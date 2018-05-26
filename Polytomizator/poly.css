@@ -1,0 +1,225 @@
+body{
+  width:4000px;
+  background-image:url('images/PolyBackground.jpg');
+  cursor:crosshair;
+}
+.main{
+  margin:auto;
+  top:35px;
+  position:relative;
+  
+
+}
+#gamedisplay{
+  margin:auto;
+
+  margin-left:50%;
+  right:1504px;
+  position: relative;
+  
+}
+.container{
+  padding:0px;
+  margin:0px;
+
+  width: 100%;
+  text-align:center;
+}
+.buttonRow{
+
+  position: fixed;
+  bottom:15px;
+  width:600px;
+  margin-left:-300px;
+  left:50%;
+  text-align:center;
+  height:70px;
+  z-index:100;
+}
+#buttonList{
+  float:left;
+  text-align:center;
+  position:relative;
+  
+}
+.buttonRow li{
+  display:inline-block;
+  background-color:RGB(40,40,40);
+  border:1px solid RGB(100,100,100);
+  border-radius:5px;
+  margin-top:10px;
+  color:white;
+  width: 100px;
+  height:50px;
+  cursor:pointer;
+}
+#colorMap{
+  color:white;
+  background-color:RGB(40,40,40);
+  cursor: pointer;
+  width:400px;
+  margin:auto;
+  margin-right:50px;
+  display: inline-block;
+}
+#polytomize{
+  display: inline-block;
+  color:white;
+  margin-left:50px;
+  background-color:RGB(40,40,40);
+  width:400px;
+  cursor: pointer;
+}
+.brushes{
+  position:fixed;
+  width: 100px;
+  left: -20px;
+  top:40px;
+}
+.brushes li{
+  display:inline-block;
+  background-color:RGB(40,40,40);
+  border:1px solid RGB(100,100,100);
+  border-radius:5px;
+  margin-top:10px;
+  color:white;
+  width: 80px;
+  height:50px;
+  cursor:pointer;
+}
+.brushes input{
+  width: 50px;
+  line-height:20px;
+  margin-top:10px;
+}
+.brushes #sizing1,#sizing2{
+  height:100px;
+  cursor:default;
+}
+.brushes #eraser{
+  cursor:pointer;
+}
+#file{
+  margin-top:15px;
+  margin-bottom:40px;
+  font-size: 25px;
+  background-color: RGB(40,40,40);
+  color:white;
+}
+#uploadText{
+  position:relative;
+  margin-top:60px;
+}
+#expandImage{
+  height:100px;
+}
+
+#loadThis{
+  font-size:15px;
+}
+#saveThis{
+
+}
+.statistics{
+  margin-bottom:50px;
+  display:inline-block;
+}
+#statsTable{
+  margin-left:25%;
+  margin-right:25%;
+}
+#statsHeader{
+}
+th{
+  width: 50%;
+  font-size: 34px;
+  padding-bottom: 20px;
+  text-decoration: 
+}
+tr{
+  font-size: 25px;
+}
+td{
+
+  height:50px;
+  line-height:25px;
+}
+
+th:nth-child(even){
+  text-align: center;
+}
+td:nth-child(even){
+  text-align: center;
+}
+td:nth-child(odd){
+  text-align:;
+}
+th, td{
+  border-bottom:solid black 1px;
+}
+#popUp{
+  background-color:RGB(230,230,230);
+  display:block;
+  border: 1px solid black;
+  border-radius:4px;
+  position:fixed;
+  padding:0 10 0 10;
+  max-width:140px;
+  font-size:13px;
+  left: 110px;
+}
+.otherOptions{
+  position:relative;
+  display:inline-block;
+  width:800px;
+  margin-left:-400px;
+  left:50%;
+  text-align:center;
+  margin-bottom:200px;
+}
+#otherOptionsHeader{
+  margin-bottom:20px;
+}
+#flowerEffect{
+  display: inline-block;
+  color:white;
+  background-color:RGB(40,40,40);
+  width:500px;
+  height:30px;
+  cursor: pointer;
+}
+#flowerEffectTime{
+  transform:translate(0,-39px);
+  transition:transform 1s;
+  z-index:-5;
+  font-size:25px;
+}
+#durationOfFlowerEffect{
+  transform:translate(0,-75px);
+  z-index:-5;
+  height:30px;
+  font-size:20px;
+  transition:transform 1s,z-index 1s;
+}
+#popUp2,#flowerEffectTimePopUp{
+  
+  position:absolute;
+  background-color:RGB(230,230,230);
+  border: 1px solid black;
+  border-radius:4px;
+  padding:0 10 0 10;
+  font-size:13px;
+  display:none;
+}
+#popUp2{
+  margin-top:-50px;
+  width:300px;
+  margin-left:660px;
+  
+}
+#flowerEffectTimePopUp{
+  display:none;
+  width: 400px;
+  margin-left:515px;
+  margin-top:-35px;
+}

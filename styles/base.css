@@ -11,7 +11,9 @@ body {
   width: 100%;
   text-align:center;
 }
-
+.page{
+  margin-top:100px;
+}
 .header ul{
   position:fixed;
   background-color:RGB(50,50,50);
@@ -43,4 +45,12 @@ body {
 }
 .header a:hover{
   color:black;
+}
+.footer{
+  height:80px;
+  margin-top:100px;
+  background-color:RGB(50,50,50);
+  color:white;
+  position: relative;
+  width:100%;
 }
