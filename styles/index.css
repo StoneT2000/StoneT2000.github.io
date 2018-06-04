@@ -1,5 +1,6 @@
 body {
   background: RGB(240,240,240);
+  height:1000px;
   
 }
 .container{
@@ -24,6 +25,7 @@ body {
   margin-left:-400px;
   left:50%;
   position: relative;
+  margin-bottom:50px;
 }
 .item a{
   font-size: 45px;
@@ -36,4 +38,10 @@ body {
 }
 .item h2{
   font-size:25px;
+}
+#intro{
+  width:500px;
+}
+#effects{
+  background-image: url("../images/banner.png");
 }
