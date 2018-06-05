@@ -47,10 +47,24 @@ body {
   color:black;
 }
 .footer{
-  height:80px;
-  margin-top:100px;
   background-color:RGB(50,50,50);
-  color:white;
-  position: relative;
+  position: absolute;
+  bottom:0;
   width:100%;
+  color:white;
+}
+.footer h6{
+  font-size:15px;
+  color:white;
+  line-height: 100px;
+  display:inline-block;
+}
+.footer a{
+  display:inline-block;
+  text-decoration: none;
+  color:RGB(220,220,220);
+  font-size:30px;
+}
+.footer a:hover{
+  color:white;
 }
