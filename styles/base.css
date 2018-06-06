@@ -1,6 +1,18 @@
 /* CSS for headers and footers*/
-body {
-  color:black;
+body, html{
+  color:RGB(30,30,30);
+
+  margin:0;
+  padding:0;
+  position: relative
+
+}
+body{
+  min-height:800px;
+}
+html{
+  min-height: 100%;
+  position: relative
 }
 
 .container{
