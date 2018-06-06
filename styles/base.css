@@ -63,7 +63,10 @@ html{
   position: absolute;
   bottom:0;
   width:100%;
+  height:110px;
   color:white;
+  text-align: center;
+  
 }
 .footer h6{
   font-size:15px;
@@ -78,5 +81,6 @@ html{
   font-size:30px;
 }
 .footer a:hover{
+
   color:white;
 }
