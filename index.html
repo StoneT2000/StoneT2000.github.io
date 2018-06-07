@@ -13,26 +13,28 @@
     <script src="scripts/index.js?version=1"></script>
 </head>
 <body>
-  
+  <script>
+    $("#mainText").css("opacity","1");
+    $("#mainText").css("transform","translate(0,-50%)")
+  </script>
+  <div class="header">
+    <ul id = "navbar">
+      <a href="index.html"><li>Home</li></a>
+      <a href="projects.html"><li>Projects</li></a>
+      <a><li>About</li></a>
+    </ul>
+  </div>
   <div class="container">
-    <!--header is universal-->
-    <div class="header">
-      <ul id = "navbar">
-        <a href="index.html"><li>Home</li></a>
-        <a href="projects.html"><li>Projects</li></a>
-        <a><li>About</li></a>
-      </ul>
-    </div>
-    <div class="row indexbody">
-      <h1 id="mainText">Hi! This is my github page. Check out my projects <a href="projects.html">here</a></h1>
+    <div class="row mainContent">
+      <h1 id="mainText" class="centerStaticWidth centerStaticHeight">Hi! This is my github.io page. Check out my projects <a href="projects.html">here</a>. Or go to my github profile <a href="https://github.com/StoneT2000"><i class="fa fa-github"></i>
     </div>
     
   </div>
-  
+  <div style="height:100px"><!--Keep's footer below container properly--></div>
   <div class="footer" style="">
-      <h6>Github </h6> <a href="https://github.com/StoneT2000"><i class="fa fa-github"></i></a>
-      <h6>||</h6>
-      <h6>Email</h6> <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
-    </div>
+    <h6>Github</h6> <a href="https://github.com/StoneT2000"><i class="fa fa-github"></i></a>
+    <h6 style="font-size:30px;margin-right: 15px;margin-left: 15px">|</h6>
+    <h6>Email</h6> <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
+  </div>
 </body>
 </html>

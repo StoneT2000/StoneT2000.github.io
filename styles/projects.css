@@ -1,15 +1,8 @@
 body {
   background-image:url('../images/PolyBackground.jpg');
-  height:1000px;
   
 }
 .container{
-  padding:0px;
-  margin:0px;
-  height: 400px;
-  margin:0px;
-  width: 100%;
-  text-align:center;
 }
 .indexbody h1{
   text-align: center;
