@@ -26,7 +26,6 @@ body, html{
   margin-left:50%;
   transform: translate(-200px,0)*/
   margin: auto;
-  color:white;
 }
 .centerStaticHeight{
   /*Centers element to middle height of parent element*/
