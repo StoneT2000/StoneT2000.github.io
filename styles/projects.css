@@ -19,6 +19,9 @@ body {
   font-size: 45px;
   padding-bottom: 4px;
   margin-bottom: 10px;
+  
+}
+.linkHead{
   border-bottom:1px solid black;
 }
 .item a:hover{
