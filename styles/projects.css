@@ -2,6 +2,9 @@ body {
   background-image:url('../images/PolyBackground.jpg');
   
 }
+.container {
+  margin-top:100px;
+}
 .indexbody h1{
   text-align: center;
   width:100%;
@@ -43,4 +46,20 @@ body {
   margin-bottom:20px;
   font-weight: 300;
  
+}
+
+@media only screen and (max-width: 825px){
+  .item img{
+    width:75%;
+    margin: auto;
+    margin-left:-25%;
+    
+  }
+  .item {
+    width:80%;
+    margin-left: -40%;
+  }
+  .item a{
+    font-size:35px;
+  }
 }

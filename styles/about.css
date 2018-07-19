@@ -1,6 +1,9 @@
 body{
   background-image:url('../images/PolyBackground.jpg');
 }
+.container {
+  margin-top:100px;
+}
 h2{
   font-size:35px;
   text-align: right;

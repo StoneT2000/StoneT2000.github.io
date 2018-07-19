@@ -11,7 +11,6 @@ body, html{
 
 .container{
   min-height:700px;
-  margin-top:100px;
   width:100%;
   text-align: center; 
 }
@@ -102,4 +101,16 @@ body, html{
 .footer a:hover{
   border-radius: 50%;
   color: #0275d8;
+}
+
+@media only screen and (max-width: 390px){
+  .header li{
+    width:33%;
+  }
+}
+@media only screen and (max-width: 640px){
+  #mainText{
+    font-size:30px;
+    line-height:40px;
+  }
 }
