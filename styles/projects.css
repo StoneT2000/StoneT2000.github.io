@@ -21,6 +21,10 @@ body {
   margin-bottom: 10px;
   
 }
+.item img{
+  margin-left:-200px;
+  transform: translate(50%,0);
+}
 .linkHead{
   border-bottom:1px solid black;
 }
