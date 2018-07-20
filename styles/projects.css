@@ -62,4 +62,15 @@ body {
   .item a{
     font-size:35px;
   }
+  .item h2{
+    font-size:18px;
+  }
+}
+@media only screen and (max-width: 625px){
+  .item a{
+    font-size:25px;
+  }
+  .item h2{
+    font-size:15px;
+  }
 }
