@@ -49,6 +49,9 @@ body {
 }
 
 @media only screen and (max-width: 825px){
+  .page h1{
+    font-size:35px;
+  }
   .item img{
     width:75%;
     margin: auto;
@@ -67,10 +70,15 @@ body {
   }
 }
 @media only screen and (max-width: 625px){
+  .page h1{
+    font-size:30px;
+  }
   .item a{
     font-size:25px;
+    line-height: normal;
   }
   .item h2{
     font-size:15px;
+    line-height: 20px;
   }
 }
