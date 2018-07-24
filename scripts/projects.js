@@ -47,6 +47,7 @@ function noSelection(){
 }
 
 function filter(){
+  //Either useful, interesting, useless, useful-interesting, useless-interesting
   if (useful == true && interesting == true){
     $(".useful-interesting").css("display","block");
   }
@@ -63,18 +64,23 @@ function filter(){
   
   if (useful == true){
     $(".useful").css("display","block");
+    $(".useful-interesting").css("display","block");
+    
   }
   else {
     $(".useful").css("display","none");
   }
   if (interesting == true){
     $(".interesting").css("display","block");
+    $(".useful-interesting").css("display","block");
+    $(".useless-interesting").css("display","block");
   }
   else {
     $(".interesting").css("display","none");
   }
   if (useless == true){
     $(".useless").css("display","block");
+    $(".useless-interesting").css("display","block");
   }
   else {
     $(".useless").css("display","none");
