@@ -7,34 +7,31 @@ $(document).on("ready", function(){
     console.log("??")
     if (useful == true){
       useful = false;
-      $(".useful").css("display","none");
     }
     else {
-      $(".useful").css("display","block");
       useful = true;
     }
+    filter();
     noSelection();
   });
   $("#useless").change(function(){
     if (useless == true){
       useless = false;
-      $(".useless").css("display","none");
     }
     else {
-      $(".useless").css("display","block");
       useless = true;
     }
+    filter();
     noSelection();
   });
   $("#interesting").change(function(){
     if (interesting == true){
       interesting = false;
-      $(".interesting").css("display","none");
     }
     else {
-      $(".interesting").css("display","block");
       interesting = true;
     }
+    filter();
     noSelection();
   });
 });
@@ -47,4 +44,40 @@ function noSelection(){
   else {
     $("#nofilter").css("display","none");
   }
+}
+
+function filter(){
+  if (useful == true && interesting == true){
+    $(".useful-interesting").css("display","block");
+  }
+  else if (useful == false && interesting == false){
+    $(".useful-interesting").css("display","none");
+  }
+  
+  if (useless == true && interesting == true){
+    $(".useless-interesting").css("display","block");
+  }
+  else if (useless == false && interesting == false) {
+    $(".useless-interesting").css("display","none");
+  }
+  
+  if (useful == true){
+    $(".useful").css("display","block");
+  }
+  else {
+    $(".useful").css("display","none");
+  }
+  if (interesting == true){
+    $(".interesting").css("display","block");
+  }
+  else {
+    $(".interesting").css("display","none");
+  }
+  if (useless == true){
+    $(".useless").css("display","block");
+  }
+  else {
+    $(".useless").css("display","none");
+  }
+
 }

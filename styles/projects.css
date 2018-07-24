@@ -18,9 +18,9 @@ body {
   position: relative;
   margin-bottom:50px;
 }
-.item a{
+.linkHead{
   font-weight: 300;
-  font-size: 45px;
+  font-size: 35px;
   padding-bottom: 4px;
   margin-bottom: 10px;
   
@@ -36,8 +36,8 @@ body {
   text-decoration: none;
 }
 .item h2{
-  font-size:25px;
- line-height: 45px;
+  font-size:20px;
+ line-height: 30px;
 }
 .page h1,a{
   font-weight: 400;
@@ -67,23 +67,23 @@ body {
     margin-left:-50%;
 
   }
-  .item a{
-    font-size:35px;
+  .linkHead{
+    font-size:30px;
   }
   .item h2{
-    font-size:18px;
+    font-size:20px;
   }
 }
 @media only screen and (max-width: 625px){
   .page h1{
     font-size:30px;
   }
-  .item a{
-    font-size:25px;
+  .linkHead{
+    font-size:30px;
     line-height: normal;
   }
   .item h2{
-    font-size:15px;
-    line-height: 20px;
+    font-size:20px;
+    line-height: 30px;
   }
 }
