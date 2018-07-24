@@ -1,5 +1,5 @@
 body {
-  background-image:url('../images/backdropdots.png');
+  /*background-image:url('../images/backdropdots.png');*/
   background-color:whitesmoke;
   
 }
@@ -48,20 +48,24 @@ body {
   font-weight: 300;
  
 }
-
+.page input{
+  margin-right:10px;
+  
+}
 @media only screen and (max-width: 825px){
   .page h1{
     font-size:35px;
   }
   .item img{
-    width:75%;
-    margin: auto;
-    margin-left:-25%;
+    width:90%;
+    margin-left: 5%;
+    transform: translate(0,0);
     
   }
   .item {
-    width:80%;
-    margin-left: -40%;
+    width:100%;
+    margin-left:-50%;
+
   }
   .item a{
     font-size:35px;
