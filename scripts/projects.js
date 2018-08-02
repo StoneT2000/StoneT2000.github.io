@@ -3,8 +3,16 @@ var useless = true;
 var interesting = true;
 $(document).on("ready", function(){
   
+  
+  //Reset checkboxes
+  var checkBoxes = $("#selection input");
+  for (var i = 0; i < checkBoxes.length; i++){
+    $("#selection input")[i].checked = true;
+  }
+  
+  
+  //Listen for changes to filters
   $("#useful").change(function(){
-    console.log("??")
     if (useful == true){
       useful = false;
     }
@@ -36,7 +44,7 @@ $(document).on("ready", function(){
   });
 });
 
-//If no choice is selected, display a nice message :P
+//If no filter is selected, display a nice message :P
 function noSelection(){
   if (useful == false && useless == false && interesting == false){
     $("#nofilter").css("display","block");
@@ -46,44 +54,40 @@ function noSelection(){
   }
 }
 
+
+//Filter based on classes
 function filter(){
-  //Either useful, interesting, useless, useful-interesting, useless-interesting
-  if (useful == true && interesting == true){
-    $(".useful-interesting").css("display","block");
-  }
-  else if (useful == false && interesting == false){
-    $(".useful-interesting").css("display","none");
-  }
-  
-  if (useless == true && interesting == true){
-    $(".useless-interesting").css("display","block");
-  }
-  else if (useless == false && interesting == false) {
-    $(".useless-interesting").css("display","none");
-  }
-  
-  if (useful == true){
-    $(".useful").css("display","block");
-    $(".useful-interesting").css("display","block");
-    
-  }
-  else {
-    $(".useful").css("display","none");
-  }
-  if (interesting == true){
-    $(".interesting").css("display","block");
-    $(".useful-interesting").css("display","block");
-    $(".useless-interesting").css("display","block");
-  }
-  else {
-    $(".interesting").css("display","none");
-  }
-  if (useless == true){
-    $(".useless").css("display","block");
-    $(".useless-interesting").css("display","block");
-  }
-  else {
-    $(".useless").css("display","none");
+  var project_items = $(".item")
+  for (var i = 0; i<project_items.length; i++){
+    var project_item_class = project_items[i].className.split(" ");
+    var hide_item = true;
+
+    for (var j = 0; j<project_item_class.length; j++){
+      
+      switch(project_item_class[j]){
+        case "useful":
+          if (useful == true){
+            hide_item = false;
+          }
+          break;
+        case "useless":
+          if (useless == true){
+            hide_item = false;
+          }
+          break;
+        case "interesting":
+          if (interesting == true){
+            hide_item = false;
+          }
+          break;
+      }
+    }
+    if (hide_item == true){
+      $(".item")[i].style["display"] = "none"
+    }
+    else {
+      $(".item")[i].style["display"] = "block"
+    }
   }
 
 }
