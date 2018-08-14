@@ -1,18 +1,19 @@
 /* CSS for headers and footers*/
 body, html{
-  color:RGB(30,30,30);
+  color:RGB(50,50,50);
   margin:0;
   padding:0;
   position: relative;
   box-sizing: border-box;
   font-weight: 400;
   min-height: 800px;
+  background-color:white;
 }
 
 .container{
-  min-height:700px;
   width:100%;
   text-align: center; 
+  margin-top:80px;
 }
 .centerPercentWidth{
   margin-left: 10%;
@@ -41,38 +42,56 @@ body, html{
 }
 .header{
   z-index:1000;
+  width: 400px;
+  position: absolute;
+  top:-80px;
+  transition: transform 0.4s;
 }
-.header ul{
-  position:fixed;
-  background-color:RGB(50,50,50);
-  height:50px;
-  top:0px;
-  list-style-type:none;
-  margin:0px;
-  padding:0px;
-  width: 100%;
-  z-index:100;
+#sidebar_button{
+  display:inline;
+}
+.header i{
+  font-size:30px;
+  margin-left:20px;
+  margin-top:20px;
+  cursor:pointer;
+}
+.header_title{
+  font-weight: 390;
+  font-size:30px;
+  width: 100px;
+  margin-left:10px;
+  display:inline;
+  text-align: center;
+
 
 }
-.header li {
-  line-height:50px;
-  width:130px;
-  height:50px;
-  display:inline-block;
-  float:left;
-  text-align: center;
-  background-color:RGB(50,50,50);
-  color:white;
+.sidebar{
+  display: inline;
+  height:100%;
+  background-color:whitesmoke;
+  position: absolute;
+  width:200px;
+  top:-80px;
+  z-index:1000;
+  transform: translate(-200px,0);
+  transition: transform 0.4s;
 }
-.header a{
-  width: 130px;
-  color:white;
+.sidebar .header_link{
+  font-size:25px;
+  height:100px;
+  line-height: 100px;
+  padding-left:20px;
+  cursor:pointer;
+  width:200px;
+  display:block;
+  transition: background-color 0.4s;
+  color:RGB(50,50,50);
 }
-.header li:hover{
-  background-color: #0275d8;
-}
-.header a:hover{
-  color:black;
+.sidebar .header_link:hover{
+  background-color:white;
+  text-decoration: none;
+  
 }
 .footer{
   position: absolute;
@@ -101,16 +120,4 @@ body, html{
 .footer a:hover{
   border-radius: 50%;
   color: #0275d8;
-}
-
-@media only screen and (max-width: 390px){
-  .header li{
-    width:33%;
-  }
-}
-@media only screen and (max-width: 640px){
-  #mainText{
-    font-size:30px;
-    line-height:40px;
-  }
 }

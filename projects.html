@@ -14,60 +14,69 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   
   <script src="scripts/projects.js?version=4"></script>
+  <script src="scripts/base.js?version=1"></script>
     
 </head>
 <body>
+  <div class="sidebar">
+    <a class="header_link" style="margin-top:100px;" href="index.html">Home</a>
+    <a class="header_link" href="projects.html">Projects</a>
+    <a class="header_link" href="about.html">About</a>
+  </div>
   <div class="header">
-      <ul id = "navbar">
-        <a href="index.html"><li>Home</li></a>
-        <a href="projects.html"><li>Projects</li></a>
-        <a href="about.html"><li>About</li></a>
-      </ul>
+    <div id="sidebar_button">
+      <i class="fas fa-bars" onclick="sidebar()"></i>
     </div>
+    <div class="header_title">Stone's Github.io</div>
+  </div>
   <div class="container">
     
     <div class="page" style="margin-bottom: 200px;">
       
       <h1 style="margin-bottom:50px">Just my stuff</h1>
-      
       <div id = "selection">
-        <h2>Filter <i>stuff(s)</i></h2>
-        <label><input id ="useful" type="checkbox" name="useful" checked="">Useful </label><br>
-        <label><input id ="useless" type="checkbox" name="useless" checked="">Useless </label><br>
-        <label><input id ="interesting" type="checkbox" name="interesting" checked="">Interesting </label>
+        <h2 style="" id="filter_head" style="">Filter Stuff</h2><h2 id="bracket">{</h2>
+        <div style=" width: 150px;" id="checks">
+          <label><input id ="useful" type="checkbox" name="useful" checked="">Useful</label>
+          <br>
+          <label><input id ="useless" type="checkbox" name="useless" checked="">Useless</label>
+          <br>
+          <label><input id ="interesting" type="checkbox" name="interesting" checked="">Interesting</label>
+        </div>
       </div>
       <h4 id="nofilter" class="centerStaticWidth" style="font-size:20px;margin-top:100px;font-weight: 400;display:none">Did you expect something cool would happen if you filtered everything? Well here you go.... <br><br>🍔<br><br></h4>
-      <div>
-        
-      </div>
       <div class="item useful interesting">
         <a href="Polytomizator" class="linkHead">Polytomizator</a>
-        <h2>Make simple, poly art. More details can be found <a href="https://github.com/StoneT2000/Polytomizator">at its repository</a></h2>
-        <a href="Polytomizator"><img id="" src="images/Moon-Mountain.jpg" height="auto" width="600"></a>
+        <h2>This is a website that helps you create poly art very quickly instead of spending countless hours creating triangles on Photoshop. At the moment, it only works on Firefox and Chrome, and it is also highly suggested to try this out on Firefox as it is much faster. More details can be found <a href="https://github.com/StoneT2000/Polytomizator">at its repository.</a></h2>
+        <a href="Polytomizator"><img id="" src="images/Moon-Mountain.jpg" height="auto" width="600" class="image"></a>
+        <h2>The image above was created within 10 to 20 seconds, wheras it might take you possibly 5 or more hours to make on photoshop. All work can be downloaded as a high resolution png image or a .svg file.</h2>
       </div>
       <div class="item useful">
-        <a href="SimpleColors" class="linkHead">Simple Colors</a>
-        <h2>A minimalist site that serves as a simple color screensaver with color palletes based on season</h2>
+        <a href="SimpleColors" class="linkHead">Simple Screensaver</a>
+        <h2>A minimalist site that serves as a simple color screensaver with color palletes based on the 4 seasons: spring, summer, fall, winter.</h2>
         <a href="SimpleColors"><img id="" src="images/simpleColors.png" height="" width="600"></a>
+          <h2>It's made to have minimal distractions (the footer is even hidden unless you hover your cursor around the bottom of the page).</h2>
       </div>
       <div class="item useful">
         <a href="MathFunctionSite" class="linkHead">User Friendly Math Functions</a>
-        <h2>In case if you find things such as matrices to tiresome to do on a TI-84. Also has graph and number theory functions</h2>
+        <h2>In case if you find things such as matrices to tiresome to do on a TI-84. Also has graph and number theory functions.</h2>
         <a href="MathFunctionSite"><img id="" src="images/matrice.png" height="" width="600"></a>
       </div>
       <div class="item useless interesting">
         <a href="Cut-Bread" class="linkHead">Cut Bread!</a>
-        <h2>A site where you can test how good you are at cutting bread evenly</h2>
+        <h2>A site where you can test how good you are at cutting bread evenly.</h2>
         <a href="Cut-Bread"><img id="" src="images/cutBreadSlice.png" height="" width="600" style="background-color:white"></a>
+        <h2>Comes along with a friendly passive-aggresive chef to cheer you on.</h2>
       </div>
       <div class="item interesting">
         <a href="Digital-Museum" class="linkHead">Digital Museum</a>
-        <h2>A website concept design on how digital museums should really work.</h2>
+        <h2>A website concept design on how digital museums should really work. My idea is that you should explore a museum online like you would in real life.</h2>
         <a href="Digital-Museum"><img id="" src="images/museum-design.png" height="" width="600" style="background-color:white"></a>
+        <h2>So this means actaully taking an elevator to different floors, and scrolling left and right to walk across a floor.</h2>
       </div>
       <div class="item useful interesting">
         <a href="Mondrian-Generator" class="linkHead">Mondrian Art Generator</a>
-        <h2>Generate Piet Mondrian-esque art</h2>
+        <h2>Generate Piet Mondrian-esque art.</h2>
         <a href="Mondrian-Generator"><img id="" src="images/MondrianArt.png" height="" width="600" style="background-color:white"></a>
       </div>
       <div class="item useless">
