@@ -13,14 +13,19 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="scripts/base.js?version=1"></script>
 </head>
 <body>
+  <div class="sidebar">
+    <a class="header_link" style="margin-top:100px;" href="index.html">Home</a>
+    <a class="header_link" href="projects.html">Projects</a>
+    <a class="header_link" href="about.html">About</a>
+  </div>
   <div class="header">
-    <ul id = "navbar">
-      <a href="index.html"><li>Home</li></a>
-      <a href="projects.html"><li>Projects</li></a>
-      <a href="about.html"><li>About</li></a>
-    </ul>
+    <div id="sidebar_button">
+      <i class="fas fa-bars" onclick="sidebar()"></i>
+    </div>
+    <div class="header_title">Stone's Github.io</div>
   </div>
   <div class="container">
     <div class="row mainContent">
@@ -34,7 +39,6 @@
     </div>
     
   </div>
-  <div style="height:100px"><!--Keep's footer below container properly--></div>
   <div class="footer" style="">
     <h6>Github</h6> <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
     <h6 style="font-size:20px;margin-right: 15px;margin-left: 15px">|</h6>
