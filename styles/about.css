@@ -1,8 +1,10 @@
 body{
-  background-image:url('../images/PolyBackground.jpg');
 }
 .container {
-  margin-top:100px;
+  margin-bottom:100px;
+}
+.mainContent{
+
 }
 h2{
   font-size:35px;

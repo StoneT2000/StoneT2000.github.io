@@ -1,22 +1,19 @@
 body {
-  background-image:url('../images/PolyBackground.jpg');
   
 }
-.mainContent h1{
-  font-size:60px;
-  font-weight: 300;
-  line-height: 80px;
+.mainContent{
+  height:500px;
+  margin-top: 80px;
+}
+#mainText{
+  position: relative;
+  top: 50%; 
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  font-size:40px;
+  font-weight:300;
+  width:80%;
+  margin-left:10%;
   text-align: center;
-  width:100%;
-  display:block;
-  color:RGB(30,30,30);
-  opacity:0;
-  line-height: 70px;
-  transition: opacity 2s,transform 2s;
-  position: absolute;
-  padding: 20px;
-  top:50%;
-  height:50%;
-
-
 }
