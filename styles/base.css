@@ -13,7 +13,8 @@ body, html{
 .container{
   width:100%;
   text-align: center; 
-  margin-top:80px;
+  padding-top:100px;
+  padding-bottom:50px;
 }
 .centerPercentWidth{
   margin-left: 10%;
@@ -44,7 +45,6 @@ body, html{
   z-index:1000;
   width: 400px;
   position: absolute;
-  top:-80px;
   transition: transform 0.4s;
 }
 #sidebar_button{
@@ -69,12 +69,12 @@ body, html{
 .sidebar{
   display: inline;
   height:100%;
+  
   background-color:whitesmoke;
   position: absolute;
   width:200px;
-  top:-80px;
   z-index:1000;
-  transform: translate(-200px,0);
+  transform: translate(-200px,-80px);
   transition: transform 0.4s;
 }
 .sidebar .header_link{
@@ -102,6 +102,7 @@ body, html{
   text-align: center;
   background-color:RGB(50,50,50);
   color:white;
+  z-index:2000;
 }
 .footer a{
   color: white;

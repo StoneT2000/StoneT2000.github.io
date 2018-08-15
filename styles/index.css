@@ -1,9 +1,8 @@
 body {
   
 }
-.mainContent{
-  height:500px;
-  margin-top: 80px;
+.container{
+  height:800px;
 }
 #mainText{
   position: relative;
