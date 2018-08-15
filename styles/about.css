@@ -6,35 +6,39 @@ body{
 .mainContent{
 
 }
-h2{
-  font-size:35px;
-  text-align: right;
-  width:175px;
+.title{
+  display:block;
+  width:100%;
+  text-align: left;
+  padding-bottom:10px;
+  border-bottom: 2px solid whitesmoke;
 }
-h3{
+.text_block{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.text_block, .text_block h3 , .text_block h4{
   font-weight: 300;
   line-height: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 30px;
+  
   text-align: left;
   margin:0 0 0 0;
-  font-size:25px;
+  font-size:20px;
+  display: inline;
+}
+/*Highlighted texts*/
+.mainContent div h4{
+  display:inline;
+  text-align: left;
+  line-height: 40px;
+  padding:0;
+  color:orange;
+  font-weight:400;
 }
 .mainContent{
   padding:20px;
   position: relative;
 }
-.line{
-  background-color:RGB(40,40,40);
-  height:5px;
-  width: 100%;
-  margin-top:0.5px;
-
-}
-.lineSide{
-  border-left:5px RGB(40,40,40) solid;
-  height:48.5px;
-  margin-top:-54px;
-  margin-left:190px;
+.text_block a{
+  font-weight:400;
 }
