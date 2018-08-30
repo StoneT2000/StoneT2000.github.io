@@ -1,45 +1,16 @@
 /* CSS for headers and footers*/
 body, html{
-  color:RGB(50,50,50);
-  margin:0;
-  padding:0;
   position: relative;
   box-sizing: border-box;
-  font-weight: 400;
-  min-height: 800px;
+  font-weight: 300;
   background-color:white;
+  color:#212529;
 }
 
-.container{
-  width:100%;
+.container-fluid{
   text-align: center; 
   padding-top:100px;
   padding-bottom:50px;
-}
-.centerPercentWidth{
-  margin-left: 10%;
-  width:80%;
-  text-align: center;
-  color:white;
-}
-.centerStaticWidth{
-  /*
-  margin-left:50%;
-  transform: translate(-200px,0)*/
-  margin: auto;
-}
-.centerStaticHeight{
-  /*Centers element to middle height of parent element*/
-  position: absolute;
-  top:50%;
-  transform: translate(0,-50%);
-  
-}
-.centerAbsoluteWidth{
-  left:50%;
-  width:400px;
-  margin-left:-200px;
-  color:white;
 }
 .header{
   z-index:1000;
@@ -57,7 +28,7 @@ body, html{
   cursor:pointer;
 }
 .header_title{
-  font-weight: 390;
+  font-weight: 300;
   font-size:30px;
   width: 100px;
   margin-left:10px;

@@ -1,7 +1,7 @@
 var useful = true;
 var useless = true;
 var interesting = true;
-$(document).on("ready", function(){
+$(document).ready( function(){
   
   
   //Reset checkboxes
