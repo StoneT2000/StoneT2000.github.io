@@ -70,7 +70,7 @@ body, html{
   display: inline;
   height:100%;
   
-  background-color:whitesmoke;
+  background-color:#f8f9fa;
   position: absolute;
   width:200px;
   z-index:1000;
@@ -100,7 +100,7 @@ body, html{
   bottom: 0px;
   margin:none;
   text-align: center;
-  background-color:RGB(50,50,50);
+  background-color:#343a40;
   color:white;
   z-index:2000;
 }
@@ -120,5 +120,5 @@ body, html{
 }
 .footer a:hover{
   border-radius: 50%;
-  color: #0275d8;
+  color: #f0efef;
 }

@@ -10,7 +10,7 @@ body{
   width:100%;
   text-align: left;
   padding-bottom:10px;
-  border-bottom: 2px solid whitesmoke;
+  border-bottom: 2px solid #343a40;;
 }
 .text_block{
   padding-top:20px;
@@ -33,6 +33,12 @@ body{
   padding:0;
   color:orange;
   font-weight:400;
+}
+#math_text h4 {
+  color:#ff5d73;
+}
+#physics_text h4{
+  color:#068d9d;
 }
 .mainContent{
   padding:20px;
