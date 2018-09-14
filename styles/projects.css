@@ -76,7 +76,15 @@ body {
     left:0;
   }
   .item img{
-    width: 80%;
+    width: 100%;
+  }
+
+
+  .linkHead {
+    font-size:28px !important;
+  }
+  .item h2, .item a {
+    font-size:16px;
   }
 }
 @media only screen and (max-width: 392px){
