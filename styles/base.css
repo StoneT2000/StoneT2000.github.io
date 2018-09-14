@@ -10,7 +10,7 @@ body, html{
 .container-fluid{
   text-align: center; 
   padding-top:100px;
-  padding-bottom:50px;
+  padding-bottom:100px;
 }
 .header{
   z-index:1000;

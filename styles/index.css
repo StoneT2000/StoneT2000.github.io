@@ -13,3 +13,13 @@
 .container-fluid{
   height:100%;
 }
+@media only screen and (max-width: 500px) {
+  #mainText {
+    font-size:30px;
+  }
+}
+@media only screen and (max-height: 600px) {
+  #mainText p {
+    display:none;
+  }
+}
