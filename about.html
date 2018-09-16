@@ -19,27 +19,44 @@
   
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel ="stylesheet" href="styles/base.css">
   <link rel ="stylesheet" href="styles/about.css">
   
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  
 
   <script src="scripts/base.js?version=1"></script>
 </head>
 <body>
   <div class="sidebar">
-    <a class="header_link" style="margin-top:100px;" href="index.html">Home</a>
-    <a class="header_link" href="projects.html">Projects</a>
-    <a class="header_link" href="about.html">About</a>
+    <a class="header_link" style="margin-top:50px;" href="index.html">/Home</a>
+    <a class="header_link" href="projects.html">/Projects</a>
+    <a class="header_link" href="about.html">/About</a>
+  </div>
+  <div class="normal_sidebar">
+    <span class="sidebar_label">Other Places</span>
+    <ul>
+      <li id="home"><ion-icon name=""></ion-icon><a class="header_link" href="index.html">/Home</a></li>
+      <li id="about"><ion-icon name=""></ion-icon><a class="header_link" href="about.html">/About</a>
+      </li>
+      <li id="projects"><ion-icon name="arrow-dropright" onclick="displayDrop('projects')"></ion-icon><a class="header_link" href="projects.html">/Projects</a>
+        <div class="drop_down_folder">
+          <div class="sub_dir_link"><a href="/Polytomizator">/Polytomizator</a>
+          </div>
+          <div class="sub_dir_link"><a href="/Cut-Bread">/Cut-Bread</a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="header">
     <div id="sidebar_button">
       <i class="fas fa-bars" onclick="sidebar()"></i>
     </div>
-    <div class="header_title">Stone's Github.io</div>
+    <a href="/"><img src="images/githubLogo.ico" style="margin-top:-10px;margin-left:10px;"></a>
+    <div class="header_title">~ stone.t://Github.io/About<span class="underscore_anim">_</span></div>
   </div>
   <div class="container-fluid">
     <div class="row mainContent">
@@ -63,12 +80,6 @@
         <h3>Within physics, I'm currently trying to recreate the game Kerbal Space Program (KSP) into a <a href="https://github.com/StoneT2000/2D-KSP">2D web version</a>. This will involve me looking into various algorithms and methods to display a <h4>star system</h4>, <h4>elliptical orbits</h4> etc. It also involves looking at various physics related laws and equations such as <h4>Kepler's laws</h4>, <h4>Tsiolkovsky rocket equation</h4>, and more.</h3>
       </div>
     </div>
-    
-  </div>
-  <div class="footer" style="">
-    <h6>Github</h6> <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
-    <h6 style="font-size:20px;margin-right: 15px;margin-left: 15px">|</h6>
-    <h6>Email</h6> <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
   </div>
 </body>
 </html>

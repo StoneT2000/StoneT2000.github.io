@@ -8,18 +8,34 @@
   font-weight:300;
   width:80%;
   margin-left:10%;
-  text-align: center;
+  text-align: left;
+
+}
+#mainText p{
+    font-size:14px;
 }
 .container-fluid{
   height:100%;
 }
-@media only screen and (max-width: 500px) {
-  #mainText {
-    font-size:30px;
-  }
-}
+
 @media only screen and (max-height: 600px) {
   #mainText p {
     display:none;
+  }
+}
+@media only screen and (max-width: 960px) {
+  #mainText {
+    font-size:25px;;
+  }
+  #mainText p{
+    font-size:12px;
+  }
+}
+@media only screen and (max-width: 510px) {
+  #mainText {
+    font-size:25px;
+  }
+  #mainText p{
+    font-size:11px;
   }
 }

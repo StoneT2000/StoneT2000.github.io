@@ -22,3 +22,28 @@ function sidebar(){
   }
   
 }
+var dropped = {'home':false,'about':false, 'projects':false};
+function displayDrop(name) {
+  if (dropped[name] == false) {
+    dropped[name] = true;
+    $("#"+name +" ion-icon").css('transform','rotate(90deg)');
+     $("#"+name + " .drop_down_folder").css('transform','translate(0,0)');
+  }
+  else {
+    $("#"+name +" ion-icon").css('transform','rotate(0deg)');
+    dropped[name] = false;
+    $("#"+name + " .drop_down_folder").css('transform','translate(-150px,0)');
+  }
+  
+}
+$(document).ready(function(){
+  window.setInterval(function(){
+    if ($(".underscore_anim").css("display") == "none"){
+      $(".underscore_anim").css("display","inline");
+    }
+    else {
+      $(".underscore_anim").css("display","none");
+    }
+    
+  },1000);
+})

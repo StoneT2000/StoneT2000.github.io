@@ -23,23 +23,40 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel ="stylesheet" href="styles/base.css">
   <link rel ="stylesheet" href="styles/projects.css">
-
-  
-  <script src="scripts/projects.js?version=5"></script>
   <script src="scripts/base.js?version=2"></script>
+  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+  <script src="scripts/projects.js?version=5"></script>
+  
     
 </head>
 <body>
   <div class="sidebar">
-    <a class="header_link" style="margin-top:100px;" href="index.html">Home</a>
-    <a class="header_link" href="projects.html">Projects</a>
-    <a class="header_link" href="about.html">About</a>
+    <a class="header_link" style="margin-top:50px;" href="index.html">/Home</a>
+    <a class="header_link" href="projects.html">/Projects</a>
+    <a class="header_link" href="about.html">/About</a>
+  </div>
+  <div class="normal_sidebar">
+    <span class="sidebar_label">Other Places</span>
+    <ul>
+      <li id="home"><ion-icon name=""></ion-icon><a class="header_link" href="index.html">/Home</a></li>
+      <li id="about"><ion-icon name=""></ion-icon><a class="header_link" href="about.html">/About</a>
+      </li>
+      <li id="projects"><ion-icon name="arrow-dropright" onclick="displayDrop('projects')"></ion-icon><a class="header_link" href="projects.html">/Projects</a>
+        <div class="drop_down_folder">
+          <div class="sub_dir_link"><a href="/Polytomizator">/Polytomizator</a>
+          </div>
+          <div class="sub_dir_link"><a href="/Cut-Bread">/Cut-Bread</a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="header">
     <div id="sidebar_button">
       <i class="fas fa-bars" onclick="sidebar()"></i>
     </div>
-    <div class="header_title">Stone's Github.io</div>
+    <a href="/"><img src="images/githubLogo.ico" style="margin-top:-10px;margin-left:10px;"></a>
+    <div class="header_title">~ stone.t://Github.io/Projects<span class="underscore_anim">_</span></div>
   </div>
   <div class="container-fluid">
     
@@ -81,8 +98,8 @@
         <h2>Comes along with a friendly passive-aggresive chef to cheer you on.</h2>
       </div>
       <div class="item useless">
-        <a href="MinionEye" class="linkHead">Watching Minion</a>
-        <h2>A site that has a watchful, attentive, and wary Minion (From Despicable Me) eye watches your every move.</h2>
+        <a href="MinionEye" class="linkHead">Minions!</a>
+        <h2>A site that has a watchful, attentive, and wary, but cute, Minion (From Despicable Me) eye that watches your every move.</h2>
         <a href="MinionEye"><img id="" src="images/minioneye.png" height="" width="600" style="background-color:white"></a>
         <h2>And if you don't like being watched by Stuart, you can change to Kevin, the minion with 2 eyes, by hovering your mouse to the bottom.</h2>
       </div>
@@ -114,11 +131,13 @@
       </div>
     </div>
   </div>
+  <!--
   <div class="footer">
     <h6></h6>
     <h6>Github </h6> <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
     <h6 style="margin-right: 5px;margin-left: 5px">|</h6>
     <h6>Email</h6> <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
   </div>
+  -->
 </body>
 </html>
