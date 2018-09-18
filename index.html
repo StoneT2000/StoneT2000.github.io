@@ -26,13 +26,21 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-  <script src="scripts/index.js?version=3"></script>
+  <script src="scripts/index.js?version=6"></script>
 </head>
 <body>
   <div class="sidebar">
     <a class="header_link" style="margin-top:50px;" href="index.html">/Home</a>
     <a class="header_link" href="projects.html">/Projects</a>
     <a class="header_link" href="about.html">/About</a>
+    <hr style="border-color:RGB(52,58,64);">
+    <div class="contact_info_wrapper" style="margin-left:20px;margin-top:20px;">
+      <div style="width:137px;display:inline-block;border-bottom:1px solid black;margin-bottom:9px;padding-bottom:5px;">Find / Contact Me @ </div>
+      <br>
+      <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
+      <div style="display:inline;width:5px;height:auto;border-left:1px solid black; margin-right:10px;vertical-align: middle;margin-left:4px;"></div>
+      <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
+    </div>
   </div>
   <div class="normal_sidebar">
     <span class="sidebar_label">Other Places</span>
@@ -51,14 +59,23 @@
           </div>
         </div>
       </li>
+      <li class="contact_info">
+
+        <div class="contact_info_wrapper">
+          <div style="width:137px;display:inline-block;border-bottom:1px solid black;margin-bottom:10px;padding-bottom:5px;">Find / Contact Me @ </div>
+          <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
+          <div style="display:inline;width:5px;height:auto;border-left:1px solid black; margin-right:10px;vertical-align: middle;margin-left:4px;"></div>
+          <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="header">
     <div id="sidebar_button">
       <i class="fas fa-bars" onclick="sidebar()"></i>
     </div>
-    <a href="/"><img src="images/githubLogo.ico" style="margin-top:-10px;margin-left:10px;"></a>
-    <div class="header_title">~ stone.t://github.io/Home<span class="underscore_anim">_</span></div>
+    <a href="/"><img src="images/githubLogo.ico" id="header_image"></a>
+    <div class="header_title">~ stone.t://github.io/Projects<span class="underscore_anim">_</span></div>
   </div>
   <div class="container-fluid">
     <div id="mainText">Hi!<br>This is my github.io page.<br>Check out my personal projects <a href="projects.html">here</a>.<br>Or go to my github profile for more <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>.<p style="margin-top:50px;">(And the background is intentionally white, it's not that your browser is having trouble loading it)</p>

@@ -37,6 +37,8 @@ a:hover {
 }
 .header {
   background-color:white;
+  height:50px;
+  
 }
 .header i{
   font-size:30px;
@@ -46,7 +48,7 @@ a:hover {
   display:none;
 }
 .header_title{
-  font-weight: 300;
+  font-weight: 200;
   font-size:30px;
   width: 100px;
   margin-left:3px;
@@ -58,10 +60,10 @@ a:hover {
   height:100%;
   
   background-color:#f8f9fa;
-  position: absolute;
-  width:200px;
+  position: fixed;
+  width:100%;
   z-index:1000;
-  transform: translate(-200px,-80px);
+  transform: translate(-100%,0px);
   transition: transform 0.4s;
 }
 .sidebar .header_link{
@@ -70,7 +72,7 @@ a:hover {
   line-height: 100px;
   padding-left:20px;
   cursor:pointer;
-  width:200px;
+  width:100%;
   display:block;
   transition: background-color 0.4s;
   color:RGB(50,50,50);
@@ -79,35 +81,6 @@ a:hover {
   background-color:white;
   text-decoration: none;
   
-}
-.footer{
-  position: absolute;
-  width:100%;
-  height:50px;
-  bottom: 0;
-  margin:none;
-  text-align: center;
-  background-color:#343a40;
-  color:white;
-  z-index:2000;
-}
-.footer a{
-  color: white;
-  font-size:25px;
-  margin-left: 5px;
-}
-.footer h6{
-  display: inline-block;
-  line-height: 50px;
-  margin-bottom: 0px;
-  margin-top:0px;
-  font-size: 20px;
-  font-weight: 300;
-  transform: translate(0,-3px);
-}
-.footer a:hover{
-  border-radius: 50%;
-  color: #f0efef;
 }
 .normal_sidebar {
   display:inline;
@@ -151,6 +124,28 @@ a:hover {
 .sub_dir_link::before{
   content:' '
 }
+.contact_info {
+  position: absolute;
+  bottom:20px;
+  font-size:12px;
+}
+.contact_info_wrapper {
+  font-size:14px;
+  margin-left:10px;
+}
+.contact_info_wrapper a {
+  font-size:20px;
+  vertical-align: middle;
+  color: RGB(52,58,64);
+}
+.contact_info_wrapper a:hover {
+  color: RGB(26,29,32);
+}
+#header_image {
+  margin-top: -10px;
+  width:32px;
+  margin-left: 10px;
+}
 @media only screen and (min-width: 600px) {
   .container-fluid {
     width:calc(100% - 160px);
@@ -167,6 +162,8 @@ a:hover {
   }
   .header {
     margin-left:0px;
+    height:40px;
+    position: fixed;
   }
   .header i {
     display:inline;
@@ -180,5 +177,28 @@ a:hover {
   }
   .header_title {
     font-size:22px;
+    line-height: 40px;
+  }
+  #header_image {
+    width:25px;
+    margin-top:-5px;
+    margin-left:5px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .header {
+    height:35px;
+  }
+  .header i {
+    font-size:14px;
+  }
+  .header_title {
+    font-size:14px;
+    line-height: 35px;
+  }
+  #header_image {
+    width:20px;
+    margin-top:-2px;
+    margin-left:2px;
   }
 }

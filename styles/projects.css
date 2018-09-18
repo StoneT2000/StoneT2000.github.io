@@ -59,7 +59,9 @@ body {
   margin-right:10px;
 }
 #filter_head{
-  line-height:50px;display: inline;font-size:25px;height:100px;padding-bottom: 55px; vertical-align: middle; font-weight: 400;margin-bottom: 60px;
+  line-height:50px;display: inline-block;font-size:25px;height:100px;vertical-align: middle; font-weight: 400;
+  margin-top:5px;
+  margin-right:10px;
 }
 #bracket {
   font-weight: 100;

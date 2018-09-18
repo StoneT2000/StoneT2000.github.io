@@ -7,15 +7,15 @@ function sidebar(){
     
     sideb[0].style["transform"] = "translate(0,0)";
     
-    header[0].style["transform"] = "translate(200px,0)";
+    //header[0].style["transform"] = "translate(100%,0)";
     
-    header_icon.innerHTML = "<i class=\"fas fa-times\" onclick=\"sidebar()\"></i>";
+    header_icon.innerHTML = "<i class=\"fas fa-times\" onclick=\"sidebar()\" style=\"margin-left:25px;\"></i>";
     sidebar_on = true;
   }
   else {
-    sideb[0].style["transform"] = "translate(-200px,0)";
+    sideb[0].style["transform"] = "translate(-100%,0)";
     
-    header[0].style["transform"] = "translate(0,0)";
+    //header[0].style["transform"] = "translate(0,0)";
     
     header_icon.innerHTML = "<i class=\"fas fa-bars\" onclick=\"sidebar()\"></i>";
     sidebar_on = false;
