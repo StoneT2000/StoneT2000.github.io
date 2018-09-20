@@ -19,7 +19,7 @@ a:hover {
 }
 .container-fluid{
   text-align: center; 
-  padding-top:100px;
+  padding-top:50px;
   width:80%;
   margin-left:20%;
   position: relative;
@@ -159,6 +159,7 @@ a:hover {
     width:100%;
     left:0px;
     margin:0px;
+    padding-top:40px;
   }
   .header {
     margin-left:0px;
@@ -168,6 +169,7 @@ a:hover {
   .header i {
     display:inline;
     font-size:22px;
+    margin-left:10px;
   }
   .sidebar {
     display:inline;
@@ -189,8 +191,12 @@ a:hover {
   .header {
     height:35px;
   }
+  .container-fluid {
+    padding-top:35px;
+  }
   .header i {
-    font-size:14px;
+    font-size:16px;
+    margin-left:8px;
   }
   .header_title {
     font-size:14px;
@@ -201,4 +207,8 @@ a:hover {
     margin-top:-2px;
     margin-left:2px;
   }
+}
+/*Maxheight value subject to change depending on how many side bar links*/
+@media only screen and (max-height:440px){
+  
 }
