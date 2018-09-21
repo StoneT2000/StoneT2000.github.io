@@ -9,7 +9,7 @@ function sidebar(){
     
     //header[0].style["transform"] = "translate(100%,0)";
     
-    header_icon.innerHTML = "<i class=\"fas fa-times\" onclick=\"sidebar()\" style=\"margin-left:25px;\"></i>";
+    header_icon.innerHTML = "<i class=\"fas fa-times\" onclick=\"sidebar()\"></i>";
     sidebar_on = true;
   }
   else {

@@ -146,6 +146,18 @@ a:hover {
   width:32px;
   margin-left: 10px;
 }
+.site_link {
+  background-color:#0366d6;
+  padding-left:5px;
+  padding-right:5px;
+  color:white;
+  transition: background-color 0.2s;
+}
+.site_link:hover {
+  color:#0366d6;
+  background-color:transparent;
+  
+}
 @media only screen and (min-width: 600px) {
   .container-fluid {
     width:calc(100% - 160px);
