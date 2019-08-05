@@ -1,93 +1,52 @@
-var useful = true;
-var useless = true;
-var interesting = true;
-$(document).ready( function(){
-  
-  
-  //Reset checkboxes
-  var checkBoxes = $("#selection input");
-  for (var i = 0; i < checkBoxes.length; i++){
-    $("#selection input")[i].checked = true;
-  }
-  
-  
-  //Listen for changes to filters
-  $("#useful").change(function(){
-    if (useful == true){
-      useful = false;
-    }
-    else {
-      useful = true;
-    }
-    filter();
-    noSelection();
-  });
-  $("#useless").change(function(){
-    if (useless == true){
-      useless = false;
-    }
-    else {
-      useless = true;
-    }
-    filter();
-    noSelection();
-  });
-  $("#interesting").change(function(){
-    if (interesting == true){
-      interesting = false;
-    }
-    else {
-      interesting = true;
-    }
-    filter();
-    noSelection();
-  });
+$(document).ready(function() {
+  $("#useless")[0].checked = true;
+  $("#interesting")[0].checked = true;
+  $("#useful")[0].checked = true;
+  filter.add('interesting');filter.add('useful');filter.add('useless');
+  for (let name of filterNames) {
+    $("#" + name).on('click', function() {
+      filterProjects();
+    });
+  };
+  window.onscroll();
 });
-
-//If no filter is selected, display a nice message :P
-function noSelection(){
-  if (useful == false && useless == false && interesting == false){
-    $("#nofilter").css("display","block");
-  }
-  else {
-    $("#nofilter").css("display","none");
-  }
-}
-
-
-//Filter based on classes
-function filter(){
-  var project_items = $(".item")
-  for (var i = 0; i<project_items.length; i++){
-    var project_item_class = project_items[i].className.split(" ");
-    var hide_item = true;
-
-    for (var j = 0; j<project_item_class.length; j++){
-      
-      switch(project_item_class[j]){
-        case "useful":
-          if (useful == true){
-            hide_item = false;
-          }
+var filter = new Set();
+function filterProjects() {
+  updateFilter()
+  let projects = $("#projects").children();
+  let allKeys = Object.keys(projects);
+  for (let key of allKeys) {
+    let project = projects[key];
+    if (project != undefined) {
+      let classList = project.classList;
+      let keep = false;
+      if (classList){
+      console.log(classList);
+      for (let className of classList) {
+        if (filter.has(className)) {
+          keep = true;
           break;
-        case "useless":
-          if (useless == true){
-            hide_item = false;
-          }
-          break;
-        case "interesting":
-          if (interesting == true){
-            hide_item = false;
-          }
-          break;
+        }
+      }
+      if (keep == false) {
+        $(project).css('display','none');
+        console.log($(project));
+      }
+      else {
+        $(project).css('display','block');
+      }
       }
     }
-    if (hide_item == true){
-      $(".item")[i].style["display"] = "none"
+  }
+}
+var filterNames = ['useless','interesting','useful'];
+function updateFilter() {
+  for (let name of filterNames) {
+    if ($("#" + name)[0].checked) {
+      filter.add(name);
     }
     else {
-      $(".item")[i].style["display"] = "block"
+      filter.delete(name);
     }
   }
-
 }

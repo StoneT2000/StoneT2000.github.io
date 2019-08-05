@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124803205-1"></script>
   <script>
@@ -14,89 +15,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="description" content="The personal github page for projects and stuff by Stone Tao. Explore a wide variety of web projects and related information on this site!" />
-  <title>Stone's Github</title>
+  <title>Stone's Github Page</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/githubLogo.ico" />
-  
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/about.css">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-  <link rel ="stylesheet" href="styles/base.css">
-  <link rel ="stylesheet" href="styles/about.css">
-  <script src="scripts/base.js?version=7"></script>
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="scripts/base.js"></script>
+  <script src="scripts/about.js"></script>
 </head>
-<body>
-  <div class="sidebar">
-    <a class="header_link" style="margin-top:50px;" href="index.html">/Home</a>
-    <a class="header_link" href="projects.html">/Projects</a>
-    <a class="header_link" href="about.html">/About</a>
-    <hr style="border-color:RGB(52,58,64);">
-    <div class="contact_info_wrapper" style="margin-left:20px;margin-top:20px;">
-      <div style="width:137px;display:inline-block;border-bottom:1px solid black;margin-bottom:9px;padding-bottom:5px;">Find / Contact Me @ </div>
-      <br>
-      <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
-      <div style="display:inline;width:5px;height:auto;border-left:1px solid black; margin-right:10px;vertical-align: middle;margin-left:4px;"></div>
-      <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
-    </div>
-  </div>
-  <div class="normal_sidebar">
-    <span class="sidebar_label">Other Places</span>
-    <ul>
-      <li id="home"><ion-icon name=""></ion-icon><a class="header_link" href="index.html">/Home</a></li>
-      <li id="about"><ion-icon name=""></ion-icon><a class="header_link" href="about.html">/About</a>
-      </li>
-      <li id="projects"><ion-icon name="arrow-dropright" onclick="displayDrop('projects')"></ion-icon><a class="header_link" href="projects.html">/Projects</a>
-        <div class="drop_down_folder">
-          <p style="font-size:14px;margin-bottom:0px;">Pinned Projects</p>
-          <div class="sub_dir_link"><a href="/Polytomizator">/Polytomizator</a>
-          </div>
-          <div class="sub_dir_link"><a href="/Cut-Bread">/Cut-Bread</a>
-          </div>
-          <div class="sub_dir_link"><a href="/Minions">/Minions</a>
-          </div>
-        </div>
-      </li>
-      <li class="contact_info">
 
-        <div class="contact_info_wrapper">
-          <div style="width:137px;display:inline-block;border-bottom:1px solid black;margin-bottom:10px;padding-bottom:5px;">Find / Contact Me @ </div>
-          <a href="https://github.com/StoneT2000"><i class="fab fa-github"></i></a>
-          <div style="display:inline;width:5px;height:auto;border-left:1px solid black; margin-right:10px;vertical-align: middle;margin-left:4px;"></div>
-          <a href="mailto:stoneztao@gmail.com"><i class="fa fa-envelope"></i></a>
-        </div>
-      </li>
+<body>
+  <div class='sidebarsWrapper'>
+    <div class='sidebars'>
+    <a class='barWrapper' clear href="#brief-a" id='bar2'><span>Brief</span><div class='bar'></div></a>
+      <a class='barWrapper' clear href="#education-a" id='bar3'><span>Education</span><div class='bar'></div></a>
+      <a class='barWrapper' clear href="#principles-a" id='bar4'><span>Principles</span><div class='bar'></div></a>
+  </div>
+  </div>
+  <header>
+    <ul>
+      <a href="about.html" clear><li>About</li></a>
+      <a href="projects.html" clear><li>Projects</li></a>
+      <a href="index.html" clear><li>Home</li></a>
     </ul>
+  </header>
+  <div class='container'>
+    <main class='content'>
+      <h1 id='heading'>About Me</h1>
+      <a class='anchor' id='brief-a'></a>
+      <h2 id='brief'>Brief</h2>
+      <p>I'm currently an undergraduate student at <a href="https://www.ucsd.edu">UCSD</a>, trying to learn as much as possible and pursue my passions in the fields of <span style='color:#ff5d73;'>AI</span> and <span style='color:orange;'>Web Development</span>.</p>
+      <p>Within Web Development, I have a advanced proficiency in JavaScript, HTML, and CSS. I am proficient with PHP, Node.js, Express.js, SASS, Wordpress, and MySQL. I have also worked with Apache and Nginx web servers, hosted on Ubuntu and CentOS systems. <br>In CS in general, I am also proficient in Java and Python, with basic proficiency with Matplotlib, Seaborn, and Keras + Tensorflow. I primarily use Adobe Brackets, Atom, and IntelliJ IDEA for code editing, and have worked with Jupyter Notebook. I also have a basic proficiency with Adobe Photoshop.</p>
+      <p>I also have a strong interest in <span style='color:#068d9d'>mathematics</span>, especially combinatorics, and no, this doesn't mean I like counting sheep at night. Rather, I prefer showing that in a group of 6 sheep, there's always going to be 3 sheep who are in the same family or 3 sheep who are not in the same family.</p>
+      <a class='anchor' id='education-a'></a>
+      <h2 id='education'>Education</h2>
+      <div class='edu-block'>
+        <img src='images/ucsd-logo.png'>
+        <h3>UC San Diego | San Diego, California, USA</h3>
+        <p>Currently majoring in Cognitive Science with Specialization in Machine Learning and Neural Computation. Class of 2023. Intending to double major with Computer Science and Engineering.</p>
+        <div>
+          <p>Selected Courses Taken</p>
+          <ul>
+            <li>CSE 11</li>
+          </ul>
+        </div>
+      </div>
+      <div class='edu-block'>
+        <img src='images/isb-logo.png'>
+        <h3>The International School of Beijing '19 | Beijing, China</h3>
+        <p>I graduated from my highschool on May 2019.</p>
+        <div style='display:inline;' id='ib-scores'>IB (International Baccalaureate) Scores: 43/45</div><div style='display:inline;'> | AP Statistics: 5</div>
+        <br>
+        <span>Math HL, Physics HL, Economics HL, Chemistry HL: 7/7 | English Lang & Lit SL, Spanish ab initio: 6/7 | TOK and EE: 3/3</span>
+      </div>
+      <a class='anchor' id='principles-a'></a>
+      <h2 id='principles'>Principles I sort of abide by</h2>
+      <h4>Design Related</h4>
+      <p>"I avoid <span style='font-family:serif;'>serif</span> fonts like the plague"</p>
+      <p>"Never make a background #FFFFFF, at least #FEFEFE or lower"</p>
+      <p>"Just 7 lines of CSS are enough to a pre-2010 website much much better looking"</p>
+      <h4>CS Related</h4>
+      <p>"I love making intelligent machines, or at least, try to make them seem intelligent"</p>
+      <p>"Colons (;) are like breakfast. I need them, but I keep forgetting them"</p>
+      <p></p>
+    </main>
   </div>
-  <div class="header">
-    <div id="sidebar_button">
-      <i class="fas fa-bars" onclick="sidebar()"></i>
-    </div>
-    <a href="/"><img src="images/githubLogo.ico" id="header_image"></a>
-    <div class="header_title">~ stone.t://github.io/About<span class="underscore_anim">_</span></div>
-  </div>
-  <div class="container-fluid">
-    <div class="row mainContent">
-      <h2 class="title">Me</h2>
-      <div class="text_block">
-        <h3>My name is Stone Tao, I'm currently a highschool student at the International School of Beijing (in Beijing) and am part of the graduating class of 2019.</h3>
-      </div>
-      <h2 class="title">Interests</h2>
-      <div style="display:inline-block;" class="text_block">
-        <h3>I'm interested in a multitude of subjects in the STEM fields, primarily <h4 style="color:#ff5d73">mathematics</h4>, <h4 style="color:orange">computer science</h4>, and <h4 style="color:#068d9d">physics</h4></h3>
-      </div>
-      
-      <div class="text_block" id="computers_text">
-        <h3>As a result, I've made a lot of dives into those areas. In particular for computers, some of my projects can be seen <a href="projects.html">here</a>. I've worked with <h4>C</h4>, <h4>Java</h4>, and <h4>Python</h4>. A lot of my projects revolve around web-development (front and back end) and I have thus worked with <h4>HTML</h4>, <h4>CSS</h4>, <h4>Javascript</h4>, <h4>PHP</h4> and <h4>MySQL</h4>. Within Javascript, I have experience with <h4>jQuery</h4>, <h4>Processing.js</h4>, and <h4>Node.js</h4>. Some common libraries and packages I use are <a href="https://getbootstrap.com/">Bootstrap</a> and <a href="https://p5js.org/">p5.js</a></h3>. I have also worked with <a href="https://electronjs.org/">Electron</a>.
-      </div>
-        
-      <div style="display:block;" class="text_block" id="math_text">
-        <h3>Within mathematics, I have a particularly strong interest in <h4>combinatorics</h4> and especially <h4>graph theory</h4>.</h3>
-      </div>
-      <div style="display:block;" class="text_block" id="physics_text">
-        <h3>Within physics, I'm currently trying to recreate the game Kerbal Space Program (KSP) into a <a href="https://github.com/StoneT2000/2D-KSP">2D web version</a>. This will involve me looking into various algorithms and methods to display a <h4>star system</h4>, <h4>elliptical orbits</h4> etc. It also involves looking at various physics related laws and equations such as <h4>Kepler's laws</h4>, <h4>Tsiolkovsky rocket equation</h4>, and more.</h3>
-      </div>
-    </div>
+  <div class='footer' style='color:#fefefe;'>
+    <div style='padding-top:30px;width:100%;text-align: center;'><a clear href="https://www.github.com/stonet2000" style='margin-right: 15px;'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width='32px' height='32px'><path fill='#fefefe' d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></a><a clear href="mailto:stao@ucsd.edu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32px" height="32px"><path fill="#fefefe" d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z"/></svg></a><br><p>Stone Tao</p></div>
   </div>
 </body>
 </html>

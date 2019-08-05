@@ -1,47 +1,15 @@
-body{
+.edu-block {
+  box-shadow: 0 4px 12px var(--bx1);
+  padding:35px 20px 20px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
 }
-.mainContent{
-
+.edu-block p {
+  margin-bottom: 0px;
 }
-.title{
-  display:block;
-  width:100%;
-  text-align: left;
-  padding-bottom:10px;
-  border-bottom: 2px solid #343a40;;
+.edu-block ul {
+  margin-top:0px;
 }
-.text_block{
-  padding-top:20px;
-  padding-bottom:20px;
-}
-.text_block, .text_block h3 , .text_block h4{
-  font-weight: 300;
-  line-height: 40px;
-  
-  text-align: left;
-  margin:0 0 0 0;
-  font-size:20px;
-  display: inline;
-}
-/*Highlighted texts*/
-.mainContent div h4{
-  display:inline;
-  text-align: left;
-  line-height: 40px;
-  padding:0;
-  color:orange;
-  font-weight:400;
-}
-#math_text h4 {
-  color:#ff5d73;
-}
-#physics_text h4{
-  color:#068d9d;
-}
-.mainContent{
-  padding:20px;
-  position: relative;
-}
-.text_block a{
-  font-weight:400;
+.edu-block img {
+  width:300px;
 }
