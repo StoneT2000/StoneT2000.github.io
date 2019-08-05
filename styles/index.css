@@ -1,15 +1,19 @@
 .project img {
   width: 320px;
   margin-top: 15px;
+  -webkit-box-shadow: 0px 2px 8px var(--bx1);
   box-shadow: 0px 2px 8px var(--bx1);
   padding: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
 }
 
 .project {
   width: 330px;
+  -webkit-box-shadow: 0px 4px 18px var(--bx1);
   box-shadow: 0px 4px 18px var(--bx1);
   padding: 20px 20px 20px 20px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   display: block;
   text-decoration: none;
@@ -18,13 +22,25 @@
   margin-left: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: -webkit-transform 0.25s;
+  -o-transition: transform 0.25s;
   transition: transform 0.25s;
+  transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
 .projects {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -51,6 +67,8 @@ a.project::before {
   top: auto;
   position: absolute;
   z-index: 2;
+  -webkit-transition: width 0.25s;
+  -o-transition: width 0.25s;
   transition: width 0.25s;
   background-color: var(--b2);
 }
@@ -62,6 +80,8 @@ a.project:hover::before {
   height: 1px;
   position: absolute;
   z-index: 2;
+  -webkit-transition: width 0.25s;
+  -o-transition: width 0.25s;
   transition: width 0.25s;
   background-color: var(--b2);
 }
@@ -76,6 +96,8 @@ a.project::after {
   bottom: calc(1em + 2px);
   position: absolute;
   z-index: 2;
+  -webkit-transition: width 0.25s;
+  -o-transition: width 0.25s;
   transition: width 0.25s;
   background-color: rgba(0, 0, 0, 0.15);
 }
@@ -147,6 +169,8 @@ a.project::after {
   position: fixed;
   right: 0px;
   top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
 
@@ -157,10 +181,14 @@ a.project::after {
 }
 
 .sidebars .barWrapper span {
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
   transform: translate(0, -15px);
   margin-right: 10px;
   display: inline-block;
   opacity: 0;
+  -webkit-transition: opacity 0.45s, color 0.3s;
+  -o-transition: opacity 0.45s, color 0.3s;
   transition: opacity 0.45s, color 0.3s;
   color:rgba(62, 75, 115, 0.45);
 }
@@ -170,6 +198,8 @@ a.project::after {
   width: 5px;
   margin-right:25px;
   background-color: rgba(62, 75, 115, 0.15);
+  -webkit-transition: background-color 0.3s, margin-right 0.3s;
+  -o-transition: background-color 0.3s, margin-right 0.3s;
   transition: background-color 0.3s, margin-right 0.3s;
   margin-bottom: 5px;
   display: inline-block;
@@ -194,5 +224,5 @@ a.project::after {
   display: block;
   position: relative;
   z-index: -1;
-  top: 0px;
+  top: -55px;
 }

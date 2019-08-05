@@ -52,6 +52,7 @@ body {
   line-height: 1.6;
   margin:0px;
   color:var(--sg1);
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color:#FEFEFE;
@@ -78,6 +79,7 @@ h4 {
   width:80%;
   margin-left:5%;
   margin-bottom: 70px;
+  min-height:  -webkit-calc(100vh - 265px);
   min-height:  calc(100vh - 265px);
 }
 .footer {
@@ -111,6 +113,8 @@ a::before {
   top:calc(1em + 10px);
   position: absolute;
   z-index: 2;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
   transition: width 0.2s;
 }
 a:hover::before, a:focus::before {
@@ -121,6 +125,8 @@ a:hover::before, a:focus::before {
   height: 1px;
   position: absolute;
   z-index: 2;
+  -webkit-transition: width 0.2s;
+  -o-transition: width 0.2s;
   transition: width 0.2s;
   text-decoration: none;
 }
@@ -132,16 +138,27 @@ button {
   border:1px solid var(--b2);
   cursor:pointer;
   font-size:1em;
+  -webkit-border-radius:5px;
   border-radius:5px;
   padding: 4px 8px 4px 8px;
+  -webkit-transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  transition: -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: transform 0.2s, box-shadow 0.2s;
   transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, -webkit-transform 0.2s, -webkit-box-shadow 0.2s;
 }
 button:hover {
+  -webkit-box-shadow: 4px 4px 0px 0px var(--b1t);
   box-shadow: 4px 4px 0px 0px var(--b1t);
+  -webkit-transform: translate(-4px, -4px);
+  -ms-transform: translate(-4px, -4px);
   transform: translate(-4px, -4px);
 }
 button:active, button:focus {
+  -webkit-box-shadow: 2px 2px 0px 0px var(--b1t);
   box-shadow: 2px 2px 0px 0px var(--b1t);
+  -webkit-transform: translate(-2px, -2px);
+  -ms-transform: translate(-2px, -2px);
   transform: translate(-2px, -2px);
 }
 a[clear] {
@@ -154,18 +171,17 @@ a[clear]::before {
   margin-top:-50px;
   margin-left:2px;
 }
-@media only screen and (max-width:991px) {
-  .sidebars {
-    display:none;
-  }
-}
 header {
   position: absolute; 
   top:0;
   float:right;
   width:100%;
   position: fixed;
+  -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  transition: background-color 0.2s, -webkit-box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s, background-color 0.2s;
   transition: box-shadow 0.2s, background-color 0.2s;
+  transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
   background-color: rgba(0,0,0,0);
   z-index: 1000;
   height:60px;
@@ -181,6 +197,8 @@ header a {
   padding-right:10px;
   margin-right:20px;
   border-bottom: 0px solid var(--sg1);
+  -webkit-transition: border-bottom 0.2s;
+  -o-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
 }
 header > ul {
@@ -190,6 +208,7 @@ header a:hover {
   border-bottom: 4px solid var(--sg1);
 }
 header.shadow {
+  -webkit-box-shadow:0 2px 16px var(--bx1t);
   box-shadow:0 2px 16px var(--bx1t);
   background-color: var(--b1);
   color:#fefefe;
@@ -203,6 +222,8 @@ header.shadow a:hover {
 .checkbox {
   margin-bottom: 20px;
   display: inline-block;
+  -webkit-transform:translateX(-24px);
+  -ms-transform:translateX(-24px);
   transform:translateX(-24px);
 }
 .checkbox input[type="checkbox"] {
@@ -223,6 +244,7 @@ header.shadow a:hover {
 .checkbox label::before{
   height: 22px;
   width: 22px;
+  -webkit-border-radius:50%;
   border-radius:50%;
   border: 1px solid var(--b1);
   left: 0px;
@@ -233,6 +255,8 @@ header.shadow a:hover {
   width: 9px;
   border-left: 2px solid var(--b1);
   border-bottom: 2px solid var(--b1);  
+  -webkit-transform: rotate(-45deg);  
+  -ms-transform: rotate(-45deg);  
   transform: rotate(-45deg);
   left: 7px;
   top: 11px;
@@ -240,6 +264,8 @@ header.shadow a:hover {
 .checkbox input[type="checkbox"] + label::after {
   content: "";
   opacity:0;
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -248,4 +274,27 @@ header.shadow a:hover {
 }
 .checkbox input[type="checkbox"]:focus + label::before {
     outline: var(--b1t) auto 4px;
+}
+@media only screen and (max-width:991px) {
+  .sidebars {
+    display:none;
+  }
+  .content {
+    width:-webkit-calc(100% - 40px);
+    width:calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 75px;
+  }
+  header {
+  -webkit-box-shadow:0 2px 16px var(--bx1t);
+  box-shadow:0 2px 16px var(--bx1t);
+  background-color: var(--b1);
+  color:#fefefe;
+}
+header a {
+  border-bottom: 0px solid #fefefe;
+}
+header a:hover {
+  border-bottom: 4px solid #fefefe;
+}
 }
