@@ -226,3 +226,13 @@ a.project::after {
   z-index: -1;
   top: -55px;
 }
+@media only screen and (max-width:600px) {
+  .project {
+    width: -webkit-calc(100% + 20px);
+    width: calc(100% + 20px);
+  }
+  .project img {
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px);
+  }
+}
