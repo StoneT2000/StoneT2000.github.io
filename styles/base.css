@@ -175,7 +175,6 @@ a[clear]::before {
 header {
   position: absolute; 
   top:0;
-  float:right;
   width:100%;
   position: fixed;
   -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
@@ -187,9 +186,13 @@ header {
   z-index: 1000;
   height:60px;
   font-weight: 400;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
 }
 header a {
-  float:right;
   list-style: none;
   display: inline-block;
   height:54px;
@@ -287,15 +290,19 @@ header.shadow a:hover {
     margin-top: 75px;
   }
   header {
-  -webkit-box-shadow:0 2px 16px var(--bx1t);
-  box-shadow:0 2px 16px var(--bx1t);
-  background-color: var(--b1);
-  color:#fefefe;
-}
-header a {
-  border-bottom: 4px solid var(--b1);
-}
-header a:hover {
-  border-bottom: 4px solid #fefefe;
-}
+    -webkit-box-shadow:0 2px 16px var(--bx1t);
+    box-shadow:0 2px 16px var(--bx1t);
+    background-color: var(--b1);
+    color:#fefefe;
+    justify-content: flex-start;
+  }
+  header a {
+    padding-left:5px;padding-right:5px;
+  }
+  header a {
+    border-bottom: 4px solid var(--b1);
+  }
+  header a:hover {
+    border-bottom: 4px solid #fefefe;
+  }
 }
