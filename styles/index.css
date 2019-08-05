@@ -160,7 +160,12 @@ padding-bottom: 5px;
   font-weight: 500;
   margin-top: 10px;
 }
-
+.award-title::before {
+  top:calc(41px);
+}
+.award-title:hover::before {
+  top:calc(41px);
+}
 .sidebarsWrapper {
   height: 100%;
   right: 0;
