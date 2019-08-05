@@ -205,6 +205,9 @@ header a {
   -o-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
 }
+header a.active {
+  border-bottom: 4px solid var(--sg1);
+}
 header > ul {
   margin:0;
 }
@@ -303,6 +306,9 @@ header.shadow a:hover {
     border-bottom: 4px solid var(--b1);
   }
   header a:hover {
+    border-bottom: 4px solid #fefefe;
+  }
+  header a.active {
     border-bottom: 4px solid #fefefe;
   }
 }
