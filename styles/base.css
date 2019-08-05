@@ -192,12 +192,12 @@ header a {
   float:right;
   list-style: none;
   display: inline-block;
-  height:55px;
+  height:54px;
   line-height: 60px;
   padding-left:10px;
   padding-right:10px;
   margin-right:20px;
-  border-bottom: 0px solid var(--sg1);
+  border-bottom: 4px solid #fefefe;
   -webkit-transition: border-bottom 0.2s;
   -o-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
@@ -215,7 +215,7 @@ header.shadow {
   color:#fefefe;
 }
 header.shadow a {
-  border-bottom: 0px solid #fefefe;
+  border-bottom: 4px solid var(--b1);
 }
 header.shadow a:hover {
   border-bottom: 4px solid #fefefe;
@@ -293,7 +293,7 @@ header.shadow a:hover {
   color:#fefefe;
 }
 header a {
-  border-bottom: 0px solid #fefefe;
+  border-bottom: 4px solid var(--b1);
 }
 header a:hover {
   border-bottom: 4px solid #fefefe;

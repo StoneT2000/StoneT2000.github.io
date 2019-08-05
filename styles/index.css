@@ -231,8 +231,10 @@ padding-bottom: 5px;
 }
 @media only screen and (max-width:600px) {
   .project {
-    width: -webkit-calc(100% + 20px);
-    width: calc(100% + 20px);
+    width: -webkit-calc(100%);
+    width: calc(100%);
+    margin-left:0;
+    margin-right:0;
   }
   .project img {
     width: -webkit-calc(100% - 10px);
