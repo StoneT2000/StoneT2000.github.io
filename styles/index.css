@@ -161,10 +161,12 @@ padding-bottom: 5px;
   margin-top: 10px;
 }
 .award-title::before {
-  top:calc(41px);
+  top:auto;
+  bottom:calc(-1px);
 }
 .award-title:hover::before {
-  top:calc(41px);
+  top:auto;
+  bottom:calc(-1px);
 }
 .sidebarsWrapper {
   height: 100%;
