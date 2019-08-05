@@ -56,6 +56,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color:#FEFEFE;
+  overflow-wrap: break-word;
 }
 h1 {
   font-family: 'TexGyre';
