@@ -52,7 +52,6 @@ body {
   line-height: 1.6;
   margin:0px;
   color:var(--sg1);
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color:#FEFEFE;
@@ -121,8 +120,6 @@ a::before {
   top:calc(1em + 10px);
   position: absolute;
   z-index: 2;
-  -webkit-transition: width 0.2s;
-  -o-transition: width 0.2s;
   transition: width 0.2s;
 }
 a:hover::before, a:focus::before {

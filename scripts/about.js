@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  let f = window.onscroll;
+  var f = window.onscroll;
   window.onscroll = function() {
     f();
     let py = window.pageYOffset;
