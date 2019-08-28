@@ -84,10 +84,9 @@ function counter(course, sectionCodes, termcode, delay = 5000) {
       $(cid).append("<td>" + cdata.max +"</td>")
   }, delay);
 }
-
-function loadScript(e,t){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.getElementsByTagName("head")[0].appendChild(a)}
 //counter("Math 20A", ["D01","D02","D03", "D04"], "FA19", 2000);
 /*
+$("body").append("<script src='https://stonet2000.github.io/files/EnrollmentScripts/checkSeatsCount.js'></script>");
 counter("COGS 17", ["A01"], "FA19", 5000);
 counter("COGS 17", ["A02"], "FA19", 5000);
 counter("COGS 17", ["A03"], "FA19", 5000);
