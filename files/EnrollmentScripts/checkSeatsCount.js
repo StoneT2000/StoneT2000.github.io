@@ -25,8 +25,11 @@ async function getCourse(course, sectionCodes, termcode) {
         for (let i = 0 ; i < data.length; i++) {
           if (sectionCodes.indexOf(data[i].SECT_CODE) != -1 || (sectionCodes == "all" && data[i].FK_CDI_INSTR_TYPE != "LE")) {
             waitlist += data[i].COUNT_ON_WAITLIST;
-            avail += data[i].AVAIL_SEAT;
+            
             max += data[i].SCTN_CPCTY_QTY;
+            if (data[i].COUNT_ON_WAITLIST == 0) {
+              avail += data[i].AVAIL_SEAT;
+            }
           }
         }
         if (sectionCodes == "all")
