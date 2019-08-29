@@ -99,7 +99,7 @@ function updateWaitlist() {
       var course = data[i].SUBJ_CODE + " " + data[i].CRSE_CODE;
       if ($("#wsd").length == 0) {
         $("body").append("<style>#wsd th, #wsd tr, #wsd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
-        $("body").append("<div id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><tbody id='wsdsub'><th>Class/Sections</th><th>Waitlist Position</th></tbody></div>");
+        $("body").append("<table id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><tbody id='wsdsub'><th>Class/Sections</th><th>Waitlist Position</th></tbody></table>");
         $("#wsd").sortable();
       }
         var cid = "#" + course.replace(/ /g, "_");
