@@ -73,6 +73,7 @@ async function updateEnrollmentStats(course, sectionCodes, termcode) {
     if ($("#csd").length == 0) {
       $("body").append("<style>#csd th, #csd tr, #csd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
       $("body").append("<table id='csd' style='top:20px;left:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><th>Class/Sections</th><th>Available</th><th>Waitlisted</th><th>Seat Limit</th></div>");
+      $("#csd").sortable();
     }
       var cid = "#" + course.replace(" ", "_") + cdata.sections.join("_");
       if ($(cid).length == 0) {
@@ -98,11 +99,12 @@ function updateWaitlist() {
       var course = data[i].SUBJ_CODE + " " + data[i].CRSE_CODE;
       if ($("#wsd").length == 0) {
         $("body").append("<style>#wsd th, #wsd tr, #wsd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
-        $("body").append("<table id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><th>Class/Sections</th><th>Waitlist Position</th></div>");
+        $("body").append("<div id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><tbody id='wsdsub'><th>Class/Sections</th><th>Waitlist Position</th></tbody></div>");
+        $("#wsd").sortable();
       }
         var cid = "#" + course.replace(/ /g, "_");
         if ($(cid).length == 0) {
-          $("#wsd").append("<tr id=" + cid.substring(1) + "></tr>");
+          $("#wsd").append("<tr class='waitlistRow' id=" + cid.substring(1) + "></tr>");
         }
         $(cid).html("");
         $(cid).append("<td>" + course + "</td>");
@@ -117,9 +119,11 @@ function liveWaitlist(delay = 5000) {
     updateWaitlist();
   }, delay)
 }
+//Sortable.create(wsd, { /* options */ });
 
 /*
 $("body").append('<script type="text/javascript">function loadScript(e,t){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.getElementsByTagName("head")[0].appendChild(a)}</script>');
+loadScript("https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js", function(){
 loadScript("https://stonet2000.github.io/files/EnrollmentScripts/checkSeatsCount.js", function(){
 counter("COGS 17", "all", "FA19", 20000);
 counter("COGS 10","all","FA19", 20000);
@@ -128,4 +132,5 @@ counter("CSE 12", "all", "FA19", 20000);
 counter("CSE 15L", "all", "FA19", 20000);
 liveWaitlist(60000);
 })
+});
 */
