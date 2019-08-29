@@ -66,11 +66,9 @@ function watch(course, sectionCodes, termcode, delay = 5000) {
   }, delay);
 }
 //watch("Math 20A", ["D01","D02","D03", "D04"], "FA19", 2000);
-
-function counter(course, sectionCodes, termcode, delay = 5000) {
-  setInterval(async function(){
-    let cdata = await getCourse(course, sectionCodes, termcode);
-    sectionsString = cdata.sections.reduce((a,b) => a + ", " + b);
+async function updateEnrollmentStats(course, sectionCodes, termcode) {
+  let cdata = await getCourse(course, sectionCodes, termcode);
+  sectionsString = cdata.sections.reduce((a,b) => a + ", " + b);
     //console.log(cdata.course + ", sections: " + sectionsString + " have in total " + cdata.available + " seats and " + cdata.waitlist + " people are waitlisted. Max Capacity: " + cdata.max);
     if ($("#csd").length == 0) {
       $("body").append("<style>#csd th, #csd tr, #csd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
@@ -85,6 +83,12 @@ function counter(course, sectionCodes, termcode, delay = 5000) {
       $(cid).append("<td>" + cdata.available +"</td>")
       $(cid).append("<td>" + cdata.waitlist +"</td>")
       $(cid).append("<td>" + cdata.max +"</td>")
+}
+
+function counter(course, sectionCodes, termcode, delay = 5000) {
+  updateEnrollmentStats(course, sectionCodes, termcode);
+  setInterval(async function(){
+    updateEnrollmentStats(course, sectionCodes, termcode);
   }, delay);
 }
 function updateWaitlist() {
@@ -114,19 +118,14 @@ function liveWaitlist(delay = 5000) {
   }, delay)
 }
 
-//counter("Math 20A", ["D01","D02","D03", "D04"], "FA19", 2000);
 /*
-$("body").append("<script src='https://stonet2000.github.io/files/EnrollmentScripts/checkSeatsCount.js'></script>");
-counter("COGS 17", ["A01"], "FA19", 5000);
-counter("COGS 17", ["A02"], "FA19", 5000);
-counter("COGS 17", ["A03"], "FA19", 5000);
-counter("COGS 17", ["A04"], "FA19", 5000);
-counter("COGS 17", ["A05"], "FA19", 5000);
-counter("COGS 10","all","FA19", 5000 );
-counter("CSE 20", "all", "FA19", 5000);
-counter("CSE 12", "all", "FA19", 5000);
-counter("CSE 15L", "all", "FA19", 5000);
-counter("DOC 1", ["C09"], "FA19", 5000);
-//counter("MATH 20A", ["D01","D02","D03", "D04"], "FA19", 5000);
-liveWaitlist(10000);
+$("body").append('<script type="text/javascript">function loadScript(e,t){var a=document.createElement("script");a.type="text/javascript",a.readyState?a.onreadystatechange=function(){"loaded"!=a.readyState&&"complete"!=a.readyState||(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.getElementsByTagName("head")[0].appendChild(a)}</script>');
+loadScript("https://stonet2000.github.io/files/EnrollmentScripts/checkSeatsCount.js", function(){
+counter("COGS 17", "all", "FA19", 20000);
+counter("COGS 10","all","FA19", 20000);
+counter("CSE 20", "all", "FA19", 20000);
+counter("CSE 12", "all", "FA19", 20000);
+counter("CSE 15L", "all", "FA19", 20000);
+liveWaitlist(60000);
+})
 */
