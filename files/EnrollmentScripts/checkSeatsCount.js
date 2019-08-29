@@ -87,6 +87,34 @@ function counter(course, sectionCodes, termcode, delay = 5000) {
       $(cid).append("<td>" + cdata.max +"</td>")
   }, delay);
 }
+function updateWaitlist() {
+  $.get("https://act.ucsd.edu/webreg2/svc/wradapter/secure/get-class?schedname=My+Schedule&final=&sectnum=&termcode=FA19").success(data=> {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].FK_CDI_INSTR_TYPE == "LE") {
+      var course = data[i].SUBJ_CODE + " " + data[i].CRSE_CODE;
+      console.log(course);
+      if ($("#wsd").length == 0) {
+        $("body").append("<style>#wsd th, #wsd tr, #wsd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
+        $("body").append("<table id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><th>Class/Sections</th><th>Waitlist Position</th></div>");
+      }
+        var cid = "#" + course.replace(/ /g, "_");
+        if ($(cid).length == 0) {
+          $("#wsd").append("<tr id=" + cid.substring(1) + "></tr>");
+        }
+        $(cid).html("");
+        $(cid).append("<td>" + course + "</td>");
+        $(cid).append("<td>" + data[i].WT_POS +"</td>")
+    }
+  }
+});
+}
+function liveWaitlist(delay = 5000) {
+  updateWaitlist();
+  setInterval(function() {
+    updateWaitlist();
+  }, delay)
+}
+
 //counter("Math 20A", ["D01","D02","D03", "D04"], "FA19", 2000);
 /*
 $("body").append("<script src='https://stonet2000.github.io/files/EnrollmentScripts/checkSeatsCount.js'></script>");
@@ -100,5 +128,6 @@ counter("CSE 20", "all", "FA19", 5000);
 counter("CSE 12", "all", "FA19", 5000);
 counter("CSE 15L", "all", "FA19", 5000);
 counter("DOC 1", ["C09"], "FA19", 5000);
-counter("MATH 20A", ["D01","D02","D03", "D04"], "FA19", 5000);
+//counter("MATH 20A", ["D01","D02","D03", "D04"], "FA19", 5000);
+liveWaitlist(10000);
 */
