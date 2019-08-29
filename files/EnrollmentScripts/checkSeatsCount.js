@@ -71,7 +71,7 @@ function counter(course, sectionCodes, termcode, delay = 5000) {
   setInterval(async function(){
     let cdata = await getCourse(course, sectionCodes, termcode);
     sectionsString = cdata.sections.reduce((a,b) => a + ", " + b);
-    console.log(cdata.course + ", sections: " + sectionsString + " have in total " + cdata.available + " seats and " + cdata.waitlist + " people are waitlisted. Max Capacity: " + cdata.max);
+    //console.log(cdata.course + ", sections: " + sectionsString + " have in total " + cdata.available + " seats and " + cdata.waitlist + " people are waitlisted. Max Capacity: " + cdata.max);
     if ($("#csd").length == 0) {
       $("body").append("<style>#csd th, #csd tr, #csd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
       $("body").append("<table id='csd' style='top:20px;left:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><th>Class/Sections</th><th>Available</th><th>Waitlisted</th><th>Seat Limit</th></div>");
@@ -92,7 +92,6 @@ function updateWaitlist() {
   for (let i = 0; i < data.length; i++) {
     if (data[i].FK_CDI_INSTR_TYPE == "LE") {
       var course = data[i].SUBJ_CODE + " " + data[i].CRSE_CODE;
-      console.log(course);
       if ($("#wsd").length == 0) {
         $("body").append("<style>#wsd th, #wsd tr, #wsd td {padding:10px;border:1px solid rgb(151,156,162)}</style>");
         $("body").append("<table id='wsd' style='top:20px;right:20px;background-color:white;box-shadow:0 2px 24px rgba(51,56,68,0.19);padding:15px;position:fixed;'><th>Class/Sections</th><th>Waitlist Position</th></div>");
