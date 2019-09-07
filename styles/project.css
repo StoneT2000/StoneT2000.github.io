@@ -46,11 +46,15 @@
 
 .project time {
   margin-top: 0;
+  margin-right: 5px;
+  font-weight:400;
 }
 
 .project h3 {
   margin-bottom: 0px;
   margin-top: 10px;
+  font-weight: 500;
+  font-family: TexGyre;
 }
 
 .project p {
@@ -100,6 +104,28 @@ a.project::after {
   -o-transition: width 0.25s;
   transition: width 0.25s;
   background-color: rgba(0, 0, 0, 0.15);
+}
+
+.code-circle {
+  border-radius:50%;
+  width:14px;
+  height:14px;
+
+  background-color:rgb(51,56,68);
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.code-circle-def {
+  vertical-align: 1px;
+  margin-right: 5px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-weight: 400;
+}
+
+.code-compositions > span {
+  display:inline-block;
 }
 @media only screen and (max-width:691px) 
 {

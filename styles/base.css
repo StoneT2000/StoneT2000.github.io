@@ -181,18 +181,11 @@ header {
   top:0;
   width:100%;
   position: fixed;
-  -webkit-transition: background-color 0.2s, -webkit-box-shadow 0.2s;
-  transition: background-color 0.2s, -webkit-box-shadow 0.2s;
-  -o-transition: box-shadow 0.2s, background-color 0.2s;
   transition: box-shadow 0.2s, background-color 0.2s;
-  transition: box-shadow 0.2s, background-color 0.2s, -webkit-box-shadow 0.2s;
   background-color: rgba(0,0,0,0);
   z-index: 1000;
   height:60px;
   font-weight: 400;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: flex-end;
 }
@@ -205,8 +198,6 @@ header a {
   padding-right:10px;
   margin-right:20px;
   border-bottom: 4px solid #fefefe;
-  -webkit-transition: border-bottom 0.2s;
-  -o-transition: border-bottom 0.2s;
   transition: border-bottom 0.2s;
 }
 header a.active {
@@ -219,8 +210,7 @@ header a:hover {
   border-bottom: 4px solid var(--sg1);
 }
 header.shadow {
-  -webkit-box-shadow:0 2px 16px var(--bx1t);
-  box-shadow:0 2px 16px var(--bx1t);
+  box-shadow:0 2px 4px var(--bx1t);
   background-color: var(--b1);
   color:#fefefe;
 }
@@ -266,8 +256,6 @@ header.shadow a:hover {
   width: 9px;
   border-left: 2px solid var(--b1);
   border-bottom: 2px solid var(--b1);  
-  -webkit-transform: rotate(-45deg);  
-  -ms-transform: rotate(-45deg);  
   transform: rotate(-45deg);
   left: 7px;
   top: 11px;
@@ -275,8 +263,6 @@ header.shadow a:hover {
 .checkbox input[type="checkbox"] + label::after {
   content: "";
   opacity:0;
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 .checkbox input[type="checkbox"]:checked + label::after {
@@ -291,14 +277,12 @@ header.shadow a:hover {
     display:none;
   }
   .content {
-    width:-webkit-calc(100% - 40px);
     width:calc(100% - 40px);
     margin-left: 20px;
     margin-top: 75px;
   }
   header {
-    -webkit-box-shadow:0 2px 16px var(--bx1t);
-    box-shadow:0 2px 16px var(--bx1t);
+    box-shadow:0 2px 4px var(--bx1t);
     background-color: var(--b1);
     color:#fefefe;
     justify-content: flex-start;
