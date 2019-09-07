@@ -8,7 +8,20 @@ $(document).ready(function() {
       filterProjects();
     });
   };
-  window.onscroll();
+    window.onscroll = function() {
+    f();
+    let py = window.pageYOffset;
+    let buffer = window.innerHeight/2;
+    $(".barWrapper").removeClass('inview');
+      if (py > $("#projects").offset().top - buffer) {
+      $("#bar1").addClass('inview');
+    }
+  };
+  $(".sidebarsWrapper").hover(function() {
+    $(".sidebars span").css('opacity', 1);
+  }, function() {
+    $(".sidebars span").css('opacity', 0);
+  })
 });
 var filter = new Set();
 function filterProjects() {

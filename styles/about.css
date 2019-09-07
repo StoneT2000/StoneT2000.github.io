@@ -13,3 +13,18 @@
 .edu-block img {
   width:300px;
 }
+#isb {
+  border: 5px solid rgb(0,88,168);
+}
+#ucsd {
+  border: 5px solid rgb(219,165,58);
+}
+.edu-logo {
+  padding:15px;
+  border-radius:5px;
+  transition:box-shadow 0.2s;
+}
+.edu-logo:hover {
+  box-shadow: 0 4px 12px var(--bx1);
+  display: inline-block;
+}

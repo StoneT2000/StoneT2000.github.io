@@ -17,14 +17,20 @@
   <meta name="description" content="The personal github page for projects and stuff by Stone Tao. Explore a wide variety of web projects and related information on this site!" />
   <title>Stone's Github Page</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/githubLogo.ico" />
-  <link rel="stylesheet" href="build/styles/base.min.css?v=2">
-  <link rel="stylesheet" href="build/styles/project.min.css?v=2">
+  <link rel="stylesheet" href="build/styles/base.min.css?v=3">
+  <link rel="stylesheet" href="build/styles/sidebars.min.css?v=2">
+  <link rel="stylesheet" href="build/styles/project.min.css?v=3">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="build/scripts/base.min.js?v=2"></script>
   <script src="build/scripts/projects.min.js?v=2"></script>
 </head>
 
 <body>
+  <div class='sidebarsWrapper'>
+    <div class='sidebars'>
+    <a class='barWrapper' clear href="#projects-a" id='bar1'><span>Projects</span><div class='bar'></div></a>
+  </div>
+  </div>
   <header>
     <ul>
       <a href="index.html" clear><li>Home</li></a>
@@ -34,7 +40,7 @@
   </header>
   <div class='container'>
     <main class='content'>
-
+      
       <h1>Projects</h1>
       <p>I make a range of things, from useful to useless. So, that's why there's a filter below to help you find what you seek!</p>
       <div class="checkbox">
@@ -49,51 +55,52 @@
         <input type="checkbox" id="useless">
         <label for="useless">Useless</label>
       </div>
+      <a class='anchor' id='projects-a'></a>
       <div class='projects' id='projects'>
         <a class='project interesting useful java' href='https://github.com/StoneT2000/IgushArray-Java'>
           <h3>IgushArray - Java</h3>
           <time>2019/09</time><span class='code-compositions'></span>
           <img src="images/igusharrayidea.png">
-          <p>I developed the first Java version of the IgushArray, which allows O(1) access and has all the same time complexities of a normal array or Java's ArrayList, but is much faster as it also allows O(n^1/2) insertion and removal.</p>
+          <p>I developed the first Java version of the IgushArray, which allows <strong>O(1)</strong> access and has all the same time complexities of a normal array or Java's ArrayList, but is much faster as it also allows <strong>O(n^1/2)</strong> insertion and removal.</p>
         </a>
-        <a class='project interesting useful js tensorflow' href='AIVisuals'>
+        <a class='project interesting useful js tensorflow' href='https://stonet2000.github.io/AIVisuals'>
           <h3>AI Visuals</h3>
           <time>2019/02</time><span class='code-compositions'></span>
           <img src="images/aivisuals.png">
           <p>This is a personal project that is a website that helps visualize machine learning at work with Google's TensorFlow.js or just raw JavaScript through various webapps.</p>
         </a>
-        <a class='project interesting useful js p5js htmlcss' href='Polytomizator'>
+        <a class='project interesting useful js p5js htmlcss' href='https://stonet2000.github.io/Polytomizator'>
           <h3>Polytomizator</h3>
           <time>2018/05</time><span class='code-compositions'></span>
           <img src="images/GreatWave22MP1MB.jpg">
           <p>This is a website that auto generates poly art. It makes use of Delaunay triangulation, image filtering, computer vision techniques, and Poisson disk sampling to help auto-generate better low-poly art.</p>
         </a>
-        <a class='project interesting useless js p5js htmlcss' href='Cut-Bread'>
+        <a class='project interesting useless js p5js htmlcss' href='https://stonet2000.github.io/Cut-Bread'>
           <h3>Cut Bread</h3>
           <time>2018/07</time><span class='code-compositions'></span>
           <img src="images/cutbread3.png">
           <p>A whimsical site about cutting bread. Yep, it's literally about cutting bread and looking at how evenly you can cut it.</p>
         </a>
-        <a class='project useful htmlcss js' href='Simple-Screensaver'>
+        <a class='project useful htmlcss js' href='https://stonet2000.github.io/Simple-Screensaver'>
           <h3>Simple Screensaver</h3>
           <time>2018/07</time><span class='code-compositions'></span>
           <img src="images/simpleColors.png">
           <p>A minimalist site that serves as a simple color screensaver with color palletes based on the 4 seasons: spring, summer, fall, winter.</p>
         </a>
-        <a class='project useless htmlcss js' href='Minions'>
+        <a class='project useless htmlcss js' href='https://stonet2000.github.io/Minions'>
           <h3>Minions!</h3>
           <time>2018/09</time><span class='code-compositions'></span>
           <img src="images/minioneye.png">
           <p>A site that has a watchful, attentive, and wary, but cute, Minion (From Despicable Me) that watches your every move.
           </p>
         </a>
-        <a class='project useless useful htmlcss js' href='iorlor1'>
+        <a class='project useless useful htmlcss js' href='https://stonet2000.github.io/iorlor1'>
           <h3>I or L or 1?</h3>
           <time>2018/11</time><span class='code-compositions'></span>
           <img src="images/iorlor1.png">
           <p>Can't figure out if someone texted you an upper-case I (eye), lower-case l (el), or a 1 (one)? Type it into this website and it'll explain it for you.</p>
         </a>
-        <a class='project useless htmlcss js' href='BBT-Name-Generator'>
+        <a class='project useless htmlcss js' href='https://stonet2000.github.io/BBT-Name-Generator'>
           <h3>Big Bang Theory Episode Name Generator</h3>
           <time>2018/09</time><span class='code-compositions'></span>
           <img src="images/bigbangtheorygen.png">
