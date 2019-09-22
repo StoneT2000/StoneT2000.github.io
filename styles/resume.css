@@ -21,7 +21,7 @@ h4 {
 strong {
   font-weight:500;
 }
-p, .main li {
+p, .content li, .content ul {
   font-size:16px;
 }
 
@@ -30,7 +30,7 @@ p, .main li {
     width:100%;
     margin:0;
   }
-  p, li {
+  p, .content li, .content ul {
     font-size:10px;
   }
   h1 {
@@ -45,8 +45,8 @@ p, .main li {
   h1, h2, h3, h4, p, ul, li {
     margin-bottom: 0px;
   }
-  p, li {
-    line-height: 16px;
+  p, .content li, .content ul {
+    line-height: 15px;
   }
   header {
     display:none;
