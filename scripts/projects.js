@@ -1,29 +1,39 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $("#useless")[0].checked = true;
   $("#interesting")[0].checked = true;
   $("#useful")[0].checked = true;
-  filter.add('interesting');filter.add('useful');filter.add('useless');
+  filter.add('interesting');
+  filter.add('useful');
+  filter.add('useless');
   for (let name of filterNames) {
-    $("#" + name).on('click', function() {
+    $("#" + name).on('click', function () {
       filterProjects();
     });
   };
-    window.onscroll = function() {
+  var f = window.onscroll;
+  let sectionBars = $(".barWrapper");
+  window.onscroll = function () {
     f();
     let py = window.pageYOffset;
-    let buffer = window.innerHeight/2;
+    let buffer = window.innerHeight / 2;
+
     $(".barWrapper").removeClass('inview');
-      if (py > $("#projects").offset().top - buffer) {
-      $("#bar1").addClass('inview');
+
+    for (let i = sectionBars.length - 1; i >= 0; i--) {
+      if (py > $(sectionBars[i].attributes.href.value).offset().top + 55 - buffer) {
+        $(sectionBars[i]).addClass('inview');
+        break;
+      }
     }
   };
-  $(".sidebarsWrapper").hover(function() {
+  $(".sidebarsWrapper").hover(function () {
     $(".sidebars span").css('opacity', 1);
-  }, function() {
+  }, function () {
     $(".sidebars span").css('opacity', 0);
   })
 });
 var filter = new Set();
+
 function filterProjects() {
   updateFilter()
   let projects = $("#projects").children();
@@ -33,32 +43,31 @@ function filterProjects() {
     if (project != undefined) {
       let classList = project.classList;
       let keep = false;
-      if (classList){
-      console.log(classList);
-      for (let className of classList) {
-        if (filter.has(className)) {
-          keep = true;
-          break;
+      if (classList) {
+        console.log(classList);
+        for (let className of classList) {
+          if (filter.has(className)) {
+            keep = true;
+            break;
+          }
         }
-      }
-      if (keep == false) {
-        $(project).css('display','none');
-        console.log($(project));
-      }
-      else {
-        $(project).css('display','block');
-      }
+        if (keep == false) {
+          $(project).css('display', 'none');
+          console.log($(project));
+        } else {
+          $(project).css('display', 'block');
+        }
       }
     }
   }
 }
-var filterNames = ['useless','interesting','useful'];
+var filterNames = ['useless', 'interesting', 'useful'];
+
 function updateFilter() {
   for (let name of filterNames) {
     if ($("#" + name)[0].checked) {
       filter.add(name);
-    }
-    else {
+    } else {
       filter.delete(name);
     }
   }
