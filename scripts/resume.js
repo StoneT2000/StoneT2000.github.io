@@ -12,6 +12,7 @@ $(document).ready(function () {
 
     for (let i = sectionBars.length - 1; i >= 0; i--) {
       //55 is anchor css top magnitude
+      console.log(sectionBars[i].attributes.href.value);
       if (py > $(sectionBars[i].attributes.href.value).offset().top - 60) {
         $(sectionBars[i]).addClass('inview');
         break;

@@ -26,6 +26,12 @@ p, .content li, .content ul {
 }
 
 @media print {
+  a {
+    color:rgb(10,11,15);
+  }
+  body {
+    color:rgb(10,11,15);
+  }
   .content {
     width:100%;
     margin:0;
