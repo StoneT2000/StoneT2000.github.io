@@ -69,10 +69,14 @@ p, .content li, .content ul {
 }
 @media print  
 {
-   li{
-       page-break-inside: avoid;
-    }
+  li{
+     page-break-inside: avoid;
+  }
+  .container {
+    margin-top:0px;
+  }
 }
 @page {
-  margin:1.5cm;
+  margin:1.4cm;
+  margin-top:1cm;
 }
