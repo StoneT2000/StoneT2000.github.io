@@ -24,10 +24,13 @@ strong {
 p, .content li, .content ul {
   font-size:16px;
 }
+.content ul {
+  padding-left:30px;
+}
 
 @media print {
   a {
-    color:rgb(10,11,15);
+    color:#0085c9;
   }
   body {
     color:rgb(10,11,15);
@@ -37,13 +40,13 @@ p, .content li, .content ul {
     margin:0;
   }
   p, .content li, .content ul {
-    font-size:10px;
+    font-size:11px;
   }
   h1 {
-    font-size:30px;
+    font-size:24px;
   }
   h2 {
-    font-size:16px;
+    font-size:15px;
   }
   h3 {
     font-size:12px;
@@ -52,7 +55,7 @@ p, .content li, .content ul {
     margin-bottom: 0px;
   }
   p, .content li, .content ul {
-    line-height: 15px;
+    line-height: 16px;
   }
   header {
     display:none;
