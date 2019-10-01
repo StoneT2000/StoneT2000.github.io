@@ -10,6 +10,8 @@ h1 {
 }
 h2 {
   font-size:24.72px;
+  border-bottom: 1px solid var(--sg1);
+  display: inline-block;
 }
 h3 {
   font-size:18.28px;
@@ -47,6 +49,7 @@ p, .content li, .content ul {
   }
   h2 {
     font-size:15px;
+    border-bottom: 0.5px solid rgb(10,11,15);
   }
   h3 {
     font-size:12px;
@@ -55,7 +58,7 @@ p, .content li, .content ul {
     margin-bottom: 0px;
   }
   p, .content li, .content ul {
-    line-height: 16px;
+    line-height: 17px;
   }
   header {
     display:none;
@@ -81,5 +84,6 @@ p, .content li, .content ul {
 }
 @page {
   margin:1.4cm;
-  margin-top:1cm;
+  margin-top:0.9cm;
+  margin-bottom: 0.9cm;
 }
