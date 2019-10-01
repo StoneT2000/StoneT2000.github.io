@@ -32,7 +32,7 @@ p, .content li, .content ul {
 
 @media print {
   a {
-    color:#0085c9;
+    color:rgb(10,11,15);
   }
   body {
     color:rgb(10,11,15);
