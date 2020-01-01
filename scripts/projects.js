@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function () {  
   $("#useless")[0].checked = true;
   $("#interesting")[0].checked = true;
   $("#useful")[0].checked = true;
@@ -8,6 +8,7 @@ $(document).ready(function () {
   for (let name of filterNames) {
     $("#" + name).on('click', function () {
       filterProjects();
+      
     });
   };
   var f = window.onscroll;
@@ -30,7 +31,9 @@ $(document).ready(function () {
     $(".sidebars span").css('opacity', 1);
   }, function () {
     $(".sidebars span").css('opacity', 0);
-  })
+  });
+  
+  
 });
 var filter = new Set();
 
@@ -44,7 +47,6 @@ function filterProjects() {
       let classList = project.classList;
       let keep = false;
       if (classList) {
-        console.log(classList);
         for (let className of classList) {
           if (filter.has(className)) {
             keep = true;
@@ -53,12 +55,19 @@ function filterProjects() {
         }
         if (keep == false) {
           $(project).css('display', 'none');
-          console.log($(project));
         } else {
           $(project).css('display', 'block');
         }
       }
     }
+  }
+  let paragraph = $("#unchecked-all-paragraph");
+  if (filter.size === 0) {
+    console.log("ha", paragraph);
+    paragraph.css("display", "block");
+  }
+  else {
+    paragraph.css("display", "none");
   }
 }
 var filterNames = ['useless', 'interesting', 'useful'];
@@ -71,4 +80,5 @@ function updateFilter() {
       filter.delete(name);
     }
   }
+
 }

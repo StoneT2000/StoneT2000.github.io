@@ -1,3 +1,9 @@
+.checkbox * {
+  cursor: pointer;
+}
+#unchecked-all-paragraph {
+  display: none;
+}
 .project img {
   width: 320px;
   margin-top: 15px;
