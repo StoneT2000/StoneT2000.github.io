@@ -1,15 +1,11 @@
 .content img {
   max-width: 90%;
-  width: 600px;
+  width: 720px;
   margin-left: 50%;
   transform: translateX(-50%);
 }
 .content img {
   display: block;
-}
-.content pre {
-  max-width: 90%;
-  width: 600px;
 }
 blockquote {
     border-left: 4px solid #dfe2e5;
