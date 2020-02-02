@@ -306,4 +306,30 @@ header.shadow a:hover {
   header a.active {
     border-bottom: 4px solid #fefefe;
   }
+  html {
+    font-size: 18px;
+  }
+  h1 {
+    font-size: 3.1em;
+  }
+  h2 {
+    font-size: 
+  }
+  h1 {
+    font-family: 'TexGyre';
+    font-size:3.6em;
+  }
+  h2 {
+    font-family: 'TexGyre';
+    font-size:2.067em;
+    font-weight:500;
+  }
+  h3 {
+    font-size:1.378em;
+    font-weight:400;
+  }
+  h4 {
+    font-size:1.0333em;
+    font-weight:400;
+  }
 }
