@@ -25,13 +25,35 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://unpkg.com/popper.js"></script>
   <script src="../../build/scripts/base.min.js?v=2"></script>
-  <script src="../../build/scripts/about.min.js?v=2"></script>
+  <script src="../../build/scripts/battlecode/2020.min.js"></script>
   <script src="../../build/scripts/code.min.js"></script>
 
   <script type="text/javascript" src="../../build/scripts/prettify.min.js"></script>
 </head>
 
 <body>
+  <div class='sidebarsWrapper'>
+    <div class='sidebars'>
+      <a class='barWrapper' clear href="#heading" id='bar1'><span>Postmortem</span>
+        <div class='bar'></div>
+      </a>
+      <a class='barWrapper' clear href="#1-introductions" id='bar2'><span>1. Introductions</span>
+        <div class='bar'></div>
+      </a>
+      <a class='barWrapper' clear href="#2-the-battlecode-2020-progression" id='bar3'><span>2. Progression </span>
+        <div class='bar'></div>
+      </a>
+      <a class='barWrapper' clear href="#3-reflection" id='bar4'><span>3. Reflection</span>
+        <div class='bar'></div>
+      </a>
+      <a class='barWrapper' clear href="#4-some-stats" id='bar5'><span>4. Some Stats</span>
+        <div class='bar'></div>
+      </a>
+      <a class='barWrapper' clear href="#appendix-a-technical-details-about-my-bot" id='bar6'><span>Appendix A</span>
+        <div class='bar'></div>
+      </a>
+    </div>
+  </div>
   <header>
     <ul>
       <a href="../../index.html" clear>
@@ -47,8 +69,9 @@
   </header>
   <div class='container'>
     <main class='content'>
-      <h1>MIT Battlecode 2020 Postmortem</h1>
-      <p>This is my 3rd year competing in Battlecode, having previously competed in team <strong>Codelympians</strong> in 2018 and 2019 (12th - 9th)</p>
+      <a class='anchor' name='heading'></a>
+      <h1>Battlecode 2020 Postmortem</h1>
+      <p>This is my 3rd year competing in MIT Battlecode, having previously competed in team <strong>Codelympians</strong> in 2018 and 2019 (12th - 9th)</p>
       <p>This year, I soloed as team <strong>Bowl of Chowder</strong> and not gonna lie, this was pretty damn hard to do given that my school started the same day as <a href='https://www.battlecode.org/'>Battlecode 2020</a>. Credit to my past teammate, Fulgrim (his discord name), for the team name.</p>
       <p>But for the love of AI, coding, and Battlecode, I persisted and made it to finals and placed 6th - 5th place! A definite improvement from last year (and hopefully this is strictly increasing). Congratulations to team <strong>Java Best Waifu</strong> for getting first this year!</p>
       <p>In this postmortem, I have included introductions to Battlecode and Battlecode 2020 along with basic spec information about this year&#39;s Battlecode. Afterwards I dive into the <a href='#2-the-battlecode-2020-progression'>progression of the competition</a>, how the meta changed and what I worked on and changed with my bot over time. I have also included a <a href='#appendix-a-technical-details-about-my-bot'>basic technical appendix</a> for anyone that wants to learn more in detail about how I made my bot. </p>
@@ -58,9 +81,9 @@
       <p>Go <a href='#2-the-battlecode-2020-progression'>here</a> if you want to skip the <a href='#1-1-intro-to-battlecode'>general intro to battlecode</a>, <a href='#1-2-intro-to-battlecode-2020'>intro to battlecode 2020</a>, and <a href='#1-2-1-the-2020-specs'>the specs</a>.</p>
       <p>Or TLDR;</p>
       <p>Battlecode is about writing an artificial intelligence agent to battle/compete against other team&#39;s bots. It&#39;s extremely exciting, although sometimes stressful, and I highly recommend this competition (I for sure am going to try and compete in this for as long as I can. Someone suggested to keep staying in PhD programs for the rest of their life just to compete in Battlecode).</p>
-      <p><a class='anchor' name='1-introductions'></a></p>
+      <p><a class='anchor' id='1-introductions'></a></p>
       <h2>1. Introductions</h2>
-      <p><a class='anchor' name='1-1-intro-to-battlecode'></a></p>
+      <p><a class='anchor' id='1-1-intro-to-battlecode'></a></p>
       <h3>1.1 Intro to Battlecode</h3>
       <p>Welcome to MIT&#39;s longest-running programming competition, <a href='https://www.battlecode.org/'>Battlecode</a>.</p>
       <p><img src="assets/image-20200130001830286.png" referrerpolicy="no-referrer" alt="image-20200130001830286"></p>
@@ -73,12 +96,12 @@
       <p>The sprint tournament is open to any, student or not, and the rest are open to only full-time students. The seeding tournament determines seeding for US/International qualifiers, and usually (due to sponsors of Battlecode), the top 12 US teams in the US qualifiers go to finals and the top 4 international teams in the international qualifiers go to finals. More logistical information on the Battlecode website!</p>
       <p>Teams that qualify for finals are invited to MIT to watch their bot compete live and also invited to a nice fancy dinner with the Battlecode developers and sponsors of Battlecode (the people who make $30,000 prize pools possible). These sponsors include the likes of Hudson River Trading and Facebook, with other companies such as Oracle and IBM sponsoring in the past.</p>
       <p>Now, onto the intro for Battlecode 2020</p>
-      <p><a class='anchor' name='1-2-intro-to-battlecode-2020'></a></p>
+      <p><a class='anchor' id='1-2-intro-to-battlecode-2020'></a></p>
       <h3>1.2 Intro to Battlecode 2020</h3>
       <p>This year&#39;s Battlecode, as teh devs amply put it, was all about a <em>thrilling survival adventure involving</em> 🍲, ▀⛓, 🐮, 🤖, <em>and more</em></p>
       <p>To translate, they said it was about soup, block chain, cows and robots. The middle two... meh, wasn&#39;t that involved/exploited in the meta and strategies of bots this year, but soup and robots were key.</p>
       <p>Some inspirational quotes from some of teh devs include &quot;we should get campbell&#39;s as a sponsor this year&quot; and &quot;don&#39;t die&quot; and &quot;keep trying&quot;. The latter two in a way describes the difficulty of Battlecode, making it to finals is not a easy 10 hour task, in my case I spent a minimum 50+ hours on my bot this year (If I had more sleep maybe would&#39;ve spent less because I definitely rewrote a lot of bad code due to lack of sleep). The former also greatly describes the fun and humor surrounding Battlecode 2020, not just this year, but for every year I&#39;ve been competing in this competition.</p>
-      <p><a class='anchor' name='1-2-1-the-2020-specs'></a></p>
+      <p><a class='anchor' id='1-2-1-the-2020-specs'></a></p>
       <h4>1.2.1 The 2020 Specs</h4>
       <p>Every Battlecode, specs are released, detailing just about everything you need in order to start writing a functional bot that can start competing against others. 2020&#39;s specs can be found here: <a href='https://2020.battlecode.org/specs.html' target='_blank' class='url'>https://2020.battlecode.org/specs.html</a></p>
       <p>This year, it&#39;s about protecting your <strong>HQ</strong> from the opponent team that may or may not try to bury it, all the while rising <strong>water levels</strong> and changing climate threaten to flood and destroy the HQ for both teams.</p>
@@ -101,7 +124,7 @@
       <p>Upon talking with (professor) Nate Foss, one of teh devs, the idea of changing communication to this blockchain format where teams had to bid for a message to go through was interesting. It was a step away from previous years where teams were given a big chunk of shared memory, allowing for things such as distributed breadth first searches famously done by Greg McGlynn and detailed <a href='http://www.anatid.net/2015/12/battlecode-2015-post-mortem.html'>here</a>, and a step away from last years communication method where you had to pay resources to send your message farther out. It encouraged more thinking behind communication due to how limited it was, in addition to having to protect your bot from malicious messages from the opponent.</p>
       <p>The only pointless part was that the actual bidding didn&#39;t prove to be a particularly used part as it was far too costly to employ message flooding strategies where you drown out the enemy with higher bids, so most bots ended up just sending 1 soup cost messages.</p>
       <p>Another point of interest was that this year&#39;s theme wasn&#39;t the usual bots kill bots in all out battle theme (although it ended up becoming that anyway). The names of the units were more neutral and less violent, and teh devs discussed how this was meant to encourage a more inclusive game this year that isn&#39;t stereotypically &quot;boyish.&quot; I hope this is something that is continued in future Battlecode iterations.</p>
-      <p><a class='anchor' name='2-the-battlecode-2020-progression'></a></p>
+      <p><a class='anchor' id='2-the-battlecode-2020-progression'></a></p>
       <h2>2. The Battlecode 2020 Progression</h2>
       <p>There were some major time periods in the 22 days or approximately 3 weeks. First days, pre-sprint, post-sprint (so right after sprint), pre-seeding, seeding, pre-qualifiers, post-qualifiers, and then finals.</p>
       <h3>2.1 First days - Infrastructure</h3>
@@ -233,6 +256,7 @@
       <p>There were also some interesting matches, in particular the matches between teams <strong>Prasici</strong> (12th - 9th) and <strong>Steam Locomotive</strong> (16th - 13th) where Prasici was able to hack Steam Locomotive&#39;s communication and tricked Steam Locomotive bot about probably where their own HQ was, causing Steam Locomotive&#39;s landscapers to not defend their HQ as a result.</p>
       <p>Team <strong>Bagger288</strong> (8th - 7th) implemented a strategy where they have a drone carry a miner around their HQ until very late game and once an opponent picks of their wall landscapers, they would place their own miner down to build net guns and stop any possible drone crunch. This almost defeated my bot on two occasions as we battled it out in the losers bracket.</p>
       <p>After defeating Bagger288, I had to battle it out against team Smite of which I then lost, achieving 6th - 5th as my final result.</p>
+      <p><a class='anchor' id='3-reflection'></a></p>
       <h2>3. Reflection</h2>
       <h3>3.1 On my bot</h3>
       <p>In hindsight, I should&#39;ve spent more time tuning my bot instead of attempting to make a drone wall buster. I misjudged how difficult it is too bust drone walls especially when teams such as Smite keep up netguns until late game. One of the major issues plaguing my bot was gaining good relative economy while being drone harassed and I could never get around this, losing me games against The High Ground, Smite, and Java. There were also some major tuning points in terms of build logic for when to build vaporators and drones that could have been better. But again, this is in hindsight and hindsight is always 20/20</p>
@@ -242,6 +266,7 @@
       <p>The infrastructure was great. For one, ranked scrimmages worked, the website was great, and it was easy to setup for every competitor without as many issues encountered with transpilation in 2019 or docker hell in 2018. </p>
       <p>A huge thanks to team Barcode for helping so often in discord to answer people&#39;s questions before teh devs had time to do so. Thank you again to all the developers and all the people who competed at finals and make finals possible. I&#39;d love to make finals again to meet and talk to you all again an discuss everything from our bots to topics on AI to how juggling might be a sign of too much time and boredom.</p>
       <p>I&#39;m excited to see where Battlecode goes next year and how future iterations will look like!</p>
+      <p><a class='anchor' id='4-some-stats'></a></p>
       <h2>4. Some Stats</h2>
       <p>Here are some stats about my code as generated by <a href='http://cloc.sourceforge.net/'>CLOC</a> (Count Lines of Code):</p>
       <pre><code>-------------------------------------------------------------------------------
@@ -257,15 +282,15 @@ SUM:                            15            481            796           4618
       <p>Some stats according to GitHub</p>
       <p><img src="assets/image-20200201125913728.png" referrerpolicy="no-referrer" alt="image-20200201125913728"></p>
       <p><code>98,999</code> lines were added and <code>52,444</code> lines were deleted (pretty inaccurate given that I copied and pasted my bot to other folders for backup/fallback bot)</p>
-      <p><a class='anchor' name='appendix-a-technical-details-about-my-bot'></a></p>
+      <p><a class='anchor' id='appendix-a-technical-details-about-my-bot'></a></p>
       <h2>Appendix A: Technical Details about my Bot</h2>
-      <p><a class='anchor' name='a-1-searching-and-finding-things-in-vision'></a></p>
+      <p><a class='anchor' id='a-1-searching-and-finding-things-in-vision'></a></p>
       <h3>A.1 Searching and finding things in vision</h3>
       <p>I often needed to find the closest object, whether it be the closest soup tile, closest water tile for drones to drop units into, or the closest friendly landscaper to pick up and put onto the wall. <a href='https://en.wikipedia.org/wiki/Breadth-first_search'>Breadth First Search</a> is a common search algorithm for finding the closest things in a graph, or in this case, a grid map where tiles are nodes and adjacent tiles are connected by edges.</p>
       <p>Your typical BFS of a grid involves keeping a queue of tiles to check, and then for tile you check you store that checked tile into a visited set, then you add neighboring tiles that have not been seen yet to the queue. This requires the use of a queue and a set data structure. Given the bytecode limits, a real BFS costs way too much. So I opted to utilize a lookup table to simulate a BFS.</p>
       <p>In particular, I created a javascript function, in <code>src/Chow10/generateBFSDeltas.js</code>, that would generate all the deltas in the order of a BFS and stored into a fixed array. These deltas represent the change in <code>x</code> and <code>y</code> coordinate from a position <code>x_0, y_0</code> and effectively represent relative coordinates. As a result, the closest relative coordinates are stored towards the front of the array and the farther ones are stored towards the back. I stored this in a constant and this allowed my bot to easily search every tile in its vision by looping through this array of BFS deltas without much computation and also determine the closest object without needing to measure the distance all the time.</p>
       <p>As a note, switch statements have low bytecode overhead and Team <strong>Barcode</strong> supposedly used a switch statement to do pathfinding and searches somehow. Check out their code here to see how they did it. (As of now, I don&#39;t have a link to their code)</p>
-      <p><a class='anchor' name='a-2-custom-data-structures'></a></p>
+      <p><a class='anchor' id='a-2-custom-data-structures'></a></p>
       <h3>A.2 Custom data structures</h3>
       <p>Java&#39;s own data structures like <code>ArrayList, HashSet, LinkedList</code> and so forth are all well designed and use inheritance heavily to enforce polymorphism and error checking amongst other features of object oriented design. However, the amount of indirection and layers between a call to say <code>list.add(3)</code> to actually adding the number <code>3</code> to the list is too much and causes a lot of bytecode overhead. As a result, I opted to create my own LinkedList for dynamic sized lists and HashSet (It&#39;s called HashTable in my code but I ended up making it into a HashSet and never bothered to rename it, so for clarity I call it MySet below). </p>
       <p>For reference, consider the following code</p>
@@ -285,7 +310,7 @@ import battlecode.common.* // import battlecode things such as MapLocation
       <p>Even if there&#39;s collisions in my implementation of the set, handled by appending to a linked list, the bytecode overhead is still less.</p>
       <p>So clearly, my own implementation has a lot less bytecode overhead and uses about 2.5 times less bytecode. This is mostly due to the fact that my own set and lists don&#39;t need to be as generalizable as the java HashSet or LinkedList, and there are less &quot;safety checks&quot; as I can just assume whenever I am using it in my bot, I am using it correctly.</p>
       <p>This helped my units stay under the bytecode limit for the most part. (My drones ended up going over as I added more and more code to improve them and I lacked the time to comb through the code again to optimize the bytecode better).</p>
-      <p><a class='anchor' name='a-3-organizing-a-drone-wall-buster'></a></p>
+      <p><a class='anchor' id='a-3-organizing-a-drone-wall-buster'></a></p>
       <h3>A.3 Organizing a drone wall buster</h3>
       <p>This is hard to coordinate. With lack of global information, I relied on redundancy and many messages to ensure the drone wall buster worked in the right order and the right way. The key component is ensuring certain signals reach out to certain drones and using the HQ as a command center to give out these signals.</p>
       <p>To be honesty, I&#39;m pretty sure there is a more efficient, and less spaghetti-code like way of doing this, but when Battlecode gives you 22 days to build a bot, that&#39;s pretty hard to come up with.</p>

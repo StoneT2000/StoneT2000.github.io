@@ -15,3 +15,6 @@ blockquote {
 blockquote blockquote {
     padding-right: 0;
 }
+strong {
+  font-weight: 500;
+}

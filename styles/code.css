@@ -85,7 +85,7 @@ pre.prettyprint {
   border-radius:0.25rem;
   padding-left: 27px;
   /*each additional digit needs 8px*/
-  width:100%;
+  width: calc(100% - 36px)
   border:1px solid #e7eaed;
   color:#d58936;
 }
