@@ -1,0 +1,327 @@
+<html lang="en">
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124803205-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-124803205-1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="The personal github page for projects and stuff by Stone Tao. Explore a wide variety of web projects and related information on this site!" />
+  <title>Stone's Github Page</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../../images/githubLogo.ico" />
+  <link rel="stylesheet" href="../../build/styles/base.min.css?v=2">
+  <link rel="stylesheet" href="../../build/styles/sidebars.min.css?v=2">
+  <link rel="stylesheet" href="../../build/styles/about.min.css?v=2">
+  <link rel="stylesheet" href="../../build/styles/battlecode.min.css">
+  <link rel="stylesheet" href="../../build/styles/code.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/popper.js"></script>
+  <script src="../../build/scripts/base.min.js?v=2"></script>
+  <script src="../../build/scripts/about.min.js?v=2"></script>
+  <script src="../../build/scripts/code.min.js"></script>
+  
+  <script type="text/javascript" src="../../build/scripts/prettify.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <ul>
+      <a href="index.html" clear>
+        <li>Home</li>
+      </a>
+      <a href="projects.html" clear>
+        <li>Projects</li>
+      </a>
+      <a href="about.html" clear>
+        <li>About</li>
+      </a>
+    </ul>
+  </header>
+  <div class='container'>
+    <main class='content'>
+      <h1>MIT Battlecode 2020 Postmortem</h1>
+      <p>This is my 3rd year competing in Battlecode, having previously competed in team <strong>Codelympians</strong> in 2018 and 2019 (12th - 9th)</p>
+      <p>This year, I soloed as team <strong>Bowl of Chowder</strong> and not gonna lie, this was pretty damn hard to do given that my school started the same day as <a href='battlecode.org/'>Battlecode 2020</a>. Credit to my past teammate, Fulgrim (his discord name), for the team name.</p>
+      <p>But for the love of AI, coding, and Battlecode, I persisted and made it to finals and placed 6th - 5th place! A definite improvement from last year (and hopefully this is strictly increasing). Congratulations to team <strong>Java Best Waifu</strong> for getting first this year!</p>
+      <p>In this postmortem, I have included introductions to Battlecode and Battlecode 2020 along with basic spec information about this year&#39;s Battlecode. Afterwards I dive into the <a href='#2. The Battlecode 2020 Progression'>progression of the competition</a>, how the meta changed and what I worked on and changed with my bot over time. I have also included a <a href='#Appendix A: Technical Details about my Bot'>basic technical appendix</a> for anyone that wants to learn more in detail about how I made my bot. </p>
+      <p>Also, <a href=''>here</a> is the GitHub repository to my all my code. In the <code>src</code> folder, <code>Chow10</code> is my latest working bot. <code>FinalChowBot.zip</code> is a zipped up folder containing the bot I submitted for finals.</p>
+      <p>Additionally, I&#39;m currently writing an article from a more sentimental perspective of Battlecode in relation to my life to be published some time soon on Medium. To be linked/posted soon.</p>
+      <p>This is my first postmortem for Battlecode and it is quite detailed and in-depth, so bear with me!</p>
+      <p>Go <a href='#2.-the-battlecode-2020-progression'>here</a> if you want to skip the <a href='#1.1 Intro to Battlecode'>general intro to battlecode</a>, <a href='#1.2 Intro to Battlecode 2020'>intro to battlecode 2020</a>, and <a href='#1.2.1 the 2020 specs'>the specs</a>.</p>
+      <p>Or TLDR;</p>
+      <p>Battlecode is about writing an artificial intelligence agent to battle/compete against other team&#39;s bots. It&#39;s extremely exciting, although sometimes stressful, and I highly recommend this competition (I for sure am going to try and compete in this for as long as I can. Someone suggested to keep staying in PhD programs for the rest of their life just to compete in Battlecode).</p>
+      <h2>1. Introductions</h2>
+      <h3>1.1 Intro to Battlecode</h3>
+      <p>Welcome to MIT&#39;s longest-running programming competition, <a href='battlecode.org/'>Battlecode</a>.</p>
+      <p><img src="assets/image-20200130001830286.png" referrerpolicy="no-referrer" alt="image-20200130001830286"></p>
+      <div style="text-align:center"><i>Figure 1: Battlecode home page</i></div>
+      <p>Battlecode is an AI competition lasting around 22 days where you can team up (or solo) and battle other teams by competing your <em>definitely-not-spaghetti-code</em> bot against the other team&#39;s <em>definitely-robust-code-and-not-rng</em> bot in a virtual game/platform to then determine a winner. It is developed by <strong>teh devs</strong>, a great group of students at MIT that run the competition, build the infrastructure and website, post announcements, chat, and answer all your questions on the <a href='https://discordapp.com/channels/386965718572466197/650084292982079539'>Battlecode discord</a>. This discord is also one of the best communities out there because everyone is so supportive and helpful. Often times other competitors will help solve your issues whether it is installation of the scaffold, debugging etc. </p>
+      <p>Every year Battlecode has a different theme and this year it was about soup 🍲</p>
+      <p>Typically, Battlecode is an actual battle between two bots (like literally, units dropping units into floods, swarming them with drones, but more on that later)</p>
+      <p>It often involves a complex combination of resource management, offensive and defensive strategy, communication in a decentralized environment, and a ton of bugs... *cough I mean <em>features</em>. Additionally, Battlecode introduces a form of computational limit on your code (sorry you can&#39;t run <a href='https://en.wikipedia.org/wiki/Bogosort'>bogosort</a> on a million element array), whether it is through a time limit on how long your bot can execute (Battlecode 2018, 2019), or through bytecode counting ( &lt; Battlecode 2017, and Battlecode 2020). You and your team will likely code in <strong>Java</strong> as that is currently the only language offered, although this may change in future iterations of Battlecode (Javascript was allowed in 2019).</p>
+      <p>Throughout the 22 days, there are several tournament, consisting of Sprint, Seeding, US/International Qualifiers, High school, Newbie, and Finals tournaments, majority of which are double elimination format with each game determined by a best of 3 or best of 5 in the case of this year.</p>
+      <p>The sprint tournament is open to any, student or not, and the rest are open to only full-time students. The seeding tournament determines seeding for US/International qualifiers, and usually (due to sponsors of Battlecode), the top 12 US teams in the US qualifiers go to finals and the top 4 international teams in the international qualifiers go to finals. More logistical information on the Battlecode website!</p>
+      <p>Teams that qualify for finals are invited to MIT to watch their bot compete live and also invited to a nice fancy dinner with the Battlecode developers and sponsors of Battlecode (the people who make $30,000 prize pools possible). These sponsors include the likes of Hudson River Trading and Facebook, with other companies such as Oracle and IBM sponsoring in the past.</p>
+      <p>Now, onto the intro for Battlecode 2020</p>
+      <h3>1.2 Intro to Battlecode 2020</h3>
+      <p>This year&#39;s Battlecode, as teh devs amply put it, was all about a <em>thrilling survival adventure involving</em> 🍲, ▀⛓, 🐮, 🤖, <em>and more</em></p>
+      <p>To translate, they said it was about soup, block chain, cows and robots. The middle two... meh, wasn&#39;t that involved/exploited in the meta and strategies of bots this year, but soup and robots were key.</p>
+      <p>Some inspirational quotes from some of teh devs include &quot;we should get campbell&#39;s as a sponsor this year&quot; and &quot;don&#39;t die&quot; and &quot;keep trying&quot;. The latter two in a way describes the difficulty of Battlecode, making it to finals is not a easy 10 hour task, in my case I spent a minimum 50+ hours on my bot this year (If I had more sleep maybe would&#39;ve spent less because I definitely rewrote a lot of bad code due to lack of sleep). The former also greatly describes the fun and humor surrounding Battlecode 2020, not just this year, but for every year I&#39;ve been competing in this competition.</p>
+      <h4>1.2.1 The 2020 Specs</h4>
+      <p>Every Battlecode, specs are released, detailing just about everything you need in order to start writing a functional bot that can start competing against others. 2020&#39;s specs can be found here: <a href='https://2020.battlecode.org/specs.html' target='_blank' class='url'>https://2020.battlecode.org/specs.html</a></p>
+      <p>This year, it&#39;s about protecting your <strong>HQ</strong> from the opponent team that may or may not try to bury it, all the while rising <strong>water levels</strong> and changing climate threaten to flood and destroy the HQ for both teams.</p>
+      <p>The <strong>game map</strong> is square-grid based and has dirt everywhere at different heights, some tiles having water on them that floods lower height tiles.</p>
+      <p><img src="assets/image-20200130170403565.png" referrerpolicy="no-referrer" alt="image-20200130170403565"></p>
+      <div style="text-align:center"><i>Figure 2: My bot (red) against Steam Locomotive (blue) on the map WaterBot.</i></div>
+      <div style="text-align:center"><i>Blue = flooded tiles, green~red = dirt level with red being very high dirt, white squares = soup deposits</i></div>
+      <p>Each unit on the <strong>grid based map</strong> runs on a <strong>turn queue</strong>, each taking turns as it comes to them, once every unit takes their turn, the next round proceeds, all the way to a maximum of 9999 rounds before various tiebreakers are used to determine winners, which usually never occurs because water levels grow at an exponential rate and it is pretty much impossible to stop it. </p>
+      <p><strong>Soup</strong> is the only resource in the game and it can be mined by <strong>miners</strong> built by your HQ and must be deposited by miners to a <strong>refinery</strong> (buildable by miners) or the HQ to be <strong>refined</strong> and made usable. But here&#39;s a catch, all your units have limited <strong>vision</strong>, and can only see within some distance squared of themselves. More on dealing with local vision later. </p>
+      <p>This soup is also used to build miners, which build other buildings such as <strong>fulfillment centers</strong>, <strong>design schools</strong>, <strong>net guns</strong>, and passive soup generators known as <strong>vaporators</strong>,</p>
+      <p>Fulfilment centers build <strong>drones</strong> with soup and design schools build <strong>landscapers</strong> with soup. Netguns destroy said drones.</p>
+      <p><img src="assets/units.png" alt="units" style="zoom: 50%;" /></p>
+      <div style="text-align:center"><i>Figure 3: The 9 different units in Battlecode 2020</i></div>
+      <p>Miners and landscapers are limited in movement as they can&#39;t go to tiles with height differences of more than 3, whereas drones can go everywhere.</p>
+      <p>In particular, landscapers sculpt land by digging up dirt and placing it elsewhere. Landscapers can also destroy buildings by burying enough dirt onto them (15 for all buildings, 50 needed for HQ). Drones can pickup units and drop them off elsewhere (or into the flood to destroy enemy units). </p>
+      <p>There are also very annoying <strong>cows</strong> that pollute the land with their <strong>gas</strong> and raise <strong>pollution</strong> near them, and pollution causes units to have higher cool downs and thus are unable to perform as many actions such as digging dirt, moving, etc. Pollution also lowers the vision radius of units.</p>
+      <p>This year also utilized bytecode counting as a computation limit on bots, with different units having different limits.</p>
+      <p>Communication was all based on &quot;blockchain&quot;, where all messages, also known as <strong>transactions</strong> of 7 integer messages, sent by any unit on any team is appended to an immutable public ledger. Each round, the engine appends the highest bidding 7 transactions onto the block for that round, with the rest of the transactions being stored to potentially be appended in a future round&#39;s block in the blockchain.</p>
+      <h4>1.2.2 Points of Interest</h4>
+      <p>Upon talking with (professor) Nate Foss, one of teh devs, the idea of changing communication to this blockchain format where teams had to bid for a message to go through was interesting. It was a step away from previous years where teams were given a big chunk of shared memory, allowing for things such as distributed breadth first searches famously done by Greg McGlynn and detailed <a href='http://www.anatid.net/2015/12/battlecode-2015-post-mortem.html'>here</a>, and a step away from last years communication method where you had to pay resources to send your message farther out. It encouraged more thinking behind communication due to how limited it was, in addition to having to protect your bot from malicious messages from the opponent.</p>
+      <p>The only pointless part was that the actual bidding didn&#39;t prove to be a particularly used part as it was far too costly to employ message flooding strategies where you drown out the enemy with higher bids, so most bots ended up just sending 1 soup cost messages.</p>
+      <p>Another point of interest was that this year&#39;s theme wasn&#39;t the usual bots kill bots in all out battle theme (although it ended up becoming that anyway). The names of the units were more neutral and less violent, and teh devs discussed how this was meant to encourage a more inclusive game this year that isn&#39;t stereotypically &quot;boyish.&quot; I hope this is something that is continued in future Battlecode iterations.</p>
+      <h2>2. The Battlecode 2020 Progression</h2>
+      <p>There were some major time periods in the 22 days or approximately 3 weeks. First days, pre-sprint, post-sprint (so right after sprint), pre-seeding, seeding, pre-qualifiers, post-qualifiers, and then finals.</p>
+      <h3>2.1 First days - Infrastructure</h3>
+      <p>The moment Battlecode 2020 started on January 6th, I opened the specs released and started reading and skimming through the documentation for how to interact with the game engine in Java. </p>
+      <p>My first impression was, turtling was the easy way to go at first, and so I first programmed a simple turtle bot for the sprint tournament whilst working heavily on bot infrastructure. One of the biggest lessons I learned from the last 2 years is that working on infrastructure first is always much more beneficial and building a working, robust bot, is a priority. This is a message echoed by many other people such as team <strong>Big Red Battlecode</strong> from their <a href='https://drive.google.com/file/d/1F1YqIdwOfiR5JpqSZoDTZKWe6h8n8SXp/view'>post-mortem</a> last year and team <strong>Smite</strong> from their <a href='https://nikhilsardana.github.io/smite.pdf'>post-mortem</a> last year as well. As Smite points out, the code that doesn&#39;t change when teh devs rebalance are</p>
+      <blockquote>
+        <p>&quot;pathfinding, resource gathering, basic communications, and functional attacking code&quot;</p>
+      </blockquote>
+      <p>Thus, some of the main infrastructure I prioritized setting up was communication methods between my team&#39;s units through blockchain, setting up basic bug nav pathing, setting up exploration code for miners so they can search and mine soup and thus gather resources. Importantly, I also began work on <a href='#A.2 Custom data structures'>custom data structures</a> for bytecode optimization and created a <a href='#A.1 Searching and finding things in vision'>&quot;BFS&quot; delta lookup table</a> for more bytecode efficient searches within unit vision, all discussed more in detail in appendix <a href='#A.1 Searching and finding things in vision'>A.1</a></p>
+      <p>(Unfortunately there were bugs in my bug nav that I straight up didn&#39;t see until pre-qualifiers)</p>
+      <p>The meta was not obvious at all and in my opinion remained fairly stagnant amongst majority of competitors early on. This was also a major reason for why successful teams generally focus on infrastructure first before trying out various strategies.</p>
+      <p><img src="assets/image-20200130180237815.png" referrerpolicy="no-referrer" alt="image-20200130180237815"></p>
+      <div style="text-align:center"><i>Figure 4: The standard turtle bot with 8 landscapers defending the HQ</i></div>
+      <h3>2.2 Pre-Sprint Tournament - Turtles, Lattices, Rushes</h3>
+      <p>I continued to program a standard turtle bot, but with somewhat decent mining code so I could get economy and turtle faster and longer. As each miner unit acts independently of each other and can only communicate through blockchain, I had all miners randomly go to one of five spread out exploration locations to look around for soup as the heuristic of where to explore. Then I originally planned to make it that once the miners reach the exploration location but find no reachable soup, they go on to the next location. However, this proved to be non-trivial as it was difficult to determine if a miner could reach a location of soup. Given the bytecode limits and vision radius, it makes it difficult to perform a full breadth first search (BFS) or A* search algorithm to path properly to locations or determine if said location is unreachable. So instead, my miners spend a number of turns proportional to the distance to the exploration location it is trying to explore before switching locations.</p>
+      <p>I had a fairly robust bot, it didn&#39;t break on the maps given to us by teh devs so I figured this would suffice for sprint and should do ok.</p>
+      <p>In comes teams <strong>Bruteforcer</strong>, <strong>Super Cow Powers</strong>, <strong>Baby Ducks</strong>, and <strong>Battlegaode</strong> (3rd)</p>
+      <p>Battlegaode had a good, simple rush strategy, which was to send a miner straight to the enemy HQ (or look for it first and utilize symmetry of the map to find the HQ faster), build a design school right away, and then build landscapers to then bury the enemy HQ and win. I was not surprised by this strategy at all and their team had this strategy for a few days before sprint and have never strayed away from rushing right away and made finals. Nevertheless, for the time between sprint and seeding, Battlegaode consistently stayed on top and rarely lost (although in one period they stayed up top mostly due to non-optimal match scheduling for ranked scrimmages).</p>
+      <p><img src="assets/image-20200130100403565.png" referrerpolicy="no-referrer" alt="image-20200130100403565"></p>
+      <div style="text-align:center"><i>Figure 5: Battlegaode (red) vs. Baby Ducks (blue) with Battlegaode rushing with a miner, design school, and landscapers</i></div>
+      <p>However, Super Cow Powers pioneered the genius strategy of terraforming/lattice, which was followed up by teams Bruteforcer and Baby Ducks. This involved building vaporators early to get a lot of passive soup income, then building a lot of landscapers early and digging out holes at even/odd x, y coordinates and placing dirt in odd/even x, y coordinates to make a lattice. </p>
+      <p><img src="assets/image-20200130100624642.png" referrerpolicy="no-referrer" alt="image-20200130100624642"></p>
+      <div style="text-align:center"><i>Figure 6: Bruteforcer (red) vs Battlegaode (blue) with Bruteforcer building the lattice and attacking the enemy with drones and landscapers, who goes on to win 2 out of 3 games against Battlegaode and win the sprint tournament</i></div>
+      <p>With this, terraforming teams were able to maintain a good economy and build a lot of drones and landscapers to take down the enemy HQ late game. Most turtles late game don&#39;t have an economy anymore because all they did was build landscapers and wall themselves in with a ring of 8 surrounding landscapers.</p>
+      <p>This culminated in Bruteforcer winning the seeding tournament (congratulations for 2nd year in a row!) </p>
+      <h3>2.3 Post-Sprint Tournament - Rush Rush Rush and Edge cases</h3>
+      <p>Unfortunately, both Bruteforcer and Super Cow Powers could not continue competing in other tournaments because they weren&#39;t full-time students. To quote a member from team <strong>Smite</strong> (2nd), the moment both of those teams left Battlecode,</p>
+      <blockquote>
+        <p>the meta [shifted] backwards 5 days [and was] equivalent of the dark ages.</p>
+      </blockquote>
+      <p>This was quite true, few bots soon after were able to transition easily to the terraformation strategy they both employed, and most took the easier route of writing a rush bot, which according to another finalist from team <strong>Anomalous Pandas</strong> (12th - 9th), </p>
+      <blockquote>
+        <p>we spend a week coding a bot
+          and we&#39;re like 20th place
+          we spend 1 hour coding a rush bot
+          top 10 within 2 hours
+          :/</p>
+      </blockquote>
+      <p>At this time, it appeared that rush was the clearly superior strategy and had no good/easy defense. Many teams opted to perfect the rush strategy for the upcoming seeding tournament. This was also caused by the spec changes after sprint tournament, which was a nerf on vaporators. Vaporators previously produced 7 soup per round and cost 1000 soup to build. They were nerfed down to 2 soup per round and cost 500 soup to build, effectively making it take longer to earn your soup back. As a result, not that many teams opted to go for the lattice strategy that won Bruteforcer the sprint tournament and rush still prevailed.</p>
+      <p>I on the other hand firmly believed that defending first would always prevail. Hence ensued several days after sprint of just programming for a rush defense using landscapers to bury the rushed enemy design school and get drones later to pick off enemy units and drown them. This was 100% the wrong way to approach rush defense (drones first was way better and easier), and in the process I just found wayyy too many edge cases to deal with and could not find a simple way to write a more robust and generalized bot to handle more maps. Maps such as these</p>
+      <p><img src="assets/edgecases.png" referrerpolicy="no-referrer" alt="image-20200130180953244"></p>
+      <div style="text-align:center"><i>Figure 7: 3 edge cases maps - small island, no space - HQ on a corner of the map - high dirt adjacent to HQ</i></div>
+      <p>hurt my brain as I tried to generalize my bot and make it more robust to various map situations given the limited vision (bot can&#39;t examine the whole map). In particular, a lot of bots broke on the map with the HQ on a corner. This is a big lesson I take from Battlecode and apply to every project I collaborate on now, find all edge cases and make sure they don&#39;t crash your project.</p>
+      <h3>2.4 Pre-Seeding Tournament - Rush... sigh</h3>
+      <p>It&#39;s at this time, the online ranked scrimmages were showing a clear win for rush bots on most maps that were used for scrimmages. Around then, out of the top 15 ranked or so bots, about 4 of them were non-rush, including my bot. If it isn&#39;t clear from the heading above, I disliked rush, like with a passion.</p>
+      <p>I was happy to see that team <strong>NP-ez</strong> (12th - 9th), to my knowledge, was the first post-sprint team to start utilizing the lattice strategy, and effectively, whereas I focused on excellent turtling. In addition, teams started to utilize a drone swarm attack, also known as the <strong>crunch</strong> as labeled by one of the teh devs, or the calculus attack as team <strong>Barcode</strong> likes to call it. Team <strong>Java Best Waifu</strong> (of which I will refer to as team Java from now on) was also utilizing the lattice strategy and they did extremely well with it as their lattice was not used just to gain economy, but was used to build towards the enemy and then attack them with masses of units instead of waiting for the flood to decide who wins.</p>
+      <p>In response to all these rush bots, I programed my bot to start utilizing drones more effectively, using drones to help build the wall by having them pickup my own landscapers and dropping them on the right location on the X wall which involved placing 3 more landscapers at each corner of the 8 landscaper ring around the HQ to add more dirt to the HQ walls to make it last longe. I also began to program the drones to create a <strong>drone wall</strong> in the late game. The drone wall is essentially placing drones around the landscapers on the X wall protecting the HQ and was meant to protect my base by limiting the number of enemy drones that could go near my HQ at one time and also picking off any units the enemy drops off at my HQ wall.</p>
+      <p><img src="assets/image-20200130183126623.png" referrerpolicy="no-referrer" alt="image-20200130183126623"></p>
+      <div style="text-align:center"><i>Figure 8: My bot's (red) X wall shape against NP-ez's (blue) lattice/terraform that culminated in a drone army crunching on my wall, although unsuccessfully in this game thanks to my drone wall</i></div>
+      <p>However, this only helped my bot defeat other turtle bots and lattice bots. Rush still remained a problem and I was not alone in asking for a rush nerf of some sort.</p>
+      <h3>2.5 Seeding Tournament - Non-rush prevails</h3>
+      <p>Troll maps. (Troll means absurd/outlandish/meant-to-mess-around-with-your-bot). It&#39;s almost like this is always a thing, every tournament in Battlecode teh devs always make edge case maps, in addition to some really cool/interesting ones. Luckily for my team and most other non-rush teams, a lot of these maps were non rush maps, maps where it was difficult for a rush bot to send a rush miner to the enemy HQ in time before the enemy gets their defenses up. Sometimes I feel like teh devs heard our complaints about rush being too powerful, and might&#39;ve specifically made maps that weren&#39;t easy to rush on. In fact, when talking to teh devs at the finalist dinner, they talked about how when they created maps for the tournament, they gave each map a rating on how rush friendly it was, and ensured each seeding round didn&#39;t consist of too many rush maps.</p>
+      <p><img src="assets/image-20200201152535782.png" referrerpolicy="no-referrer" alt="image-20200201152535782"></p>
+      <div style="text-align:center"><i>Figure 9: Maps like these were difficult to rush fast on as there's an ocean separating the two HQs and required a drone to pick up a miner to rush</i></div>
+      <p>As a result, the non-rush bots ended up placing very high in the seeding tournament, with team <strong>Java</strong>, my team, and team <strong>NP-ez</strong> placing 2nd, 3rd, and 5th respectively. Java could&#39;ve/should&#39;ve won seeding tournament, but unfortunately were dealt with edge case maps that made their bot perform undesired features such as break a wall that then floods the HQ that was on low elevation. Smite goes on to defeat Java with their rush bot and win seeding tournament, getting first seed for the upcoming US qualifiers.</p>
+      <h3>2.6 Pre-US Qualifiers Tournament - Meta Bloom</h3>
+      <p>This year there was a split between international and US teams where the international teams compete in a separate international qualifiers tournament to decide the top 4 teams that get to go and compete in finals. I have decided to leave this part of the Battlecode 2020 chronology out as I was not involved much (was very busy with events at my school at the time). This is in addition to the fact that a lot of changes occurred after the international qualifiers and before the US qualifiers and the meta truly bloomed quite a lot</p>
+      <h4>2.6.1 Drone Harass</h4>
+      <p>The first major strategy that came up was drone harass. This was extremely powerful and team <strong>NP-ez</strong> was in fact one of the first to do it as they placed fulfillment centers near enemy units near soup locations that would then make drones that picked up enemy units and drop them into the water, allowing <strong>NP-ez</strong> to gain early map and resource control. They did this before seeding tournament in fact. However effective this was, it wasn&#39;t widely adopted until team <strong>Java</strong> employed the strategy of building a fulfillment center asap and a drone asap. Not only did this early drone stop incoming rush miners from ever building a design school right next to your HQ, this early drone, coupled with Java&#39;s excellent economy and mining, was then combined with even more drones built that then all flew over to the enemy territory and harassed the enemy units.</p>
+      <p><img src="assets/image-20200201113727604.png" referrerpolicy="no-referrer" alt="image-20200201113727604"></p>
+      <div style="text-align:center"><i>Figure 10: Java's drones harassing my units and effectvely demolishing my economy and lattice by rendering my miners and landscapers useless</i></div>
+      <p>These harassing drones either dropped enemy units into the flood if enemy units didn&#39;t run away or build a net gun, or ensured that enemy units had little space to move around as they try to avoid getting picked up and dropped into the flood. In addition, these drones won&#39;t stop harassing as the only way to defeat them is to build a costly 250 soup net gun, in comparison to the 150 soup cost drone. Even then, building net guns against a good drone harassment is not that effective as it is easy to avoid the net gun&#39;s shooting radius while still seeing where it is and keeping track of where the net guns are. </p>
+      <p>Eventually the drone harassment will slow the enemy&#39;s economy down significantly as it&#39;s hard for them to lattice, build a wall or mine. This is all happening while team Java is peacefully building vaporators and terraforming to the enemy HQ to prepare for their crunch.</p>
+      <p>I still had a turtle + drone wall strategy and decided that lattice + drone harass was better (basically Java&#39;s strategy). I wasn&#39;t alone as more and more top teams switched over to a lattice of their own kind such as team <strong>The High Ground</strong> (4th).</p>
+      <h4>2.6.2 Passive Lattice</h4>
+      <p>But through further analysis, I decided that a better strategy was to make a limited/passive lattice. This involved me programming a limit into how big the lattice, or <strong>cookie</strong> as I like to call it, can be made. My heuristic was to always keep a lattice area of around <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.815ex" height="1.994ex" viewBox="0 -755.9 2073 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;">
+            <defs>
+              <path stroke-width="0" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
+              <path stroke-width="0" id="E1-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path>
+              <path stroke-width="0" id="E1-MJMAIN-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path>
+              <path stroke-width="0" id="E1-MJMATHI-3C0" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path>
+            </defs>
+            <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+              <use xlink:href="#E1-MJMAIN-31"></use>
+              <use xlink:href="#E1-MJMAIN-33" x="500" y="0"></use>
+              <use xlink:href="#E1-MJMAIN-34" x="1000" y="0"></use>
+              <use xlink:href="#E1-MJMATHI-3C0" x="1500" y="0"></use>
+            </g>
+          </svg></span>
+        <script type="math/tex">134\pi</script> and to use the HQ as the center of the lattice/circle/cookie. (Note, this number 134 is highly arbitrary). I programmed in methods to also deal with cases when the HQ is near an edge and the radius of the cookie would have to be increased so its area is around the desired area.
+      </p>
+      <p><img src="assets/image-20200131140130080.png" referrerpolicy="no-referrer" alt="image-20200131140130080"></p>
+      <div style="text-align:center"><i>Figure 11: The passive lattice, also called a cookie because the higher the dirt, the more brown it turns and there are holes for toppings</i></div>
+      <p>The idea behind my passive lattice was that by limiting the area in which my bot terraforms, my bot ends up still getting a good economy and builds lots of vaporators while also keeping a high elevation lattice. Teams like Java and The High Ground made lattices with fixed heights of around 8. This meant their entire lattice would flood past approximately round 1650 and would destroy all their economy, giving their bots one chance to stop the enemy with their aggressive lattice and drone harass. In comparison, my passive lattice would reach heights way past 8 and would last much longer (given I don&#39;t get crunched or harassed to death by the enemy earlier), and gives my bot more time to build units and prepare for its own crunch at around round 1950. Most bots at round 1950 don&#39;t have an economy anymore and I leveraged this to take down enemy bots late game and ensure wins.</p>
+      <h4>2.6.3 More effective Drone Wall</h4>
+      <p>The drone wall strategy in my opinion always remained very good. Theoretically pretty easy to beat, but in practice extremely difficult to code a counter against (from my experience at least).</p>
+      <p>Team <strong>Rael Tähvend</strong> were the first team I knew of that somewhat consistently formed a drone wall at this time in Battlecode and <strong>Smite</strong> at this time had also shifted strategies from rush to using a small lattice and a drone wall (similar to my passive lattice but smaller and more defensive). The idea here is that in order to setup a wall for the HQ and defend it with drones, not much soup is required. The bot only has to do a little bit of latticing to build vaporators that won&#39;t get flooded, then build a ton of landscapers and drones to make the X wall and the drone wall. With this strategy, Smite spent less soup on building strong, long lasting economy, and spent it all on the landscapers and drones, allowing them to build high walls still like a turtle bot, but also protect themselves from drone crunches as the drone wall leaves no gaps for enemy drones to enter and pickoff landscapers on the walls.</p>
+      <p><img src="assets/image-20200201115117492.png" referrerpolicy="no-referrer" alt="image-20200201115117492"></p>
+      <div style="text-align:center"><i>Figure 12: Smite's (blue) drone wall protecting its HQ along with other units to make passage to the HQ near impossible</i></div>
+      <h4>2.6.4 Drone Wall Buster</h4>
+      <p>I spent most of the final few hours before the submission deadline for US qualifiers working on a drone wall buster. As I said, it is theoretically pretty easy to demolish a drone wall when you have resources. The idea is that entering late game, once the bot has enough resources to send relentless attacks on the enemy HQ with drones carrying landscapers and miners, the bot has the drones drop landscapers holding dirt into the water next to the enemy HQ. Landscapers when dropped into the water drop all their dirt as well, effectively allowing my bot to build a temporary island next to the enemy HQ. With this island, I would then drop miners on to it who then instantly build net guns to shoot down the enemy drone wall, allowing for my mass of drones to then pickoff all the enemy landscapers on the walls and put my miners and landscapers on the walls to make more netguns and design schools that then have all the produced landscapers bury the adjacent HQ.</p>
+      <p><img src="assets/ezgif-5-6a9f0e853951.gif" referrerpolicy="no-referrer" alt="ezgif-5-6a9f0e853951"></p>
+      <div style="text-align:center"><i>Figure 13: An example of the drone wall buster working with the creation of an island, net gun placement, and then the final crunch</i></div>
+      <p>It was a good idea, but the amount of coordination needed and edge cases to deal with was just too much. I ended up making my bot a little worse for qualifiers as I introduced some unwanted bugs. It was just too inconsistent as the island making is already difficult enough given the exponential water level growth and the fact that if the enemy has extra enemy drones, they can pick off the miners being placed on the island. Luckily, not that many bots had code in place to deal with drone wall busts, but this all depends on how the early game pans out and whether my bot could get enough resources to make the cookie.</p>
+      <h4>2.6.5 My thoughts</h4>
+      <p>Coupling the passive lattice strategy with drone harassment, I believed I had achieved a fairly good bot. My conclusion was that theoretically, the strategies from best to worst were as follows:</p>
+      <div style="text-align:center">Passive Lattice &gt; Aggressive Lattice &gt; Small Lattice + Drone Wall + Defensive Turtle &gt; Turtle</div>
+      <p>with the assumption that drone harass is always used. I didn&#39;t include rush strategy in here because as time went on, competitors realized the rush strategy is truly dependent on map RNG (RNG is slang for random chance but also is an abbreviation for Random Number Generator). There were some small maps where the HQs were so close that defense against rushes is outright impossible. On larger maps, rushes would never work. At around this time, the best rush bot was team <strong>Kryptonite</strong> (8th - 7th) who had an effective rush that was always able to prevent early drones from picking up the miner through kiting drones, using the drone to hold the miner until its safe, amongst other rush strategies. It actually made their rush a lot more interesting to watch and learn about. In particular, Kryptonite main strategy was more of to rush and hijack the enemy base, and make it difficult for the enemy to turtle given that rush may not always work. This led to an interesting match in finals where they did indeed hijack the enemy base with their own landscaper, but their own landscaper likes saving itself and ended up building a wall for the enemy.</p>
+      <p>However, due to a lack of time, there were some fairly important features I was unable to include that lost me some games. One of which is more optimal drone harassment and early economy. Every time I face The High Ground or Java, I always end up falling behind in economy early on and as a result, the enemy has more drones and harasses me to death before I can build up my own lattice and long term economy. Another issue is that my landscapers always tried to build the same fixed area of <span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.815ex" height="1.994ex" viewBox="0 -755.9 2073 858.4" role="img" focusable="false" style="vertical-align: -0.238ex;">
+            <defs>
+              <path stroke-width="0" id="E2-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path>
+              <path stroke-width="0" id="E2-MJMAIN-33" d="M127 463Q100 463 85 480T69 524Q69 579 117 622T233 665Q268 665 277 664Q351 652 390 611T430 522Q430 470 396 421T302 350L299 348Q299 347 308 345T337 336T375 315Q457 262 457 175Q457 96 395 37T238 -22Q158 -22 100 21T42 130Q42 158 60 175T105 193Q133 193 151 175T169 130Q169 119 166 110T159 94T148 82T136 74T126 70T118 67L114 66Q165 21 238 21Q293 21 321 74Q338 107 338 175V195Q338 290 274 322Q259 328 213 329L171 330L168 332Q166 335 166 348Q166 366 174 366Q202 366 232 371Q266 376 294 413T322 525V533Q322 590 287 612Q265 626 240 626Q208 626 181 615T143 592T132 580H135Q138 579 143 578T153 573T165 566T175 555T183 540T186 520Q186 498 172 481T127 463Z"></path>
+              <path stroke-width="0" id="E2-MJMAIN-34" d="M462 0Q444 3 333 3Q217 3 199 0H190V46H221Q241 46 248 46T265 48T279 53T286 61Q287 63 287 115V165H28V211L179 442Q332 674 334 675Q336 677 355 677H373L379 671V211H471V165H379V114Q379 73 379 66T385 54Q393 47 442 46H471V0H462ZM293 211V545L74 212L183 211H293Z"></path>
+              <path stroke-width="0" id="E2-MJMATHI-3C0" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path>
+            </defs>
+            <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)">
+              <use xlink:href="#E2-MJMAIN-31"></use>
+              <use xlink:href="#E2-MJMAIN-33" x="500" y="0"></use>
+              <use xlink:href="#E2-MJMAIN-34" x="1000" y="0"></use>
+              <use xlink:href="#E2-MJMATHI-3C0" x="1500" y="0"></use>
+            </g>
+          </svg></span>
+        <script type="math/tex">134 \pi</script>, which isn&#39;t ideal in maps with low amounts of soup. Low soup meant I can&#39;t get enough vaporators and thus in the long run I didn&#39;t have enough soup to get enough landscapers to maintain a sizable lattice.
+      </p>
+      <h3>2.7 US Qualifiers Tournament - Bugs!</h3>
+      <p>This was scary for me. Before qualifiers started, I found some major bugs that messed up my bots build logic, causing it to not build enough vaporators for strong mid-late game economy, causing it to build not enough landscapers to maintain a lattice, and occasionally not building a wall near the HQ first to prevent some water accidentally seeping in as my landscapers make the passive lattice. In fact, I was knocked out in the top 8 round because my landscapers were busy terraforming land for the lattice but didn&#39;t terraform enough near the HQ, eventually letting water flood into the HQ&#39;s space.</p>
+      <p><img src="assets/image-20200201120437579.png" referrerpolicy="no-referrer" alt="image-20200201120437579"></p>
+      <div style="text-align:center"><i>Figure 14: My bot (red) against jenkinsmafia (blue) and my bot fails to keep the water out of the space near the HQ as it accidentally dug a hole next to water.</i></div>
+      <p>Luckily, my drone harassment saved me as it helped my bot win enough games in the losers bracket to make it to the top 12 of the US qualifiers tournament, sending me to the finals!</p>
+      <p>I do want to mention that team <strong>Chicken</strong> and <strong>confused</strong> deserved to be in finals as well, but unfortunately <strong>Chicken</strong> didn&#39;t have a good seed and made a really good bot (consistently top 8 in rankings) too late into the season and <strong>confused</strong> was an international team (also consistently top 8 in rankings). Best of luck next year!</p>
+      <h3>2.8 Post-Qualifiers Tournament / Pre-Finals</h3>
+      <p>For the most part, most teams stuck to their own strategies as there was literally about 1 day left before final submissions were due. I focused on making my bot more robust, optimizing bytecode (somehow my drones still go over bytecode), and actually getting a more robust drone wall breaker.</p>
+      <p>At first, my updated drone wall breaker was successfully breaking team Smite&#39;s drone wall on some maps. However, Smite shifted their strategy a bit to include netguns on high dirt around their HQ to protect their drone wall and their landscapers even further, rendering my drone wall buster a little weaker now.</p>
+      <p>As finals drew near, the finals seeding was finally determined and I was a little unfortunate. teh devs weighted 3 variables, seeding tournament ranking, final ELO rating on ranked scrimmages, and whether or not you qualified through winners or losers bracket. Unfortunately I qualified through losers bracket after a close game against team <strong>jenkinsmafia</strong> (16th - 13th) that determined who won through winners bracket, and that dropped my final seeding from a potential 4th to 9th. </p>
+      <h3>2.9 Finals</h3>
+      <p>What a final. There was excitement, there were close calls, there were strategies galore.</p>
+      <p>Im surprised that my drone wall buster actually worked once, defeating team <strong>Blue Dragon</strong> (16th - 13th). Afterwards, it bugged out as expected and couldn&#39;t break thicker drone walls put up by team Smite. My big cookie was unfortunately no match for Smite&#39;s dense small cookie / textured raisin.</p>
+      <p>There were some very close games, with smite winning a game by a single round to enter the final round to face team Java.</p>
+      <p>There were also some interesting matches, in particular the matches between teams <strong>Prasici</strong> (12th - 9th) and <strong>Steam Locomotive</strong> (16th - 13th) where Prasici was able to hack Steam Locomotive&#39;s communication and tricked Steam Locomotive bot about probably where their own HQ was, causing Steam Locomotive&#39;s landscapers to not defend their HQ as a result.</p>
+      <p>Team <strong>Bagger288</strong> (8th - 7th) implemented a strategy where they have a drone carry a miner around their HQ until very late game and once an opponent picks of their wall landscapers, they would place their own miner down to build net guns and stop any possible drone crunch. This almost defeated my bot on two occasions as we battled it out in the losers bracket.</p>
+      <p>After defeating Bagger288, I had to battle it out against team Smite of which I then lost, achieving 6th - 5th as my final result.</p>
+      <h2>3. Reflection</h2>
+      <h3>3.1 On my bot</h3>
+      <p>In hindsight, I should&#39;ve spent more time tuning my bot instead of attempting to make a drone wall buster. I misjudged how difficult it is too bust drone walls especially when teams such as Smite keep up netguns until late game. One of the major issues plaguing my bot was gaining good relative economy while being drone harassed and I could never get around this, losing me games against The High Ground, Smite, and Java. There were also some major tuning points in terms of build logic for when to build vaporators and drones that could have been better. But again, this is in hindsight and hindsight is always 20/20</p>
+      <p>Most likely the next time I do Battlecode, I&#39;m going to place a stronger emphasis on infrastructure and go a little slower before adopting a meta and sticking to it mostly. Having had started out with a pure turtle meta with landscaper defense vs rushes wasted a good amount of time as I switched to the lattice meta.</p>
+      <h3>3.2 On Battlecode</h3>
+      <p>This was by far the best designed Battlecode and best infrastructure of the past 3 years I have competed in it. There was a single spec change that occurred right after sprint and that was it, accentuating how solid the design was in the first place. </p>
+      <p>The infrastructure was great. For one, ranked scrimmages worked, the website was great, and it was easy to setup for every competitor without as many issues encountered with transpilation in 2019 or docker hell in 2018. </p>
+      <p>A huge thanks to team Barcode for helping so often in discord to answer people&#39;s questions before teh devs had time to do so. Thank you again to all the developers and all the people who competed at finals and make finals possible. I&#39;d love to make finals again to meet and talk to you all again an discuss everything from our bots to topics on AI to how juggling might be a sign of too much time and boredom.</p>
+      <p>I&#39;m excited to see where Battlecode goes next year and how future iterations will look like!</p>
+      <h2>4. Some Stats</h2>
+      <p>Here are some stats about my code as generated by <a href='http://cloc.sourceforge.net/'>CLOC</a> (Count Lines of Code):</p>
+      <pre><code>-------------------------------------------------------------------------------
+Language                     files          blank        comment           code
+-------------------------------------------------------------------------------
+Java                            14            481            796           4577
+JavaScript                       1              0              0             41
+-------------------------------------------------------------------------------
+SUM:                            15            481            796           4618
+-------------------------------------------------------------------------------
+</code></pre>
+      <p>(The javascript comes from appendix <a href='#A.1 Searching and finding things in vision'>A.1</a>, where I detail about searching and finding things in bot vision)</p>
+      <p>Some stats according to GitHub</p>
+      <p><img src="assets/image-20200201125913728.png" referrerpolicy="no-referrer" alt="image-20200201125913728"></p>
+      <p><code>98,999</code> lines were added and <code>52,444</code> lines were deleted (pretty inaccurate given that I copied and pasted my bot to other folders for backup/fallback bot)</p>
+      <h2>Appendix A: Technical Details about my Bot</h2>
+      <h3>A.1 Searching and finding things in vision</h3>
+      <p>I often needed to find the closest object, whether it be the closest soup tile, closest water tile for drones to drop units into, or the closest friendly landscaper to pick up and put onto the wall. <a href=''>Breadth First Search</a> is a common search algorithm for finding the closest things in a graph, or in this case, a grid map where tiles are nodes and adjacent tiles are connected by edges.</p>
+      <p>Your typical BFS of a grid involves keeping a queue of tiles to check, and then for tile you check you store that checked tile into a visited set, then you add neighboring tiles that have not been seen yet to the queue. This requires the use of a queue and a set data structure. Given the bytecode limits, a real BFS costs way too much. So I opted to utilize a lookup table to simulate a BFS.</p>
+      <p>In particular, I created a javascript function, in <code>src/Chow10/generateBFSDeltas.js</code>, that would generate all the deltas in the order of a BFS and stored into a fixed array. These deltas represent the change in <code>x</code> and <code>y</code> coordinate from a position <code>x_0, y_0</code> and effectively represent relative coordinates. As a result, the closest relative coordinates are stored towards the front of the array and the farther ones are stored towards the back. I stored this in a constant and this allowed my bot to easily search every tile in its vision by looping through this array of BFS deltas without much computation and also determine the closest object without needing to measure the distance all the time.</p>
+      <p>As a note, switch statements have low bytecode overhead and Team <strong>Barcode</strong> supposedly used a switch statement to do pathfinding and searches somehow. Check out their code here to see how they did it. (As of now, I don&#39;t have a link to their code)</p>
+      <h3>A.2 Custom data structures</h3>
+      <p>Java&#39;s own data structures like <code>ArrayList, HashSet, LinkedList</code> and so forth are all well designed and use inheritance heavily to enforce polymorphism and error checking amongst other features of object oriented design. However, the amount of indirection and layers between a call to say <code>list.add(3)</code> to actually adding the number <code>3</code> to the list is too much and causes a lot of bytecode overhead. As a result, I opted to create my own LinkedList for dynamic sized lists and HashSet (It&#39;s called HashTable in my code but I ended up making it into a HashSet and never bothered to rename it, so for clarity I call it MySet below). </p>
+      <p>For reference, consider the following code</p>
+      <pre><code class='language-java' lang='java'>import java.util.HashSet; // java&#39;s HashSet
+import Chow10.util.MySet; // my implementation of the set
+import battlecode.common.* // import battlecode things such as MapLocation
+...
+ 	HashSet&lt;Integer&gt; javaSet = new HashSet&lt;&gt;();
+	MySet&lt;Integer&gt; mySet = new MySet&lt;&gt;();
+	MapLocation myLoc = new MapLocation(0, 50);
+	javaSet.add(myLoc);
+	mySet.add(myLoc);
+  
+</code></pre>
+      <p><code>javaSet.add(134)</code> according to the Battlecode engine took about <strong>161</strong> bytecode</p>
+      <p><code>mySet.add(134)</code> according to the Battlecode engine took about <strong>65</strong> bytecode.</p>
+      <p>So clearly, my own implementation has a lot less bytecode overhead and uses about 2.5 times less bytecode. This is mostly due to the fact that my own set and lists don&#39;t need to be as generalizable as the java HashSet or LinkedList, and there are less &quot;safety checks&quot; as I can just assume whenever I am using it in my bot, I am using it correctly.</p>
+      <p>This helped my units stay under the bytecode limit for the most part. (My drones ended up going over as I added more and more code to improve them and I lacked the time to comb through the code again to optimize the bytecode better).</p>
+      <h3>A.3 Organizing a drone wall buster</h3>
+      <p>This is hard to coordinate. With lack of global information, I relied on redundancy and many messages to ensure the drone wall buster worked in the right order and the right way. The key component is ensuring certain signals reach out to certain drones and using the HQ as a command center to give out these signals.</p>
+      <p>To be honesty, I&#39;m pretty sure there is a more efficient, and less spaghetti-code like way of doing this, but when Battlecode gives you 22 days to build a bot, that&#39;s pretty hard to come up with.</p>
+      <h4>The Blockchain Transactions/Messages</h4>
+      <p>The drone wall buster involved me adding about 12 different types of messages to be appended to the blockchain, namely:</p>
+      <pre><code class='language-java' lang='java'>static final int ATTACKED_ENEMY_WALL = 34;
+
+static final int NO_LANDSCAPERS_LEFT_ON_ENEMY_HQ = 35;
+
+static final int BUILD_ISLAND = 36;
+
+static final int FOUND_LANDSCAPERS_ON_ENEMY_HQ_AGAIN = 37;
+static final int PLACED_NETGUN = 38;
+
+static final int LANDSCAPER_DRONES_SWARM = 39;
+static final int MINER_DRONES_SWARM = 40;
+static final int ONLY_DRONES_SWARM = 41;
+
+static final int STOP_LANDSCAPER_DRONES_SWARM = 42;
+static final int STOP_MINER_DRONES_SWARM = 43;
+static final int STOP_ONLY_DRONES_SWARM = 44;
+
+static final int RECALL_ONLY_DRONES = 45;
+</code></pre>
+      <p><code>ATTACKED_ENEMY_WALL</code> was a message sent by drones, landscapers, and miners telling my HQ and other units that they were successful in getting near the enemy HQ.</p>
+      <p><code>NO_LANDSCAPERS_LEFT_ON_ENEMY_HQ</code> was a message sent by drones telling my HQ that there were no landscapers left on the enemy walls, which meant that my units should be safe to swarm in and crunch as we broke through the drone wall successfully and got all the landscapers off.</p>
+      <p><code>BUILD_ISLAND</code> is an message sent when drones trying to crunch at first can&#39;t get close enough to actually pick off any enemy landscapers (and thus can&#39;t send <code>ATTACKED_ENEMY_WALL</code>). So, if the drones are unable to attack the enemy wall within <code>15</code> rounds (a limit which is then increased later on future attempts to attack), then they send a message to ask everyone to build an island as clearly if we can&#39;t attack the enemy wall, it is likely we need ground support from netguns to break open the enemy drone wall.</p>
+      <p><code>PLACED_NETGUN</code> is a message to tell the HQ that a net gun was successfully placed, which means that it is now possible to charge in as this net gun will shoot down the enemy drone wall and also protect some of my own miners and landscapers I might drop on to the enemy wall.</p>
+      <p><code>LANDSCAPER_DRONES_SWARM</code>, <code>MINER_DRONES_SWARM</code>, <code>ONLY_DRONES_SWARM</code> are messages sent by HQ telling drones to swarm and crunch in, depending on if they hold landscapers, miners, or nothing. Likewise, prepending <code>STOP_</code> to these variables gives you the signal numbers for messages sent by the HQ to tell these drones to stop crunching in.</p>
+      <p>These 6 signals are used a lot by the HQ to coordinate the attacks and ensure units are not wasting time trying to attack a drone wall that hasn&#39;t been broken yet, or running into the HQ without a landscaper or miner to attack the HQ when there are no landscapers left on the enemy HQ wall.</p>
+      <p>Finally, <code>RECALL_ONLY_DRONES</code> recalls only the drones back to the HQ to pick up units such as landscapers and miners for another attack.</p>
+      <h4>Island Building and Drone Busting Logic</h4>
+      <p>I originally planned on calculating a optimal place to place the island and net guns depending on how thick the enemy drone wall is, but didn&#39;t have the time to do so. So for a simple solution, I have all units try to build the island at about 6 tiles away from the enemy HQ in the direction of my own HQ.</p>
+      <p>Drones would only pick up landscapers with at least 20 dirt on them to then drop it on the island location, who would then attempt to terraform if still alive. Drones with miners would then find an empty spot on the island that was not adjacent to an enemy drone and was safe and had adjacent buildable land. Miners dropped near the HQ would instantly build netguns if there were no netguns close to them and then build design schools if adjacent to the HQ.</p>
+      <p>The netguns would then destroy a part of the drone wall, miners would also message the HQ of the existence of the net gun, in turn making the HQ tell all drones with miners and landscapers to start crunching in.</p>
+
+    </main>
+  </div>
+  <footer class='footer' style='color:#fefefe;'>
+    <div style='padding-top:30px;width:100%;text-align: center;' id='links'><a clear href="https://www.github.com/stonet2000"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width='32px' height='32px'>
+          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" /></svg></a><a clear href="mailto:stao@ucsd.edu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32px" height="32px">
+          <path d="M437.332 80H74.668C51.199 80 32 99.198 32 122.667v266.666C32 412.802 51.199 432 74.668 432h362.664C460.801 432 480 412.802 480 389.333V122.667C480 99.198 460.801 80 437.332 80zM432 170.667L256 288 80 170.667V128l176 117.333L432 128v42.667z" /></svg></a><a href="https://www.linkedin.com/in/stonet2000/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width='32px' height='32px'>
+          <path d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z" /></svg></a><br>
+      <p>Stone Tao</p>
+    </div>
+  </footer>
+</body>
+
+</html>
