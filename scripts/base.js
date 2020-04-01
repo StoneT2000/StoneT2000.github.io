@@ -18,11 +18,13 @@ $(document).ready(function(){
   addCodeCircles("html", "HTML");
   addCodeCircles("css", "CSS");
   addCodeCircles("htmlcss", "HTML & CSS");
+  addCodeCircles("typescript", "Typescript");
+  addCodeCircles("react", "React");
   
   
   
 });
-var colors = {css:"#563d7c" , java:"#b07219", html:"#e34c26", js:"#f1e05a", p5js:"#ed225d",tensorflow:"#ff6f00",htmlcss:"#85425F"};
+var colors = {css:"#563d7c" , java:"#b07219", html:"#e34c26", js:"#f1e05a", p5js:"#ed225d",tensorflow:"#ff6f00",htmlcss:"#85425F",typescript:"#2b7489", react:"#61dafb"};
 function addCodeCircles(name, displayName) {
   $(".project." + name +" > .code-compositions").append("<span><div class='code-circle' style='background-color:" + colors[name] +"'></div><span class='code-circle-def'>" + displayName + "</span></span>");
 }
