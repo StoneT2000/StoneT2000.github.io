@@ -31,12 +31,12 @@
     }
    $(document).ready(function() {
     function addPost(post) {
-      // var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
-      // fetch(captionUrl).then(function(res) {
-      //   return res.text();
-      // }).then(function(res) {
+      var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
+      fetch(captionUrl).then(function(res) {
+        return res.text();
+      }).then(function(res) {
         
-      // var text = md.render(res);
+      var text = md.render(res);
       var thumbPath = `${post.name}/${post.thumb}`;
       $(".posts-wrapper").append(
         `<div class='post'>
@@ -46,10 +46,10 @@
           </div>
           <div>
             <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
-            <div class='caption'>file:///Users/stone.tao/Desktop/Coding/MyWebsite/StoneT2000.github.io/blog/index.html</div>
+            <div class='caption'>${text}</div>
           </div>
         </div>`
-      );
+      // );
       // });
     }
     var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];

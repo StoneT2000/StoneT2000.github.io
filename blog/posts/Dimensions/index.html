@@ -35,16 +35,14 @@
     // html      = converter.makeHtml(text);
     // console.log(html);
     // fetch("./test.md");
-    var url = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/dimensions/dimensions.md`
+    var url = `dimensions.md`
     var md = window.markdownit();
-    var myRequest = new Request(url, { headers: new Headers({'accept':'application/vnd.github.v3.raw'})});
-        fetch(myRequest)
+        fetch(url)
         .then(function(response) {
           if (!response.ok) return "# There was error with your response, please check the details and try again";
             return response.text();
         }).then(function(response) {
          let r = md.render(response);
-         console.log(r);
          $(".content").append(r);
         });
   </script>
