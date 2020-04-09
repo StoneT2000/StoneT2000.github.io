@@ -23,45 +23,42 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="../build/scripts/base.min.js?v=2"></script>
   <script src="../build/scripts/projects.min.js?v=5"></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js'></script>
   <script>
     var url = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/`
-    // var md = window.markdownit();
+    var md = window.markdownit();
     function blogDown() {
       $(".posts-wrapper").html('<h3>Oops! Blog Down!</h3>')
     }
-    async function fetchImage(path) {
-      return new Promise(function(resolve) {
-        var imageUrl = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/${path}/`
-        fetch(imageUrl).then(function(res) {
-          return res.json();
-        }).then(function(res) {
-          res.forEach(function(file) {
-            if (file.name.slice(0, 5) == 'thumb') {
-              resolve(file.download_url)
-            }
-          });
-        });
+   $(document).ready(function() {
+    function addPost(post) {
+      var captionUrl = `posts/${post.name}/caption.md`;
+      fetch(captionUrl).then(function(res) {
+        return res.text();
+      }).then(function(res) {
+        
+      var text = md.render(res);
+      var thumbPath = `${post.name}/${post.thumb}`;
+      $(".posts-wrapper").append(
+        `<div class='post'>
+          <div class='title'>
+            <h2>${post.name}</h2>
+            <date>${post.date}</date>
+          </div>
+          <div>
+            <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
+            <div class='caption'>${text}</div>
+          </div>
+        </div>`
+      );
       });
     }
-    
-    $(document).ready(function(){
-      var myRequest = new Request(url, { headers: new Headers({'accept':'application/json'})});
-      fetch(url)
-      .then(function(response) {
-        if (!response.ok) blogDown();
-        return response.json();
-      }).then(function(res) {
-        let images = [];
-        var imagePromises = [];
-        res.forEach(function(dir, i) {
-          console.log(dir);
-          imagePromises.push(fetchImage(dir.name));
-        });
-        Promise.all(imagePromises).then((images) => {
-          console.log(images);
-        })
-      });
-    });
+    var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
+    for (var i = 0; i < posts.length; i++) {
+      var post = posts[i];
+      addPost(post);
+    }
+   });
   </script>
 </head>
 
