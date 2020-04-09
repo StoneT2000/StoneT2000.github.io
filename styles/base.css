@@ -203,7 +203,7 @@ header a {
   line-height: 60px;
   padding-left:10px;
   padding-right:10px;
-  margin-right:20px;
+  margin-right:30px;
   border-bottom: 4px solid #fefefe;
   transition: border-bottom 0.2s;
 }
@@ -306,11 +306,11 @@ header.shadow a:hover {
   header a.active {
     border-bottom: 4px solid #fefefe;
   }
-  a {
+  .content a {
     text-decoration: underline !important;
     border: none !important;
   }
-  a:hover::before, a:focus::before {
+  .content a:hover::before, .content a:focus::before {
     width: 0%
   }
   html {
@@ -336,5 +336,13 @@ header.shadow a:hover {
     font-weight:400;
     margin-top:0px;
     margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width:510px) {
+  header > ul {
+    padding-left: 18px;
+  }
+  header > ul > a {
+    margin-right: 5px;
   }
 }
