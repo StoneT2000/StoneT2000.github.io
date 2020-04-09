@@ -25,17 +25,26 @@
   <script src="../build/scripts/projects.min.js?v=5"></script>
   <script>
     var url = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/`
-    var md = window.markdownit();
-    var myRequest = new Request(url, { headers: new Headers({'accept':'application/vnd.github.v3.raw'})});
-        fetch(myRequest)
-        .then(function(response) {
-          if (!response.ok) return "# There was error with your response, please check the details and try again";
-            return response.text();
-        }).then(function(response) {
-         let r = md.render(response);
-         console.log(r);
-         $(".content").append(r);
+    // var md = window.markdownit();
+    function blogDown() {
+      $(".posts-wrapper").html('<h3>Oops! Blog Down!</h3>')
+    }
+    function fetchImage(path) {
+      var imageUrl = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/${path}/`
+    }
+    
+    $(document).ready(function(){
+      var myRequest = new Request(url, { headers: new Headers({'accept':'application/json'})});
+      fetch(url)
+      .then(function(response) {
+        if (!response.ok) blogDown();
+        return response.json();
+      }).then(function(res) {
+        res.forEach(function(dir, i) {
+          console.log(dir);
         });
+      });
+    });
   </script>
 </head>
 
