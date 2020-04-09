@@ -306,13 +306,6 @@ header.shadow a:hover {
   header a.active {
     border-bottom: 4px solid #fefefe;
   }
-  .content a {
-    text-decoration: underline !important;
-    border: none !important;
-  }
-  .content a:hover::before, .content a:focus::before {
-    width: 0%
-  }
   html {
     font-size: 16px;
   }
@@ -344,5 +337,8 @@ header.shadow a:hover {
   }
   header > ul > a {
     margin-right: 5px;
+  }
+  .content a:hover::before, .content a:focus::before {
+    width: 0%
   }
 }
