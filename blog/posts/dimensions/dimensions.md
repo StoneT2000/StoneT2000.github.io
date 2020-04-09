@@ -19,7 +19,13 @@ What made Halite and Battlecode so amazing to me in stark comparison to the othe
 3. History (Battlecode stretches way back to at least 2003)
 5. Great flexibility (Although Battlecode does not achieve this at all, it makes up for this through the above points)
 
-CodinGame is not geared so socially. It's dashboard shows no indication that there is a forum or a discord and appears to geared towards getting jobs. Terminal is better and does offer a very active forum and brings great events to universities once in a while but each year it doesn't seem to change much. Furthermore Terminal seems to only support a few languages directly. Kaggle outright only supports Python, although understandably due to its extremely strong Python tied data science audience. Kaggle similarly is a much more professional community, and loses touch with the personal side of competing and having fun.
+There's actually a whole paper on the [design of programming competitions](https://arxiv.org/pdf/1710.07738.pdf) with specific focus on the first rendition of Halite by Michael Truell and Benjamin Spector. I am choosing to focus on a few aspects.
+
+CodinGame is not geared so socially. It's dashboard shows no indication that there is a forum or a discord and appears to geared towards getting jobs. 
+
+Terminal is better and does offer a very active forum and brings great events to universities once in a while but each year it doesn't seem to change much. Furthermore Terminal seems to only officially support a few languages directly.
+
+Kaggle outright only supports Python, although understandably due to its extremely strong Python tied data science audience. Kaggle similarly is a much more professional community, and loses touch with the personal side of competing.
 
 ## The Greatness of Halite and Battlecode
 
@@ -31,3 +37,4 @@ Halite and Battlecode are also always **fresh**. In the 3 iterations of Halite, 
 
 Battlecode also brings about a ton of history and simultaneously develops a greater community, a literal Battlecode alumni community. One of the most legendary competitors, Greg McLynn, has competed several times over and still competes once in a while despite having long graduated. At Battlecode 2020 Finals he came back, not as an competitor, but as a sponsor representative of Battlecode. That's community right there.
 
+## The Case For a Generalized AI Competition Framework
