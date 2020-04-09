@@ -6,7 +6,7 @@ Tldr; With the Coronavirus going around I had a lot of time, so I developed a [g
 
 Jump here if you want more details on why I made it, how I created it, and what are some possible implications.
 
-## What makes a good AI Competition?
+### What makes a good AI Competition?
 
 Ok, now back to the motivation and story.
 
@@ -27,7 +27,7 @@ Terminal is better and does offer a very active forum and brings great events to
 
 Kaggle outright only supports Python, although understandably due to its extremely strong Python tied data science audience. Kaggle similarly is a much more professional community, and loses touch with the personal side of competing.
 
-## The Greatness of Halite and Battlecode
+### The Greatness of Halite and Battlecode
 
 Halite and Battlecode both use [Discord](https://discordapp.com/) for communication and Halite takes on step further through using their own forum as well. The idea of using Discord is brilliant because Discord is often seen as a casual community, a community that can form really tight knit bonds. This is why organizations like ACM at UCSD use Discord because of its culture and community like nature, and has successfully brought together over a thousand members into one org in less than a year. In my own experience, Battlecode's discord has been so friendly and has kind of been my computer science mentor throughout high school. I was learned the ropes of Java through failing again and again in Battlecode 2018 and learning from more experienced programmers and competitors in the Discord.
 
@@ -37,4 +37,4 @@ Halite and Battlecode are also always **fresh**. In the 3 iterations of Halite, 
 
 Battlecode also brings about a ton of history and simultaneously develops a greater community, a literal Battlecode alumni community. One of the most legendary competitors, Greg McLynn, has competed several times over and still competes once in a while despite having long graduated. At Battlecode 2020 Finals he came back, not as an competitor, but as a sponsor representative of Battlecode. That's community right there.
 
-## The Case For a Generalized AI Competition Framework
+### The Case For a Generalized AI Competition Framework

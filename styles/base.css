@@ -306,30 +306,35 @@ header.shadow a:hover {
   header a.active {
     border-bottom: 4px solid #fefefe;
   }
+  a {
+    text-decoration: underline !important;
+    border: none !important;
+  }
+  a:hover::before, a:focus::before {
+    width: 0%
+  }
   html {
-    font-size: 18px;
+    font-size: 16px;
   }
   h1 {
-    font-size: 3.1em;
-  }
-  h2 {
-    font-size: 
-  }
-  h1 {
-    font-family: 'TexGyre';
-    font-size:3.6em;
+    font-size: 2.6em;
+    margin: 0px;
   }
   h2 {
     font-family: 'TexGyre';
-    font-size:2.067em;
+    font-size:2em;
     font-weight:500;
+    margin-top:0px;
   }
   h3 {
     font-size:1.378em;
     font-weight:400;
+    margin-top:0px;
   }
   h4 {
     font-size:1.0333em;
     font-weight:400;
+    margin-top:0px;
+    margin-bottom: 0px;
   }
 }
