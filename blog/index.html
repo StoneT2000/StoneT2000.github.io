@@ -29,8 +29,19 @@
     function blogDown() {
       $(".posts-wrapper").html('<h3>Oops! Blog Down!</h3>')
     }
-    function fetchImage(path) {
-      var imageUrl = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/${path}/`
+    async function fetchImage(path) {
+      return new Promise(function(resolve) {
+        var imageUrl = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/${path}/`
+        fetch(imageUrl).then(function(res) {
+          return res.json();
+        }).then(function(res) {
+          res.forEach(function(file) {
+            if (file.name.slice(0, 5) == 'thumb') {
+              resolve(file.download_url)
+            }
+          });
+        });
+      });
     }
     
     $(document).ready(function(){
@@ -40,9 +51,15 @@
         if (!response.ok) blogDown();
         return response.json();
       }).then(function(res) {
+        let images = [];
+        var imagePromises = [];
         res.forEach(function(dir, i) {
           console.log(dir);
+          imagePromises.push(fetchImage(dir.name));
         });
+        Promise.all(imagePromises).then((images) => {
+          console.log(images);
+        })
       });
     });
   </script>
