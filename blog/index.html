@@ -18,7 +18,6 @@
   <title>Stone's Github Page</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/githubLogo.ico" />
   <link rel="stylesheet" href="../build/styles/base.min.css?v=3">
-  <link rel="stylesheet" href="../build/styles/sidebars.min.css?v=2">
   <link rel="stylesheet" href="../build/styles/blog.min.css?v=5">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="../build/scripts/base.min.js?v=2"></script>
@@ -32,12 +31,12 @@
     }
    $(document).ready(function() {
     function addPost(post) {
-      var captionUrl = `posts/${post.name}/caption.md`;
-      fetch(captionUrl).then(function(res) {
-        return res.text();
-      }).then(function(res) {
+      // var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
+      // fetch(captionUrl).then(function(res) {
+      //   return res.text();
+      // }).then(function(res) {
         
-      var text = md.render(res);
+      // var text = md.render(res);
       var thumbPath = `${post.name}/${post.thumb}`;
       $(".posts-wrapper").append(
         `<div class='post'>
@@ -47,11 +46,11 @@
           </div>
           <div>
             <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
-            <div class='caption'>${text}</div>
+            <div class='caption'>file:///Users/stone.tao/Desktop/Coding/MyWebsite/StoneT2000.github.io/blog/index.html</div>
           </div>
         </div>`
       );
-      });
+      // });
     }
     var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
     for (var i = 0; i < posts.length; i++) {
@@ -63,11 +62,6 @@
 </head>
 
 <body>
-  <div class='sidebarsWrapper'>
-    <div class='sidebars'>
-      <a class='barWrapper' clear href="#projects-a" id='bar1'><span>Projects</span><div class='bar'></div></a>
-    </div>
-  </div>
   <header>
     <ul>
       <a href="../index.html" clear><li>Home</li></a>
