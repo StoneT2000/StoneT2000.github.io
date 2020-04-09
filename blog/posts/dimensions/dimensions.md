@@ -1,6 +1,6 @@
 # Dimensions
 
-Over the past few years I have fell in love with AI competitions. Particularly [Halite](halite.io/) and [Battlecode](https://battlecode.org/) have inspired me to study more about computing and try to learn as much as I can. So at the conclusion of Battlecode 2020 last February, I'm left with that feeling that "I have to wait another year before competing again" as many other competitors may feel. 
+Over the past few years I have fell in love with AI competitions. Particularly [Halite](https://halite.io/) and [Battlecode](https://battlecode.org/) have inspired me to study more about computing and try to learn as much as I can. So at the conclusion of Battlecode 2020 last February, I'm left with that feeling that "I have to wait another year before competing again" as many other competitors may feel. 
 
 Tldr; With the Coronavirus going around I had a lot of time, so I developed a [generalized AI competition framework](https://github.com/stonet2000/dimensions) that allows you to easily create an AI competition so you don't have to wait for another quality competition any longer. This framework gives you boundless possibilities as to what kind of AI competition you want to make and it lets your creativity run wild.
 
