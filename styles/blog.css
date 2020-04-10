@@ -8,20 +8,34 @@
   display: inline-block;
   vertical-align: top;
 }
+.post-link {
+  color: var(--sg1);
+}
+.post-link:hover::before {
+  width: 0;
+}
 .caption {
   display: inline-block;
   width: calc(100% - 30% - 30px);
   margin-left: 20px;
   font-size: 0.9em;
 }
-.post > .title {
-  margin-bottom: 10px;
+.blog-header {
+  margin-bottom: 25px;
 }
-.post > .title > h2 {
+.post .title {
+  margin-bottom: 10px;
+  color: var(--b1);
+  transition: all 0.2s;
+}
+.post .title:hover {
+  color: var(--b2);
+}
+.post .title > h2 {
   display: inline;
   margin-right: 20px;
 }
-.post > .title > date {
+.post .title > date {
   display: inline;
   font-size: 1em;
 }

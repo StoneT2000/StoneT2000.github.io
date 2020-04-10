@@ -31,26 +31,28 @@
     }
    $(document).ready(function() {
     function addPost(post) {
-      var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
-      fetch(captionUrl).then(function(res) {
-        return res.text();
-      }).then(function(res) {
+      // var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
+      // fetch(captionUrl).then(function(res) {
+      //   return res.text();
+      // }).then(function(res) {
         
-      var text = md.render(res);
+      var text = 'hgahdas';//md.render(res);
       var thumbPath = `${post.name}/${post.thumb}`;
       $(".posts-wrapper").append(
-        `<a href='posts/${post.name}'><div class='post'>
+        `<div class='post'>
+          <a href='posts/${post.name}/index.html' class='post-link'>
           <div class='title'>
             <h2>${post.name}</h2>
             <date>${post.date}</date>
           </div>
+          </a>
           <div>
             <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
             <div class='caption'>${text}</div>
           </div>
-        </div></a>`
+        </div>`
       );
-      });
+      // });
     }
     var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
     if (!posts.length) {
@@ -77,7 +79,7 @@
   </header>
   <div class='container'>
     <main class='content'>
-      <h1>Blog!</h1>
+      <h1 class='blog-header'>Blog!</h1>
       <div class='posts-wrapper'>
 
       </div>
