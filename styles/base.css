@@ -106,7 +106,7 @@ footer > #links > a > svg > path {
   fill:#fefefe;
 }
 a {
-  color:var(--b2);
+  color:var(--b1);
   padding-bottom: 2px;
   position: relative;
   font-style: normal;
@@ -120,7 +120,7 @@ a:hover,a:focus {
 a::before {
   content: "";
   left: 0;
-  background-color: var(--b2);
+  background-color: var(--b1);
   width: 0%;
   height: 1px;
   top:-webkit-calc(1em + 10px);
@@ -132,7 +132,7 @@ a::before {
 a:hover::before, a:focus::before {
   content: "";
   left: 0;
-  background-color: var(--b2);
+  background-color: var(--b1);
   width: 100%;
   height: 1px;
   position: absolute;
@@ -146,8 +146,8 @@ button {
   font-family: 'Open Sans';
   font-weight:300;
   background-color:#fefefe;
-  color:var(--b2);
-  border:1px solid var(--b2);
+  color:var(--b1);
+  border:1px solid var(--b1);
   cursor:pointer;
   font-size:1em;
   -webkit-border-radius:5px;
