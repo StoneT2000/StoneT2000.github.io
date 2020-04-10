@@ -2,9 +2,9 @@
 
 Over the past few years, I have fallen in love with AI competitions. Particularly [Halite](https://halite.io/) and [Battlecode](https://battlecode.org/) have inspired me to study more about computing and try to learn as much as I can. So at the conclusion of Battlecode 2020 last February, I'm left with that feeling that "I have to wait another year before competing again" as many other competitors may feel. 
 
-Tldr; With the Coronavirus going around I had a lot of time, so I developed a [generalized AI competition framework](https://github.com/stonet2000/dimensions) that allows you to easily create an AI competition so you don't have to wait for another quality competition any longer. This framework gives you boundless possibilities as to what kind of AI competition you want to make and how you want it to be run.
+Tldr; With the Coronavirus going around I had a lot of time, so I developed a [generalized AI competition framework](https://github.com/stonet2000/dimensions) called [Dimensions](https://github.com/stonet2000/dimensions) that allows you to easily create an AI competition so you don't have to wait for another quality competition any longer. This framework gives you boundless possibilities as to what kind of AI competition you want to make and how you want it to be run with implications in research as well.
 
-Jump [here](#The Case For a Generalized AI Competition Framework) if you want more details on why I made this framework and what makes it stand out
+Scroll to the final section if you want more details on why I made this framework and what makes it stand out.
 
 ### What makes a good AI Competition?
 
@@ -18,7 +18,7 @@ What made Halite and Battlecode so amazing to me in stark comparison to the othe
 2. Fresh, interesting competition designs every year
 3. History (Battlecode stretches way back to at least 2003)
 
-There's a great paper that goes in-depth on the [design of programming competitions](https://arxiv.org/pdf/1710.07738.pdf) with a specific focus on the first rendition of Halite by Michael Truell and Benjamin Spector. I am choosing to focus on a few aspects and relate them to [why I developed Dimensions](#The Case For a Generalized AI Competition Framework)
+There's a great paper that goes in-depth on the [design of programming competitions](https://arxiv.org/pdf/1710.07738.pdf) with a specific focus on the first rendition of Halite by Michael Truell and Benjamin Spector. I am choosing to focus on a few aspects and relate them to why I developed the Dimensions framework.
 
 ### The Greatness of Halite and Battlecode
 
