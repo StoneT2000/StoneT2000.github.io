@@ -39,7 +39,7 @@
       var text = md.render(res);
       var thumbPath = `${post.name}/${post.thumb}`;
       $(".posts-wrapper").append(
-        `<div class='post'>
+        `<a href='posts/${post.name}'><div class='post'>
           <div class='title'>
             <h2>${post.name}</h2>
             <date>${post.date}</date>
@@ -48,11 +48,11 @@
             <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
             <div class='caption'>${text}</div>
           </div>
-        </div>`
+        </div></a>`
       );
       });
     }
-    var posts = []; //[{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
+    var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
     if (!posts.length) {
       $(".posts-wrapper").html("<p>Nothing here yet!</p>");
     }
@@ -70,7 +70,7 @@
       <a href="../index.html" clear><li>Home</li></a>
       <a href="../projects.html" clear><li>Projects</li></a>
       <a href="../about.html" clear><li>About</li></a>
-      <a href="blog/index.html" clear class='active'>
+      <a href="index.html" clear class='active'>
         <li>Blog</li>
       </a>
     </ul>

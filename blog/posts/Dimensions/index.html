@@ -34,7 +34,6 @@
     // text      = '# hello, markdown!',
     // html      = converter.makeHtml(text);
     // console.log(html);
-    // fetch("./test.md");
     var url = `dimensions.md`
     var md = window.markdownit();
         fetch(url)
@@ -49,28 +48,6 @@
 </head>
 
 <body>
-  <div class='sidebarsWrapper'>
-    <div class='sidebars'>
-      <!-- <a class='barWrapper' clear href="#heading" id='bar1'><span>Postmortem</span>
-        <div class='bar'></div>
-      </a>
-      <a class='barWrapper' clear href="#1-introductions" id='bar2'><span>1. Introductions</span>
-        <div class='bar'></div>
-      </a>
-      <a class='barWrapper' clear href="#2-the-battlecode-2020-progression" id='bar3'><span>2. Progression </span>
-        <div class='bar'></div>
-      </a>
-      <a class='barWrapper' clear href="#3-reflection" id='bar4'><span>3. Reflection</span>
-        <div class='bar'></div>
-      </a>
-      <a class='barWrapper' clear href="#4-some-stats" id='bar5'><span>4. Some Stats</span>
-        <div class='bar'></div>
-      </a>
-      <a class='barWrapper' clear href="#appendix-a-technical-details-about-my-bot" id='bar6'><span>Appendix A</span>
-        <div class='bar'></div>
-      </a> -->
-    </div>
-  </div>
   <header>
     <ul>
       <a href="../../../index.html" clear>
@@ -82,7 +59,7 @@
       <a href="../../../about.html" clear>
         <li>About</li>
       </a>
-      <a href="../../blog.html" clear>
+      <a href="../../index.html" clear class='active'>
         <li>Blog</li>
       </a>
     </ul>
