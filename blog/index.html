@@ -30,7 +30,7 @@
     }
    $(document).ready(function() {
     function addPost(post) {
-      var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
+      var captionUrl = `posts/${post.name}/caption.md`;
       fetch(captionUrl).then(function(res) {
         return res.text();
       }).then(function(res) {
@@ -53,7 +53,7 @@
       );
       });
     }
-    var posts = [];//[{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
+    var posts = []; //[{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
     if (!posts.length) {
       $(".posts-wrapper").html("<p>Nothing here yet!</p>");
     }

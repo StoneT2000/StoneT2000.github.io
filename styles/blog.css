@@ -18,7 +18,10 @@
   display: inline-block;
   width: calc(100% - 30% - 30px);
   margin-left: 20px;
-  font-size: 0.9em;
+  font-size: 1em;
+}
+.caption *:first-child {
+  margin-top: -4px;
 }
 .blog-header {
   margin-bottom: 25px;
