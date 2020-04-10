@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="../build/styles/blog.min.css?v=5">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="../build/scripts/base.min.js?v=2"></script>
-  <script src="../build/scripts/projects.min.js?v=5"></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js'></script>
   <script>
     var url = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/`
@@ -54,7 +53,7 @@
       );
       });
     }
-    var posts = [{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
+    var posts = [];//[{name:'Dimensions', date:'April 9, 2020', thumb:'thumb.gif'}];
     if (!posts.length) {
       $(".posts-wrapper").html("<p>Nothing here yet!</p>");
     }
