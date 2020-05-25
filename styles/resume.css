@@ -1,5 +1,8 @@
 .container {
   margin-top:60px;
+  font-weight: 400;
+}
+.container strong {
 }
 h1, h2, h3, h4, p, ul, li {
   margin:0px;
