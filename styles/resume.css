@@ -33,6 +33,12 @@ p, .content li, .content ul {
   padding-left:30px;
 }
 
+.work-meta {
+  font-size: 16px;
+  float: right;
+  font-family: 'Open Sans';
+}
+
 @media print {
   a {
     color:rgb(10,11,15);
@@ -47,6 +53,10 @@ p, .content li, .content ul {
   p, .content li, .content ul {
     font-size:11px;
   }
+  .work-meta {
+    font-size: 11px;
+  }
+
   h1 {
     font-size:24px;
   }
@@ -61,7 +71,7 @@ p, .content li, .content ul {
     margin-bottom: 0px;
   }
   p, .content li, .content ul {
-    line-height: 17px;
+    line-height: 19px;
   }
   header {
     display:none;
