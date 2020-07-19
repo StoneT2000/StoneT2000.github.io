@@ -24,6 +24,7 @@
 
 .workmodule {
   font-size: 0.9em;
+  margin-bottom: 16px;
 }
 
 .workmodule p,
@@ -58,6 +59,7 @@
   display: inline-block;
   padding-bottom: 10px;
   font-weight: 500;
+  font-size: 1.3em;
 }
 
 .work-details {
