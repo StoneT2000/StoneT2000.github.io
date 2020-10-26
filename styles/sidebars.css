@@ -18,6 +18,7 @@
   display: block;
   text-align: right;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .sidebars .barWrapper span {
