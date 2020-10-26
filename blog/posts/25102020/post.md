@@ -4,7 +4,7 @@ I turned 20 today. I've officially entered an age range where things are very re
 
 So here's to that! This blog will now feature what I've been working on, thoughts I find interesting, books and articles I think are worth reading, and anything else I think is relevant enough to bother typing. Happy reading y'all!
 
-## Research on HCI and AI
+## Research on HCI and AI 📝
 
 I've recently started doing research! Never have I ever thought I might do undergraduate research (actually, I'm not sure if I'm officially a researcher at Protolabs but I'm doing research). Nevertheless, I've been exploring the intersection of [Human Computer Interaction (HCI)](https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction) and [Artificial Intelligence (AI)](https://en.wikipedia.org/wiki/Artificial_intelligence). Luckily UCSD is a great hub for HCI and am lucky to live in a time period where this intersection has become more important than ever.
 
@@ -27,7 +27,7 @@ A number of issues include lack of **transparency** of algorithms (e.g blackboxe
 
 I believe with more effort into researching how to improve various properties of "interpretability" from angles such as crowdsourcing, embedding humans in ML among others in the contexts of social media, healthcare etc., we can then truly generate more **trust** in AI and / or remove bias and enable the full potential of **AI** without the backlash.
 
-## Building AI Competitions in 3 days :robot:
+## Building AI Competitions in 3 days 🤖
 
 Here's a big pivot to AI competitions. No, not something like Kaggle (although they run Halite now). Some of you readers may have seen that I've built (and am working on still) a [AI competition framework](https://github.com/StoneT2000/Dimensions) intended to make it extremely easy to launch your own language agnostic AI competition, fully scalable and secured (mostly), inspired by the work of [Battlecode](http://battlecode.org/) and [Halite](http://halite.io/) and intended to generalize those two into a common framework. 
 
