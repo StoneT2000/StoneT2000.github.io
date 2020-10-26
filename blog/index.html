@@ -43,14 +43,22 @@
     $(document).ready(function () {
       function addPost(post) {
         var captionUrl = `https://stonet2000.github.io/blog/posts/${post.path}/caption.md`;
+        $(".posts-wrapper").append(`
+        <div class='post' id='${post.path}'>
+          <div className="skeleton">
+          loading post...
+          </div>
+        </div>`
+        )
         fetch(captionUrl).then(function (res) {
           return res.text();
         }).then(function (res) {
 
           var text = md.render(res);
           var thumbPath = `${post.path}/${post.thumb}`;
-          $(".posts-wrapper").append(
-            `<div class='post'>
+          console.log(post)
+          $(`.posts-wrapper #${post.path}`).html(
+            `
           <a href='https://stonet2000.github.io/blog/posts/${post.path}/index.html' class='post-link'>
           <div class='title'>
             <h2>${post.name}</h2>
@@ -60,8 +68,7 @@
           <div>
             <div class='thumb-wrapper'><img class='thumb' src='https://stonet2000.github.io/blog/posts/${thumbPath}'></div>
             <div class='caption'>${text}</div>
-          </div>
-        </div>`
+          </div>`
           );
         });
       }
