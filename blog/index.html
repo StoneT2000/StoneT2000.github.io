@@ -23,6 +23,15 @@
   <script src="../build/scripts/base.min.js?v=2"></script>
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js'></script>
   <script>
+    /**
+    How to add a new post
+    Create a post.md and captions.md, thumb.png 
+    Append that to posts list with date and the thumbnail file
+    Publish onto github
+    Copy template
+    */
+
+
     var url = `https://api.github.com/repos/StoneT2000/StoneT2000.github.io/contents/blog/posts/`
     var md = window.markdownit();
     function blogDown() {
@@ -30,7 +39,7 @@
     }
    $(document).ready(function() {
     function addPost(post) {
-      var captionUrl = `posts/${post.name}/caption.md`;
+      var captionUrl = `https://stonet2000.github.io/blog/posts/${post.name}/caption.md`;
       fetch(captionUrl).then(function(res) {
         return res.text();
       }).then(function(res) {
@@ -39,14 +48,14 @@
       var thumbPath = `${post.name}/${post.thumb}`;
       $(".posts-wrapper").append(
         `<div class='post'>
-          <a href='posts/${post.name}/index.html' class='post-link'>
+          <a href='https://stonet2000.github.io/blog/posts/${post.name}/index.html' class='post-link'>
           <div class='title'>
             <h2>${post.name}</h2>
             <date>${post.date}</date>
           </div>
           </a>
           <div>
-            <div class='thumb-wrapper'><img class='thumb' src='posts/${thumbPath}'></div>
+            <div class='thumb-wrapper'><img class='thumb' src='https://stonet2000.github.io/blog/posts/${thumbPath}'></div>
             <div class='caption'>${text}</div>
           </div>
         </div>`
