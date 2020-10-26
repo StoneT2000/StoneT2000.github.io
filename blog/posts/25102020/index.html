@@ -29,8 +29,12 @@
   
   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/markdown-it/10.0.0/markdown-it.min.js'></script>
   <script>
-    var url = `post.md`
-    var md = window.markdownit();
+    var url = `https://stonet2000.github.io/blog/posts/25102020/post.md`
+    var md = window.markdownit({
+      html: true,
+      linkify: true,
+      typographer: true
+    });
         fetch(url)
         .then(function(response) {
           if (!response.ok) return "# There was error with your response, please check the details and try again";
