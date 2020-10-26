@@ -78,7 +78,7 @@ h4 {
 }
 
 .blog-content h1:first-of-type {
-  max-width: 80%;
+  max-width: calc(100% - 15rem);
 }
 .content {
   width:80%;
