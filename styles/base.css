@@ -76,6 +76,10 @@ h4 {
   font-size:1.2em;
   font-weight:400;
 }
+
+.blog-content:first-of-type(h1) {
+  max-width: 80%;
+}
 .content {
   width:80%;
   margin-left:5%;
@@ -280,6 +284,9 @@ header.shadow a:hover {
     outline: var(--b1t) auto 4px;
 }
 @media only screen and (max-width:991px) {
+  .blog-content:first-of-type(h1) {
+    max-width: 100%;
+  }
   .sidebars {
     display:none;
   }
