@@ -12,12 +12,12 @@ In short terms, HCI x AI asks questions about the **interface of AI technology a
 
 Why is it relevant? Here's 2 articles demonstrating how AI tech has had a measurable impact on us, on the dimensions of discrimination and bias, politics and filter bubbles (and there's so many more examples, many of which are very subtle)
 
-- https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm
-- https://www.theguardian.com/technology/2017/may/22/social-media-election-facebook-filter-bubbles
+- [https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm](https://www.theguardian.com/technology/2020/sep/21/twitter-apologises-for-racist-image-cropping-algorithm)
+- [https://www.theguardian.com/technology/2017/may/22/social-media-election-facebook-filter-bubbles](https://www.theguardian.com/technology/2017/may/22/social-media-election-facebook-filter-bubbles)
 
 Here's a great article on algorithimic bias by [Vox](https://vox.com)
 
-- https://www.vox.com/recode/2020/2/18/21121286/algorithms-bias-discrimination-facial-recognition-transparency
+- [https://www.vox.com/recode/2020/2/18/21121286/algorithms-bias-discrimination-facial-recognition-transparency](https://www.vox.com/recode/2020/2/18/21121286/algorithms-bias-discrimination-facial-recognition-transparency)
 
 (fun fact, I'm in the background of [this video on fencing](https://www.youtube.com/watch?v=kTw05gC2T9Y&ab_channel=Vox) by Vox. I'm the kid wearing red shoes. This will be the closest I ever get to being on a 2 million view youtube video)
 
