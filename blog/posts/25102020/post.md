@@ -38,7 +38,7 @@ Here's some interesting results. I built a hide and seek AI competition, launche
 To say the least, if you know how to use the framework, it becomes pretty easy to make competitions on the fly provided you have an idea. Something that I didn't even realize could happen initially was **how easy it is to create visualizers** for an AI competition now, something that I have worked a bit with recently as I help develop a new AI competition.
 
 <img src="https://cdn.discordapp.com/attachments/724158854534791199/768181430064775208/running.gif" alt="running" style="zoom: 50%;" />
-<caption>A gif of the visualizer of one of the competitions</caption>
+<p class="caption">A gif of the visualizer of one of the competitions</p>
 
 Here's some context. A visualizer takes a match's replay file and generates the visuals to show users the result of the match as well as what happened. Usually, visualizers are web based and that means they're written in Javascript, a different language to whatever runs the match engine and competitions (e.g. Halite 3 is C++, Battlecode is Java). This means you need to store replays that reflect most of the match information, including the actions taken by agents, perhaps the grid map and how it changes over time due to actions etc. Then, not only are these replays typically big, you then need to program the visualizer to read all of that output and change it to javascript understandable code and then effectively play the match out again. **Tedious** right? (the answer is yes by the way)
 
