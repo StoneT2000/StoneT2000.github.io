@@ -46,4 +46,4 @@ Since Dimensions is in [typescript](typescriptlang.org) (superset of javascript)
 
 Anyway, first blog post done,
 
-:ocean:
+🌊
