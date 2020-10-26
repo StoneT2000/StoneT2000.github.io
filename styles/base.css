@@ -115,36 +115,6 @@ a {
   position: relative;
   font-style: normal;
   cursor: pointer;
-  text-decoration: none;
-  display:inline-block;
-}
-a:hover,a:focus {
-  text-decoration: none;
-}
-a::before {
-  content: "";
-  left: 0;
-  background-color: var(--b1);
-  width: 0%;
-  height: 1px;
-  top:-webkit-calc(1em + 10px);
-  top:calc(1em + 10px);
-  position: absolute;
-  z-index: 2;
-  transition: width 0.2s;
-}
-a:hover::before, a:focus::before {
-  content: "";
-  left: 0;
-  background-color: var(--b1);
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  z-index: 2;
-  -webkit-transition: width 0.2s;
-  -o-transition: width 0.2s;
-  transition: width 0.2s;
-  text-decoration: none;
 }
 button {
   font-family: 'Open Sans';
@@ -210,6 +180,7 @@ header a {
   margin-right:30px;
   border-bottom: 4px solid #fefefe;
   transition: border-bottom 0.2s;
+  text-decoration: none;
 }
 header a.active {
   border-bottom: 4px solid var(--sg1);
@@ -279,9 +250,6 @@ header.shadow a:hover {
 .checkbox input[type="checkbox"]:checked + label::after {
   content: "";
   opacity: 1;
-}
-.checkbox input[type="checkbox"]:focus + label::before {
-    outline: var(--b1t) auto 4px;
 }
 @media only screen and (max-width:991px) {
   .blog-content h1:first-of-type {

@@ -26,6 +26,9 @@
 .blog-header {
   margin-bottom: 25px;
 }
+.post .post-link { 
+  text-decoration: none;
+}
 .post .title {
   margin-bottom: 10px;
   color: var(--b1);
