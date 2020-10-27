@@ -1,6 +1,6 @@
 # Starting a Proper Blog
 
-I turned 20 today. I've officially entered an age range where things are very real in the world, my thoughts and ideas no longer relevant to just friends and family. Also, apparently some people want to hear about my experiences and activities and I guess the older I get, the more "important" my voice is (curious though about how to measure "importance" of one's voice).
+I've realized as I get older, things are very real in the world, my thoughts and ideas no longer relevant to just friends and family. Also, apparently some people want to hear about my experiences and activities and I guess the older I get, the more "important" my voice is (curious though about how to measure "importance" of one's voice).
 
 So here's to that! This blog will now feature what I've been working on, thoughts I find interesting, books and articles I think are worth reading, and anything else I think is relevant enough to bother typing. Happy reading y'all!
 
