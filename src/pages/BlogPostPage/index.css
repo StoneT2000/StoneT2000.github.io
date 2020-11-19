@@ -1,0 +1,32 @@
+.BlogPostPage h1:first-of-type {
+  max-width: calc(100% - 15rem);
+}
+
+.BlogPostPage img {
+  max-width: 90%;
+  width: 720px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.BlogPostPage img {
+  display: block;
+}
+.BlogPostPage .caption {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+.BlogPostPage blockquote {
+  border-left: 4px solid #dfe2e5;
+  padding: 0 15px;
+  color: #777777;
+}
+.BlogPostPage blockquote blockquote {
+  padding-right: 0;
+}
+.BlogPostPage strong {
+  font-weight: 700;
+}
+.BlogPostPage .anchor {
+  top: -145px;
+}

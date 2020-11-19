@@ -1,0 +1,76 @@
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  position: fixed;
+  transition: box-shadow 0.2s, background-color 0.2s;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 1000;
+  height: 60px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-end;
+}
+header a {
+  list-style: none;
+  display: inline-block;
+  height: 54px;
+  line-height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 30px;
+  border-bottom: 4px solid #fefefe;
+  transition: border-bottom 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+header a.active {
+  border-bottom: 4px solid var(--sg1);
+}
+header > ul {
+  margin: 0;
+}
+header a:hover {
+  border-bottom: 4px solid var(--sg1);
+}
+header.shadow {
+  box-shadow: 0 2px 4px var(--bx1t);
+  background-color: var(--b1);
+  color: #fefefe;
+}
+header.shadow a {
+  border-bottom: 4px solid var(--b1);
+}
+header.shadow a:hover {
+  border-bottom: 4px solid #fefefe;
+}
+
+@media only screen and (max-width: 991px) {
+  header {
+    box-shadow: 0 2px 4px var(--bx1t);
+    background-color: var(--b1);
+    color: #fefefe;
+    justify-content: flex-start;
+  }
+  header a {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  header a {
+    border-bottom: 4px solid var(--b1);
+  }
+  header a:hover {
+    border-bottom: 4px solid #fefefe;
+  }
+  header a.active {
+    border-bottom: 4px solid #fefefe;
+  }
+}
+@media only screen and (max-width: 510px) {
+  header > ul {
+    padding-left: 18px;
+  }
+  header > ul > a {
+    margin-right: 5px;
+  }
+}

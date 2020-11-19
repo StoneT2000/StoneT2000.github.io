@@ -1,0 +1,75 @@
+.BlogPostPreviewCard .wave-symbol {
+  border-radius: 50%;
+}
+.BlogPostPreviewCard {
+  margin-bottom: 40px;
+}
+.BlogPostPreviewCard .thumb-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+.BlogPostPreviewCard .post-link {
+  color: var(--sg1);
+}
+.BlogPostPreviewCard .caption {
+  display: inline-block;
+  width: calc(100% - 30% - 30px);
+  margin-left: 20px;
+  font-size: 1rem;
+  text-align: left;
+}
+.BlogPostPreviewCard .caption *:first-child {
+  margin-top: -4px;
+}
+.blog-header {
+  margin-bottom: 25px;
+}
+.BlogPostPreviewCard .post-link {
+  text-decoration: none;
+}
+.BlogPostPreviewCard .title {
+  margin-bottom: 10px;
+  color: var(--b1);
+  transition: all 0.2s;
+}
+.BlogPostPreviewCard .title:hover {
+  color: var(--b2);
+}
+.BlogPostPreviewCard .title > h2 {
+  display: inline;
+  margin-right: 20px;
+}
+.BlogPostPreviewCard .title > date {
+  display: inline;
+  font-size: 1rem;
+}
+.BlogPostPreviewCard .thumb-wrapper {
+  width: 30%;
+}
+.BlogPostPreviewCard .thumb {
+  width: 100%;
+}
+@media only screen and (max-width: 750px) {
+  .BlogPostPreviewCard .thumb-wrapper {
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .BlogPostPreviewCard .caption {
+    display: block;
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .BlogPostPreviewCard > .title > date {
+    display: block;
+  }
+  .BlogPostPreviewCard .thumb-wrapper {
+    width: calc(100%);
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
