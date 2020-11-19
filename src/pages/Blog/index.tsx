@@ -52,7 +52,8 @@ const Blog = () => {
       });
       setPosts(filledPosts);
     });
-  }, [posts]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
       {/* <Sidebar tabs={tabs} />, */}
