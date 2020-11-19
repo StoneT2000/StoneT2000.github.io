@@ -1,0 +1,24 @@
+.AwardModule p,
+.AwardModule ul {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+.AwardModule h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.AwardModule .award-title {
+  font-size: 1.2rem;
+  padding-bottom: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.AwardModule .award-title::before {
+  top:auto;
+  bottom:calc(-1px);
+}
+.AwardModule .award-title:hover::before {
+  top:auto;
+  bottom:calc(-1px);
+}

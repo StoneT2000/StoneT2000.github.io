@@ -1,6 +1,7 @@
 import React from 'react';
 import ProjectCard from '../../components/ProjectCard';
 import WorkModule from '../../components/WorkModule';
+import AwardModule from '../../components/AwardModule';
 import DefaultLayout from '../layouts/DefaultLayout';
 import './index.css';
 import logo from './logo.png';
@@ -91,6 +92,44 @@ const Home = () => {
       logoImage: 'assets/taosdata.png',
     },
   ];
+
+  const awards = [
+    {
+      details: `<p>
+      MIT Battlecode 2020 | Finalist, 5th overall, top soloist (Competed in
+      Java) – Jan. 2020 |
+      <a href="https://github.com/StoneT2000/Battlecode2020/" target="blank">
+        Bot Code
+      </a>
+      | <a href="https://stonet2000.github.io/battlecode/2020">Post Mortem</a>
+    </p>
+    <p>
+      MIT Battlecode 2019 | Finalist, 9th overall, 4th out of high school
+      teams (Competed in JS) – Jan. 2019 |
+      <a href="https://github.com/StoneT2000/BC19/" target="blank">
+        Bot Code
+      </a>
+    </p>`,
+      link: 'http://battlecode.org/',
+      title: 'MIT Battlecode (AI Competition)',
+    },
+    {
+      title: 'Halite AI Competition',
+      link: 'https://halite.io/',
+      details: `<p>Halite 3 | Placed 66th out of 4000+ students and professionals globally. Achieved admiral status by placing above Two Sigma’s base bot. 5th placed high school student out of 500+ HS students. 1st place JavaScript bot. – Nov. 2018 to Jan. 2019</p>`,
+    },
+    {
+      title: 'IEEE at UCSD Quarterly Projects++',
+      link: null,
+      details: `<p>Placed 1st with my team. Collaborated on building an IoT personal farm with auto-irrigation and time series data collection, aimed at improving the user feedback on plant growth. Contributed on database work, data integration with hardware, and data visualizers</p>`,
+    },
+    {
+      title: 'USA Mathematical Talent Search',
+      link: 'https://usamts.org/',
+      details: `<p>Silver Medal - May 2018</p>`,
+    },
+  ];
+
   return (
     <DefaultLayout>
       <div className="Home">
@@ -132,9 +171,18 @@ const Home = () => {
             <ProjectCard {...project} />
           ))}
         </div>
+        <div className="anchor" id="work-a" />
+        <h2>Experience</h2>
         <div>
           {works.map((work) => (
             <WorkModule {...work} />
+          ))}
+        </div>
+        <div className="anchor" id="awards-a" />
+        <h2>Awards</h2>
+        <div>
+          {awards.map((award) => (
+            <AwardModule {...award} />
           ))}
         </div>
       </div>
