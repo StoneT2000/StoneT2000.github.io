@@ -1,112 +1,69 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
-import Sidebar from '../../components/Sidebar';
+import BlogPostPreviewCard, {
+  BlogPostPreviewCardProps,
+} from '../../components/BlogPostPreviewCard';
 import './index.css';
-const About = () => {
-  const tabs = [
-    { name: 'About', href: 'brief-a' },
-    { name: 'Education', href: 'education-a' },
-  ];
+import axios from 'axios';
+import MarkdownIt from 'markdown-it';
+const md = new MarkdownIt();
+const Blog = () => {
+  const [posts, setPosts] = useState<
+    Array<BlogPostPreviewCardProps & { path: string }>
+  >([
+    {
+      path: '25102020',
+      title: 'Starting a Proper Blog',
+      time: 'October 26, 2020',
+      thumbnail: 'thumb.png',
+      thumbnailAltText: 'Blue color',
+      desc: '',
+    },
+    {
+      path: 'Dimensions',
+      title: 'Dimensions',
+      time: 'April 9, 2020',
+      thumbnail: 'thumb.gif',
+      thumbnailAltText:
+        'Dimensions running a Rock Paper Scissors AI tournament',
+      desc: '',
+    },
+  ]);
+  useEffect(() => {
+    let filledPosts: any[] = [];
+    let fetchCaptionsPromises: Array<Promise<string>> = [];
+    posts.forEach((post) => {
+      const captionUrl = `https://stonet2000.github.io/blog/posts/${post.path}/caption.md`;
+      fetchCaptionsPromises.push(
+        axios.get(captionUrl).then((res) => {
+          return md.render(res.data);
+        })
+      );
+    });
+    Promise.all(fetchCaptionsPromises).then((captions) => {
+      captions.forEach((caption, i) => {
+        filledPosts.push(posts[i]);
+        filledPosts[i].desc = caption;
+        filledPosts[i].link = `/blog/posts/${filledPosts[i].path}`;
+        filledPosts[
+          i
+        ].thumbnail = `/blog/posts/${filledPosts[i].path}/${filledPosts[i].thumbnail}`;
+      });
+      setPosts(filledPosts);
+    });
+  }, []);
   return (
     <>
-      <Sidebar tabs={tabs} />,
-      <DefaultLayout page="About">
-        <div className="About">
-          <h1 id="brief-a">About Me</h1>
-          <div id="brief">
-            <p>
-              I'm currently an undergraduate student studying Computer Science
-              and Cognitive Science at{' '}
-              <a href="https://www.ucsd.edu" target="blank">
-                UCSD
-              </a>
-              , class of 2023. I'm interested in AI, HCI, Web Development and
-              make AI competitions,{' '}
-              <a href="https://stonet2000.github.io/Cut-Bread/" target="blank">
-                some useless websites
-              </a>
-              , and more creations. Currently researching at intersection of AI
-              and HCI, focusing on how embedding people in the ML loop can help
-              improve the model in terms of predicative power, fairness,
-              transparency etc. More talk of all that on my{' '}
-              <a href="/blog">blog</a>. Also you can{' '}
-              <a href="/files/Stone%20Tao%20-%20Resume.pdf" target="blank">
-                view my resume here
-              </a>
-            </p>
-            <p>
-              I'm most fluent with Typescript / Javascript, Python, and C++. I
-              have also worked with Go, Java and touched Assembly a few times.
-            </p>
-            <p>
-              In Data Science and AI, I'm experienced with Tensorflow, Keras,
-              Pandas, Numpy, Scikit-learn and basic PyTorch and CV2
-            </p>
-            <p>
-              In Web Development and Software Engineering, I'm experienced with
-              Node.js, React.js, MongoDB, Express.js. I've also worked with
-              Wordpress, PHP, MySQL and the LAMP tech stack.
-            </p>
-            <p>
-              I also founded and run the AI club at UCSD, see{' '}
-              <a href="https://ai.acmucsd.com" target="blank">
-                ai.acmucsd.com
-              </a>
-              , helping run competitions, reach out to high schools, and run
-              workshops on AI topics and programming
-            </p>
-          </div>
-          <h1 id="education-a">Education</h1>
-          <div id="education">
-            <div>
-              <h3>
-                Undergraduate:{' '}
-                <a href="https://www.ucsd.edu" target="blank">
-                  University of California San Diego
-                </a>
-              </h3>
-              <aside>Major GPA: 4.0/4.0</aside>
-              <aside>Overall GPA: 3.98/4.0</aside>
-              <p>
-                Computer Science and Cognitive Science (ML specialization)
-                Double Major. Class of 2023
-              </p>
-              <p>Selected Courses Taken:</p>
-              <ul>
-                <li>
-                  AI / Data Science: CSE 152 - Intro to Computer vision, COGS
-                  108 - Data Science in Practice, COGS 118A - Supervised ML
-                  Algorithms
-                </li>
-                <li>
-                  Math: MATH 31AH - Honors Linear Algebra, MATH 31BH - Honors
-                  Multivariable Calculus, MATH 31CH - Honors Vector Calculus,
-                  CSE 20 & CSE 21 - Discrete Math
-                </li>
-                <li>
-                  Computer Science: CSE 100 - Advanced Data Structures, CSE 101
-                  - Design and Analsis of Algorithms, CSE 30 - Computer
-                  Organization and Systems Programming
-                </li>
-                <li>
-                  Cognitive Science: COGS 14A & 14B - Research Methods in
-                  Cognitive Science, COGS 17 - Neurobiology of Cognition
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>
-                High school:{' '}
-                <a href="https://www.isb.bj.edu.cn/" target="blank">
-                  The International School of Beijing
-                </a>
-              </h3>
-              <p>Class of 2019</p>
-            </div>
-          </div>
+      {/* <Sidebar tabs={tabs} />, */}
+      <DefaultLayout page="Blog">
+        <div className="Blog">
+          <h1>Blog!</h1>
+          {posts.map((post, i) => (
+            <BlogPostPreviewCard key={i} {...post} />
+          ))}
         </div>
       </DefaultLayout>
     </>
   );
 };
-export default About;
+export default Blog;

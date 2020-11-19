@@ -15,10 +15,10 @@
   margin-top: 10px;
 }
 .AwardModule .award-title::before {
-  top:auto;
-  bottom:calc(-1px);
+  top: auto;
+  bottom: calc(-1px);
 }
 .AwardModule .award-title:hover::before {
-  top:auto;
-  bottom:calc(-1px);
+  top: auto;
+  bottom: calc(-1px);
 }

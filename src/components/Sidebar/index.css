@@ -25,33 +25,32 @@
   display: inline-block;
   opacity: 0;
   transition: opacity 0.45s, color 0.3s;
-  color:rgba(62, 75, 115, 0.45);
+  color: rgba(62, 75, 115, 0.45);
 }
 
 .Sidebar .sidebars .bar {
   height: 35px;
   width: 5px;
-  margin-right:25px;
+  margin-right: 25px;
   background-color: rgba(62, 75, 115, 0.15);
   transition: background-color 0.3s, margin-right 0.3s;
   margin-bottom: 5px;
   display: inline-block;
-  
 }
 
 .Sidebar .sidebars .bar-wrapper:hover .bar {
   background-color: rgba(62, 75, 115, 0.85);
-  margin-right:30px;
+  margin-right: 30px;
 }
 .Sidebar .sidebars .bar-wrapper:hover span {
-  color:var(--sg1);
+  color: var(--sg1);
 }
 
 .Sidebar .sidebars .bar-wrapper.inview .bar {
   background-color: rgba(62, 75, 115, 0.85);
 }
 .Sidebar .sidebars .bar-wrapper.inview span {
-  color:var(--sg1);
+  color: var(--sg1);
 }
 
 @media only screen and (max-width: 991px) {

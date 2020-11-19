@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-type SidebarProps = {
+export type SidebarProps = {
   tabs: { name: string; href: string }[];
 };
 const Sidebar = ({ tabs }: SidebarProps) => {
