@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Switch,
-  BrowserRouter as Router,
-  Route,
-  useLocation,
-} from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import './styles/base.css';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
