@@ -1,0 +1,35 @@
+.edu-block {
+  box-shadow: 0 4px 12px var(--bx1);
+  padding:35px 20px 20px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.edu-block p {
+  margin-bottom: 0px;
+}
+.edu-block ul {
+  margin-top:0px;
+}
+.edu-block img {
+  width:300px;
+  max-width: 100%;
+}
+#isb {
+  border: 3px solid rgb(0,88,168);
+}
+#ucsd {
+  border: 3px solid rgb(219,165,58);
+}
+.edu-logo {
+  padding:15px;
+  border-radius:5px;
+  transition:box-shadow 0.2s;
+}
+.edu-logo:hover {
+  box-shadow: 0 4px 12px var(--bx1);
+  display: inline-block;
+}
+#brief span {
+  color:var(--b2);
+  font-weight: 400;
+}
