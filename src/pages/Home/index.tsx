@@ -79,8 +79,8 @@ const Home = () => {
     {
       link: 'https://www.taosdata.com/en/',
       org: 'TAOS Data',
-      start: '2020/06',
-      end: '2020/09',
+      start: '2019/06',
+      end: '2019/09',
       location: 'Oakland, USA',
       details: [
         `Independently developed the company website and integrated Wordpress as a headless CMS, serving up to
