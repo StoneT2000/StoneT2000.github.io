@@ -150,14 +150,20 @@ const Home = () => {
               GitHub: <a href="https://www.github.com/stonet2000">StoneT2000</a>
             </p>
             <p>
+              Twitter: <a href="https://twitter.com/Stone_Tao">@Stone_Tao</a>
+            </p>
+            <p>
               Email:{' '}
               <a href="mailto:stonezt2019@gmail.com ">stonezt2019@gmail.com </a>
             </p>
             <p>
-              Resume: <a href="resume.html">Online</a> |{' '}
-              <a href="files/Stone%20Tao%20-%20Resume.pdf">PDF</a>
+              Resume: <a href="files/Stone%20Tao%20-%20Resume.pdf">PDF</a>
             </p>
           </div>
+          <p>
+            I'm a software engineer / AI x HCI researcher. Previously worked at
+            LaunchDarkly
+          </p>
           <p>
             Computer Science and Cognitive Science major at{' '}
             <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023
@@ -165,13 +171,10 @@ const Home = () => {
           <p>
             I love AI and design. Currently developing fun AI competitions and
             researching at the intersection of HCI and AI. Check out my{' '}
-            <a href="projects.html">Projects</a>,{' '}
-            <a href="#work-a">Experience</a>, <a href="about.html">About Me</a>,
-            or <a href="#awards-a">Awards</a>.{' '}
-            <a href="resume.html">View my resume</a> or{' '}
-            <a href="files/Stone%20Tao%20-%20Resume.pdf">
-              download a pdf version
-            </a>
+            <a href="/projects">Projects</a>, <a href="#work-a">Experience</a>,{' '}
+            <a href="/blog">Blog</a>, <a href="#awards-a">Awards</a>,{' '}
+            <a href="/about">About Me</a>, or{' '}
+            <a href="/files/Stone%20Tao%20-%20Resume.pdf">view my resume</a>
           </p>
           <div className="anchor" id="projects-a" />
           <h2>Pinned Projects</h2>
