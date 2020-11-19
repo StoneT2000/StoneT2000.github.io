@@ -6,6 +6,7 @@ import BlogPostPreviewCard, {
 import './index.css';
 import axios from 'axios';
 import MarkdownIt from 'markdown-it';
+import { Helmet } from 'react-helmet';
 const md = new MarkdownIt();
 const Blog = () => {
   const [posts, setPosts] = useState<
@@ -56,6 +57,13 @@ const Blog = () => {
     <>
       {/* <Sidebar tabs={tabs} />, */}
       <DefaultLayout page="Blog">
+        <Helmet>
+          <title>Stone Tao's Blog</title>
+          <meta
+            name="description"
+            content="Stone Tao's blog on AI, HCI, and what he's working on"
+          />
+        </Helmet>
         <div className="Blog">
           <h1>Blog!</h1>
           {posts.map((post, i) => (

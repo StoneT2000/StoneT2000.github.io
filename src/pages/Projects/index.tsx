@@ -3,6 +3,7 @@ import ProjectCard, { ProjectCardProps } from '../../components/ProjectCard';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import './index.css';
+import { Helmet } from 'react-helmet';
 const Projects = () => {
   const [checked, setChecked] = useState({
     useful: true,
@@ -92,6 +93,13 @@ const Projects = () => {
     <>
       <Sidebar tabs={tabs} />,
       <DefaultLayout page="Projects">
+        <Helmet>
+          <title>Stone Tao's Projects</title>
+          <meta
+            name="description"
+            content="Stone Tao's page of projects on AI, cool software, and useless stuff like a site about cutting bread"
+          />
+        </Helmet>
         <div className="Projects">
           <div className="anchor" id="projects-a" />
           <h1>Projects</h1>

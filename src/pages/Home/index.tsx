@@ -4,6 +4,7 @@ import WorkModule from '../../components/WorkModule';
 import AwardModule from '../../components/AwardModule';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
+import { Helmet } from 'react-helmet';
 import './index.css';
 import logo from './logo.png';
 const Home = () => {
@@ -140,6 +141,13 @@ const Home = () => {
     <>
       <Sidebar tabs={tabs} />,
       <DefaultLayout page="Home">
+        <Helmet>
+          <title>Stone Tao's Website</title>
+          <meta
+            name="description"
+            content="Stone Tao's personal website with projects, a blog, resume, and the about me kind of stuff"
+          />
+        </Helmet>
         <div className="Home">
           <h1 id="heading">
             Stone Tao{' '}

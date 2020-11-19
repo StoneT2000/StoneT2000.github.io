@@ -2,6 +2,7 @@ import React from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import './index.css';
+import { Helmet } from 'react-helmet';
 const About = () => {
   const tabs = [
     { name: 'About', href: 'brief-a' },
@@ -11,6 +12,13 @@ const About = () => {
     <>
       <Sidebar tabs={tabs} />,
       <DefaultLayout page="About">
+        <Helmet>
+          <title>About Stone Tao</title>
+          <meta
+            name="description"
+            content="Stone Tao's about page, covering education, interests, and various other details"
+          />
+        </Helmet>
         <div className="About">
           <h1 id="brief-a">About Me</h1>
           <div id="brief">

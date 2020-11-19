@@ -5,10 +5,12 @@ import axios from 'axios';
 import MarkdownIt from 'markdown-it';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
+import { Helmet } from 'react-helmet';
 const md = new MarkdownIt({ html: true, linkify: true });
 const BlogPostPage = () => {
   const [content, setContent] = useState('');
   const [tabs, setTabs] = useState<{ name: string; href: string }[]>([]);
+  const [title, setTitle] = useState('Blog Post');
   const { postpath } = useParams<{ postpath: string }>();
   useEffect(() => {
     const url = `/blog/posts/${postpath}/post.md`;
@@ -33,16 +35,25 @@ const BlogPostPage = () => {
         h2elems[i].innerHTML += `<span class="anchor" id="${href}"></span>`;
       }
       setTabs(foundtabs);
+      const h1elem = document.getElementsByTagName('h1')[0];
+      setTitle(h1elem.innerHTML);
     });
-  }, []);
+  }, [postpath]);
   useEffect(() => {
     // find all h2 elements
     // content.
   }, [content]);
   return (
     <>
-      <Sidebar tabs={tabs} />,
+      <Sidebar tabs={tabs} />
       <DefaultLayout page="Blog">
+        <Helmet>
+          <title>{title}</title>
+          <meta
+            name="description"
+            content={`Stone Tao's blog post on ${title}`}
+          />
+        </Helmet>
         <div className="BlogPostPage">
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
         </div>
