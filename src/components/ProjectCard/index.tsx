@@ -1,7 +1,7 @@
 import React from 'react';
 import CodeCircles from '../CodeCircles';
 import './index.css';
-type ProjectCardProps = {
+export type ProjectCardProps = {
   title: string;
   link: string;
   time: string;

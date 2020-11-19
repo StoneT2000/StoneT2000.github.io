@@ -38,8 +38,8 @@ const WorkModule = ({
       <p className="work-role">{role}</p>
       <div className="work-details">
         <ul>
-          {details.map((d) => (
-            <li dangerouslySetInnerHTML={{ __html: d }} />
+          {details.map((d, i) => (
+            <li key={i} dangerouslySetInnerHTML={{ __html: d }} />
           ))}
         </ul>
       </div>

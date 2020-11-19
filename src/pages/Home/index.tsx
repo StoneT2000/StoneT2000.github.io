@@ -3,6 +3,7 @@ import ProjectCard from '../../components/ProjectCard';
 import WorkModule from '../../components/WorkModule';
 import AwardModule from '../../components/AwardModule';
 import DefaultLayout from '../layouts/DefaultLayout';
+import Sidebar from '../../components/Sidebar';
 import './index.css';
 import logo from './logo.png';
 const Home = () => {
@@ -129,64 +130,73 @@ const Home = () => {
       details: `<p>Silver Medal - May 2018</p>`,
     },
   ];
-
+  const tabs = [
+    { name: 'Home', href: 'heading' },
+    { name: 'Projects', href: 'projects-a' },
+    { name: 'Work Experience', href: 'work-a' },
+    { name: 'Awards', href: 'awards-a' },
+  ];
   return (
-    <DefaultLayout>
-      <div className="Home">
-        <h1 id="heading">
-          Stone Tao{' '}
-          <img src={logo} width="50px" height="50px" id="logo" alt="logo" />
-        </h1>
-        <p id="first-links">
-          <div>
-            GitHub: <a href="https://www.github.com/stonet2000">StoneT2000</a>
+    <>
+      <Sidebar tabs={tabs} />,
+      <DefaultLayout page="Home">
+        <div className="Home">
+          <h1 id="heading">
+            Stone Tao{' '}
+            <img src={logo} width="50px" height="50px" id="logo" alt="logo" />
+          </h1>
+          <div id="first-links">
+            <p>
+              GitHub: <a href="https://www.github.com/stonet2000">StoneT2000</a>
+            </p>
+            <p>
+              Email:{' '}
+              <a href="mailto:stonezt2019@gmail.com ">stonezt2019@gmail.com </a>
+            </p>
+            <p>
+              Resume: <a href="resume.html">Online</a> |{' '}
+              <a href="files/Stone%20Tao%20-%20Resume.pdf">PDF</a>
+            </p>
           </div>
-          <div>
-            Email:{' '}
-            <a href="mailto:stonezt2019@gmail.com ">stonezt2019@gmail.com </a>
+          <p>
+            Computer Science and Cognitive Science major at{' '}
+            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023
+          </p>
+          <p>
+            I love AI and design. Currently developing fun AI competitions and
+            researching at the intersection of HCI and AI. Check out my{' '}
+            <a href="projects.html">Projects</a>,{' '}
+            <a href="#work-a">Experience</a>, <a href="about.html">About Me</a>,
+            or <a href="#awards-a">Awards</a>.{' '}
+            <a href="resume.html">View my resume</a> or{' '}
+            <a href="files/Stone%20Tao%20-%20Resume.pdf">
+              download a pdf version
+            </a>
+          </p>
+          <div className="anchor" id="projects-a" />
+          <h2>Pinned Projects</h2>
+          <div className="projects">
+            {projects.map((project) => (
+              <ProjectCard {...project} key={project.title} />
+            ))}
           </div>
+          <div className="anchor" id="work-a" />
+          <h2>Work Experience</h2>
           <div>
-            Resume: <a href="resume.html">Online</a> |{' '}
-            <a href="files/Stone%20Tao%20-%20Resume.pdf">PDF</a>
+            {works.map((work) => (
+              <WorkModule {...work} key={work.org} />
+            ))}
           </div>
-        </p>
-        <p>
-          Computer Science and Cognitive Science major at{' '}
-          <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023
-        </p>
-        <p>
-          I love AI and design. Currently developing fun AI competitions and
-          researching at the intersection of HCI and AI. Check out my{' '}
-          <a href="projects.html">Projects</a>, <a href="#work-a">Experience</a>
-          , <a href="about.html">About Me</a>, or <a href="#awards-a">Awards</a>
-          . <a href="resume.html">View my resume</a> or{' '}
-          <a href="files/Stone%20Tao%20-%20Resume.pdf">
-            download a pdf version
-          </a>
-        </p>
-        <div className="anchor" id="projects-a" />
-        <h2>Pinned Projects</h2>
-        <div className="projects">
-          {projects.map((project) => (
-            <ProjectCard {...project} />
-          ))}
+          <div className="anchor" id="awards-a" />
+          <h2>Awards</h2>
+          <div>
+            {awards.map((award) => (
+              <AwardModule {...award} key={award.title} />
+            ))}
+          </div>
         </div>
-        <div className="anchor" id="work-a" />
-        <h2>Experience</h2>
-        <div>
-          {works.map((work) => (
-            <WorkModule {...work} />
-          ))}
-        </div>
-        <div className="anchor" id="awards-a" />
-        <h2>Awards</h2>
-        <div>
-          {awards.map((award) => (
-            <AwardModule {...award} />
-          ))}
-        </div>
-      </div>
-    </DefaultLayout>
+      </DefaultLayout>
+    </>
   );
 };
 export default Home;

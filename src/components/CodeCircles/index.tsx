@@ -33,10 +33,13 @@ const CodeCircles = ({ types }: CodeCirclesProps) => {
         .map((type) => {
           return [
             <div
+              key={type}
               className="code-circle"
               style={{ backgroundColor: colors[type] }}
             ></div>,
-            <span className="code-circle-def">{names[type]}</span>,
+            <span className="code-circle-def" key={`${type}-s`}>
+              {names[type]}
+            </span>,
           ];
         })}
     </span>

@@ -4,7 +4,7 @@
 .Home #heading {
   margin-bottom: 60px;
 }
-.Home #first-links > div {
+.Home #first-links > p {
   display: inline-block;
   padding-right: 10px;
 }
