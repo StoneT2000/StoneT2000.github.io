@@ -52,7 +52,7 @@ const Blog = () => {
       });
       setPosts(filledPosts);
     });
-  }, []);
+  }, [posts]);
   return (
     <>
       {/* <Sidebar tabs={tabs} />, */}
