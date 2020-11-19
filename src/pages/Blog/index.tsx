@@ -34,7 +34,7 @@ const Blog = () => {
     let filledPosts: any[] = [];
     let fetchCaptionsPromises: Array<Promise<string>> = [];
     posts.forEach((post) => {
-      const captionUrl = `https://stonet2000.github.io/blog/posts/${post.path}/caption.md`;
+      const captionUrl = `/blog/posts/${post.path}/caption.md`;
       fetchCaptionsPromises.push(
         axios.get(captionUrl).then((res) => {
           return md.render(res.data);
