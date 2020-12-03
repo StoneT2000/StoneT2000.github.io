@@ -31,7 +31,11 @@ function App() {
           strict
           path="/blog/posts/:postpath"
           component={(path: any) => {
-            return <Redirect to={path.location.pathname} />;
+            let newp = path.location.pathname;
+            if (path.location.pathname[-1] !== '/') {
+              newp += '/';
+            }
+            return <Redirect to={newp} />;
           }}
         />
         <Route
