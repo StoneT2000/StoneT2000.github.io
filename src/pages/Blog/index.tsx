@@ -15,7 +15,7 @@ const Blog = () => {
     {
       path: '20201202',
       title: 'The Beauty and Brilliance of Tales From the Loop',
-      time: 'December 1, 2020',
+      time: 'December 2, 2020',
       thumbnail: '12.jpg',
       thumbnailAltText: 'Cover art of Tales From the Loop by Simon Stalenhag',
       desc: '',
