@@ -1,0 +1,1 @@
+Tales From the Loop, originally an artbook by Simon Stålenhag, has now grown into a TV show that speaks volumes about leaving the unexplained unexplained, and coming to terms with everything. In this post I explore the beauty and brilliance behind it

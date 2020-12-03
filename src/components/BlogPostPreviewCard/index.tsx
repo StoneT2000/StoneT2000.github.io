@@ -7,6 +7,7 @@ export type BlogPostPreviewCardProps = {
   thumbnail: string;
   link?: string;
   thumbnailAltText: string;
+  lengthInMin?: number;
 };
 const BlogPostPreviewCard = ({
   title,
@@ -15,13 +16,22 @@ const BlogPostPreviewCard = ({
   thumbnail,
   thumbnailAltText,
   link,
+  lengthInMin,
 }: BlogPostPreviewCardProps) => {
   return (
     <div className="BlogPostPreviewCard">
       <a href={link} className="post-link">
         <div className="title">
           <h2>{title}</h2>
-          <time>{time}</time>
+          <br />
+          <time>{time}</time>{' '}
+          {lengthInMin ? (
+            <span>
+              &#183; <span>{lengthInMin} min read</span>
+            </span>
+          ) : (
+            ''
+          )}
         </div>
       </a>
       <div className="thumb-wrapper">

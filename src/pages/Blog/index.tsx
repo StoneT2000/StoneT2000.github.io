@@ -13,12 +13,22 @@ const Blog = () => {
     Array<BlogPostPreviewCardProps & { path: string }>
   >([
     {
+      path: '20201202',
+      title: 'The Beauty and Brilliance of Tales From the Loop',
+      time: 'December 1, 2020',
+      thumbnail: '12.jpg',
+      thumbnailAltText: 'Cover art of Tales From the Loop by Simon Stalenhag',
+      desc: '',
+      lengthInMin: 4,
+    },
+    {
       path: '25102020',
       title: 'Starting a Proper Blog',
       time: 'October 26, 2020',
       thumbnail: 'thumb.png',
       thumbnailAltText: 'Blue color',
       desc: '',
+      lengthInMin: 3,
     },
     {
       path: 'Dimensions',
