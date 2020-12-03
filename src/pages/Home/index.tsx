@@ -48,6 +48,16 @@ const Home = () => {
 
   const works = [
     {
+      link: 'https://quantco.com/',
+      org: 'QuantCo',
+      start: 'TBD',
+      end: 'TBD',
+      location: 'Berlin, Germany',
+      details: [`TBD`],
+      role: 'Incoming Software Engineering Intern',
+      logoImage: 'assets/logo_quantco_black.svg ',
+    },
+    {
       link: 'http://protolab.ucsd.edu',
       org: 'ProtoLab / Design Lab',
       start: '2020/08',
