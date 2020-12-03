@@ -1,4 +1,4 @@
-# The beauty of Tales From the Loop
+# The Beauty and Brilliance of Tales From the Loop
 
 I recently just finished watching the first season of Tales From the Loop after having also bought the original artbook mid-way through the season because of how "entranced" I was by the concept and art. Tales From the Loop was originally an artbook by [Simon Stålenhag](https://twitter.com/simonstalenhag?s=20) and it's truly mesmerizing. In this post, I talk about his art, and then the story and show that grew from the art.
 

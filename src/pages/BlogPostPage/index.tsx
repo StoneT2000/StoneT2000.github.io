@@ -6,6 +6,9 @@ import MarkdownIt from 'markdown-it';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
+//@ts-ignore
+import { TwitterShareButton } from 'react-twitter-embed';
+
 const md = new MarkdownIt({ html: true, linkify: true });
 const BlogPostPage = () => {
   const [content, setContent] = useState('');
@@ -56,6 +59,10 @@ const BlogPostPage = () => {
         </Helmet>
         <div className="BlogPostPage">
           <div dangerouslySetInnerHTML={{ __html: content }}></div>
+          <TwitterShareButton
+            url={window.location}
+            options={{ text: `${title}`, via: 'Stone_Tao' }}
+          />
         </div>
       </DefaultLayout>
     </>
