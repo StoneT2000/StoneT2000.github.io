@@ -18,7 +18,7 @@ And if you don't like the way I put it, see [the art](https://www.simonstalenhag
 
 Despite being a typical knowledge-hungry student, I'm actually happy that Tales From the Loop leaves every mystery unexplained and learned a few things from that.
 
-When I was younger my mom forced me to go to a ton of art museums because she likes art (and is an amazing artist herself) and I guess she believes exposure to art is an important part of my upbringing. I disliked most of the trips, hated the lack of benches, and most of the time asked the same question: "why is the art so expensive?"
+When I was younger my mom forced me to go to a ton of art museums because she likes art (and is an amazing artist herself) and I guess she believes exposure to art is an important part of my upbringing. I disliked most of the trips, hated the lack of benches, and most of the time asked the same question: "why is the art so expensive?" (Now that I think of it, the lack of benches encouraged me to stand and walk more, forcing me to view the art instead of sitting down and dozing off or looking at my phone, an interesting design; reminds me of this great [vox video on uncomfortable benches](https://www.youtube.com/watch?v=WeyLEe1T0yo))
 
 It takes time to understand art at a deeper level, but time has passed and now one thing I did take out of all of those art museums is that a lot of meaning and beauty of art stems from how you interpret it, how you want the story to be told. I'm no art expert myself but I think the beauty of it is that you can have your own "meta" interpretation of art in general, and the art will have succeeded in curating thought and inspiration possibly.
 
