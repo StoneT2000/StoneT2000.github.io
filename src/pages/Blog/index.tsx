@@ -55,7 +55,7 @@ const Blog = () => {
       captions.forEach((caption, i) => {
         filledPosts.push(posts[i]);
         filledPosts[i].desc = caption;
-        filledPosts[i].link = `/blog/posts/${filledPosts[i].path}`;
+        filledPosts[i].link = `/blog/posts/${filledPosts[i].path}/`;
         filledPosts[
           i
         ].thumbnail = `/blog/posts/${filledPosts[i].path}/${filledPosts[i].thumbnail}`;
