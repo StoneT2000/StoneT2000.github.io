@@ -37,7 +37,7 @@ Here's some interesting results. I built a hide and seek AI competition, launche
 
 To say the least, if you know how to use the framework, it becomes pretty easy to make competitions on the fly provided you have an idea. Something that I didn't even realize could happen initially was **how easy it is to create visualizers** for an AI competition now, something that I have worked a bit with recently as I help develop a new AI competition.
 
-<img src="https://cdn.discordapp.com/attachments/724158854534791199/768181430064775208/running.gif" alt="running" style="zoom: 50%;" />
+<img src="running.gif" alt="running" style="zoom: 50%;" />
 
 <p class="caption">A gif of the visualizer of one of the competitions</p>
 
