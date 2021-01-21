@@ -58,6 +58,17 @@ const Home = () => {
       logoImage: 'assets/logo_quantco_black.svg ',
     },
     {
+      link: 'https://cseweb.ucsd.edu/~haosu/lab/group.html',
+      org: 'SU Lab at UCSD',
+      start: '2021/01',
+      end: null,
+      location: 'San Diego, USA',
+      details: [`Researching 3D Computer Vision under Professor Hao Su and under the mentorship of Xiaoshuai Zhang. Working on the 3D
+      relighting project`],
+      role: 'Computer Vision Research Intern',
+      logoImage: 'assets/sulab.png ',
+    },
+    {
       link: 'http://protolab.ucsd.edu',
       org: 'ProtoLab / Design Lab',
       start: '2020/08',
@@ -67,8 +78,8 @@ const Home = () => {
         `Currently researching at the intersection of HCI and AI.
       Specifically looking at how to encourage more positive results from
       AI models and increase trust in data and predictions through humans
-      in ML, crowdsourcing and more.`,
-        `Working under Steven Dow and Brian McInnis`,
+      in ML, crowdsourcing and more. Also researching novel approaches to data discussion.`,
+        `Working under Professor Steven Dow and Brian McInnis`,
       ],
       role: 'Undegraduate Researcher',
       logoImage: 'assets/dlab.jpg',
@@ -179,19 +190,20 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I'm a software engineer / AI x HCI researcher. Previously worked at
-            LaunchDarkly
+            I'm a software engineer / AI x HCI researcher. Incoming engineer at{' '}
+            <a target="blank" href="https://quantco.com/">QuantCo</a>, previously worked at{' '}
+            <a target="blank" href="https://launchdarkly.com/">LaunchDarkly.</a>
           </p>
           <p>
-            Computer Science and Cognitive Science major at{' '}
-            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023
+            I'm also a Computer Science and Cognitive Science major at{' '}
+            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023, and actively performing research at the SU Lab at UCSD and ProtoLab at the Design Lab at UCSD
           </p>
           <p>
             I love AI and design. Currently developing fun AI competitions and
-            researching at the intersection of HCI and AI. Check out my{' '}
-            <a href="/projects">Projects</a>, <a href="#work-a">Experience</a>,{' '}
-            <a href="/blog">Blog</a>, <a href="#awards-a">Awards</a>,{' '}
-            <a href="/about">About Me</a>, or{' '}
+            researching computer vision and researching at the intersection of HCI and AI.
+            Check out my <a href="/projects">Projects</a>,{' '}
+            <a href="#work-a">Experience</a>, <a href="/blog">Blog</a>,{' '}
+            <a href="#awards-a">Awards</a>, <a href="/about">About Me</a>, or{' '}
             <a href="/files/Stone%20Tao%20-%20Resume.pdf">view my resume</a>
           </p>
           <div className="anchor" id="projects-a" />

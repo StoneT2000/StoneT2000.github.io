@@ -37,7 +37,7 @@ const About = () => {
               and HCI, focusing on how embedding people in the ML loop can help
               improve the model in terms of predicative power, fairness,
               transparency etc. More talk of all that on my{' '}
-              <a href="/blog">blog</a>. Also you can{' '}
+              <a href="/blog">blog</a>. I'm also researching 3D computer vision at the SU Lab and in particular am working on the 3D relighting project. Also you can{' '}
               <a href="/files/Stone%20Tao%20-%20Resume.pdf" target="blank">
                 view my resume here
               </a>
@@ -75,6 +75,7 @@ const About = () => {
               </h3>
               <aside>Major GPA: 4.0/4.0</aside>
               <aside>Overall GPA: 3.98/4.0</aside>
+              <aside>Provost Honors List. Member of Tau Beta Pi Honors Engineering Society</aside>
               <p>
                 Computer Science and Cognitive Science (ML specialization)
                 Double Major. Class of 2023
@@ -82,7 +83,7 @@ const About = () => {
               <p>Selected Courses Taken:</p>
               <ul>
                 <li>
-                  AI / Data Science: CSE 152 - Intro to Computer vision, COGS
+                  AI / Data Science: CSE 291-I - ML Meets Geometry (Graduate CV), CSE 152 - Intro to Computer vision, COGS
                   108 - Data Science in Practice, COGS 118A - Supervised ML
                   Algorithms
                 </li>
