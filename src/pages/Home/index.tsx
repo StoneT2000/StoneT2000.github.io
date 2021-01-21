@@ -102,7 +102,7 @@ const Home = () => {
       org: 'TAOS Data',
       start: '2019/06',
       end: '2019/09',
-      location: 'Oakland, USA',
+      location: 'Beijing, China',
       details: [
         `Independently developed the company website and integrated Wordpress as a headless CMS, serving up to
         18k+ daily users`,
