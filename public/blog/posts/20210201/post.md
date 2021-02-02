@@ -2,7 +2,7 @@
 
 This is my 4th year competing in MIT Battlecode. I previously competed as Bowl of Chowder (5th) in 2020, and as Codelympians (9th) in 2019 and was Codelympians in 2018 but did not make finals the first year.
 
-This year I once again soloed my way to finals, achieving 9th overall, and to my surprise, won the "Adaptive Strategy" award for spearheading the development of a strategy known as "muck flanking."
+This year I once again soloed my way to finals, achieving 9th overall, and to my surprise, won the "Adaptive Strategy" award for spearheading the development of a strategy known as "muck flanking."My team name was California Roll (however it's listed as Chop Suey online)
 
 Apparently a significant number of people read [my postmortem from last year](). Traffic to that post jumped by ~1000% for a few days and was quite high over the course of the competition. As a result, this incentivized me to write a better postmortem that isn't all about a single competition that most people won't understand without having competed in it. Instead, I decided to have a [gentler introduction](#A-Gentle-Introduction-a) that isn't a wall of text, and focus more on general points not specific to Battlecode 2021, but on Battlecode and AI programming competitions in general. I still include the traditional "timeline" format of Battlecode postmortems in a [later section](#The-Battlecode-2021-Timeline-a). I also now include my [evaluation](#My-Evaluation-a) of the year's design, it's features, what makes it good / interesting / fun, and what wasn't so great. If you want to read my unreadable code, it's here: https://github.com/StoneT2000/Battlecode2021/
 
