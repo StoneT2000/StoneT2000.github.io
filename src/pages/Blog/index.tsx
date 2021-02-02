@@ -13,6 +13,16 @@ const Blog = () => {
     Array<BlogPostPreviewCardProps & { path: string }>
   >([
     {
+      path: '20210202',
+      title: 'Battlecode 2021 Postmortem',
+      time: 'February 2, 2021',
+      thumbnail: 'thumb.png',
+      thumbnailAltText: '"Skill"',
+      desc: '',
+      lengthInMin: 28,
+      otherMeta: '7 min read without full Battlecode Timeline',
+    },
+    {
       path: '20201202',
       title: 'The Beauty and Brilliance of Tales From the Loop',
       time: 'December 2, 2020',

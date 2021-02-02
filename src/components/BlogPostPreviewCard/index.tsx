@@ -8,6 +8,7 @@ export type BlogPostPreviewCardProps = {
   link?: string;
   thumbnailAltText: string;
   lengthInMin?: number;
+  otherMeta?: string;
 };
 const BlogPostPreviewCard = ({
   title,
@@ -17,6 +18,7 @@ const BlogPostPreviewCard = ({
   thumbnailAltText,
   link,
   lengthInMin,
+  otherMeta,
 }: BlogPostPreviewCardProps) => {
   return (
     <div className="BlogPostPreviewCard">
@@ -32,6 +34,7 @@ const BlogPostPreviewCard = ({
           ) : (
             ''
           )}
+          {otherMeta && <span> &#183; {otherMeta}</span>}
         </div>
       </a>
       <div className="thumb-wrapper">
