@@ -15,7 +15,7 @@ const Blog = () => {
     {
       path: '20210202',
       title: 'Battlecode 2021 Postmortem',
-      time: 'February 2, 2021',
+      time: 'February 1, 2021',
       thumbnail: 'thumb.png',
       thumbnailAltText: '"Skill"',
       desc: '',
