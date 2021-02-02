@@ -163,7 +163,7 @@ But here's the problem. That EC builds 2 slanderers using all of its 5.4 million
 
 <img src="./flip.png" />
 
-The above happened in one turn as babyducks nearby muck exposed both of my huge slanderers. Safe to say, I didn't win that match.
+The above happened in one turn as babyduck's nearby muck exposed both of my huge slanderers. Safe to say, I didn't win that match.
 
 During the middle of this period, teh devs finally decided to lower the exponential base of the exponential base by a *constant*. This didn't really do anything. Muck buff remained overpowered still.
 
@@ -173,13 +173,13 @@ This occured near the end of the sprint 1 period and early into sprint 2. People
 
 <img src="eco1.png" alt="proper economies developed by my team and team Producing Perfection "/>
 
-The above is a game between Producing Perfection (blue) and me (red). Both of us have already realized that having some slands is better than none. However developing said economy is difficult because if one builds too many slands, you would be susceptible to being exposed by enemy mucks.
+The above is a game between Producing Perfection (blue) and me (red). Both of us have already realized that having some slands is better than none. However developing a economy is difficult because if one builds too many slands, you would be susceptible to being exposed by enemy mucks.
 
 Another common thing that was done was building lattices of slands. This was good because it meant you could move your slands close to your EC for protection while still allowing fluid movement through the slands so your EC can still build units and units can leave and attack or protect. 
 
 A big problem that most teams worked on tackling was muck defence. Early on babyducks employed a feature where they had polis circle around their EC constantly, which is 1. easy to code, and 2. naturally balances the amount of polis in every direction to protect the slands near their EC from all directions. I opted to go for a poli lattice, believing this sparser solution was more efficient, and created a bigger scouting network. The broader scouting network would help alert my units early on where mucks are to optimize which units should target which mucks, and which direction should my slands runaway towards. However, this suffered a bit on the balancing side as sometimes my polis will be concentrated on one side of my EC, giving the enemy mucks open access to another side and exposing a lot of my slands. This ended up being a problem that was stuck on my todo list for a while. 
 
-Interestingly, this was also one of the few strategies I initiated was unique to my bot that people copied. Team Producing Perfection and team Hard Coders and probably some other teams both used a poli lattice for defence. There was quite a bit of split on this strategy as many other bots opted for babyducks idea of circling polis, which then developed into "electron" polis that would try to keep their distance away from other polis while forming a circular network around the EC.
+Interestingly, this was also one of the few strategies I initiated was unique to my bot that people copied. Team Producing Perfection and team Hard Coders and probably some other teams used the same poli lattice for defence. However, there was quite a bit of split on this strategy as many other bots opted for babyducks idea of circling polis, which then developed into "electron" polis that would try to keep their distance away from other polis while forming a circular network around the EC.
 
 #### Buff Mucks
 
