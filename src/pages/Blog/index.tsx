@@ -13,7 +13,7 @@ const Blog = () => {
     Array<BlogPostPreviewCardProps & { path: string }>
   >([
     {
-      path: '20210202',
+      path: '20210201',
       title: 'Battlecode 2021 Postmortem',
       time: 'February 1, 2021',
       thumbnail: 'thumb.png',
