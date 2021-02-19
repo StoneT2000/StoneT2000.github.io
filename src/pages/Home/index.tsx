@@ -120,15 +120,14 @@ const Home = () => {
     {
       details: `
       <p>
-      MIT Battlecode 2021 | Finalist, 9th overall, Won the Adapative Strategy Award – Jan. 2020 |
+      MIT Battlecode 2021 | Finalist, 9th overall, Won the Adapative Strategy Award – Jan. 2021 |
       <a href="https://github.com/StoneT2000/Battlecode2021/" target="blank">
         Bot Code
       </a>
-      | <a href="https://stonet2000.github.io/battlecode/2020">Post Mortem</a>
+      | <a href="https://www.stoneztao.com/blog/posts/20210201/">Post Mortem</a>
     </p>
       <p>
-      MIT Battlecode 2020 | Finalist, 5th overall, top soloist (Competed in
-      Java) – Jan. 2020 |
+      MIT Battlecode 2020 | Finalist, 5th overall, top soloist – Jan. 2020 |
       <a href="https://github.com/StoneT2000/Battlecode2020/" target="blank">
         Bot Code
       </a>
@@ -136,7 +135,7 @@ const Home = () => {
     </p>
     <p>
       MIT Battlecode 2019 | Finalist, 9th overall, 4th out of high school
-      teams (Competed in JS) – Jan. 2019 |
+      teams – Jan. 2019 |
       <a href="https://github.com/StoneT2000/BC19/" target="blank">
         Bot Code
       </a>
