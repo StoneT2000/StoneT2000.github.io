@@ -1,1 +1,1 @@
-I talk about my experiences taking a graduate computer vision course, CSE 291-I: ML Meets Geometry taught by professor Hao Su. I go into what I learned, why you should take graduate courses, how to succeed/survive in one, and tips on enrolling in one at UCSD.
+I talk about my experiences taking a graduate computer vision course, CSE 291-I: ML Meets Geometry taught by professor Hao Su. I go into what I learned, why you should take graduate courses, how to succeed/survive in one, tips on deep-learning courses, and tips on enrolling in graduate courses at UCSD.
