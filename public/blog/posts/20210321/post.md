@@ -61,9 +61,10 @@ And some tips for courses with a ton of programming around deep-learning. This a
 There are two parts to enrolling in a graduate course. 
 
 1. Figure out if the graduate course is suited for you and you can handle it.
+
 2. Try to enroll in the class (can be a bit tricky)
 
-tldr; For enrolling in graduate courses, always ask the professor about the course and ask them to help you enroll. It helps if you know the professor, have taken relevant courses, and can demonstrate a strong interest.
+tldr; For enrolling in graduate courses, always ask the professor about the course and ask them to help you enroll. It helps if you know the professor, have taken relevant courses, and can demonstrate a strong interest. Do all of this as early as possible.
 
 ### Figuring out if the course is right for you and you can handle it.
 

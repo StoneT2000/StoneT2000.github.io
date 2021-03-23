@@ -8,7 +8,6 @@ import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
 //@ts-ignore
 import { TwitterShareButton } from 'react-twitter-embed';
-import { link } from 'fs';
 
 const md = new MarkdownIt({ html: true, linkify: true });
 const BlogPostPage = () => {
