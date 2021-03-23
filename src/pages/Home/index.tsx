@@ -6,6 +6,7 @@ import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
 import './index.css';
+import work from "./work.json";
 import logo from './logo.png';
 const Home = () => {
   const projects = [
@@ -46,75 +47,7 @@ const Home = () => {
     },
   ];
 
-  const works = [
-    {
-      link: 'https://quantco.com/',
-      org: 'QuantCo',
-      start: 'TBD',
-      end: 'TBD',
-      location: 'Berlin, Germany',
-      details: [`TBD`],
-      role: 'Incoming Software Engineering Intern',
-      logoImage: 'assets/logo_quantco_black.svg ',
-    },
-    {
-      link: 'https://cseweb.ucsd.edu/~haosu/lab/group.html',
-      org: 'SU Lab at UCSD',
-      start: '2021/01',
-      end: null,
-      location: 'San Diego, USA',
-      details: [`Researching 3D Computer Vision under Professor Hao Su and under the mentorship of Xiaoshuai Zhang. Working on the 3D
-      relighting project`],
-      role: 'Computer Vision Research Intern',
-      logoImage: 'assets/sulab.png ',
-    },
-    {
-      link: 'http://protolab.ucsd.edu',
-      org: 'ProtoLab / Design Lab',
-      start: '2020/08',
-      end: null,
-      location: 'San Diego, USA',
-      details: [
-        `Currently researching at the intersection of HCI and AI.
-      Specifically looking at how to encourage more positive results from
-      AI models and increase trust in data and predictions through humans
-      in ML, crowdsourcing and more. Also researching novel approaches to data discussion.`,
-        `Working under Professor Steven Dow and Brian McInnis`,
-      ],
-      role: 'Undegraduate Researcher',
-      logoImage: 'assets/dlab.jpg',
-    },
-    {
-      link: 'https://launchdarkly.com/',
-      org: 'LaunchDarkly',
-      start: '2020/06',
-      end: '2020/09',
-      location: 'Oakland, USA',
-      details: [
-        `Part of the full stack team Squad Oinx. Worked on feature workflows and semantic patches to enable state independent scheduling of feature flagging as well as a new approval review system for feature flagging, allowing users to release complex features with confidence`,
-        `Developed REST API with Go for backend and React + Typescript for frontend`,
-      ],
-      role: 'Software Engineering Intern',
-      logoImage: 'assets/ld.png',
-    },
-    {
-      link: 'https://www.taosdata.com/en/',
-      org: 'TAOS Data',
-      start: '2019/06',
-      end: '2019/09',
-      location: 'Beijing, China',
-      details: [
-        `Independently developed the company website and integrated Wordpress as a headless CMS, serving up to
-        18k+ daily users`,
-        `Developed a Node.js Connector for the company’s main product, TDengine, an open source big data
-        platform with 11000+ stars`,
-        `Created a C interface, to enable high-speed interaction with TDengine. Implemented subscription,
-        async, and stream functionality`,
-      ],
-      role: 'Full Stack Developer Intern',
-      logoImage: 'assets/taosdata.png',
-    },
-  ];
+  const works = work.data;
 
   const awards = [
     {
@@ -198,17 +131,24 @@ const Home = () => {
           </div>
           <p>
             I'm a software engineer / AI x HCI researcher. Incoming engineer at{' '}
-            <a target="blank" href="https://quantco.com/">QuantCo</a>, previously worked at{' '}
-            <a target="blank" href="https://launchdarkly.com/">LaunchDarkly.</a>
+            <a target="blank" href="https://quantco.com/">
+              QuantCo
+            </a>
+            , previously worked at{' '}
+            <a target="blank" href="https://launchdarkly.com/">
+              LaunchDarkly.
+            </a>
           </p>
           <p>
             I'm also a Computer Science and Cognitive Science major at{' '}
-            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023, and actively performing research at the SU Lab at UCSD and ProtoLab at the Design Lab at UCSD
+            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023, and
+            actively performing research at the SU Lab at UCSD and ProtoLab at
+            the Design Lab at UCSD
           </p>
           <p>
             I love AI and design. Currently developing fun AI competitions and
-            researching computer vision and researching at the intersection of HCI and AI.
-            Check out my <a href="/projects">Projects</a>,{' '}
+            researching computer vision and researching at the intersection of
+            HCI and AI. Check out my <a href="/projects">Projects</a>,{' '}
             <a href="#work-a">Experience</a>, <a href="/blog">Blog</a>,{' '}
             <a href="#awards-a">Awards</a>, <a href="/about">About Me</a>, or{' '}
             <a href="/files/Stone%20Tao%20-%20Resume.pdf">view my resume</a>

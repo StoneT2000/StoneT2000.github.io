@@ -37,7 +37,7 @@ const About = () => {
               and HCI, focusing on how embedding people in the ML loop can help
               improve the model in terms of predicative power, fairness,
               transparency etc. More talk of all that on my{' '}
-              <a href="/blog">blog</a>. I'm also researching 3D computer vision at the SU Lab and in particular am working on the 3D relighting project. Also you can{' '}
+              <a href="/blog">blog</a>. I'm also researching at the SU Lab. Also you can{' '}
               <a href="/files/Stone%20Tao%20-%20Resume.pdf" target="blank">
                 view my resume here
               </a>
@@ -47,8 +47,8 @@ const About = () => {
               have also worked with Go, Java and touched Assembly a few times.
             </p>
             <p>
-              In Data Science and AI, I'm experienced with Tensorflow, Keras,
-              Pandas, Numpy, Scikit-learn and basic PyTorch and CV2
+              In Data Science and AI, I'm experienced with Tensorflow, PyTorch, Keras,
+              Pandas, Numpy, Scikit-learn, OpenAI Gym, and basic CV2, Trimesh, Open3D
             </p>
             <p>
               In Web Development and Software Engineering, I'm experienced with
@@ -90,12 +90,12 @@ const About = () => {
                 <li>
                   Math: MATH 31AH - Honors Linear Algebra, MATH 31BH - Honors
                   Multivariable Calculus, MATH 31CH - Honors Vector Calculus,
-                  CSE 20 & CSE 21 - Discrete Math
+                  CSE 20 & CSE 21 - Discrete Math, MATH 180A & MATH 181A - Intro. to Probability and Statistics
                 </li>
                 <li>
                   Computer Science: CSE 100 - Advanced Data Structures, CSE 101
                   - Design and Analsis of Algorithms, CSE 30 - Computer
-                  Organization and Systems Programming
+                  Organization and Systems Programming, CSE 110 - Software Engineering
                 </li>
                 <li>
                   Cognitive Science: COGS 14A & 14B - Research Methods in

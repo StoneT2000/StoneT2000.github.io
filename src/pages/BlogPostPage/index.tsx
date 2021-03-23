@@ -45,7 +45,7 @@ const BlogPostPage = () => {
         const linkElem = linkElems[i];
         console.log(linkElem.href);
         if (linkElem.origin !== window.origin) {
-          linkElem.target = "_blank";
+          linkElem.target = "blank";
         }
         
       }
