@@ -1,0 +1,1 @@
+I talk about my experiences taking a graduate computer vision course, CSE 291-I: ML Meets Geometry taught by professor Hao Su. I go briefly into what I learned, and talk about how to succeed at graduate level courses.

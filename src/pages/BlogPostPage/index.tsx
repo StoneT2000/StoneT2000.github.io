@@ -8,6 +8,7 @@ import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
 //@ts-ignore
 import { TwitterShareButton } from 'react-twitter-embed';
+import { link } from 'fs';
 
 const md = new MarkdownIt({ html: true, linkify: true });
 const BlogPostPage = () => {
@@ -23,7 +24,7 @@ const BlogPostPage = () => {
       md.parse(res.data, '').forEach((token) => {
         if (token.type === 'html_block') {
           if (token.content.slice(1, 3) === 'h2') {
-            console.log(token.content);
+            // console.log(token.content);
           }
         }
       });
@@ -40,6 +41,15 @@ const BlogPostPage = () => {
       setTabs(foundtabs);
       const h1elem = document.getElementsByTagName('h1')[0];
       setTitle(h1elem.innerHTML);
+      const linkElems = document.getElementsByTagName('a');
+      for (let i = 0; i < linkElems.length; i++) {
+        const linkElem = linkElems[i];
+        console.log(linkElem.href);
+        if (linkElem.origin !== window.origin) {
+          linkElem.target = "_blank";
+        }
+        
+      }
     });
   }, [postpath]);
   useEffect(() => {

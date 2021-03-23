@@ -59,7 +59,10 @@ Through Stålenhag's art and the unbelivable show, I learn that I have to come t
 I really hope there is a second season, but it's probably the end of the loop for this story. Perhaps another timeline can create a similar undefinable feeling that Tales From the Loop gives.
 
 It was brilliant.
-
+</br>
+</br>
+</br>
+</br>
 Anyway, blog post no.2 done,
 
 🌊

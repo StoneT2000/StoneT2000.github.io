@@ -13,11 +13,20 @@ const Blog = () => {
     Array<BlogPostPreviewCardProps & { path: string }>
   >([
     {
+      path: '20210321',
+      title: 'How to Survive a Graduate Course as an Undergrad',
+      time: 'March 22, 2021',
+      thumbnail: 'thumb.png',
+      thumbnailAltText: '"Pose Estimation!"',
+      desc: '',
+      lengthInMin: 7,
+    },
+    {
       path: '20210201',
       title: 'Battlecode 2021 Postmortem',
       time: 'February 1, 2021',
-      thumbnail: 'thumb.png',
-      thumbnailAltText: '"Skill"',
+      thumbnail: 'thumb.jpg',
+      thumbnailAltText: '"Battlecode Homepage"',
       desc: '',
       lengthInMin: 28,
       otherMeta: '7 min read without full Battlecode Timeline',
