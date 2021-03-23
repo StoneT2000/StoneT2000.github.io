@@ -38,11 +38,15 @@ Moreover, research-centric courses usually have a **smaller class size**, which 
 
 <h2 id='How-to-Succeed'>How to Succeed</h2>
 
-Taking a graduate course has its many benefits, but at the end of the day it's not worthwhile if you can't do well in the course and/or ingest the content at a reasonable pace. So here's a few general tips
+Taking a graduate course has its many benefits, but at the end of the day it's not worthwhile if you can't do well in the course and/or ingest the content at a reasonable pace. These courses can be demanding. So here's a few general tips
 
-1. **Start early.** You are highly likely to be behind in terms of necessary content. Unless you are an absolute genius, you have some catch up to do. For example, for CSE 291-I, our first homework was a refresher homework, meant to test our knowledge on basic requirements from probability to deep learning. Starting early will give you the appropriate time to catch up on some parts of the material and do well on homework and exams
+1. **Start early.** You are highly likely to be behind in terms of necessary content. Unless you are an absolute genius, you have some catch up to do. For example, for CSE 291-I, our first homework was a refresher homework, meant to test our knowledge on basic requirements from probability to deep learning. Starting early will give you the appropriate time to catch up on some parts of the material and do well on homework and exams. Planning to take a course ahead of time will also give you time to refresh yourself on relevant material
 
 2. **Always ask for help!** Don't be afraid to ask a stupid question, for all we know, other students are thinking the same thing. Luckily for my course, the professor encourages students to ask as many questions as possible and this is often the same for other professors. Questions not only get you recognized but help initiate an open discussion that is often rewarding. You don't always get a free chance to openly talk with the professor and disucss ideas. Moreover, the professor's job is to help you succeed in the course, and if you don't communicate, you make it just that much more difficult for the professor, they are there to help!
+
+3. **Develop a solid mathematical background.** This might be one of the biggest caveats of higher level computer science courses. There is going to be math, and it is going to be hard if you don't learn the appropriate mathematics. Mathematics powers a ton of the heavy machinery used in computer science and a single lecture can easily get you lost in unknown symbols if you don't have a decent grasp of the math. Depending on domain, the graduate course will require different types of mathematics that you should make sure you have a decent grasp on. Don't be afraid to re-read your old linear algebra notes or refresh your knowledge on vector calculus, you will need it (subject to course domain of course).
+
+   For students at UCSD, I highly recommend taking MATH 109 (Mathematical Reasoning) or MATH 31AH-CH (honors math) before diving into any more upper division math courses like statistics, numerical optimization, etc. MATH 109 or MATH 31AH-CH will give you a good problem solving framework and learn how to prove in math, which will greatly help you understand a long sequence of equations in any lecture or paper.
 
 And some tips for courses with a ton of programming around deep-learning. This assumes you have decent familarity with python and a deep-learning framework like PyTorch or Tensorflow or whichever language and framework pair for the task at hand.
 
@@ -55,6 +59,8 @@ And some tips for courses with a ton of programming around deep-learning. This a
 3. **Develop visualization functions.** Visual feedback is one of the best ways to understand what's happening with a model, especially in computer vision. Without the feedback, it's difficult to tell if your model is working as intended, and you will probably want to have some simple scripts to visually interpret model inputs and outputs, its architecture, etc.
 
 4. **Using Jupyter Notebook.** Software such as Jupyter Notebook is great for exploratory programming when you want to test our new code and debug it, as well as explore potential options for a new model, algorithm etc. The fact that Jupyter Notebook lets you run parts of your code separately enables a ton of flexibility in development. Moreover, oftentimes there might be some data-loading involved that could take a while and Jupyter Notebook will let you load that into the RAM and keep it available while you explore instead of having to load it up again every time to test a new bit of code.
+
+Last thing, be ok to jump ship and drop the course. Not all courses selected will turn out great for you and that's fine! Come back next quarter, or even next year. I promise you you won't be behind, the fact you might consider a graduate course as a undergraduate means you are way ahead of other students already and are not falling behind in terms of coursework.
 
 <h2 id='Enrolling-in-Graduate-Courses'>Enrolling in Graduate Courses</h2>
 
