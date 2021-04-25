@@ -48,8 +48,9 @@ const About = () => {
             </p>
             <p>
               In Data Science and AI, I'm experienced with Tensorflow, PyTorch, Keras,
-              Pandas, Numpy, Scikit-learn, OpenAI Gym, and basic CV2, Trimesh, Open3D
+              Pandas, Numpy, scikit-learn, OpenAI Gym, Computer Vision (CV), Reinforcement Learning (RL), GANs, Decision Trees, Clustering Algorithms
             </p>
+            <p>In CV, I'm experienced with 3D CV (Object Detection, Segmentation, Pose Estimation) using deep learning </p>
             <p>
               In Web Development and Software Engineering, I'm experienced with
               Node.js, React.js, MongoDB, Express.js. I've also worked with

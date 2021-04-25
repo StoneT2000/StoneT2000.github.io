@@ -17,8 +17,8 @@
       "end": null,
       "location": "San Diego, USA",
       "details": [
-        "Researching 3D Computer Vision under Professor Hao Su and under the mentorship of Xiaoshuai Zhang.",
-        "Developing full-stack for the benchmarking website for <a href='https://sapien.ucsd.edu/' target='blank'>SAPIEN</a>"
+        "Working on Reinforcement Learning (RL) and Robotics for the  <a href='https://sapien.ucsd.edu/' target='blank'>SAPIEN</a> project under Professor Hao Su. Currently building new gym environments for RL benchmarks.",
+        "Utilizing Python, Docker, MongoDB, Typescript to develop the RL benchmark system full stack."
       ],
       "role": "AI Research Intern",
       "logoImage": "assets/sulab.png "
