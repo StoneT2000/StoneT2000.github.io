@@ -10,7 +10,7 @@ const About = () => {
   ];
   return (
     <>
-      <Sidebar tabs={tabs} />,
+      <Sidebar tabs={tabs} />
       <DefaultLayout page="About">
         <Helmet>
           <title>About Stone Tao</title>
