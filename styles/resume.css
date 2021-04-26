@@ -38,6 +38,13 @@ p, .content li, .content ul {
   float: right;
   font-family: 'Open Sans';
 }
+#social { 
+  position: relative;
+  float: right;
+  text-align: right;
+  width: 100%;
+  margin-top: -35px;
+}
 
 @media print {
   a {
@@ -84,6 +91,13 @@ p, .content li, .content ul {
   }
   .sidebarsWrapper {
     display:none;
+  }
+  #social { 
+    position: relative;
+    float: right;
+    text-align: right;
+    width: 100%;
+    margin-top: -22px;
   }
 }
 @media print  
