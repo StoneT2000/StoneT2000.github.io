@@ -1,0 +1,1 @@
+I go in depth on my thoughts on AI programming challenges, how the Lux AI Challenge address issues in competitions like Battlecode, Halite, Terminal, and how this all came about.
