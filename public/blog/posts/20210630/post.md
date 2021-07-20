@@ -8,7 +8,7 @@ I put this up first because I dislike saying Battlecode is a bad competition bec
 
 This post looks at a few competitions as mini case-studies, pointing out what went wrong, and what was good. In particular, I have selected [Battlecode](https://battlecode.org/), [Halite](http://halite.io/), [Terminal](http://terminal.c1games.com/), [CodinGame](http://codingame.com/) and [Screeps](https://screeps.com/). These 5 (in my opinion) span the general spectrum of the current state of AI programming challenges.
 
-If you want to skip that part and just learn about how the [Lux AI Challenge](lux-ai.org) works to address the shortcomings of other competitions and retains lots of the good from past competitions, [click here]() **TODO fix gramamr**
+If you want to skip that part and just learn about how the [Lux AI Challenge](https://lux-ai.org) works to address the shortcomings of other competitions and retains lots of the good from past competitions, [click here]() **TODO fix gramamr and add link to left**
 
 Also if you don't know what an AI programming challenge is, it's effectively programming a virtual bot to compete against other bots in a game.
 
@@ -61,24 +61,24 @@ Another huge issue which is something that I think only Halite and Battlecode re
 
 ### CodinGame
 
-This is an interesting one. CodinGame is a company that has a lot of success with this style of competition. They have a community of 2 million something members and AI programming challenges with 100,000+ competitors with their seasonal competitions bringing in 8,000+ competitors easily. It seems to be overwhelmingly popular in the French and European circles of engineers
+This is an interesting one. CodinGame is a company that has a lot of success with this style of competition. They have a community of 2 million something members and AI programming challenges with 100,000+ competitors with their seasonal competitions bringing in 8,000+ competitors easily. It seems to be overwhelmingly popular in the French and European circles of engineers.
 
 
 
-**Conclusion:** A great move forward. 
+**Conclusion:** A great move forward. Other stuff?
 
 ### Screeps
 
-This is quite special in the sense that it probably has the competitors of any competition, but it's actually a game on [Steam](https://store.steampowered.com/) and by far the most popular AI programming one. The interesting part is that Screeps is actually an MMO which is not a easy thing to engineer for. UIUC's most recent MechMania AI programming competition attempted to run an MMO AI competition and it failed completely. About 20 competitors, nothing worked, visualizer was broken, a lot of "overengineering," and unfortunately not worth more than two sentences to talk about. 
+This is quite special in the sense that it probably has the same style as any other AI programming challenge, but it's actually a game on [Steam](https://store.steampowered.com/) and by far the most popular one. The interesting part is that Screeps is actually an MMO which is not a easy thing to engineer for. UIUC's most recent MechMania AI programming competition attempted to run an MMO AI competition and it failed completely. About 20 competitors, nothing worked, visualizer was broken, a lot of "overengineering," and unfortunately not worth more than two sentences to talk about. 
 
-Looking at the reviews on Steam and feedback from some of their competitors, Screeps is truly unique and extremely addicting. 
+Looking at the reviews on Steam and feedback from some of their competitors, Screeps is truly unique and extremely addicting and I wish I had the time to compete in it. It has some awesome developer tools that really define what it means to have "smooth competition experiences", although it is Javascript only.
 
-
-
-**Conclusion:** Very very well developed game and good game design and awesome tooling from what I hear. Unfortunately it's JavaScript only and behind a paywall which is okay for some but I think it just too many barriers.
+**Conclusion:** Very very well developed game and good game design and awesome tooling from what I hear. Unfortunately it's JavaScript only and part of it is behind a paywall which is okay for some but that just decreases the accessibility for open and fair competition in general.
 
 
 <h2 id='Lux-AI-Challenge'>Lux AI Challenge</h2>
+
+Add content here about how we are super good (and stuff we plan to improve on)
 </br>
 </br>
 </br>
