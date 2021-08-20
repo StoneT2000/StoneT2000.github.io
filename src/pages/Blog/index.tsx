@@ -11,7 +11,15 @@ const md = new MarkdownIt();
 const Blog = () => {
   const [posts, setPosts] = useState<
     Array<BlogPostPreviewCardProps & { path: string }>
-  >([
+  >([{
+      path: '20210630',
+      title: 'The Lux AI Challenge',
+      time: 'June 30, 2021',
+      thumbnail: 'thumb.png',
+      thumbnailAltText: 'The Lux AI Challenge Season 1 design',
+      desc: '',
+      lengthInMin: 7,
+    },
     {
       path: '20210321',
       title: 'How to Survive a Graduate Course as an Undergrad',
