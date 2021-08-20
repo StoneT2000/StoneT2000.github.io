@@ -1,1 +1,0 @@
-I analyze the spectrum of AI programming challenges and how the Lux AI Challenge address issues in competitions like Battlecode, Halite, Terminal and why it is the future.

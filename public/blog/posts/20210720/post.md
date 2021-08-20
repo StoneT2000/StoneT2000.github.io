@@ -1,10 +1,10 @@
-# A Case Study on AI Programming Challenges 
+# A Survey of AI Programming Challenges 
 
 In 2018, I got my first real taste of an AI programming challenge. It was MIT's infamously difficult [Battlecode](https://battlecode.org/). I competed in it with a few friends on a complete whim. I had no knowledge of Java or any algorithms/data structures and as expected we basically sucked really hard. Flopped every tournament. You would not expect someone to suddenly make finals the year after, or consecutively for 3 years in a row, to then go on to be extremely interested in AI.
 
 I put this up first because I dislike saying Battlecode is a bad competition because it is the very reason I'm where I am right now. I'm working at [QuantCo](https://quantco.com/) as an intern purely because of Battlecode. I'm interested in AI because of Battlecode. I'm interested in Computer Science and Cognitive Science because of Battlecode (and a few other factors). So no hard feelings @Battlecode devs, but Battlecode still needs a lot of work and the current state unfortunately clouds all the great work Battlecode has done over the years.
 
-This post looks at a few competitions as mini case studies, pointing out what is great and what is not so great. In particular, I have selected [Battlecode](https://battlecode.org/), [Halite](http://halite.io/), [Terminal](http://terminal.c1games.com/), [CodinGame](http://codingame.com/) and [Screeps](https://screeps.com/). These 5 (in my opinion) span the general spectrum of the current state of AI programming challenges. Lastly, I also give a overview of the Lux AI Challenge and give it a similar sort of "case study" treatment.
+This post looks provides a survey of a few competitions presented as mini case studies, pointing out what is great and what is not so great. In particular, I have selected [Battlecode](https://battlecode.org/), [Halite](http://halite.io/), [Terminal](http://terminal.c1games.com/), [CodinGame](http://codingame.com/) and [Screeps](https://screeps.com/). These 5 (in my opinion) span the general spectrum of the current state of AI programming challenges. Lastly, I also give a overview of the Lux AI Challenge and give it a similar sort of "case study" treatment.
 
 If you don't know what an AI programming challenge is, it's effectively programming a virtual bot to compete against other bots in a game.
 
