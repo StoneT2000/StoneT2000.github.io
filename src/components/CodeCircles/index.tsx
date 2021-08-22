@@ -11,11 +11,11 @@ const CodeCircles = ({ types }: CodeCirclesProps) => {
     js: '#f1e05a',
     p5js: '#ed225d',
     tensorflow: '#ff6f00',
-    pytorch: "#dd5655",
+    pytorch: '#dd5655',
     htmlcss: '#85425F',
     typescript: '#2b7489',
     react: '#61dafb',
-    python: "#3572A5",
+    python: '#3572A5',
   };
   const names: Record<string, string> = {
     css: 'CSS',

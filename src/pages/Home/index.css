@@ -11,6 +11,9 @@
 .Home #first-links > p > a {
   text-decoration: none;
 }
+.Home #first-links > p {
+  margin: 0;
+}
 .Home .projects {
   display: flex;
   flex-wrap: wrap;

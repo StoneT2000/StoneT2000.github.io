@@ -45,9 +45,8 @@ const BlogPostPage = () => {
         const linkElem = linkElems[i];
         console.log(linkElem.href);
         if (linkElem.origin !== window.origin) {
-          linkElem.target = "blank";
+          linkElem.target = 'blank';
         }
-        
       }
     });
   }, [postpath]);

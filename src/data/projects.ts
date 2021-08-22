@@ -1,4 +1,13 @@
 export const ProjectsData = {
+  luxai: {
+    title: 'Lux AI Challenge Season 1',
+    time: '2021/08',
+    thumbnail: 'assets/luxaithumb.png',
+    thumbnailAltText: 'Logo of the Lux AI Challenge Season 1',
+    text: `Season 1 of the <strong>Lux AI Challenge</strong>, built for novelty, inclusivity, and accessibility, hosted on <strong>Kaggle</strong>! This competition is step one in our efforts to build the next generation of AI competitions and environments.`,
+    link: 'https://github.com/Lux-AI-Challenge/Lux-Design-2021',
+    tags: ['useful', 'typescript', 'ai', 'python'],
+  },
   'rl-ts': {
     title: 'RL Gym and Library in Typescript',
     time: '2021/04',

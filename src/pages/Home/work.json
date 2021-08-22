@@ -3,11 +3,13 @@
     {
       "link": "https://quantco.com/",
       "org": "QuantCo",
-      "start": "TBD",
-      "end": "TBD",
-      "location": "Berlin, Germany",
-      "details": ["TBD"],
-      "role": "Incoming Software Engineering Intern",
+      "start": "2021/06",
+      "end": "2021/09",
+      "location": "Boston, USA",
+      "details": ["Developed and researched high precision and accurate white-box function approximation using deep neural nets, decision trees, and boosting. Helps automatically migrate slow, complex, hand-built calculators in old systems to new systems, and learn fast differentiable approximations of these functions for analysis purposes. Results beat LGBM, deep neural nets (by themselves), and other methods by 100x or by being feasible in high dimensions.",
+        "Developing OCR+NLP tools for analysis of insurance documents for automatic categorization of insurance types and their properties",
+        "Used Pytorch, Jax, Flax, Optax, scikit learn, scipy, Pandas, GCP"],
+      "role": "Machine Learning Engineer Intern",
       "logoImage": "assets/logo_quantco_black.svg "
     },
     {
@@ -17,8 +19,9 @@
       "end": null,
       "location": "San Diego, USA",
       "details": [
-        "Working on Reinforcement Learning (RL) and Robotics for the  <a href='https://sapien.ucsd.edu/' target='blank'>SAPIEN</a> project under Professor Hao Su. Currently building new gym environments for RL benchmarks.",
-        "Utilizing Python, Docker, MongoDB, Typescript to develop the RL benchmark system full stack."
+        "Researching Reinforcement Learning (RL) and Robotics under Professor Hao Su. Currently building gym environments for RL benchmarks to test RL agents on SAPIEN, a simulated part-based interactive, 3D environment.",
+        "Preprint for our work on the environments and generalizable RL: <a href='https://arxiv.org/abs/2107.14483'>https://arxiv.org/abs/2107.14483</a>",
+        "Environments are being used for our lab's manipulation skill challenge sponsored by Qualcomm AI Research: <a href='https://github.com/haosulab/ManiSkill'>https://github.com/haosulab/ManiSkill</a>. Furthermore, I'm developing the ManiSkill challenge platform full stack with Python, Docker, MongoDB, Typescript."
       ],
       "role": "AI Research Intern",
       "logoImage": "assets/sulab.png "
