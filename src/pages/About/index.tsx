@@ -64,8 +64,11 @@ const About = () => {
               Mou
             </p>
             <p>
-              In Data Science and AI, I'm experienced with Tensorflow, PyTorch, Jax, scikit-learn, OpenAI Gym, and various other tools. For domains I'm experienced and interested in Computer Vision, Reinforcement Learning, GANs, Decision Trees,
-              and Clustering Algorithms
+              In Data Science and AI, I'm experienced with Tensorflow, PyTorch,
+              Jax, scikit-learn, OpenAI Gym, and various other tools. For
+              domains I'm experienced and interested in Computer Vision,
+              Reinforcement Learning, GANs, Decision Trees, and Clustering
+              Algorithms
             </p>
             <p>
               In Web Development and Software Engineering, I'm experienced with

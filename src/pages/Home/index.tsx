@@ -99,25 +99,32 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I'm a software engineer / AI x HCI researcher, my primary interests are in RL. Currently a Machine Learning Engineer Intern at{' '}
+            I'm a software engineer / AI x HCI researcher, my primary interests
+            are in RL. Currently a Machine Learning Engineer Intern at{' '}
             <a target="blank" href="https://quantco.com/">
               QuantCo
             </a>
             , previously worked at{' '}
             <a target="blank" href="https://launchdarkly.com/">
               LaunchDarkly.
-            </a>. I also co-founded the <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to build creative, inclusive, and accessible AI competitions and environments for all
+            </a>
+            . I also co-founded the{' '}
+            <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
+            build creative, inclusive, and accessible AI competitions and
+            environments for all
           </p>
           <p>
             I'm also a Computer Science and Cognitive Science major at{' '}
             <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023, and
-            actively performing research at the <a href="https://cseweb.ucsd.edu/~haosu/">SU Lab at UCSD</a> and <a href="http://protolab.ucsd.edu/">ProtoLab</a> at
-            the Design Lab at UCSD
+            actively performing research at the{' '}
+            <a href="https://cseweb.ucsd.edu/~haosu/">SU Lab at UCSD</a> and{' '}
+            <a href="http://protolab.ucsd.edu/">ProtoLab</a> at the Design Lab
+            at UCSD
           </p>
           <p>
             I love AI and design. Currently developing AI competitions,
-            researching RL, and researching at the intersection of
-            HCI and AI. Check out my <a href="/projects">Projects</a>,{' '}
+            researching RL, and researching at the intersection of HCI and AI.
+            Check out my <a href="/projects">Projects</a>,{' '}
             <a href="#work-a">Experience</a>, <a href="/blog">Blog</a>,{' '}
             <a href="#awards-a">Awards</a>, <a href="/about">About Me</a>, or{' '}
             <a href="/files/Stone%20Tao%20-%20Resume.pdf">view my resume</a>

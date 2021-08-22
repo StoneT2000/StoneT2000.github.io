@@ -1,6 +1,18 @@
 {
   "data": [
     {
+      "link": "https://lux-ai.org/",
+      "org": "Lux AI Challenge",
+      "start": "2021/08",
+      "end": null,
+      "location": "Worldwide!",
+      "details": ["Co-founder of the Lux AI Challenge. We build creative, accessible, inclusive, and engaging AI challenges that necessitate outside of the box engineering and analysis.",
+        "Currently collaborating with Kaggle to develop the future of AI challenges and an exciting approach to discovering creative engineering talent and encouraging people to learn AI and programming.",
+        "I spearhead the development of our competitions in addition to cultivating our collaborations with Kaggle and other sponsors of our competitions."],
+      "role": "Co-founder",
+      "logoImage": "assets/luxailogo.png "
+    },
+    {
       "link": "https://quantco.com/",
       "org": "QuantCo",
       "start": "2021/06",
