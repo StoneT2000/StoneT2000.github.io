@@ -13,6 +13,15 @@ const Blog = () => {
     Array<BlogPostPreviewCardProps & { path: string }>
   >([
     {
+      path: 'nn-fnc-approx',
+      title: 'High Precision Function Approximation With Decision Trees and Neural Networks',
+      time: 'December 12, 2021',
+      thumbnail: 'thumb.gif',
+      thumbnailAltText: 'Gif showing how the decision tree neural network (DTNN) model',
+      desc: '',
+      lengthInMin: 11,
+    },
+    {
       path: '20210720',
       title: 'A Survey of AI Programming Challenges',
       time: 'August 20, 2021',

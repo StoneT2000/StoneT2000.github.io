@@ -1,0 +1,1 @@
+I introduce some of work on function approximation while I interned at QuantCo. We identified a few solutions and directions that help tackle some of the issues faced by function approximation of functions with high dimensionality and many discontinuities. In the end, we convert hand written code into matrices without NLP.

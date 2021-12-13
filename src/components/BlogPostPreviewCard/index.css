@@ -38,6 +38,7 @@
 .BlogPostPreviewCard .title > h2 {
   display: inline;
   margin-right: 20px;
+  font-size: 2rem;
 }
 .BlogPostPreviewCard .title > date {
   display: inline;
