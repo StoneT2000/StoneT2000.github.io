@@ -3,6 +3,8 @@ import DefaultLayout from '../layouts/DefaultLayout';
 import './index.css';
 import axios from 'axios';
 import MarkdownIt from 'markdown-it';
+//@ts-ignore
+import MarkdownItKatex from 'markdown-it-katex';
 import { useParams } from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
@@ -10,6 +12,7 @@ import { Helmet } from 'react-helmet';
 import { TwitterShareButton } from 'react-twitter-embed';
 
 const md = new MarkdownIt({ html: true, linkify: true });
+md.use(MarkdownItKatex);
 const BlogPostPage = () => {
   const [content, setContent] = useState('');
   const [tabs, setTabs] = useState<{ name: string; href: string }[]>([]);
@@ -17,6 +20,7 @@ const BlogPostPage = () => {
   const { postpath } = useParams<{ postpath: string }>();
   useEffect(() => {
     const url = `/blog/posts/${postpath}/post.md`;
+    
     axios.get(url).then((res) => {
       setContent(md.render(res.data));
       const foundtabs: any[] = [];
