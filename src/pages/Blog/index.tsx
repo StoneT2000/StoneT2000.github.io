@@ -22,7 +22,7 @@ const Blog = () => {
       lengthInMin: 11,
     },
     {
-      path: '20210720',
+      path: 'ai-challenge-survey',
       title: 'A Survey of AI Programming Challenges',
       time: 'August 20, 2021',
       thumbnail: 'thumb.png',
@@ -31,7 +31,7 @@ const Blog = () => {
       lengthInMin: 11,
     },
     {
-      path: '20210321',
+      path: 'grad-courses',
       title: 'How to Survive a Graduate Course as an Undergrad',
       time: 'March 22, 2021',
       thumbnail: 'thumb.png',
@@ -40,7 +40,7 @@ const Blog = () => {
       lengthInMin: 7,
     },
     {
-      path: '20210201',
+      path: 'bc21',
       title: 'Battlecode 2021 Postmortem',
       time: 'February 1, 2021',
       thumbnail: 'thumb.jpg',
@@ -50,7 +50,7 @@ const Blog = () => {
       otherMeta: '7 min read without full Battlecode Timeline',
     },
     {
-      path: '20201202',
+      path: 'talesfromtheloop',
       title: 'The Beauty and Brilliance of Tales From the Loop',
       time: 'December 2, 2020',
       thumbnail: '12.jpg',
@@ -58,24 +58,24 @@ const Blog = () => {
       desc: '',
       lengthInMin: 4,
     },
-    {
-      path: '25102020',
-      title: 'Starting a Proper Blog',
-      time: 'October 26, 2020',
-      thumbnail: 'thumb.png',
-      thumbnailAltText: 'Blue color',
-      desc: '',
-      lengthInMin: 3,
-    },
-    {
-      path: 'Dimensions',
-      title: 'Dimensions',
-      time: 'April 9, 2020',
-      thumbnail: 'thumb.gif',
-      thumbnailAltText:
-        'Dimensions running a Rock Paper Scissors AI tournament',
-      desc: '',
-    },
+    // {
+    //   path: '25102020',
+    //   title: 'Starting a Proper Blog',
+    //   time: 'October 26, 2020',
+    //   thumbnail: 'thumb.png',
+    //   thumbnailAltText: 'Blue color',
+    //   desc: '',
+    //   lengthInMin: 3,
+    // },
+    // {
+    //   path: 'Dimensions',
+    //   title: 'Dimensions',
+    //   time: 'April 9, 2020',
+    //   thumbnail: 'thumb.gif',
+    //   thumbnailAltText:
+    //     'Dimensions running a Rock Paper Scissors AI tournament',
+    //   desc: '',
+    // },
   ]);
   useEffect(() => {
     let filledPosts: any[] = [];
