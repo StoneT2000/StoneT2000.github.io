@@ -31,8 +31,8 @@
       "end": null,
       "location": "San Diego, USA",
       "details": [
-        "Researching Reinforcement Learning (RL) and Robotics under Professor Hao Su. Currently building gym environments for RL benchmarks to test RL agents on SAPIEN, a simulated part-based interactive, 3D environment.",
-        "Preprint for our work on the environments and generalizable RL: <a href='https://arxiv.org/abs/2107.14483'>https://arxiv.org/abs/2107.14483</a>",
+        "Researching Reinforcement Learning (RL) and Robotics under Professor Hao Su. Currently researching topics in RL and robotics. Previously built gym environments for RL benchmarks to test RL agents on SAPIEN, a simulated part-based interactive, 3D environment.",
+        "Our work on the environments and generalizable RL was accepted to NeurIPS 2021 (Benchmark and Datasets track): <a href='https://arxiv.org/abs/2107.14483'>https://arxiv.org/abs/2107.14483</a>",
         "Environments are being used for our lab's manipulation skill challenge sponsored by Qualcomm AI Research: <a href='https://github.com/haosulab/ManiSkill'>https://github.com/haosulab/ManiSkill</a>. Furthermore, I'm developing the ManiSkill challenge platform full stack with Python, Docker, MongoDB, Typescript."
       ],
       "role": "AI Research Intern",

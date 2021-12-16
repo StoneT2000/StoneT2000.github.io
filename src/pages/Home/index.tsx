@@ -100,11 +100,11 @@ const Home = () => {
           </div>
           <p>
             I'm a software engineer / AI x HCI researcher, my primary interests
-            are in RL. Currently a Machine Learning Engineer Intern at{' '}
+            are in RL. Previously a Machine Learning Engineer Intern at{' '}
             <a target="blank" href="https://quantco.com/">
               QuantCo
             </a>
-            , previously worked at{' '}
+            , previously interned at{' '}
             <a target="blank" href="https://launchdarkly.com/">
               LaunchDarkly.
             </a>

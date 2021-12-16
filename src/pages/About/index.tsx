@@ -75,7 +75,7 @@ const About = () => {
               Node.js, React.js, MongoDB, Express.js to list a few
             </p>
             <p>
-              I also founded and run the{' '}
+              I also founded and run an{' '}
               <a href="https://ai.acmucsd.com" target="blank">
                 AI club at UCSD
               </a>
@@ -104,9 +104,9 @@ const About = () => {
               <p>Selected Courses Taken:</p>
               <ul>
                 <li>
-                  AI / Data Science: CSE 291-I - ML Meets Geometry (Graduate
-                  CV), CSE 152 - Intro to Computer vision, COGS 108 - Data
-                  Science in Practice, COGS 118A - Supervised ML Algorithms
+                  AI / Data Science: CSE 291-D - Reinforcement Learning and Robotics (Graduate), CSE 291-I - ML Meets Geometry (Graduate
+                  CV), CSE 258 - Recommendation systems (Graduate), CSE 152 - Intro to Computer vision, COGS 108 - Data
+                  Science in Practice, COGS 118A / 118B - Supervised & Unsupervised ML Algorithms
                 </li>
                 <li>
                   Math: MATH 31AH - Honors Linear Algebra, MATH 31BH - Honors

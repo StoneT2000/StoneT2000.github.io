@@ -36,9 +36,7 @@ In a nutshell, we solve a difficult regression problem, but there are a number o
 3. We need to achieve a high degree of precision on the orders of 1e-5 to 1e-7
 4. $f$ also has 100s of dimensions in its input and output spaces
 
-<h2 id="Approaches">Approaches </h2>
-
-Many approaches have been investigated, and I'll go in depth in the following 4
+Because of these quirks, many approaches have been investigated, and I'll go in depth in the following 4
 
 1. Neural Networks
 2. 2nd order optimization of Neural Nets for regression
@@ -47,7 +45,7 @@ Many approaches have been investigated, and I'll go in depth in the following 4
 
 These proved to be the most influential and powerful methods out of all the other tricks and techniques we experimented with.
 
-### Neural Networks
+<h2 id="Neural-Networks">Neural Networks</h2>
 
 Why deep neural nets for an approximation problem?
 
@@ -63,7 +61,7 @@ The typical way to use neural nets in a regression problem is to train the neura
 
 However, standard neural networks on their own are nowhere near sufficient to achieve any level of desirable accuracy in our project, and the next section discusses the first massive improvement in performance via 2nd order optimization.
 
-### 2nd Order Optimization
+<h2 id="2nd-Order-Optimization">2nd Order Optimization</h2>
 
 Almost ubiquitously, deep learning practitioners rely on first-order optimization algorithms such as Gradient Descent, Adam, RMSProp to name a few. These methods prove incredibly useful in many tasks because they are fast, computationally efficient and feasible, often bug-free, and many other reasons listed out in this [stackoverflow answer](https://stats.stackexchange.com/a/394108). Another important aspect of first-order methods is that they achieve low generalization error compared to second-order methods, making algorithms like SGD and Adam incredibly popular in CV and NLP tasks where generalization error is paramount.
 
@@ -77,7 +75,7 @@ These features of our project suddenly make 2nd order optimization algorithms mu
 
 With 2nd order optimization, a single deep neural net was able to achieve about 30% accuracy on test data in the project, meaning it predicted 30% of data points to within 1 of its true value. But this is about as far as it will go, and can't scale farther in any direction (model complexity, time, data etc.) without entering scaling problems or hitting a minimum. The major issue is that discontinuities reduce the performance of the neural net as it attempts to fit a smooth model over it, in addition to having major approximation errors around the discontinuities. I tackle this issue next.
 
-### Residual-Based Splitting
+<h2 id="Residual-Based Splitting">Residual-Based Splitting</h2>
 
 We can treat any arbitrary function like our target function as being some piecewise smooth function if you split the input space into the right regions. So one solution is to identify the smooth regions of the input space and train a different function approximator that can achieve high precision and doesn't need to worry about fitting to discontinuities. Thus, the fundamental reason for using a Decision Tree for this problem is to **handle discontinuities**.
 
@@ -105,13 +103,13 @@ A direct algorithmic way to then find this discontinuity is to use the splitting
 
 There can be a lot of further research on discontinuity finding to improve this, from refining a split decided by a DT by generating more data near the split or finding other algorithms that discover  and can ignore the noise potentially introduced by poor-fitting in other input space regions, in addition to being more effective in higher dimensions where discontinuities in other dimensions or spanning multiple dimensions can make this much more complex.
 
-### DTNNs
+<h2 id="DTNNs">DTNNs</h2>
 
 Now that we have in our toolbox a neural network-based function approximator and a method to identify discontinuities and separate out the smooth regions in the input space, we can combine these into a single decision tree neural network model. This combination then allows us to also make effective use of a key property of this problem, which is that we can **generate data on the fly** using the target function.
 
 At a high level, a DTNN is a decision tree with neural nets at each leaf that perform the regression for any data that falls to that leaf, and the splitting algorithm is the residual-based splitting method. Thanks to the splitting of the input space, we also don't need as much data or as big of a neural network model at each leaf to sufficiently capture the behavior there with high accuracy.
 
-#### Growing the DTNN
+### Growing the DTNN
 
 The growing algorithm is quite similar to a typical decision tree growing algorithm but with a few changes. The DTNN maintains the same procedure of taking each leaf node and determining first whether to continue splitting, then deciding on the best split to make before making the split.
 
@@ -129,7 +127,7 @@ Visually, growing a DTNN looks like this:
 
 A green circle represents a leaf node that has a trained neural network that is accurate enough, a blue node is an internal node or a to be trained leaf node. Each round, we increase the depth of the tree by one via residual-based splitting and only generate two children per leaf node, and then fine tune the neural nets at all leaf nodes that need fine tuning.
 
-#### DTNN Pseudocode
+### DTNN Pseudocode
 
 For those who prefer pseudocode, the growing algorithm is as follows
 
@@ -174,9 +172,9 @@ The `splitting_func` is a function that when given the neural network, the train
 
 The `input_subspace` is simply the data range of inputs that we want to approximate the target function over, and the root node of the DTNN is associated with this input subspace. For our project, this would be the boundaries of every feature dimension in the historical data.
 
-<h2 id="DTNN-Discussion">DTNN Discussion</h2>
+### DTNN Discussion
 
-### Results
+#### Results
 
 With the DTNN and residual-based splitting and 2nd order optimization, we raised that 30% to about 86% of test data points approximated to within 1, despite data points being on the order of 1e5 to 1e7. In particular, the single NN and DTNN were both trained on a single CPU for 64 hours and achieved 30% and 86% accuracy respectively. This outperforms just about any regression model we tried, from GBDTs (~2% accuracy), to first-order optimized neural nets (~2% accuracy), to interpolation algorithms (infeasible).
 
@@ -184,13 +182,13 @@ The major reason the DTNN achieves such a massive improvement is in addition to 
 
 The DTNN also has a number of nice properties. One is that it is highly scalable compared to neural networks, another is that it has unbounded performance potential with no generalization problems (usually). There are a bunch more but these are listed in the [further applications section](#Further-Applications). There's also a [further research topic section](#Further-Research-Topics) that lists out a number of questions my advisor and I asked that we didn't have time to explore but are probably worth exploring and can improve the results.
 
-### Scaling
+#### Scaling
 
 You can easily parallelize the DT growing process by training each leaf on a separate core, subject to balancing issues if there are only 2 leaves training and one takes a lot longer than the other. Moreover, this project is more often CPU bottlenecked as the target function tends to be the main limiting factor due to data generation speeds, so GPUs aren't really necessary (nor are 2nd order optimization methods that well optimized on the GPU), so in terms of scaling, you can simply increase the number of CPUs (generally quite easy) and achieve pretty high efficiency in training speed vs number of CPUs used.
 
 You can even horizontally scale this process across multiple servers probably, although I'm not exactly sure how much of an overhead that might have. I suspect it should be fairly low since the only unique data each different server has is the data range and the neural network, everything else is the same from the target function / data generator, to the neural network architecture and splitting function.
 
-### Unbounded Potential
+#### Unbounded Potential
 
 In theory, with a target function at hand to generate noiseless training data, the DTNN can get **100% of training and test data points approximated to not just within 1, but even 0.1, 0.01, etc.** when given sufficient time, a guarantee that cannot be said of any other model that I'm aware of (except for an extremely, out of memory, DT kind of model which at that point is really just memorizing the training data).
 
