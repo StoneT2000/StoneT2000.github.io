@@ -17,9 +17,9 @@ const Blog = () => {
       title: 'High Precision Function Approximation With Decision Trees and Neural Networks',
       time: 'December 12, 2021',
       thumbnail: 'thumb.gif',
-      thumbnailAltText: 'Gif showing how the decision tree neural network (DTNN) model',
+      thumbnailAltText: 'Gif showing how the decision tree neural network (DTNN) model works',
       desc: '',
-      lengthInMin: 11,
+      lengthInMin: 16,
     },
     {
       path: 'ai-challenge-survey',
