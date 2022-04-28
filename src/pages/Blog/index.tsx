@@ -115,7 +115,7 @@ const Blog = () => {
         <div className="Blog">
           <h1>Blog!</h1>
           <p>
-            I mostly blog about AI and HCI, as well as my experiences at UC San
+            I mostly blog about AI, as well as my experiences at UC San
             Diego, building random software, and competing in AI competitions.
             Sometimes there's a book or some art thrown in the mix. To be
             updated on when I make new blog posts,{' '}

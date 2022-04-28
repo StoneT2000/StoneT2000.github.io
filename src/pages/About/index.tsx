@@ -60,15 +60,12 @@ const About = () => {
               <a href="https://lux-ai.org" target="blank">
                 Lux AI Challenge
               </a>{' '}
-              with <a href="https://bovard.dev/">Bovard</a>, Isa Pan, and Andrew
-              Mou
+              with <a href="https://bovard.dev/">Bovard Doerschuk-Tiberi</a> and Isa Pan
             </p>
             <p>
-              In Data Science and AI, I'm experienced with Tensorflow, PyTorch,
-              Jax, scikit-learn, OpenAI Gym, and various other tools. For
-              domains I'm experienced and interested in Computer Vision,
-              Reinforcement Learning, GANs, Decision Trees, and Clustering
-              Algorithms
+              In Data Science and AI, I'm experienced with PyTorch, Tensorflow,
+              Jax, scikit-learn, OpenAI Gym, and various other tools. I'm also experienced and interested in Computer Vision,
+              Reinforcement Learning, and Tree Learners
             </p>
             <p>
               In Web Development and Software Engineering, I'm experienced with

@@ -88,6 +88,9 @@ const Home = () => {
               GitHub: <a href="https://www.github.com/stonet2000">StoneT2000</a>
             </p>
             <p>
+            Google Scholar: <a href="https://scholar.google.com/citations?user=GAMO0EwAAAAJ&hl=en">Profile</a>
+            </p>
+            <p>
               Twitter: <a href="https://twitter.com/Stone_Tao">@Stone_Tao</a>
             </p>
             <p>
@@ -99,12 +102,12 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I'm a software engineer / AI x HCI researcher, my primary interests
-            are in RL. Previously a Machine Learning Engineer Intern at{' '}
+            I'm a software engineer / AI researcher, my primary interests
+            are in RL, Robotics, and Tree Learners. I was previously a Machine Learning Engineer Intern at{' '}
             <a target="blank" href="https://quantco.com/">
               QuantCo
             </a>
-            , previously interned at{' '}
+            , and previously interned at{' '}
             <a target="blank" href="https://launchdarkly.com/">
               LaunchDarkly.
             </a>
