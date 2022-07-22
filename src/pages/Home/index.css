@@ -20,6 +20,9 @@
   width: 100%;
   justify-content: center;
 }
+.Home .publication p {
+  margin: 0;
+}
 @media only screen and (max-width: 422px) {
   .Home #logo {
     display: none;

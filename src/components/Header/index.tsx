@@ -27,9 +27,9 @@ const Header = ({ active }: HeaderProps) => {
         <a href="/projects" className={active === 'Projects' ? 'active' : ''}>
           <li>Projects</li>
         </a>
-        <a href="/about" className={active === 'About' ? 'active' : ''}>
+        {/* <a href="/about" className={active === 'About' ? 'active' : ''}>
           <li>About</li>
-        </a>
+        </a> */}
         <a href="/blog/" className={active === 'Blog' ? 'active' : ''}>
           <li>Blog</li>
         </a>

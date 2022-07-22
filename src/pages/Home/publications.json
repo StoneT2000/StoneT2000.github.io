@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "title": "Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations",
+      "authors": "Tongzhou Mu, Zhan Ling, Fanbo Xiang, Derek Cathera Yang, Xuanlin Li, Stone Tao, Zhiao Huang, Zhiwei Jia, and Hao Su.",
+      "venue": "NeurIPS (Datasets and Benchmark Track)",
+      "year": "2021",
+      "link": "https://arxiv.org/abs/2107.14483",
+      "projectpage": "https://sapien.ucsd.edu/challenges/maniskill/2021/",
+      "code": "https://github.com/haosulab/ManiSkill"
+    }
+  ]
+}
