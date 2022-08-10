@@ -58,27 +58,33 @@ const Home = () => {
           <p>
             I am an AI researcher and my primary research interests are in
             reinforcement learning, robotics, and tree learners. I'm currently
-            conducting research at the{' '}
-            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su Lab</a> at UCSD and{' '}
-            <a href="http://protolab.ucsd.edu/">ProtoLabs/DesignLab</a> at UCSD. I also co-founded the{' '}
-            <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
+            conducting reinforcement learning and robotics research at UCSD
+            supervised by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>{' '}
+            and AI x HCI research supervised by{' '}
+            <a href="https://spdow.ucsd.edu/">Steven Dow</a>. I also co-founded
+            the <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
             build creative, inclusive, and accessible AI competitions and
-            environments for all.
+            environments for all, as well as provide a high quality benchmark
+            for massive multi-agent RL.
           </p>
           <p>
-            I was previously a Machine Learning Engineer Intern at{' '}
+            I previously was a Machine Learning Engineer Intern at{' '}
             <a target="blank" href="https://quantco.com/">
               QuantCo
-            </a>
-            , and previously interned at{' '}
+            </a>{' '}
+            and interned at{' '}
             <a target="blank" href="https://launchdarkly.com/">
               LaunchDarkly
-            </a>.
+            </a>
+            .
           </p>
           <p>
-            I'm currently a undergraduate Computer Science and Cognitive Science
-            double major, Math minor, at{' '}
-            <a href="https://www.ucsd.edu/">UC San Diego</a>, class of 2023.
+            I'm currently an undergraduate Computer Science and Cognitive
+            Science double major, Math minor, at{' '}
+            <a href="https://www.ucsd.edu/">UC San Diego</a>, graduating June
+            2023. I'm currently applying to Ph.D. programs for Fall 2023,
+            looking to continue learning and researching in AI with interests in
+            reinforcement learning.
           </p>
           <div className="anchor" id="publications-a" />
           <h2>Publications</h2>
@@ -87,24 +93,52 @@ const Home = () => {
             bolded = bolded.replace('Stone Tao', '<strong>Stone Tao</strong>');
             return (
               <div className="publication" key={publication.title}>
-                <p>
-                  <a href={publication.link}>{publication.title}</a>
-                </p>
-                <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
-                <p><i>{publication.venue}, {publication.year}</i></p>
-                <p>
-                  <a href={publication.link}>arXiv</a>{' '}
-                  {publication.projectpage && (
-                    <>
-                      / <a href={publication.projectpage}>project page</a>{' '}
-                    </>
-                  )}
-                  {publication.code && (
-                    <>
-                      / <a href={publication.code}>code</a>{' '}
-                    </>
-                  )}
-                </p>
+                <div style={{textAlign: "center"}} className="publication-image">
+                  <img
+                    
+                    src={publication.image}
+                  ></img>
+                </div>
+                <div className="publication-details">
+                  <p>
+                    {publication.link === 'TBA' ? (
+                      publication.title
+                    ) : (
+                      <a href={publication.link}>{publication.title}</a>
+                    )}
+                  </p>
+                  <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
+                  <p>
+                    <i>
+                      {publication.venue}, {publication.year}
+                    </i>
+                  </p>
+                  <p>
+                    {publication.link === 'TBA' ? (
+                      publication.link
+                    ) : (
+                      <a href={publication.link}>arXiv</a>
+                    )}{' '}
+                    {publication.projectpage && (
+                      <>
+                        {publication.projectpage !== 'TBA' && (
+                          <>
+                            / <a href={publication.projectpage}>project page</a>
+                          </>
+                        )}{' '}
+                      </>
+                    )}
+                    {publication.code && (
+                      <>
+                        {publication.code !== 'TBA' && (
+                          <>
+                            / <a href={publication.code}>code</a>{' '}
+                          </>
+                        )}
+                      </>
+                    )}
+                  </p>
+                </div>
               </div>
             );
           })}

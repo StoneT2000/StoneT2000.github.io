@@ -23,6 +23,24 @@
 .Home .publication p {
   margin: 0;
 }
+.Home .publication {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.Home .publication .publication-details {
+  max-width: 40rem;
+  width: 40rem;
+}
+.Home .publication .publication-image {
+  width: 20rem;
+  margin-right: 1rem;
+}
+.Home .publication .publication-image img {
+  background-size: contain;
+  width: 100%;
+
+}
 @media only screen and (max-width: 422px) {
   .Home #logo {
     display: none;
