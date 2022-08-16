@@ -30,7 +30,7 @@ const Home = () => {
   ];
   return (
     <>
-      <Sidebar tabs={tabs} />,
+      <Sidebar tabs={tabs} />
       <DefaultLayout page="Home">
         <Helmet>
           <title>Stone Tao's Website</title>
