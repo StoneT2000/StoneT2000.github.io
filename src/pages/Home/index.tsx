@@ -94,10 +94,11 @@ const Home = () => {
             return (
               <div className="publication" key={publication.title}>
                 <div style={{textAlign: "center"}} className="publication-image">
+                  {publication.image ? 
                   <img
                     alt={`thumbnail for ${publication.title}`}
                     src={publication.image}
-                  ></img>
+                  ></img> : <></>}
                 </div>
                 <div className="publication-details">
                   <p>
