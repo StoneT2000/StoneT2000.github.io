@@ -95,7 +95,7 @@ const Home = () => {
               <div className="publication" key={publication.title}>
                 <div style={{textAlign: "center"}} className="publication-image">
                   <img
-                    
+                    alt={`thumbnail for ${publication.title}`}
                     src={publication.image}
                   ></img>
                 </div>
