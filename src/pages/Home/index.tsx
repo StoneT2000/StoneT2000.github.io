@@ -10,9 +10,8 @@ import work from './work.json';
 import logo from './logo.png';
 import { ProjectsData } from '../../data/projects';
 import { awards } from './awards';
-import publication from './publications.json';
+import {data as publications} from './publications';
 const Home = () => {
-  const publications = publication.data;
   const projects = [
     ProjectsData['luxai'],
     ProjectsData['rl-ts'],
