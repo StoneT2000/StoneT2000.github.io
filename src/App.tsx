@@ -26,7 +26,7 @@ function App() {
         {/* <Route exact path="/about" component={About} /> */}
         {/* <Route exact path="/blog" component={Blog} /> */}
         <Route path="/blog" component={() => { 
-            window.location.href = 'https://blog.stoneztao.com'; 
+            window.location.href = `https://blog.stoneztao.com${window.location.pathname.slice(5)}`;
             return null;
         }} />
         {/* <Route
