@@ -16,6 +16,8 @@ const CodeCircles = ({ types }: CodeCirclesProps) => {
     typescript: '#2b7489',
     react: '#61dafb',
     python: '#3572A5',
+    jax: 'rgb(144,53,170)',
+    robotics: '#EF7B45',
   };
   const names: Record<string, string> = {
     css: 'CSS',
@@ -29,6 +31,8 @@ const CodeCircles = ({ types }: CodeCirclesProps) => {
     html: 'HTML',
     htmlcss: 'HTML & CSS',
     python: 'Python',
+    jax: 'Jax',
+    robotics: 'Robotics'
   };
   return (
     <span className="CodeCircles">

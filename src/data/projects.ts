@@ -1,5 +1,23 @@
 export const ProjectsData = {
-  luxai: {
+  robojax: {
+    title: 'Robojax',
+    time: '2022/09',
+    // thumbnail: 'assets/luxaithumb.png',
+    thumbnailAltText: 'Logo of the Lux AI Challenge Season 1',
+    text: `A library with <strong>reinforcement learning</strong> algorithms and various state of the art approaches for solving <strong>robotics tasks</strong>. All in Jax!`,
+    link: 'https://github.com/StoneT2000/robojax',
+    tags: ['useful', 'ai', 'python', 'jax', 'robotics'],
+  },
+  jaxbandits: {
+    title: 'Jax Bandits',
+    time: '2022/09',
+    // thumbnail: 'assets/luxaithumb.png',
+    thumbnailAltText: 'Jax bandits thumbnail',
+    text: `A fast Jax based library for multi-armed bandit problems.`,
+    link: 'https://github.com/StoneT2000/jax-bandits',
+    tags: ['useful', 'ai', 'python', 'jax'],
+  },
+  luxai1: {
     title: 'Lux AI Challenge Season 1',
     time: '2021/08',
     thumbnail: 'assets/luxaithumb.png',

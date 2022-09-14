@@ -5,8 +5,8 @@ export type ProjectCardProps = {
   title: string;
   link: string;
   time: string;
-  thumbnail: string;
-  thumbnailAltText: string;
+  thumbnail?: string;
+  thumbnailAltText?: string;
   text: string;
   tags: string[];
 };
@@ -21,7 +21,7 @@ const ProjectCard = (project: ProjectCardProps) => {
         <h3>{project.title}</h3>
         <time>{project.time}</time>
         <CodeCircles types={project.tags} />
-        <img src={project.thumbnail} alt={project.thumbnailAltText} />
+        {project.thumbnail && <img src={project.thumbnail} alt={project.thumbnailAltText} />}
         <p dangerouslySetInnerHTML={{ __html: project.text }} />
       </a>
     </div>

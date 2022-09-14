@@ -13,8 +13,8 @@ import { awards } from './awards';
 import {data as publications} from './publications';
 const Home = () => {
   const projects = [
-    ProjectsData['luxai'],
-    ProjectsData['rl-ts'],
+    ProjectsData['robojax'],
+    ProjectsData['luxai1'],
     ProjectsData['polytomizator'],
   ];
 
