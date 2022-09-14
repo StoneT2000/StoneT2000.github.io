@@ -10,7 +10,7 @@ import work from './work.json';
 import logo from './logo.png';
 import { ProjectsData } from '../../data/projects';
 import { awards } from './awards';
-import {data as publications} from './publications';
+import { data as publications } from './publications';
 const Home = () => {
   const projects = [
     ProjectsData['robojax'],
@@ -56,10 +56,15 @@ const Home = () => {
           </div>
           <p>
             I am an AI researcher and my primary research interests are in
-            reinforcement learning, robotics, and tree learners. I'm currently
-            conducting reinforcement learning and robotics research at UCSD
-            supervised by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>{' '}
-            and AI x HCI research supervised by{' '}
+            reinforcement learning, robotics, and tree learners. I'm
+            particularly interested in finding ways to more efficiently utilize
+            data as well as generate more/better data for reinforcement
+            learning to solve difficult tasks. To this end, I've researched various RL problems including imitation learning and finding good abstractions of the world, as well as work towards building high-quality competitions and benchmarks to garner more research and data collection for different domains.
+          </p>
+          <p>I'm currently conducting
+            reinforcement learning and robotics research at UCSD supervised by{' '}
+            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and AI x HCI
+            research supervised by{' '}
             <a href="https://spdow.ucsd.edu/">Steven Dow</a>. I also co-founded
             the <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
             build creative, inclusive, and accessible AI competitions and
@@ -92,12 +97,18 @@ const Home = () => {
             bolded = bolded.replace('Stone Tao', '<strong>Stone Tao</strong>');
             return (
               <div className="publication" key={publication.title}>
-                <div style={{textAlign: "center"}} className="publication-image">
-                  {publication.image ? 
-                  <img
-                    alt={`thumbnail for ${publication.title}`}
-                    src={publication.image}
-                  ></img> : <></>}
+                <div
+                  style={{ textAlign: 'center' }}
+                  className="publication-image"
+                >
+                  {publication.image ? (
+                    <img
+                      alt={`thumbnail for ${publication.title}`}
+                      src={publication.image}
+                    ></img>
+                  ) : (
+                    <></>
+                  )}
                 </div>
                 <div className="publication-details">
                   <p>
