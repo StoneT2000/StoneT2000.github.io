@@ -11,18 +11,30 @@ export const data = [
     code: 'TBA',
     image: null,
   },
-  {
-    title:
-      'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
-    authors:
-      'TBA',
-    venue: 'In Submission',
-    year: '2022',
-    link: 'TBA',
-    projectpage: 'TBA',
-    code: 'TBA',
-    image: null,
-  },
+  // {
+  //   title:
+  //     'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
+  //   authors:
+  //     'TBA',
+  //   venue: 'In Submission',
+  //   year: '2022',
+  //   link: 'TBA',
+  //   projectpage: 'TBA',
+  //   code: 'TBA',
+  //   image: null,
+  // },
+  // {
+  //   title:
+  //     'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
+  //   authors:
+  //     'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
+  //   venue: 'In Submission',
+  //   year: '2022',
+  //   link: 'TBA',
+  //   projectpage: 'TBA',
+  //   code: 'TBA',
+  //   image: null,
+  // },
   {
     title:
       'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations',
