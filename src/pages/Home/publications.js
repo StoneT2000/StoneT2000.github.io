@@ -4,8 +4,8 @@ export const data = [
       'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization',
     authors:
       'Stone Tao, Xiaochen Li, Tongzhou Mu, Zhiao Huang, Yuzhe Qin, and Hao Su.',
-    venue: 'In Submission',
-    year: '2022',
+    venue: 'In Submission to ICLR',
+    year: '2023',
     link: 'TBA',
     projectpage: 'TBA',
     code: 'TBA',
@@ -23,18 +23,18 @@ export const data = [
   //   code: 'TBA',
   //   image: null,
   // },
-  // {
-  //   title:
-  //     'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
-  //   authors:
-  //     'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
-  //   venue: 'In Submission',
-  //   year: '2022',
-  //   link: 'TBA',
-  //   projectpage: 'TBA',
-  //   code: 'TBA',
-  //   image: null,
-  // },
+  {
+    title:
+      'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
+    authors:
+      'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
+    venue: 'In Submission to CHI',
+    year: '2023',
+    link: 'TBA',
+    projectpage: 'TBA',
+    code: 'TBA',
+    image: null,
+  },
   {
     title:
       'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations',

@@ -3,7 +3,7 @@ export const ProjectsData = {
     title: 'Robojax',
     time: '2022/09',
     // thumbnail: 'assets/luxaithumb.png',
-    thumbnailAltText: 'Logo of the Lux AI Challenge Season 1',
+    thumbnailAltText: 'None',
     text: `A library with <strong>reinforcement learning</strong> algorithms and various state of the art approaches for solving <strong>robotics tasks</strong>. All in Jax!`,
     link: 'https://github.com/StoneT2000/robojax',
     tags: ['useful', 'ai', 'python', 'jax', 'robotics'],
