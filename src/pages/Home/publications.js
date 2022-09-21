@@ -11,18 +11,18 @@ export const data = [
     code: 'TBA',
     image: null,
   },
-  // {
-  //   title:
-  //     'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
-  //   authors:
-  //     'TBA',
-  //   venue: 'In Submission',
-  //   year: '2022',
-  //   link: 'TBA',
-  //   projectpage: 'TBA',
-  //   code: 'TBA',
-  //   image: null,
-  // },
+  {
+    title:
+      'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
+    authors:
+      'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
+    venue: 'In Submission to ICLR',
+    year: '2023',
+    link: 'TBA',
+    projectpage: 'TBA',
+    code: 'TBA',
+    image: null,
+  },
   {
     title:
       'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
