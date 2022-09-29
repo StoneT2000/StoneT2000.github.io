@@ -25,9 +25,19 @@ export const data = [
   },
   {
     title:
-      'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
+      'ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills',
     authors:
-      'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
+      'Jiayuan Gu, Fanbo Xiang, Zhan Ling, Xinyue Wei, Xiqiang Liu, Xuanlin Li, Rui Chen, Stone Tao, Tongzhou Mu, Pengwei Xie, Yunchao Yao, Yihe Tang, Xiaodi Yuan, Zhiao Huang, Hao Su.',
+    venue: 'In Submission to ICLR',
+    year: '2023',
+    link: 'TBA',
+    projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2022/',
+    code: 'https://github.com/haosulab/ManiSkill2',
+  },
+  {
+    title:
+      'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
+    authors: 'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
     venue: 'In Submission to CHI',
     year: '2023',
     link: 'TBA',
