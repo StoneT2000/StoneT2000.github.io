@@ -36,8 +36,9 @@ export const data = [
   },
   {
     title:
-      'MetaWriter: Supporting Information Synthesis for Academic Meta-reviewers through Machine-generated Highlights and Summaries',
-    authors: 'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
+      'TBA',
+    // authors: 'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
+    authors: 'TBA',
     venue: 'In Submission to CHI',
     year: '2023',
     link: 'TBA',
