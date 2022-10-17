@@ -6,10 +6,10 @@ export const data = [
       'Stone Tao, Xiaochen Li, Tongzhou Mu, Zhiao Huang, Yuzhe Qin, and Hao Su.',
     venue: 'In Submission to ICLR',
     year: '2023',
-    link: 'TBA',
-    projectpage: 'TBA',
-    code: 'TBA',
-    image: null,
+    link: 'https://arxiv.org/abs/2210.07658',
+    projectpage: 'https://trajectorytranslation.github.io/',
+    code: 'https://github.com/trajectorytranslation/trajectorytranslation',
+    image: '/assets/publications/tr2.gif',
   },
   {
     title:
