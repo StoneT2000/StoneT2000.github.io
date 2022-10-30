@@ -91,7 +91,7 @@ const Home = () => {
             reinforcement learning.
           </p>
           <div className="anchor" id="publications-a" />
-          <h2>Publications</h2>
+          <h2>Publications / Preprints</h2>
           {publications.map((publication: any) => {
             let bolded = publication.authors;
             bolded = bolded.replace('Stone Tao', '<strong>Stone Tao</strong>');
@@ -121,7 +121,7 @@ const Home = () => {
                   <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
                   <p>
                     <i>
-                      {publication.venue}, {publication.year}
+                      {publication.venue}
                     </i>
                   </p>
                   <p>
