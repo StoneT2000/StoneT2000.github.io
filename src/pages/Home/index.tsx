@@ -11,6 +11,7 @@ import logo from './logo.png';
 import { ProjectsData } from '../../data/projects';
 import { awards } from './awards';
 import { data as publications } from './publications';
+import {data as presentations} from './presentations'
 const Home = () => {
   const projects = [
     ProjectsData['robojax'],
@@ -23,6 +24,7 @@ const Home = () => {
   const tabs = [
     { name: 'Home', href: 'heading' },
     { name: 'Publications', href: 'publications-a' },
+    { name: 'Presentations/Talks', href:'presentations-a'},
     { name: 'Projects', href: 'projects-a' },
     { name: 'Work Experience', href: 'work-a' },
     { name: 'Awards', href: 'awards-a' },
@@ -59,9 +61,9 @@ const Home = () => {
             reinforcement learning, robotics, and tree learners. I'm
             particularly interested in finding ways to more efficiently utilize
             data as well as generate more/better data for reinforcement
-            learning to solve difficult tasks. To this end, I've researched various RL problems including imitation learning and finding good abstractions of the world, as well as work towards building high-quality competitions and benchmarks to garner more research and data collection for different domains.
+            learning to solve difficult tasks. To this end, my research has revolved around various RL problems including few-shot learning, imitation learning, finding good abstractions of the world, as well as work towards building high-quality competitions and benchmarks to garner more research and data collection for different domains.
           </p>
-          <p>I'm currently conducting
+          <p>Currently I conduct
             reinforcement learning and robotics research at UCSD supervised by{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and AI x HCI
             research supervised by{' '}
@@ -69,10 +71,7 @@ const Home = () => {
             the <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
             build creative, inclusive, and accessible AI competitions and
             environments for all, as well as provide a high quality benchmark
-            for massive multi-agent RL.
-          </p>
-          <p>
-            I previously was a Machine Learning Engineer Intern at{' '}
+            for massive multi-agent RL. Previously was a Machine Learning Engineer Intern at{' '}
             <a target="blank" href="https://quantco.com/">
               QuantCo
             </a>{' '}
@@ -112,11 +111,13 @@ const Home = () => {
                 </div>
                 <div className="publication-details">
                   <p>
+                  <strong>
                     {publication.link === 'TBA' ? (
                       publication.title
                     ) : (
                       <a href={publication.link}>{publication.title}</a>
                     )}
+                    </strong>
                   </p>
                   <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
                   <p>
@@ -153,6 +154,20 @@ const Home = () => {
               </div>
             );
           })}
+          <div className="anchor" id="presentations-a" />
+          <h2>Presentations / Talks</h2>
+          <div className="presentations">
+          {presentations.map((data) => {
+            return <div>
+              <p><strong>{data.title}</strong>
+              <br />
+              {data.venue}, {data.date}
+              <br/>
+              {}{data.slides && <a  target="_blank" rel="noreferrer" href={data.slides}>Slides</a>}
+              </p>
+              </div>
+          })}
+          </div>
           <div className="anchor" id="projects-a" />
           <h2>Pinned Projects</h2>
           <div className="projects">

@@ -8,6 +8,9 @@
   display: inline-block;
   padding-right: 10px;
 }
+.Home h2 {
+  font-size: 1.8rem;
+}
 .Home #first-links > p > a {
   text-decoration: none;
 }
@@ -24,7 +27,7 @@
   margin: 0;
 }
 .Home .publication {
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   display: flex;
   flex-wrap: wrap;
 }
