@@ -36,18 +36,6 @@ export const data = [
   },
   {
     title:
-      'TBA',
-    // authors: 'Lu Sun, Stone Tao, Junjie Hu, Steven P. Dow',
-    authors: 'TBA',
-    venue: 'In Submission to CHI 2023',
-    year: '2023',
-    link: 'TBA',
-    projectpage: 'TBA',
-    code: 'TBA',
-    image: null,
-  },
-  {
-    title:
       'Maniskill: Generalizable manipulation skill benchmark with large-scale demonstrations',
     authors:
       'Tongzhou Mu*, Zhan Ling*, Fanbo Xiang*, Derek Cathera Yang*, Xuanlin Li*, Stone Tao, Zhiao Huang, Zhiwei Jia, and Hao Su.',
