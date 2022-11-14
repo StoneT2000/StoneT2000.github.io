@@ -2,7 +2,7 @@ export const data = [
   {
     title: 'The Design of the Lux AI Challenge: Accessibility, Fun, and Research',
     date: '11/11/2022',
-    venue: 'Kaggle Podcast (upcoming)'
+    venue: 'Kaggle Podcast'
   },
   {
     title: 'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization.',
