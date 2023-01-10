@@ -16,12 +16,12 @@ export const data = [
       'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
     authors:
       'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
-    venue: 'In Submission to ICLR 2023; Accepted at NeurIPS 2022 Deep RL Workshop',
+    venue: 'In Submission to IJCAI 2023; Accepted at NeurIPS 2022 Deep RL Workshop',
     year: '2023',
-    link: 'TBA',
+    link: 'https://arxiv.org/abs/2301.01609',
     projectpage: 'TBA',
-    code: 'TBA',
-    image: null,
+    code: 'https://github.com/hanmochen/lux-open',
+    image: '/assets/publications/lux_overview_v1.6.png',
   },
   {
     title:
@@ -33,6 +33,7 @@ export const data = [
     link: 'TBA',
     projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2022/',
     code: 'https://github.com/haosulab/ManiSkill2',
+    image: '/assets/publications/maniskill2.jpeg'
   },
   {
     title:
