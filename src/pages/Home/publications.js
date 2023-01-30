@@ -27,7 +27,7 @@ export const data = [
     title:
       'ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills',
     authors:
-      'Jiayuan Gu, Fanbo Xiang, Zhan Ling, Xinyue Wei, Xiqiang Liu, Xuanlin Li, Rui Chen, Stone Tao, Tongzhou Mu, Pengwei Xie, Yunchao Yao, Yihe Tang, Xiaodi Yuan, Zhiao Huang, Hao Su.',
+      'iayuan Gu, Fanbo Xiang, Xuanlin Li*, Zhan Ling*, Xiqiang Liu*, Tongzhou Mu*, Yihe Tang*, Stone Tao*, Xinyuwe Wei*, Yunchao Yao*, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su.',
     venue: 'ICLR 2023',
     year: '2023',
     link: 'TBA',
