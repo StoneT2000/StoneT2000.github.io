@@ -4,7 +4,7 @@ export const data = [
       'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization',
     authors:
       'Stone Tao, Xiaochen Li, Tongzhou Mu, Zhiao Huang, Yuzhe Qin, and Hao Su.',
-    venue: 'In Submission to ICML 2023; Accepted at NeurIPS 2022 Deep RL Workshop',
+    venue: 'In Submission; Accepted at NeurIPS 2022 Deep RL Workshop',
     year: '2023',
     link: 'https://arxiv.org/abs/2210.07658',
     projectpage: 'https://trajectorytranslation.github.io/',
@@ -16,7 +16,7 @@ export const data = [
       'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
     authors:
       'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
-    venue: 'In Submission to IJCAI 2023; Accepted at NeurIPS 2022 Deep RL Workshop',
+    venue: 'In Submission; Accepted at NeurIPS 2022 Deep RL Workshop',
     year: '2023',
     link: 'https://arxiv.org/abs/2301.01609',
     projectpage: 'TBA',
