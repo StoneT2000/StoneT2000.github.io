@@ -27,10 +27,10 @@ export const data = [
     title:
       'ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills',
     authors:
-      'iayuan Gu, Fanbo Xiang, Xuanlin Li*, Zhan Ling*, Xiqiang Liu*, Tongzhou Mu*, Yihe Tang*, Stone Tao*, Xinyuwe Wei*, Yunchao Yao*, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su.',
+      'Jiayuan Gu†, Fanbo Xiang†, Xuanlin Li*, Zhan Ling*, Xiqiang Liu*, Tongzhou Mu*, Yihe Tang*, Stone Tao*, Xinyuwe Wei*, Yunchao Yao*, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su.',
     venue: 'ICLR 2023',
     year: '2023',
-    link: 'TBA',
+    link: 'https://arxiv.org/abs/2302.04659',
     projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2022/',
     code: 'https://github.com/haosulab/ManiSkill2',
     image: '/assets/publications/maniskill2.jpeg'

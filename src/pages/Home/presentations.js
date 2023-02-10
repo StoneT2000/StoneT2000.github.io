@@ -7,12 +7,12 @@ export const data = [
   {
     title: 'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization.',
     date: '12/9/2022',
-    venue: 'NeurIPS 2022 Deep RL Workshop (upcoming)'
+    venue: 'NeurIPS 2022 Deep RL Workshop'
   },
   {
     title: 'Emergent Collective Intelligence From Massive-Agent Cooperation and Competition.',
     date: '12/9/2022',
-    venue: 'NeurIPS 2022 Deep RL Workshop (upcoming)'
+    venue: 'NeurIPS 2022 Deep RL Workshop'
   },
   {
     title: 'AI Competition Design For Multi-Agent Environments / Games',
