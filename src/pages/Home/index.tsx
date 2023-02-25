@@ -85,9 +85,7 @@ const Home = () => {
             I'm currently an undergraduate Computer Science and Cognitive
             Science double major, Math minor, at{' '}
             <a href="https://www.ucsd.edu/">UC San Diego</a>, graduating June
-            2023. I'm currently applying to Ph.D. programs for Fall 2023,
-            looking to continue learning and researching in AI with interests in
-            reinforcement learning.
+            2023.
           </p>
           <div className="anchor" id="publications-a" />
           <h2>Publications / Preprints</h2>
