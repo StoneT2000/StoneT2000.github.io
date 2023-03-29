@@ -36,7 +36,7 @@ const Home = () => {
       <Sidebar tabs={tabs} />
       <DefaultLayout page="Home">
         <Helmet>
-          <title>Stone Tao's Website</title>
+          <title>Stone Tao</title>
           <meta
             name="description"
             content="Stone Tao's personal website with his CV, research, projects, and blog"
