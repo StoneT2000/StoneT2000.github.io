@@ -7,11 +7,12 @@ import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
 import './index.css';
 import work from './work.json';
+import news from './news.json';
 import logo from './logo.png';
 import { ProjectsData } from '../../data/projects';
 import { awards } from './awards';
 import { data as publications } from './publications';
-import {data as presentations} from './presentations'
+import { data as presentations } from './presentations';
 const Home = () => {
   const projects = [
     ProjectsData['robojax'],
@@ -23,8 +24,9 @@ const Home = () => {
 
   const tabs = [
     { name: 'Home', href: 'heading' },
+    { name: 'News', href: 'news-a' },
     { name: 'Publications', href: 'publications-a' },
-    { name: 'Presentations/Talks', href:'presentations-a'},
+    { name: 'Presentations/Talks', href: 'presentations-a' },
     { name: 'Projects', href: 'projects-a' },
     { name: 'Work Experience', href: 'work-a' },
     { name: 'Awards', href: 'awards-a' },
@@ -57,36 +59,53 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I am an AI researcher and my primary research interests are in
-            reinforcement learning, robotics, and tree learners. I'm
-            particularly interested in finding ways to more efficiently utilize
-            data as well as generate more/better data for reinforcement
-            learning to solve difficult tasks. To this end, my research has revolved around various RL problems including few-shot learning, imitation learning, finding good abstractions of the world, as well as work towards building high-quality competitions and benchmarks to garner more research and data collection for different domains.
-          </p>
-          <p>Currently I conduct
-            reinforcement learning and robotics research at UCSD supervised by{' '}
-            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and AI x HCI
-            research supervised by{' '}
-            <a href="https://spdow.ucsd.edu/">Steven Dow</a>. I also co-founded
-            the <a href="https://lux-ai.org">Lux AI Challenge</a>, which aims to
-            build creative, inclusive, and accessible AI competitions and
-            environments for all, as well as provide a high quality benchmark
-            for massive multi-agent RL. Previously was a Machine Learning Engineer Intern at{' '}
-            <a target="blank" href="https://quantco.com/">
-              QuantCo
-            </a>{' '}
-            and interned at{' '}
-            <a target="blank" href="https://launchdarkly.com/">
-              LaunchDarkly
+            I am an incoming PhD student at UC San Diego, where I will be
+            advised by professor{' '}
+            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I'm grateful
+            to have my research be funded by the{' '}
+            <a href="https://www.nsfgrfp.org/">
+              NSF Graduate Research Fellowship
             </a>
             .
           </p>
           <p>
-            I'm currently an undergraduate Computer Science and Cognitive
-            Science double major, Math minor, at{' '}
-            <a href="https://www.ucsd.edu/">UC San Diego</a>, graduating June
-            2023.
+            My current research interests include long-horizon problems,
+            especially in robotic manipulation, with a general goal of building
+            efficient, adaptable, and capable embodied AI. To this end, my
+            research revolves around reinforcement learning, few-shot learning,
+            imitation learning, as well as high-quality robotics benchmarks.
           </p>
+          <p>
+            On the side, I'm also interested in building and running
+            high-quality open-source AI competitions for education and research.
+            I co-founded the <a href="https://lux-ai.org">Lux AI Challenge</a>{' '}
+            and collaborate frequently with <a href="https://kaggle.com/">Kaggle</a> to build and
+            deliver these AI competitions.
+          </p>
+          <p>
+            Previously I was an undergraduate at UC San Diego, advised by{' '}
+            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> (on robotics
+            and reinforcement learning) and{' '}
+            <a href="https://spdow.ucsd.edu/">Steven Dow</a> (on AI x HCI).
+            During my undergraduate I interned at{' '}
+            <a target="blank" href="https://quantco.com/">
+              QuantCo
+            </a>{' '}
+            (machine learning) advised by <a href="https://tbenthompson.com/">Ben Thompson</a> and{' '}
+            <a target="blank" href="https://launchdarkly.com/">
+              LaunchDarkly
+            </a>{' '}
+            (full-stack software engineering).
+          </p>
+          <div className="anchor" id="news-a" />
+          <h2 style={{marginBottom: 0}}>News</h2>
+          <ul style={{marginTop: "0.5rem"}}>
+          {
+            news.data.map((v) => {
+              return <li>{v.date}: <span dangerouslySetInnerHTML={{__html: v.content}}></span></li>
+            })
+          }
+          </ul>
           <div className="anchor" id="publications-a" />
           <h2>Publications / Preprints</h2>
           {publications.map((publication: any) => {
@@ -109,19 +128,17 @@ const Home = () => {
                 </div>
                 <div className="publication-details">
                   <p>
-                  <strong>
-                    {publication.link === 'TBA' ? (
-                      publication.title
-                    ) : (
-                      <a href={publication.link}>{publication.title}</a>
-                    )}
+                    <strong>
+                      {publication.link === 'TBA' ? (
+                        publication.title
+                      ) : (
+                        <a href={publication.link}>{publication.title}</a>
+                      )}
                     </strong>
                   </p>
                   <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
                   <p>
-                    <i>
-                      {publication.venue}
-                    </i>
+                    <i>{publication.venue}</i>
                   </p>
                   <p>
                     {publication.link === 'TBA' ? (
@@ -155,16 +172,29 @@ const Home = () => {
           <div className="anchor" id="presentations-a" />
           <h2>Presentations / Talks</h2>
           <div className="presentations">
-          {presentations.map((data) => {
-            return <div>
-              <p><strong>{data.title}</strong>
-              <br />
-              {data.venue}, {data.date}
-              <br/>
-              {}{data.slides && <a  target="_blank" rel="noreferrer" href={data.slides}>Slides</a>}
-              </p>
-              </div>
-          })}
+            {presentations.map((data) => {
+              return (
+                <div>
+                  <p>
+                    <strong>{data.title}</strong>
+                    <br />
+                    {data.venue}, {data.date}
+                    <br />
+                    {}
+                    {data.slides && (
+                      <a target="_blank" rel="noreferrer" href={data.slides}>
+                        Slides
+                      </a>
+                    )}
+                    {data.recording && (
+                      <a target="_blank" rel="noreferrer" href={data.recording}>
+                        Recording
+                      </a>
+                    )}
+                  </p>
+                </div>
+              );
+            })}
           </div>
           <div className="anchor" id="projects-a" />
           <h2>Pinned Projects</h2>

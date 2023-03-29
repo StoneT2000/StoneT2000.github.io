@@ -29,7 +29,7 @@
       "link": "https://cseweb.ucsd.edu/~haosu/lab/group.html",
       "org": "SU Lab at UCSD",
       "start": "2021/01",
-      "end": null,
+      "end": "2023/03",
       "location": "San Diego, USA",
       "details": [
         "Researching Reinforcement Learning (RL) and Robotics under Professor Hao Su. Currently researching topics in RL and robotics. Previously built gym environments for RL benchmarks to test RL agents on SAPIEN, a simulated part-based interactive, 3D environment.",
@@ -43,7 +43,7 @@
       "link": "http://protolab.ucsd.edu",
       "org": "ProtoLab / Design Lab",
       "start": "2020/08",
-      "end": null,
+      "end": "2023/03",
       "location": "San Diego, USA",
       "details": [
         "Currently researching at the intersection of HCI and AI. Specifically researching NLP summarization methods",
