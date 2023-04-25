@@ -69,11 +69,11 @@ const Home = () => {
             .
           </p>
           <p>
-            My current research interests include long-horizon problems,
+            My current research interests include long-horizon and sparse-reward problems,
             especially in robotic manipulation, with a general goal of building
             efficient, adaptable, and capable embodied AI. To this end, my
             research revolves around reinforcement learning, few-shot learning,
-            imitation learning, as well as high-quality robotics benchmarks.
+            imitation learning, auto curriculum-learning, as well as high-quality robotics benchmarks.
           </p>
           <p>
             On the side, I'm also interested in building and running
