@@ -4,7 +4,7 @@ export const data = [
       'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization',
     authors:
       'Stone Tao, Xiaochen Li, Tongzhou Mu, Zhiao Huang, Yuzhe Qin, and Hao Su.',
-    venue: 'In Submission; Accepted at NeurIPS 2022 Deep RL Workshop',
+    venue: 'ICML 2023',
     year: '2023',
     link: 'https://arxiv.org/abs/2210.07658',
     projectpage: 'https://trajectorytranslation.github.io/',
