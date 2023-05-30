@@ -1,6 +1,14 @@
 export const data = [
   {
     title:
+      'Lux AI Challenge Season 2.5 (NeurIPS Edition)',
+    authors:
+      'Stone Tao, Qimai Li, Yuhao Jiang, Jiaxin Chen, Xiaolong Zhu, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard',
+    venue: 'NeurIPS 2023 (Competitions Track)',
+    year: '2023',
+  },
+  {
+    title:
       'Abstract-to-Executable Trajectory Translation for One-Shot Task Generalization',
     authors:
       'Stone Tao, Xiaochen Li, Tongzhou Mu, Zhiao Huang, Yuzhe Qin, and Hao Su.',
