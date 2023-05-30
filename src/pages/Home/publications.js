@@ -6,7 +6,8 @@ export const data = [
       'Stone Tao, Qimai Li, Yuhao Jiang, Jiaxin Chen, Xiaolong Zhu, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard',
     venue: 'NeurIPS 2023 (Competitions Track)',
     year: '2023',
-    link: "TBA"
+    link: "TBA",
+    image: '/assets/lux_2.5_temp.png',
   },
   {
     title:
@@ -30,7 +31,7 @@ export const data = [
     link: 'https://arxiv.org/abs/2301.01609',
     projectpage: 'TBA',
     code: 'https://github.com/hanmochen/lux-open',
-    image: '/assets/publications/lux_overview_v1.6.png',
+    image: '/assets/publications/lux_overview_v1.6.jpeg',
   },
   {
     title:
