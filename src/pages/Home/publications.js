@@ -6,6 +6,7 @@ export const data = [
       'Stone Tao, Qimai Li, Yuhao Jiang, Jiaxin Chen, Xiaolong Zhu, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard',
     venue: 'NeurIPS 2023 (Competitions Track)',
     year: '2023',
+    link: "TBA"
   },
   {
     title:
