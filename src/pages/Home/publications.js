@@ -7,7 +7,7 @@ export const data = [
     venue: 'NeurIPS 2023 (Competitions Track)',
     year: '2023',
     link: "TBA",
-    image: '/assets/lux_2.5_temp.png',
+    image: '/assets/publications/lux_2.5_temp.png',
   },
   {
     title:
@@ -31,7 +31,7 @@ export const data = [
     link: 'https://arxiv.org/abs/2301.01609',
     projectpage: 'TBA',
     code: 'https://github.com/hanmochen/lux-open',
-    image: '/assets/publications/lux_overview_v1.6.jpeg',
+    image: '/assets/publications/lux_overview_v1.6.jpg',
   },
   {
     title:
