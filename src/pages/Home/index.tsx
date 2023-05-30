@@ -72,8 +72,8 @@ const Home = () => {
             My current research interests include long-horizon and sparse-reward problems,
             especially in robotic manipulation, with a general goal of building
             efficient, adaptable, and capable embodied AI. To this end, my
-            research revolves around reinforcement learning, few-shot learning,
-            imitation learning, auto curriculum-learning, as well as high-quality robotics benchmarks.
+            research revolves around reinforcement learning, environment design, few-shot learning,
+            imitation learning, auto curriculum-learning, as well as high-quality robotics benchmarks. If you are interested in working with me / just want to chat about stuff feel free to reach out to my email / twitter!
           </p>
           <p>
             On the side, I'm also interested in building and running
