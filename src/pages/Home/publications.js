@@ -1,5 +1,14 @@
 export const data = [
   {
+    title: "RFCL: Reverse Forward Curriculum Learning for Extreme Sample and Demonstration Efficiency in RL",
+    authors:
+      'Stone Tao, Arth Shukla, Tsekai Chen, Hao Su',
+    venue: 'ICLR 2024',
+    year: '2023',
+    link: "TBA",
+    image: '/assets/publications/rfcl.gif',
+  },
+  {
     title:
       'Lux AI Challenge Season 2.5 (NeurIPS Edition)',
     authors:
@@ -26,7 +35,7 @@ export const data = [
       'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
     authors:
       'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
-    venue: 'In Submission; Accepted at NeurIPS 2022 Deep RL Workshop',
+    venue: 'NeurIPS 2022 Deep RL Workshop',
     year: '2023',
     link: 'https://arxiv.org/abs/2301.01609',
     projectpage: 'TBA',

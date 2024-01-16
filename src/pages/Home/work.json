@@ -64,20 +64,6 @@
       ],
       "role": "Software Engineering Intern",
       "logoImage": "assets/ld.png"
-    },
-    {
-      "link": "https://www.taosdata.com/en/",
-      "org": "TAOS Data",
-      "start": "2019/06",
-      "end": "2019/09",
-      "location": "Beijing, China",
-      "details": [
-        "Independently developed the company website and integrated Wordpress as a headless CMS, serving up to 18k+ daily users",
-        "Developed a Node.js Connector for the company’s main product, TDengine, an open source big data platform with 18k+ stars",
-        "Created a C interface, to enable high-speed interaction with TDengine. Implemented subscription, async, and stream functionality"
-      ],
-      "role": "Full Stack Developer Intern",
-      "logoImage": "assets/taosdata.png"
     }
   ]
 }

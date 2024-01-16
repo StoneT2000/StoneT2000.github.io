@@ -40,14 +40,14 @@ export const awards = [
     link: 'https://halite.io/',
     details: `<p>Halite 3 | Placed 66th out of 4000+ students and professionals globally. Achieved admiral status by placing above Two Sigma's base bot. 5th placed high school student out of 500+ HS students. 1st place JavaScript bot. - Nov. 2018 to Jan. 2019</p>`,
   },
-  {
-    title: 'IEEE at UCSD Quarterly Projects++',
-    link: null,
-    details: `<p>Placed 1st with my team. Collaborated on building an IoT personal farm with auto-irrigation and time series data collection, aimed at improving the user feedback on plant growth. Contributed on database work, data integration with hardware, and data visualizers</p>`,
-  },
-  {
-    title: 'USA Mathematical Talent Search',
-    link: 'https://usamts.org/',
-    details: `<p>Silver Medal - May 2018</p>`,
-  },
+  // {
+  //   title: 'IEEE at UCSD Quarterly Projects++',
+  //   link: null,
+  //   details: `<p>Placed 1st with my team. Collaborated on building an IoT personal farm with auto-irrigation and time series data collection, aimed at improving the user feedback on plant growth. Contributed on database work, data integration with hardware, and data visualizers</p>`,
+  // },
+  // {
+  //   title: 'USA Mathematical Talent Search',
+  //   link: 'https://usamts.org/',
+  //   details: `<p>Silver Medal - May 2018</p>`,
+  // },
 ]
