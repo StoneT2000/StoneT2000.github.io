@@ -141,7 +141,7 @@ const Home = () => {
                   </p>
                   <p>
                     {publication.link === 'TBA' ? (
-                      publication.link
+                      ""
                     ) : (
                       <a href={publication.link}>arXiv</a>
                     )}{' '}

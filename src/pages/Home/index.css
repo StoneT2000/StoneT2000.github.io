@@ -30,10 +30,12 @@
   margin-bottom: .5rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .Home .publication .publication-details {
   max-width: 40rem;
   width: 40rem;
+  min-height: 8rem;
 }
 .Home .publication .publication-image {
   width: 20rem;

@@ -4,8 +4,10 @@ export const data = [
     authors:
       'Stone Tao, Arth Shukla, Tsekai Chen, Hao Su',
     venue: 'ICLR 2024',
-    year: '2023',
+    year: '2024',
     link: "TBA",
+    projectpage: "https://reverseforward-cl.github.io/",
+    code: "https://github.com/stonet2000/rfcl",
     image: '/assets/publications/rfcl.gif',
   },
   {
@@ -17,6 +19,15 @@ export const data = [
     year: '2023',
     link: "TBA",
     image: '/assets/publications/lux_2.5_temp.png',
+  },
+  {
+    title: "MetaWriter: Exploring the Potential and Perils of AI Writing Support in Scientific Peer Review",
+    authors:
+      'Lu Sun, Stone Tao, Junjie Hu, Steven Dow',
+    venue: 'CSCW 2023',
+    year: '2023',
+    link: "TBA",
+    // image: '/assets/publications/rfcl.gif',
   },
   {
     title:
@@ -32,18 +43,6 @@ export const data = [
   },
   {
     title:
-      'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
-    authors:
-      'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
-    venue: 'NeurIPS 2022 Deep RL Workshop',
-    year: '2023',
-    link: 'https://arxiv.org/abs/2301.01609',
-    projectpage: 'TBA',
-    code: 'https://github.com/hanmochen/lux-open',
-    image: '/assets/publications/lux_overview_v1.6.jpg',
-  },
-  {
-    title:
       'ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills',
     authors:
       'Jiayuan Gu†, Fanbo Xiang†, Xuanlin Li*, Zhan Ling*, Xiqiang Liu*, Tongzhou Mu*, Yihe Tang*, Stone Tao*, Xinyue Wei*, Yunchao Yao*, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su.',
@@ -53,6 +52,18 @@ export const data = [
     projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2022/',
     code: 'https://github.com/haosulab/ManiSkill2',
     image: '/assets/publications/maniskill2.jpeg'
+  },
+  {
+    title:
+      'Emergent Collective Intelligence from Massive-Agent Cooperation and Competition',
+    authors:
+      'Hanmo Chen*, Stone Tao*, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li',
+    venue: 'NeurIPS 2022 Deep RL Workshop',
+    year: '2023',
+    link: 'https://arxiv.org/abs/2301.01609',
+    projectpage: 'TBA',
+    code: 'https://github.com/hanmochen/lux-open',
+    image: '/assets/publications/lux_overview_v1.6.jpg',
   },
   {
     title:
