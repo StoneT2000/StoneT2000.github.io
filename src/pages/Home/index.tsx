@@ -59,8 +59,7 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I am an incoming PhD student at UC San Diego, where I will be
-            advised by professor{' '}
+            I am a PhD student at UC San Diego advised by professor{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I'm grateful
             to have my research be funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
