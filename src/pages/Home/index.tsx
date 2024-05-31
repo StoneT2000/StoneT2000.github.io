@@ -1,12 +1,12 @@
 import React from 'react';
 import ProjectCard from '../../components/ProjectCard';
-import WorkModule from '../../components/WorkModule';
+// import WorkModule from '../../components/WorkModule';
 import AwardModule from '../../components/AwardModule';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import { Helmet } from 'react-helmet';
 import './index.css';
-import work from './work.json';
+// import work from './work.json';
 import news from './news.json';
 import logo from './logo.png';
 import { ProjectsData } from '../../data/projects';
@@ -20,7 +20,7 @@ const Home = () => {
     ProjectsData['polytomizator'],
   ];
 
-  const works = work.data;
+  // const works = work.data;
 
   const tabs = [
     { name: 'Home', href: 'heading' },
