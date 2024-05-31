@@ -28,7 +28,7 @@ const Home = () => {
     { name: 'Publications', href: 'publications-a' },
     { name: 'Presentations/Talks', href: 'presentations-a' },
     { name: 'Projects', href: 'projects-a' },
-    { name: 'Work Experience', href: 'work-a' },
+    // { name: 'Work Experience', href: 'work-a' },
     { name: 'Awards', href: 'awards-a' },
   ];
   return (
@@ -59,7 +59,7 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I am a PhD student at UC San Diego advised by professor{' '}
+            I am a first-year PhD student at UC San Diego advised by professor{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I'm grateful
             to have my research be funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
@@ -69,8 +69,8 @@ const Home = () => {
           </p>
           <p>
             My current research interests revolve around a general goal of building
-            efficient, adaptable, and capable embodied AI. A big chunk of my direction is around scalable datasets/benchmarks for robotics and games. To this end, my
-            research revolves around reinforcement learning, environment design, few-shot learning,
+            efficient, adaptable, and capable embodied AI. A big chunk of my direction is around scalable datasets/benchmarks for embodied AI by tackling the intersection of simulation and machine learning. To this end, my
+            research revolves around reinforcement learning, simulation, few-shot learning,
             imitation learning, auto curriculum-learning, as well as high-quality robotics/game benchmarks. If you are interested in working with me / just want to chat about stuff feel free to reach out to my email / twitter!
           </p>
           <p>
@@ -201,13 +201,13 @@ const Home = () => {
               <ProjectCard {...project} key={project.title} />
             ))}
           </div>
-          <div className="anchor" id="work-a" />
+          {/* <div className="anchor" id="work-a" />
           <h2>Work Experience</h2>
           <div>
             {works.map((work) => (
               <WorkModule {...work} key={work.org} />
             ))}
-          </div>
+          </div> */}
           <div className="anchor" id="awards-a" />
           <h2>Awards</h2>
           <div>

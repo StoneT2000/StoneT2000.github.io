@@ -5,6 +5,11 @@ export const awards = [
     details: '<p>Awarded the NSF Graduate Research Fellowship for my proposal on sample efficient, scalable robotic learning and human robot interaction. Receiving $147,000 in funding over 3 years.</p>'
   },
   {
+    title: 'UCSD CSE Award for Excellence in Leadership',
+    link: "https://cse.ucsd.edu/undergraduate/cse-undergraduate-student-awards",
+    details: '<p>Received the annual award for demonstrated excellence in leadership inside and outside of UCSD</p>'
+  },
+  {
     title: 'UCSD CSE Alumni Advisory Board Leadership Excellence Scholarship',
     link: null,
     details: '<p>Awarded scholarship in 2021 and 2022 for demonstration of leadership at UCSD and outside of UCSD</p>'

@@ -1,33 +1,45 @@
 export const data = [
   {
+    title:
+      'Lux AI Season 3: Lux AI Season 3: Multi-Agent Meta Learning at Scale',
+    authors:
+      'Stone Tao, Akarsh Kumar, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard, Hao Su',
+    venue: 'NeurIPS 2024 (Competitions Track)',
+    year: '2024',
+    link: "TBA",
+    // image: '/assets/publications/lux_2.5_temp.png',
+  },
+  {
     title: "RFCL: Reverse Forward Curriculum Learning for Extreme Sample and Demonstration Efficiency in RL",
     authors:
       'Stone Tao, Arth Shukla, Tsekai Chen, Hao Su',
     venue: 'ICLR 2024',
     year: '2024',
-    link: "TBA",
+    link: "https://arxiv.org/abs/2405.03379",
     projectpage: "https://reverseforward-cl.github.io/",
     code: "https://github.com/stonet2000/rfcl",
     image: '/assets/publications/rfcl.gif',
   },
   {
+    title: "MetaWriter: Exploring the Potential and Perils of AI Writing Support in Scientific Peer Review",
+    authors:
+      'Lu Sun, Stone Tao, Junjie Hu, Steven Dow',
+    venue: 'CSCW 2024',
+    year: '2023',
+    link: "https://dl.acm.org/doi/pdf/10.1145/3637371",
+    image: '/assets/publications/metawriter.png',
+  },
+  {
     title:
-      'Lux AI Challenge Season 2.5 (NeurIPS Edition)',
+      'Lux AI Season 2 (NeurIPS Edition)',
     authors:
       'Stone Tao, Qimai Li, Yuhao Jiang, Jiaxin Chen, Xiaolong Zhu, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard',
     venue: 'NeurIPS 2023 (Competitions Track)',
     year: '2023',
     link: "TBA",
+    projectpage: "https://www.kaggle.com/c/lux-ai-season-2/",
+    code: "https://github.com/Lux-AI-Challenge/Lux-Design-S2/",
     image: '/assets/publications/lux_2.5_temp.png',
-  },
-  {
-    title: "MetaWriter: Exploring the Potential and Perils of AI Writing Support in Scientific Peer Review",
-    authors:
-      'Lu Sun, Stone Tao, Junjie Hu, Steven Dow',
-    venue: 'CSCW 2023',
-    year: '2023',
-    link: "TBA",
-    // image: '/assets/publications/rfcl.gif',
   },
   {
     title:
