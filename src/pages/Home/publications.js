@@ -1,13 +1,25 @@
 export const data = [
   {
     title:
+      'ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI',
+    authors:
+      'Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su',
+    venue: 'arXiv 2024',
+    year: '2024',
+    link: 'https://arxiv.org/abs/2410.00425',
+    projectpage: 'https://maniskill.ai',
+    code: 'https://github.com/haosulab/ManiSkill',
+    image: '/assets/publications/maniskill3_splash.jpg'
+  },
+  {
+    title:
       'Lux AI Season 3: Lux AI Season 3: Multi-Agent Meta Learning at Scale',
     authors:
       'Stone Tao, Akarsh Kumar, Bovard Doerschuk-Tiberi, Isabelle Pan, Addison Howard, Hao Su',
     venue: 'NeurIPS 2024 (Competitions Track)',
     year: '2024',
     link: "TBA",
-    // image: '/assets/publications/lux_2.5_temp.png',
+    image: '/assets/publications/lux_2.5_temp.png',
   },
   {
     title: "RFCL: Reverse Forward Curriculum Learning for Extreme Sample and Demonstration Efficiency in RL",
