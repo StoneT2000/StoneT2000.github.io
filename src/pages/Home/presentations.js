@@ -1,5 +1,10 @@
 export const data = [
   {
+    title: 'ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI',
+    date: '6/18/2024',
+    venue: 'CVPR 2024 Embodied AI Workshop'
+  },
+  {
     title: 'Lux AI Season 2 and Reinforcement Learning',
     date: '2/21/2023',
     venue: 'Kaggle Podcast',
