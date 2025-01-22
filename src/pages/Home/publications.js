@@ -1,5 +1,26 @@
 export const data = [
   {
+    title: 'ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks',
+    authors: 'Arth Shukla, Stone Tao, Hao Su',
+    venue: 'ICLR 2025',
+    year: '2025',
+    link: 'https://arxiv.org/abs/2412.13211',
+    projectpage: 'https://arth-shukla.github.io/mshab/',
+    code: 'https://github.com/arth-shukla/mshab',
+    image: '/assets/publications/mshab_render.gif',
+  },
+  {
+    title: 'Policy Decorator: Model-Agnostic Online Refinement for Large Policy Model',
+    authors: 'Xiu Yuan*, Tongzhou Mu*, Stone Tao, Yunhao Fang, Michael Zhang, Hao Su',
+    venue: 'ICLR 2025',
+    year: '2025',
+    link: 'https://arxiv.org/abs/2412.13630',
+    projectpage: 'https://policydecorator.github.io/',
+    code: 'https://github.com/tongzhoumu/policy_decorator',
+    image: '/assets/publications/policy_decorator.gif',
+
+  },
+  {
     title:
       'ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI',
     authors:
@@ -19,6 +40,8 @@ export const data = [
     venue: 'NeurIPS 2024 (Competitions Track)',
     year: '2024',
     link: "TBA",
+    projectpage: "https://www.kaggle.com/c/lux-ai-season-3/",
+    code: "https://github.com/Lux-AI-Challenge/Lux-Design-S3/",
     image: '/assets/publications/lux_2.5_temp.png',
   },
   {

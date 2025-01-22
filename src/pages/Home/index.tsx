@@ -59,7 +59,7 @@ const Home = () => {
             </p>
           </div>
           <p>
-            I am a first-year PhD student at UC San Diego advised by professor{' '}
+            I am a 2nd-year PhD student at UC San Diego advised by professor{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I'm grateful
             to have my research be funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
@@ -176,17 +176,20 @@ const Home = () => {
                   <p>
                     <strong>{data.title}</strong>
                     <br />
-                    {data.venue}, {data.date}
+                    {data.entries.map((x, idx) => {
+                      return (
+                        <>
+                          {x.venue}, {x.date}{x.recording && (
+                            <> / <a target="_blank" rel="noreferrer" href={x.recording}>Recording</a></>
+                          )}
+                          {idx < data.entries.length - 1 && <br />}
+                        </>
+                      )
+                    })}
                     <br />
-                    {}
                     {data.slides && (
                       <a target="_blank" rel="noreferrer" href={data.slides}>
                         Slides
-                      </a>
-                    )}
-                    {data.recording && (
-                      <a target="_blank" rel="noreferrer" href={data.recording}>
-                        Recording
                       </a>
                     )}
                   </p>
