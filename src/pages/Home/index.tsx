@@ -189,7 +189,13 @@ const Home = () => {
                     <br />
                     {data.slides && (
                       <a target="_blank" rel="noreferrer" href={data.slides}>
-                        Slides
+                        Slides {data.slides.endsWith(".pptx") ? " (pptx)" : ""}
+                      </a>
+                    )}
+                    {data.slides && data.pdf && ', '}
+                    {data.pdf && (
+                      <a target="_blank" rel="noreferrer" href={data.pdf}>
+                        PDF
                       </a>
                     )}
                   </p>

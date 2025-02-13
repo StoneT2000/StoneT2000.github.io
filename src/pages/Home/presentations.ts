@@ -6,16 +6,20 @@ interface PresentationData {
     recording?: string;
   }[];
   slides?: string;
+  pdf?: string;
 }
 
 export const data: PresentationData[] = [
   {
     title: "Scaling Embodied AI via Simulation and Sim-integrated Robot Learning",
     // date: "Jan, 2025",
+    slides: "https://github.com/StoneT2000/paper-assets/raw/refs/heads/main/presentations/scaling-embodied-ai-via-simulation-and-sim-integrated-robot-learning/simulation_and_simulation_integrated_algorithms_public_01_2024.pptx",
+    pdf: "https://github.com/StoneT2000/paper-assets/raw/refs/heads/main/presentations/scaling-embodied-ai-via-simulation-and-sim-integrated-robot-learning/simulation_and_simulation_integrated_algorithms_public_01_2024.pdf",
     entries: [
       {
         date: "Jan, 2025",
-        venue: "Institute for AI Industry Research (AIR), Tsinghua University"
+        venue: "Institute for AI Industry Research (AIR), Tsinghua University",
+      
       }
     ]
   },
