@@ -25,7 +25,7 @@ export const data = [
       'ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI',
     authors:
       'Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su',
-    venue: 'arXiv 2024',
+    venue: '2025 ICLR Robot Learning Workshop, Oral Presentation',
     year: '2024',
     link: 'https://arxiv.org/abs/2410.00425',
     projectpage: 'https://maniskill.ai',
