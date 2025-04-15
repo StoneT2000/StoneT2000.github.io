@@ -1,5 +1,15 @@
 export const data = [
   {
+    title: 'Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy and World Model Learning',
+    authors: 'Adrià López Escoriza, Nicklas Hansen, Stone Tao, Tongzhou Mu, Hao Su',
+    venue: 'arXiv preprint 2025',
+    year: '2025',
+    link: 'https://arxiv.org/abs/2503.01837',
+    projectpage: 'https://adrialopezescoriza.github.io/demo3',
+    code: 'https://github.com/adrialopezescoriza/demo3',
+    image: '/assets/publications/demo3.gif',
+  },
+  {
     title: 'ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks',
     authors: 'Arth Shukla, Stone Tao, Hao Su',
     venue: 'ICLR 2025',
@@ -24,13 +34,14 @@ export const data = [
     title:
       'ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI',
     authors:
-      'Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su',
-    venue: '2025 ICLR Robot Learning Workshop, Oral Presentation',
+      'Stone Tao, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Viswesh Nagaswamy Rajesh, Yong Woo Choi, Yen-Ru Chen, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su',
+    venue: 'RSS 2025\nICLR 2025 Robot Learning Workshop, Oral Presentation',
     year: '2024',
     link: 'https://arxiv.org/abs/2410.00425',
     projectpage: 'https://maniskill.ai',
     code: 'https://github.com/haosulab/ManiSkill',
-    image: '/assets/publications/maniskill3_splash.jpg'
+    image: '/assets/publications/maniskill3_splash.jpg',
+    representative: true,
   },
   {
     title:
@@ -54,6 +65,7 @@ export const data = [
     projectpage: "https://reverseforward-cl.github.io/",
     code: "https://github.com/stonet2000/rfcl",
     image: '/assets/publications/rfcl.gif',
+    representative: true,
   },
   {
     title: "MetaWriter: Exploring the Potential and Perils of AI Writing Support in Scientific Peer Review",
@@ -98,7 +110,8 @@ export const data = [
     link: 'https://arxiv.org/abs/2302.04659',
     projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2022/',
     code: 'https://github.com/haosulab/ManiSkill2',
-    image: '/assets/publications/maniskill2.jpeg'
+    image: '/assets/publications/maniskill2.jpeg',
+    representative: true,
   },
   {
     title:
@@ -123,5 +136,6 @@ export const data = [
     projectpage: 'https://sapien.ucsd.edu/challenges/maniskill/2021/',
     code: 'https://github.com/haosulab/ManiSkill',
     image: '/assets/publications/maniskill.png',
+    representative: true,
   },
 ];

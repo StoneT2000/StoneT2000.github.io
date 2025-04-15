@@ -1,6 +1,6 @@
 {
   "data": [
-    {"date": "Mar, 2025", "content": "ManiSkill3 is accepted as an Oral presentation at the ICLR Robot Learning Workshop."},
+    {"date": "Mar, 2025", "content": "ManiSkill3 is accepted at RSS'25 and as an oral presentation at the ICLR Robot Learning Workshop, see you in LA (RSS) and Singapore (ICLR)!"},
     {"date": "Jan, 2025", "content": "Two papers accepted to ICLR'25."},
     {"date": "Dec, 2024", "content": "Lux AI Season 3 has started! Compete for a $50,000 prize pool <a href='https://www.kaggle.com/c/lux-ai-season-3/'>on Kaggle.</a>"},
     {"date": "May, 2024","content": "<a href='https://github.com/haosulab/ManiSkill'>ManiSkill3 Beta</a> has been released! State-of-the-art fully open-source robotics simulation with the fastest parallel visual simulation, faster than most other simulators. 1000s of FPS for visual RL on just google colab! Comes with a ton of features for teleoperation, rendering, reinforcement learning and more."},

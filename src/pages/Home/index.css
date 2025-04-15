@@ -32,6 +32,11 @@
   flex-wrap: wrap;
   align-items: center;
 }
+.Home .publication.representative {
+  padding: 0.5rem 0 0.5rem 0;
+  background-color: #fff8df;
+}
+
 .Home .publication .publication-details {
   max-width: 40rem;
   width: 40rem;

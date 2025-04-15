@@ -1,4 +1,13 @@
 export const ProjectsData = {
+  maniskill: {
+    title: 'ManiSkill',
+    time: '2024/05',
+    thumbnail: 'assets/maniskill_logo.svg',
+    thumbnailAltText: 'ManiSkill Logo',
+    text: `GPU Parallelized Robotics Simulation and Rendering framework. Designed to be flexible, easy to use, and supports sim2real/real2sim and many robot learning baselines.`,
+    link: 'https://github.com/haosulab/ManiSkill',
+    tags: ['useful', 'ai', 'python', 'robotics'],
+  },
   robojax: {
     title: 'Robojax',
     time: '2022/09',

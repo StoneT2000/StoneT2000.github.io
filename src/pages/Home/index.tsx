@@ -15,7 +15,7 @@ import { data as publications } from './publications';
 import { data as presentations } from './presentations';
 const Home = () => {
   const projects = [
-    ProjectsData['robojax'],
+    ProjectsData['maniskill'],
     ProjectsData['luxai1'],
     ProjectsData['polytomizator'],
   ];
@@ -60,7 +60,7 @@ const Home = () => {
           </div>
           <p>
             I am a 2nd-year PhD student at UC San Diego advised by professor{' '}
-            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I'm grateful
+            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I am joining <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a> as a research intern this summer. I'm grateful
             to have my research be funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
               NSF Graduate Research Fellowship
@@ -106,11 +106,12 @@ const Home = () => {
           </ul>
           <div className="anchor" id="publications-a" />
           <h2>Publications / Preprints</h2>
+          <p>Papers sorted by recency, Representative papers are highlighted.</p>
           {publications.map((publication: any) => {
             let bolded = publication.authors;
             bolded = bolded.replace('Stone Tao', '<strong>Stone Tao</strong>');
             return (
-              <div className="publication" key={publication.title}>
+              <div className={`publication ${publication.representative ? 'representative' : ''}`} key={publication.title}>
                 <div
                   style={{ textAlign: 'center' }}
                   className="publication-image"
@@ -136,7 +137,16 @@ const Home = () => {
                   </p>
                   <p dangerouslySetInnerHTML={{ __html: bolded }}></p>
                   <p>
-                    <i>{publication.venue}</i>
+                    {publication.venue.includes('\n') ? (
+                      publication.venue.split('\n').map((venue: any, index: any) => (
+                        <React.Fragment key={index}>
+                          <i>{venue}</i>
+                          {index < publication.venue.split('\n').length - 1 && <br />}
+                        </React.Fragment>
+                      ))
+                    ) : (
+                      <i>{publication.venue}</i>
+                    )}
                   </p>
                   <p>
                     {publication.link === 'TBA' ? (
