@@ -168,14 +168,14 @@ Learning in Foundation Environments (LIFE) #h(1fr) 2022 \
 
 == Current/Past Student Mentees
 #chiline()
-
+*Xiu Yua* (BS UC San Diego #sym.arrow.r PhD University of Washingtong) #h(1fr) 2024 -- 2025 \
 *Xander Hinrichsen* (BS UC San Diego #sym.arrow.r MS UC San Diego) #h(1fr) 2024 -- now \
 *Sid Bharthulwar* (BS Harvard) #h(1fr) 2024 -- now \
 *Rebecca Chen* (BS UC San Diego) #h(1fr) 2024 -- now \
 *Nan Xiao* (MS UC San Diego) #h(1fr) 2024 -- now \
 *Arnav Gurha* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Arth Shukla* (BS UC San Diego) #h(1fr) 2023 -- now \
-*Kevin Chan* (BS UC San Diego) #h(1fr) 2022 -- 2024\
+*Arth Shukla* (BS UC San Diego #sym.arrow.r PhD UC San Diego) #h(1fr) 2023 -- 2025 \
+*Kevin Chan* (BS UC San Diego #sym.arrow.r MS Stanford) #h(1fr) 2022 -- 2024 \
 *Doris Zhang* (BS UC San Diego) #h(1fr) 2022 -- 2024
 
 
@@ -197,7 +197,7 @@ Robotics: ManiSkill Challenge 2021 (ICLR 2022 Generalizable Policy Learning in t
 Multiagent Games/RL: Lux AI Season 1, Lux AI Season 2 (NeurIPS 2023 Competitions), Lux AI Season 3 (NeurIPS 2024 Competitions)
 
 *Peer Review* \
-AI/ML: ICLR, ICML, NeurIPS, CoLLas \
+AI/ML: ICLR, ICML, NeurIPS, CoLLas, RLC \
 Robotics: IROS, ICRA \
 Computer Vision/Graphics: SIGGRAPH \
 
