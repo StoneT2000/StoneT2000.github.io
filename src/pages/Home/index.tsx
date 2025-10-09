@@ -57,10 +57,12 @@ const Home = () => {
               <a href="https://twitter.com/Stone_Tao">Twitter</a> /{' '}
               <a href="mailto:stonezt2019@gmail.com ">Email</a>
             </p>
+            <br/>
+            <span style={{fontSize: '0.8rem'}}>Last Updated: October 9, 2025</span>
           </div>
           <p>
-            I am a 2nd-year PhD student at UC San Diego advised by professor{' '}
-            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a>. I am joining <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a> as a research intern this summer. I'm grateful
+            I am a 3rd-year PhD student at UC San Diego advised by professor{' '}
+            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and am also working at <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a> as a research intern. I'm grateful
             to have my research be funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
               NSF Graduate Research Fellowship
@@ -68,10 +70,12 @@ const Home = () => {
             .
           </p>
           <p>
-            My current research interests revolve around a general goal of building
-            efficient, adaptable, and capable embodied AI. A big chunk of my direction is around scalable datasets/benchmarks for embodied AI by tackling the intersection of simulation and machine learning. To this end, my
-            research revolves around reinforcement learning, simulation, few-shot learning,
-            imitation learning, auto curriculum-learning, as well as high-quality robotics/game benchmarks. If you are interested in working with me / just want to chat about stuff feel free to reach out to my email / twitter!
+            My current research interests revolve around advancing embodied AI and robot foundation models via compute-scalable synthetic data like simulation or world models, 
+            as well as machine learning tools like RL. 
+            The phrase "simulation integrated machine learning" captures much of my main research interests. 
+            In the context of machine learning tools for robotics, we can modify both the data generator and ML algorithms to address downstream problems 
+            from better sim2real RL to scalable simulation evals of real robot policies. 
+            If you are interested in working with me / just want to chat about stuff feel free to reach out to my email / twitter!
           </p>
           <p>
             On the side, I'm also interested in building and running
