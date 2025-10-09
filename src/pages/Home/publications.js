@@ -4,9 +4,10 @@ export const data = [
     authors: 'Sid Bharthulwar, Stone Tao, Hao Su',
     venue: 'NeurIPS 2025',
     year: '2025',
-    // link: 'https://arxiv.org/abs/2503.01837',
+    link: 'https://openreview.net/forum?id=7ypH75sToC&referrer=%5Bthe%20profile%20of%20Stone%20Tao%5D(%2Fprofile%3Fid%3D~Stone_Tao1)',
     // projectpage: 'https://openreview.net/pdf?id=7ypH75sToC',
     // code: 'https://github.com/stonet2000/staggered-environment-resets',
+    representative: true,
   },
   {
     title: 'Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy and World Model Learning',
@@ -21,7 +22,7 @@ export const data = [
   {
     title: 'Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation',
     authors: 'Qiyue Gao*, Xinyu Pi*, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, Stone Tao, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu.',
-    venue: 'arXiv preprint 2025',
+    venue: 'ACL 2025',
     year: '2025',
     link: 'https://arxiv.org/abs/2506.21876',
     projectpage: 'https://wm-abench.maitrix.org/',
