@@ -36,10 +36,20 @@ University of California, San Diego. #h(1fr) \
 == Publications / Preprints
 #chiline()
 
+*Staggered Environment Resets Improve Massively Parallel On-Policy Reinforcement Learning* \
+Neural Information and Processing Systems *(NeurIPS)* 2025. \
+Sid Bharthulwar, *Stone Tao*, Hao Su. #h(1fr) \
+#link("https://openreview.net/pdf?id=7ypH75sToC")[arXiv]
+
 *Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy, and World Model \ Learning* \
-arxiv 2025. \
+International Conference on Machine Learning *(ICML)* 2025. \
 Adrià López Escoriza, Nicklas Hansen, *Stone Tao*, Tongzhou Mu, Hao Su. #h(1fr) \
 #link("https://arxiv.org/abs/2503.01837")[arXiv] | #link("https://adrialopezescoriza.github.io/demo3/")[project page] | #link("https://github.com/adrialopezescoriza/demo3")[code]
+
+*Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation* #h(1fr) \
+Association for Computational Linguistics *(ACL)* 2025. \
+Qiyue Gao\*, Xinyu Pi\*, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, *Stone Tao*, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu. \
+#link("https://arxiv.org/abs/2506.21876")[arXiv] | #link("https://wm-abench.maitrix.org/")[project page] | #link("https://huggingface.co/datasets/maitrix-org/WM-ABench")[code]
 
 *ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks* #h(1fr) \
 International Conference on Learning Representations *(ICLR)* 2025. \
@@ -52,7 +62,8 @@ Xiu Yuan\*, Tongzhou Mu\*, *Stone Tao*, Yunhao Fang, Michael Zhang, Hao Su. \
 #link("https://arxiv.org/abs/2412.13630")[arXiv] | #link("https://policydecorator.github.io/")[project page] | #link("https://github.com/tongzhoumu/policy_decorator")[code]
 
 *ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI* #h(1fr) \
-Robot Learning Workshop at ICLR 2025, Oral Presentation \
+Robotics Science and Systems *(RSS)* 2025 \
+Robot Learning Workshop at *(ICLR)* 2025, Oral Presentation \
 *Stone Tao*, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Viswesh Nagaswamy Rajesh, Yong Woo Choi, Yen-Ru Chen, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su. \
 #link("https://arxiv.org/abs/2410.00425")[arXiv] | #link("http://maniskill.ai/")[project page] | #link("https://github.com/haosulab/ManiSkill")[code]
 
@@ -99,7 +110,8 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 == Experience
 #chiline()
-*NVIDIA Research*, Incoming Research Intern #h(1fr) 2025
+*NVIDIA Research*, Research Intern, Advisor: Iretiayo Akinola, Yijie Guo, Yashraj Narang #h(1fr) 2025
+- Research on sim2real, reinforcement learning, simulation, and manipulation.
 
 *Hillbot*, Research Scientist Intern, Advisor: Hao Su #h(1fr) 2024 \
 - Research on the intersection of simulation, reinforcement learning, imitation learning, and embodied AI
@@ -107,7 +119,7 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 *UC San Diego: Hao Su Lab*, Undergraduate Researcher, Advisor: Hao Su #h(1fr) 2020 -- 2023 \
 - Research on robotics and embodied AI, particularly tackling long-horizon problems. Leveraging reinforcement learning, few-shot learning, imitation learning, and transformers.
-- Research and develop large-scale robotic manipulation benchmarks (ManiSkill2).
+- Research and develop large-scale robotic manipulation benchmarks (ManiSkill).
 
 *UC San Diego: ProtoLab*, Undergraduate Researcher, Advisor: Steven Dow #h(1fr) 2019 -- 2023 \
 - Research at the intersection of AI and HCI, particularly AI-assisted tools and using NLP in systems requiring in-depth synthesis of information such as peer-review systems.
@@ -115,8 +127,7 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 *Lux AI Challenge*, Co-Founder #h(1fr) 2021 --
 - Lead the research, development, and design of creative, accessible, and inclusive AI competitions.
-- Past competitions have accumulated over 1,600+ teams, 1,000+ github stars, 30,000+ submissions, 10,000,000+ matches run, and had one of the most diverse group of participants ever. Enabled competitors to research novel deep RL and IL methods to a unique large-scale multi-agent problem.
-- Currently working on a season 3 competition in collaboration with Kaggle.
+- Past competitions have accumulated over 2000+ teams, 1,000+ github stars, 30,000+ submissions, 10,000,000+ matches run, and had one of the most diverse group of participants ever. Enabled competitors to research novel deep RL and IL methods to a unique large-scale multi-agent problem.
 
 *QuantCo*, ML Engineer Intern, Advisor: T. Ben Thompson #h(1fr) 2021 \
 - Researched high-precision and accurate function approximation using neural nets and decision trees. Help automatically migrate slow, complex, hand-built computations in old systems to new systems.
@@ -127,8 +138,8 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 == Selected Open Source Projects
 #chiline()
-*ManiSkill ★1400+* #h(1fr) 2021 -- \
-GPU parallelized robotics simulation with state-of-the-art state simulation speed and the fastest visual simulation speeds (10-1000x faster compared to other simulators). Designed to be pythonic and abstract away most GPU memory management code to make building and training on robotics tasks a breeze.\
+*ManiSkill ★2000+* #h(1fr) 2021 -- \
+GPU parallelized robotics simulation framework with state-of-the-art simulation+rendering speeds and efficiency. Designed to be pythonic and abstract away most GPU memory management code to make building and training on robotics tasks a breeze.\
 #link("https://github.com/haosulab/maniskill")[haosulab/ManiSkill]
 
 *Lux AI Challenge ★1600+* #h(1fr)  2021 -- \
@@ -150,7 +161,9 @@ Founded the largest organization on AI at UC San Diego, seeking to cultivate a c
 
 == Presentations / Talks
 #chiline()
+
 *Scaling Embodied AI via Simulation and Sim-integrated Robot Learning* \
+Allen AI (AI2) #h(1fr) 2025 \
 Institute for AI Industry Research (AIR), Tsinghua University #h(1fr) 2024
 
 *ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI* \
@@ -168,11 +181,11 @@ Learning in Foundation Environments (LIFE) #h(1fr) 2022 \
 
 == Current/Past Student Mentees
 #chiline()
-*Xiu Yua* (BS UC San Diego #sym.arrow.r PhD University of Washingtong) #h(1fr) 2024 -- 2025 \
-*Xander Hinrichsen* (BS UC San Diego #sym.arrow.r MS UC San Diego) #h(1fr) 2024 -- now \
+*Xiu Yuan* (BS UC San Diego #sym.arrow.r PhD Washington University) #h(1fr) 2024 -- 2025 \
+*Xander Hinrichsen* (BS UC San Diego #sym.arrow.r MS UC San Diego #sym.arrow.r NVIDIA) #h(1fr) 2024 -- 2025 \
 *Sid Bharthulwar* (BS Harvard) #h(1fr) 2024 -- now \
 *Rebecca Chen* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Nan Xiao* (MS UC San Diego) #h(1fr) 2024 -- now \
+*Nan Xiao* (MS UC San Diego #sym.arrow.r University of Tennessee, Knoxville) #h(1fr) 2024 -- now \
 *Arnav Gurha* (BS UC San Diego) #h(1fr) 2024 -- now \
 *Arth Shukla* (BS UC San Diego #sym.arrow.r PhD UC San Diego) #h(1fr) 2023 -- 2025 \
 *Kevin Chan* (BS UC San Diego #sym.arrow.r MS Stanford) #h(1fr) 2022 -- 2024 \
@@ -197,7 +210,7 @@ Robotics: ManiSkill Challenge 2021 (ICLR 2022 Generalizable Policy Learning in t
 Multiagent Games/RL: Lux AI Season 1, Lux AI Season 2 (NeurIPS 2023 Competitions), Lux AI Season 3 (NeurIPS 2024 Competitions)
 
 *Peer Review* \
-AI/ML: ICLR, ICML, NeurIPS, CoLLas, RLC \
+AI/ML: ICLR, ICML, NeurIPS (Top Reviewer), CoLLas, RLC \
 Robotics: IROS, ICRA \
 Computer Vision/Graphics: SIGGRAPH \
 

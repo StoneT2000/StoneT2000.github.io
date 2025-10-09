@@ -17,7 +17,11 @@ export const data: PresentationData[] = [
     pdf: "https://github.com/StoneT2000/paper-assets/raw/refs/heads/main/presentations/scaling-embodied-ai-via-simulation-and-sim-integrated-robot-learning/simulation_and_simulation_integrated_algorithms_public_01_2024.pdf",
     entries: [
       {
-        date: "Jan, 2025",
+        date: "July, 2025",
+        venue: "Allen AI Institute for AI (AI2)"
+      },
+      {
+        date: "January, 2025",
         venue: "Institute for AI Industry Research (AIR), Tsinghua University",
       
       }

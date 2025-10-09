@@ -1,13 +1,32 @@
 export const data = [
   {
+    title: 'Staggered Environment Resets Improve Massively Parallel On-Policy Reinforcement Learning',
+    authors: 'Sid Bharthulwar, Stone Tao, Hao Su',
+    venue: 'NeurIPS 2025',
+    year: '2025',
+    // link: 'https://arxiv.org/abs/2503.01837',
+    // projectpage: 'https://openreview.net/pdf?id=7ypH75sToC',
+    // code: 'https://github.com/stonet2000/staggered-environment-resets',
+  },
+  {
     title: 'Multi-Stage Manipulation with Demonstration-Augmented Reward, Policy and World Model Learning',
     authors: 'Adrià López Escoriza, Nicklas Hansen, Stone Tao, Tongzhou Mu, Hao Su',
-    venue: 'arXiv preprint 2025',
+    venue: 'ICML 2025',
     year: '2025',
     link: 'https://arxiv.org/abs/2503.01837',
     projectpage: 'https://adrialopezescoriza.github.io/demo3',
     code: 'https://github.com/adrialopezescoriza/demo3',
     image: '/assets/publications/demo3.gif',
+  },
+  {
+    title: 'Do Vision-Language Models Have Internal World Models? Towards an Atomic Evaluation',
+    authors: 'Qiyue Gao*, Xinyu Pi*, Kevin Liu, Junrong Chen, Ruolan Yang, Xinqi Huang, Xinyu Fang, Lu Sun, Gautham Kishore, Bo Ai, Stone Tao, Mengyang Liu, Jiaxi Yang, Chao-Jung Lai, Chuanyang Jin, Jiannan Xiang, Benhao Huang, Zeming Chen, David Danks, Hao Su, Tianmin Shu, Ziqiao Ma, Lianhui Qin, Zhiting Hu.',
+    venue: 'arXiv preprint 2025',
+    year: '2025',
+    link: 'https://arxiv.org/abs/2506.21876',
+    projectpage: 'https://wm-abench.maitrix.org/',
+    code: 'https://huggingface.co/datasets/maitrix-org/WM-ABench',
+    image: '/assets/publications/wmbench.png',
   },
   {
     title: 'ManiSkill-HAB: A Benchmark for Low-Level Manipulation in Home Rearrangement Tasks',
