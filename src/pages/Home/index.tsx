@@ -63,8 +63,8 @@ const Home = () => {
           <p>
             I am a 3rd-year PhD student at UC San Diego advised by professors{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a>. 
-            I am currently working with professor Dieter Fox at <a href="https://www.allenai.org/">Allen Institute for AI</a> as a research intern.
-            I have previously interned at <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a>. I'm grateful to have my research be funded by the{' '}
+            I am currently working with professor <a href="https://homes.cs.washington.edu/~fox/">Dieter Fox</a> at the <a href="https://www.allenai.org/">Allen Institute for AI (AI2)</a> as a research intern.
+            I have previously interned at <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a>. I'm grateful to have my research funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
               NSF Graduate Research Fellowship
             </a>
