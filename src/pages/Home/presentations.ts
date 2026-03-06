@@ -11,6 +11,16 @@ interface PresentationData {
 
 export const data: PresentationData[] = [
   {
+    "title": "Accelerating and Driving Robotics Progress via Simulation Integrated Robot Learning",
+    "entries": [
+      {
+        "date": "February, 2026",
+        "venue": "University of Pennsylvania",
+        "recording": "https://www.youtube.com/watch?v=i2ML9TvxLDY"
+      }
+    ]
+  },
+  {
     title: "Scaling Embodied AI via Simulation and Sim-integrated Robot Learning",
     // date: "Jan, 2025",
     slides: "https://github.com/StoneT2000/paper-assets/raw/refs/heads/main/presentations/scaling-embodied-ai-via-simulation-and-sim-integrated-robot-learning/simulation_and_simulation_integrated_algorithms_public_01_2024.pptx",

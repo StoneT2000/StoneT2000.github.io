@@ -18,8 +18,8 @@ stao\@ucsd.edu |
 #chiline()
 
 *PhD Student in Computer Science and Engineering* #h(1fr) 2023 --  \
-University of California, San Diego. Advisor: Hao Su #h(1fr)  \
-Research Topics/Interests: Reinforcement Learning, Simulation, Embodied AI, Learning from Demonstrations
+University of California, San Diego. Advisors: Hao Su, Henrik Christensen #h(1fr)  \
+Research Topics/Interests: Simulation, Robotics, Reinforcement Learning, Evaluations
 
 *B.S. Double Major in Computer Science and Cognitive Science, Math Minor* #h(1fr) 2019 -- 2023 \
 University of California, San Diego. #h(1fr) \
@@ -29,9 +29,9 @@ University of California, San Diego. #h(1fr) \
 
 == Selected Awards
 #chiline()
-*National Science Foundation Graduate Research Fellowship* #h(1fr) 2023-2028 \
+*National Science Foundation Graduate Research Fellowship* #h(1fr) 2023 \
 *UCSD CSE Award for Excellence in Leadership* #h(1fr) 2023 \
-*UCSD CSE Alumni Advisory Board Leadership Excellence Scholarship* #h(1fr) 2021-2022
+*UCSD CSE Alumni Advisory Board Leadership Excellence Scholarship* #h(1fr) 2021, 2022
 
 == Publications / Preprints
 #chiline()
@@ -110,19 +110,21 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 == Experience
 #chiline()
-*NVIDIA Research*, Research Intern, Advisor: Iretiayo Akinola, Yijie Guo, Yashraj Narang #h(1fr) 2025
-- Research on sim2real, reinforcement learning, simulation, and manipulation.
+*Allen Institute for AI (AI2)*, Research Intern, Advisor: Dieter Fox #h(1fr) 2025 -- 2026 \
+- Research on scalable simulation infrastructure, evaluations, and reinforcement learning for manipulation.
+
+*NVIDIA Research*, Research Intern, Advisors: Iretiayo Akinola, Yijie Guo, Yashraj Narang #h(1fr) 2025
+- Research on sim-to-real, reinforcement learning, simulation, and manipulation.
 
 *Hillbot*, Research Scientist Intern, Advisor: Hao Su #h(1fr) 2024 \
 - Research on the intersection of simulation, reinforcement learning, imitation learning, and embodied AI
 - Business Strategy
 
 *UC San Diego: Hao Su Lab*, Undergraduate Researcher, Advisor: Hao Su #h(1fr) 2020 -- 2023 \
-- Research on robotics and embodied AI, particularly tackling long-horizon problems. Leveraging reinforcement learning, few-shot learning, imitation learning, and transformers.
-- Research and develop large-scale robotic manipulation benchmarks (ManiSkill).
+- Research on robotics, imitation/reinforcement learning, and large-scale robotic manipulation benchmarks (ManiSkill).
 
 *UC San Diego: ProtoLab*, Undergraduate Researcher, Advisor: Steven Dow #h(1fr) 2019 -- 2023 \
-- Research at the intersection of AI and HCI, particularly AI-assisted tools and using NLP in systems requiring in-depth synthesis of information such as peer-review systems.
+- Research at the intersection of AI and HCI on AI-assisted tools for systems requiring deep information synthesis
 - Developed the Design for San Diego competition's front and backend.
 
 *Lux AI Challenge*, Co-Founder #h(1fr) 2021 --
@@ -161,10 +163,17 @@ Founded the largest organization on AI at UC San Diego, seeking to cultivate a c
 
 == Presentations / Talks
 #chiline()
+*Accelerating and Driving Robotics Progress via Simulation Integrated Robot Learning* \
+University of Pennsylvania #h(1fr) 2026 \
+#link("https://www.youtube.com/watch?v=i2ML9TvxLDY")[Youtube Recording]
 
 *Scaling Embodied AI via Simulation and Sim-integrated Robot Learning* \
 Allen AI (AI2) #h(1fr) 2025 \
 Institute for AI Industry Research (AIR), Tsinghua University #h(1fr) 2024
+
+*ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI* \
+Robopapers (Podcast) \
+#link("https://www.youtube.com/watch?v=fpOCPQB2spM")[Youtube Recording]
 
 *ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI* \
 CVPR 2024 Embodied AI Workshop #h(1fr) 2024 \
@@ -181,16 +190,17 @@ Learning in Foundation Environments (LIFE) #h(1fr) 2022 \
 
 == Current/Past Student Mentees
 #chiline()
+*Justin Luo* (BS Caltech) #h(1fr) 2025 -- now \
+*Viswesh Nagaswamy Rajesh* (MS UC San Diego #sym.arrow.r General Robotics) #h(1fr) 2025 -- now \
 *Xiu Yuan* (BS UC San Diego #sym.arrow.r PhD Washington University) #h(1fr) 2024 -- 2025 \
 *Xander Hinrichsen* (BS UC San Diego #sym.arrow.r MS UC San Diego #sym.arrow.r NVIDIA) #h(1fr) 2024 -- 2025 \
-*Sid Bharthulwar* (BS Harvard) #h(1fr) 2024 -- now \
+*Sid Bharthulwar* (BS Harvard #sym.arrow.r Jump Trading) #h(1fr) 2024 -- 2025 \
 *Rebecca Chen* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Nan Xiao* (MS UC San Diego #sym.arrow.r University of Tennessee, Knoxville) #h(1fr) 2024 -- now \
+*Nan Xiao* (MS UC San Diego #sym.arrow.r PhD University of Tennessee, Knoxville) #h(1fr) 2024 -- 2025 \
 *Arnav Gurha* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Arth Shukla* (BS UC San Diego #sym.arrow.r PhD UC San Diego) #h(1fr) 2023 -- 2025 \
+*Arth Shukla* (BS UC San Diego #sym.arrow.r PhD University of Washington) #h(1fr) 2023 -- 2025 \
 *Kevin Chan* (BS UC San Diego #sym.arrow.r MS Stanford) #h(1fr) 2022 -- 2024 \
 *Doris Zhang* (BS UC San Diego) #h(1fr) 2022 -- 2024
-
 
 == Teaching
 #chiline()
@@ -210,8 +220,8 @@ Robotics: ManiSkill Challenge 2021 (ICLR 2022 Generalizable Policy Learning in t
 Multiagent Games/RL: Lux AI Season 1, Lux AI Season 2 (NeurIPS 2023 Competitions), Lux AI Season 3 (NeurIPS 2024 Competitions)
 
 *Peer Review* \
-AI/ML: ICLR, ICML, NeurIPS (Top Reviewer), CoLLas, RLC \
-Robotics: IROS, ICRA \
+AI/ML: ICLR, ICML, NeurIPS (Top Reviewer), TMLR, CoLLas, RLC \
+Robotics: IROS, ICRA, RSS \
 Computer Vision/Graphics: SIGGRAPH \
 
 == Other Awards
