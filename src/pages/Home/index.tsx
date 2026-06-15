@@ -64,7 +64,7 @@ const Home = () => {
             I am a final year PhD student at UC San Diego advised by professors{' '}
             <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a>. 
             I am currently working at <a href="https://www.pi.website/">Physical Intelligence</a> as a research intern.
-            I have previously was a student researcher at <a href="https://www.ucsd.edu/">Allen AI Institute for AI (AI2)</a>, <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a>, and <a href="https://www.sudo.ai/">Sudo AI.</a>. I'm grateful to have my research funded by the{' '}
+            I previously was a student researcher at <a href="https://www.ucsd.edu/">Allen AI Institute for AI (AI2)</a>, <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a>, and <a href="https://www.sudo.ai/">Sudo AI.</a>. I'm grateful to have my research funded by the{' '}
             <a href="https://www.nsfgrfp.org/">
               NSF Graduate Research Fellowship
             </a>
