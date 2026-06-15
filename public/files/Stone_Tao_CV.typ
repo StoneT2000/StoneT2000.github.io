@@ -110,6 +110,9 @@ Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xi
 
 == Experience
 #chiline()
+*Physical Intelligence*, Research Intern #h(1fr) 2026 \
+- Research on simulation and evaluation systems for robotics foundation models.
+
 *Allen Institute for AI (AI2)*, Research Intern, Advisor: Dieter Fox #h(1fr) 2025 -- 2026 \
 - Research on scalable simulation infrastructure, evaluations, and reinforcement learning for manipulation.
 
