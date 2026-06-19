@@ -1,5 +1,6 @@
 {
   "data": [
+    {"date": "June, 2026", "content": "<a href='https://github.com/orgs/mani-skill/projects/1'>ManiSkill4 has been planned</a>. Support for multiple backends (e.g. Newton/Mujoco-warp, Sapien) and improved API designs coming soon."},
     {"date": "September, 2025", "content": "One paper (improving massively parallel on-policy RL via reset staggering) is accepted to NeurIPS'25, see you in San Diego!"},
     {"date": "March, 2025", "content": "ManiSkill3 is accepted at RSS'25 and as an oral presentation at the ICLR Robot Learning Workshop, see you in LA (RSS) and Singapore (ICLR)!"},
     {"date": "January, 2025", "content": "Two papers accepted to ICLR'25."},
