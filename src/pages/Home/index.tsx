@@ -24,7 +24,7 @@ const Home = () => {
 
   const tabs = [
     { name: 'Home', href: 'heading' },
-    { name: 'News', href: 'news-a' },
+    // { name: 'News', href: 'news-a' },
     { name: 'Publications', href: 'publications-a' },
     { name: 'Presentations/Talks', href: 'presentations-a' },
     { name: 'Projects', href: 'projects-a' },
@@ -61,28 +61,10 @@ const Home = () => {
             <span style={{fontSize: '0.8rem'}}>Last Updated: June 15, 2026</span>
           </div>
           <p>
-            I am a final year PhD student at UC San Diego researching simulation and robot learning, advised by professors{' '}
-            <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a>. 
-            I am currently working at <a href="https://www.pi.website/">Physical Intelligence</a> as a research intern.
-            I previously was a student researcher at <a href="https://www.ucsd.edu/">Allen AI Institute for AI (AI2)</a>, <a href="https://www.nvidia.com/en-us/research/">NVIDIA research</a>, and <a href="https://www.sudo.ai/">Sudo AI</a>. I'm grateful to have my research funded by the{' '}
-            <a href="https://www.nsfgrfp.org/">
-              NSF Graduate Research Fellowship
-            </a>
-            .
+            I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. I was previously a PhD student advised
+            by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a> at UC San Diego. 
           </p>
-          <p>
-            The phrase "simulation integrated machine learning" captures much of my main research interests. 
-            In the context of machine learning tools for robotics, we can modify both the simulator and ML algorithms to address downstream problems 
-            from better sim2real RL to scalable simulation evaluations of policies.
-          </p>
-          <p>
-            On the side, I'm also interested in building and running
-            high-quality open-source AI competitions for education and research.
-            I co-founded the <a href="https://lux-ai.org">Lux AI Challenge</a>{' '}
-            and collaborate frequently with <a href="https://kaggle.com/">Kaggle</a> to build and
-            deliver these AI competitions.
-          </p>
-          <div className="anchor" id="news-a" />
+          {/* <div className="anchor" id="news-a" />
           <h2 style={{marginBottom: 0}}>News</h2>
           <ul style={{marginTop: "0.5rem"}}>
           {
@@ -90,7 +72,7 @@ const Home = () => {
               return <li>{v.date}: <span dangerouslySetInnerHTML={{__html: v.content}}></span></li>
             })
           }
-          </ul>
+          </ul> */}
           <div className="anchor" id="publications-a" />
           <h2>Publications / Preprints</h2>
           <p>Papers sorted by recency, Representative papers are highlighted.</p>
