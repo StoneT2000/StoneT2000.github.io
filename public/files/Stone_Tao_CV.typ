@@ -10,28 +10,45 @@
 
 = Stone Tao
 
-stao\@ucsd.edu |
-#link("https://github.com/stonet2000")[github.com/stonet2000] | #link("https://stoneztao.com")[stoneztao.com] |
-#link("https://twitter.com/Stone_Tao")[twitter.com/Stone_Tao]
+stonezt2019\@gmail.com |
+#link("https://github.com/stonet2000")[github.com/stonet2000] | #link("https://stoneztao.com")[stoneztao.com] | #link("https://stoneztao.substack.com/")[stoneztao.substack.com]
 
 == Education
 #chiline()
 
-*PhD Student in Computer Science and Engineering* #h(1fr) 2023 --  \
+*PhD Student in Computer Science and Engineering* #h(1fr) 2023 -- 2026  \
 University of California, San Diego. Advisors: Hao Su, Henrik Christensen #h(1fr)  \
-Research Topics/Interests: Simulation, Robotics, Reinforcement Learning, Evaluations
+Research Topics: Simulation, Robotics, Reinforcement Learning, Evaluation
 
 *B.S. Double Major in Computer Science and Cognitive Science, Math Minor* #h(1fr) 2019 -- 2023 \
 University of California, San Diego. #h(1fr) \
 
-//- *Graduate Courses:* Computer Vision (ML meets Geometry), ML for Robotics, Differentiable Programming, Recommender Systems, Embodied AI. \
-//- *Undergraduate Courses* Decision-Making in the Brain, Parallel Computing, Statistical NLP, Advanced Optimization Methods for Data Science, Advanced Data Structures, Operating Systems, Multiple Probability and Stats Courses, Foundations of Real Analysis, Honors Calculus, and more. \
+== Experience
+#chiline()
+*Physical Intelligence*, Member of Technical Staff #h(1fr) 2026 -- Present \
+- Research on simulation for robotics foundation models.
+
+*Allen Institute for AI (AI2)*, Research Intern, Advisor: Dieter Fox #h(1fr) 2026 \
+- Research on scalable simulation infrastructure, evaluations, and reinforcement learning for manipulation.
+
+*NVIDIA Research*, Research Intern, Advisors: Iretiayo Akinola, Yijie Guo, Yashraj Narang #h(1fr) 2025
+- Research on sim-to-real, reinforcement learning, simulation, and manipulation.
+
+*Hillbot/Sudo AI*, Research Scientist Intern, Advisor: Hao Su #h(1fr) 2024 \
+- Research on the intersection of simulation, reinforcement learning, imitation learning, and robotics.
+
+*Lux AI Challenge*, Co-Founder #h(1fr) 2021 -- Present
+- Lead the research, development, and design of creative, accessible, and inclusive AI competitions.
+
+*QuantCo*, ML Engineer Intern, Advisor: T. Ben Thompson #h(1fr) 2021 \
+- Research on high-precision and accurate function approximation via deep learning and decision trees.
+
 
 == Selected Awards
 #chiline()
 *National Science Foundation Graduate Research Fellowship* #h(1fr) 2023 \
 *UCSD CSE Award for Excellence in Leadership* #h(1fr) 2023 \
-*UCSD CSE Alumni Advisory Board Leadership Excellence Scholarship* #h(1fr) 2021, 2022
+//*UCSD CSE Alumni Advisory Board Leadership Excellence Scholarship* #h(1fr) 2021, 2022
 
 == Publications / Preprints
 #chiline()
@@ -65,7 +82,7 @@ Xiu Yuan\*, Tongzhou Mu\*, *Stone Tao*, Yunhao Fang, Michael Zhang, Hao Su. \
 Robotics Science and Systems *(RSS)* 2025 \
 Robot Learning Workshop at *(ICLR)* 2025, Oral Presentation \
 *Stone Tao*, Fanbo Xiang, Arth Shukla, Yuzhe Qin, Xander Hinrichsen, Xiaodi Yuan, Chen Bao, Xinsong Lin, Yulin Liu, Tse-kai Chan, Yuan Gao, Xuanlin Li, Tongzhou Mu, Nan Xiao, Arnav Gurha, Viswesh Nagaswamy Rajesh, Yong Woo Choi, Yen-Ru Chen, Zhiao Huang, Roberto Calandra, Rui Chen, Shan Luo, Hao Su. \
-#link("https://arxiv.org/abs/2410.00425")[arXiv] | #link("http://maniskill.ai/")[project page] | #link("https://github.com/haosulab/ManiSkill")[code]
+#link("https://arxiv.org/abs/2410.00425")[arXiv] | #link("http://maniskill.ai/")[project page] | #link("https://github.com/mani-skill/ManiSkill")[code]
 
 *Lux AI Season 3: Multi-Agent Meta Learning at Scale* #h(1fr) \
 Neural Information and Processing Systems *(NeurIPS)* 2024 Competitions Track. \
@@ -101,68 +118,22 @@ Jiayuan Gu†, Fanbo Xiang†, Xuanlin Li\*, Zhan Ling\*, Xiqiang Liu\*, Tongzho
 Neural Information and Processing Systems *(NeurIPS)* 2021 Datasets and Benchmarks Track \
 Tongzhou Mu\*, Zhan Ling\*, Fanbo Xiang\*, Derek Cathera Yang\*, Xuanlin Li\*, *Stone Tao*, Zhiao Huang, \
 Zhiwei Jia, Hao Su. \
-#link("https://arxiv.org/abs/2107.14483")[arXiv] | #link("https://sapien.ucsd.edu/challenges/maniskill/2021/")[project page] | #link("https://github.com/haosulab/ManiSkill")[code]
+#link("https://arxiv.org/abs/2107.14483")[arXiv] | #link("https://sapien.ucsd.edu/challenges/maniskill/2021/")[project page] | #link("https://github.com/mani-skill/ManiSkill")[code]
 
 *Emergent Collective Intelligence From Massive-Agent Cooperation and Competition* #h(1fr) \
 Neural Information and Processing Systems *(NeurIPS)* 2022 Deep RL Workshop. \
 Hanmo Chen\*, *Stone Tao\**, Jiaxin Chen, Weihan Shen, Xihui Li, Sikai Cheng, Xiaolong Zhu, Xiu Li. \
 #link("https://arxiv.org/abs/2301.01609")[arXiv]
 
-== Experience
-#chiline()
-*Physical Intelligence*, Research Intern #h(1fr) 2026 \
-- Research on simulation and evaluation systems for robotics foundation models.
-
-*Allen Institute for AI (AI2)*, Research Intern, Advisor: Dieter Fox #h(1fr) 2025 -- 2026 \
-- Research on scalable simulation infrastructure, evaluations, and reinforcement learning for manipulation.
-
-*NVIDIA Research*, Research Intern, Advisors: Iretiayo Akinola, Yijie Guo, Yashraj Narang #h(1fr) 2025
-- Research on sim-to-real, reinforcement learning, simulation, and manipulation.
-
-*Hillbot*, Research Scientist Intern, Advisor: Hao Su #h(1fr) 2024 \
-- Research on the intersection of simulation, reinforcement learning, imitation learning, and embodied AI
-- Business Strategy
-
-*UC San Diego: Hao Su Lab*, Undergraduate Researcher, Advisor: Hao Su #h(1fr) 2020 -- 2023 \
-- Research on robotics, imitation/reinforcement learning, and large-scale robotic manipulation benchmarks (ManiSkill).
-
-*UC San Diego: ProtoLab*, Undergraduate Researcher, Advisor: Steven Dow #h(1fr) 2019 -- 2023 \
-- Research at the intersection of AI and HCI on AI-assisted tools for systems requiring deep information synthesis
-- Developed the Design for San Diego competition's front and backend.
-
-*Lux AI Challenge*, Co-Founder #h(1fr) 2021 --
-- Lead the research, development, and design of creative, accessible, and inclusive AI competitions.
-- Past competitions have accumulated over 2000+ teams, 1,000+ github stars, 30,000+ submissions, 10,000,000+ matches run, and had one of the most diverse group of participants ever. Enabled competitors to research novel deep RL and IL methods to a unique large-scale multi-agent problem.
-
-*QuantCo*, ML Engineer Intern, Advisor: T. Ben Thompson #h(1fr) 2021 \
-- Researched high-precision and accurate function approximation using neural nets and decision trees. Help automatically migrate slow, complex, hand-built computations in old systems to new systems.
-- Developed OCR+NLP tools for analysis of insurance documents.
-
-*LaunchDarkly*, Software Engineer Intern #h(1fr) 2020 \
-- Worked full stack on feature workflows, semantic patches, and conflict handling to enable state independent scheduling of feature flagging, a feature requested by LaunchDarkly’s largest business customers.
-
 == Selected Open Source Projects
 #chiline()
-*ManiSkill ★2000+* #h(1fr) 2021 -- \
-GPU parallelized robotics simulation framework with state-of-the-art simulation+rendering speeds and efficiency. Designed to be pythonic and abstract away most GPU memory management code to make building and training on robotics tasks a breeze.\
-#link("https://github.com/haosulab/maniskill")[haosulab/ManiSkill]
+*ManiSkill ★3000+* #h(1fr) \
+GPU parallelized robotics simulation framework and infrastructure. Designed to be pythonic and abstract away most GPU memory management code to make building and training on robotics tasks a breeze.\
+#link("https://github.com/mani-skill/Maniskill")[mani-skill/ManiSkill]
 
-*Lux AI Challenge ★1600+* #h(1fr)  2021 -- \
+*Lux AI Challenge ★1600+* #h(1fr)  \
 Code for the Lux AI Challenge, including the AI environments and visualizers. \
 #link("https://github.com/Lux-AI-Challenge")[Lux-AI-Challenge]
-
-*Reinforcement Learning Gym and Library in Typescript ★20+* #h(1fr) 2021 \
-Implements a gym interface and algorithms like PPO and DQN in Typescript for reinforcement learning on browsers and Node.js. \
-#link("https://github.com/stonet2000/rl-ts")[stonet2000/rl-ts]
-
-== Leadership
-#chiline()
-*Co-Founder of the Lux AI Challenge* #h(1fr) 2021 -- \
-Initiated the original project concept and invited others to co-found the non-profit organization and competition. Successfully some of the largest multi-agent AI competitions in collaboration with Kaggle. Raised over \$130,000 in funds for the competition.
-
-*Founding President of ACM AI at UC San Diego* #h(1fr) 2020 -- 2022 \
-Founded the largest organization on AI at UC San Diego, seeking to cultivate a community of AI enthusiasts as well as lower the barriers for learning AI. Grew the organization from zero to 1000+ members in 2 years, working with my board to develop social events, workshops, seminars, and competitions.
-
 
 == Presentations / Talks
 #chiline()
@@ -175,46 +146,19 @@ Allen AI (AI2) #h(1fr) 2025 \
 Institute for AI Industry Research (AIR), Tsinghua University #h(1fr) 2024
 
 *ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI* \
-Robopapers (Podcast) \
+Robopapers (Podcast) #h(1fr) 2025 \
+CVPR 2024 Embodied AI Workshop #h(1fr) 2024 \
+Echo AI Talk  #h(1fr) 2024 \
 #link("https://www.youtube.com/watch?v=fpOCPQB2spM")[Youtube Recording]
 
-*ManiSkill3: Scalable Simulation+Rendering for Generalizable Embodied AI* \
-CVPR 2024 Embodied AI Workshop #h(1fr) 2024 \
-Echo AI Talk  #h(1fr) 2024
+//*Lux AI Season 2 and Reinforcement Learning* \
+//Kaggle Podcast #h(1fr) 2023 \
+//#link("https://www.youtube.com/watch?v=3QdOTFtQ76U")[Youtube recording]
 
-*Lux AI Season 2 and Reinforcement Learning* \
-Kaggle Podcast #h(1fr) 2023 \
-#link("https://www.youtube.com/watch?v=3QdOTFtQ76U")[Youtube recording]
-
-*AI Competition Design For Multi-Agent Environments / Games* \
-Kaggle Podcast #h(1fr) 2022 \
-Learning in Foundation Environments (LIFE) #h(1fr) 2022 \
-#link("https://docs.google.com/presentation/d/13EwQQLNcXJRJx0cDTgCoMATbEMWLDyO1HWeUf03x_io/edit?usp=sharing")[Slides]
-
-== Current/Past Student Mentees
-#chiline()
-*Justin Luo* (BS Caltech) #h(1fr) 2025 -- now \
-*Viswesh Nagaswamy Rajesh* (MS UC San Diego #sym.arrow.r General Robotics) #h(1fr) 2025 -- now \
-*Xiu Yuan* (BS UC San Diego #sym.arrow.r PhD Washington University) #h(1fr) 2024 -- 2025 \
-*Xander Hinrichsen* (BS UC San Diego #sym.arrow.r MS UC San Diego #sym.arrow.r NVIDIA) #h(1fr) 2024 -- 2025 \
-*Sid Bharthulwar* (BS Harvard #sym.arrow.r Jump Trading) #h(1fr) 2024 -- 2025 \
-*Rebecca Chen* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Nan Xiao* (MS UC San Diego #sym.arrow.r PhD University of Tennessee, Knoxville) #h(1fr) 2024 -- 2025 \
-*Arnav Gurha* (BS UC San Diego) #h(1fr) 2024 -- now \
-*Arth Shukla* (BS UC San Diego #sym.arrow.r PhD University of Washington) #h(1fr) 2023 -- 2025 \
-*Kevin Chan* (BS UC San Diego #sym.arrow.r MS Stanford) #h(1fr) 2022 -- 2024 \
-*Doris Zhang* (BS UC San Diego) #h(1fr) 2022 -- 2024
-
-== Teaching
-#chiline()
-*UC San Diego: CSE 276F Machine Learning for Robotics (Co-Instructor)* #h(1fr) 2024 Spring \
-Taught 4 lectures covering off policy RL, exploration in RL, learning from demonstrations, and model based RL. Wrote homework material covering robotics, robotics simulation, reinforcement learning, and robot learning. Held office hours.
-
-*UC San Diego: CSE 291 Machine Learning for Robotics* #h(1fr) 2023 Winter \
-Wrote various course materials and Google Colab notebooks covering robotics, robotics environments, reinforcement learning, and imitation learning.
-
-*UC San Diego: CSE 12 Basic Data Structures and Object-Oriented Design* #h(1fr) 2020 Spring \
-Held office hours and wrote unit tests for grading homework automatically in Java.
+//*AI Competition Design For Multi-Agent Environments / Games* \
+//Kaggle Podcast #h(1fr) 2022 \
+//Learning in Foundation Environments (LIFE) #h(1fr) 2022 \
+//#link("https://docs.google.com/presentation/d/13EwQQLNcXJRJx0cDTgCoMATbEMWLDyO1HWeUf03x_io/edit?usp=sharing")[Slides]
 
 == Service
 #chiline()
@@ -224,30 +168,5 @@ Multiagent Games/RL: Lux AI Season 1, Lux AI Season 2 (NeurIPS 2023 Competitions
 
 *Peer Review* \
 AI/ML: ICLR, ICML, NeurIPS (Top Reviewer), TMLR, CoLLas, RLC \
-Robotics: IROS, ICRA, RSS \
+Robotics: IROS, ICRA, RSS, CoRL \
 Computer Vision/Graphics: SIGGRAPH \
-
-== Other Awards
-#chiline()
-*UCSD Undergraduate Provost Honors List* #h(1fr) 2019-2023\
-*MIT Battlecode (AI Competition) Finalist* #h(1fr) 2019-2021 \
-Made finals 3 times in a row (2019-2021), placing 1st out of all soloists and 5th overall in 2020, competing against over 600 teams of high school to graduate students. Won the Five Rings adaptive strategy award for spearheading an influential
-strategy in 2021.
-
-== Skills
-#chiline()
-*Programming Languages:* Python, Typescript/Javascript, C/C++, Go, Java, SQL
-
-*AI:* Reinforcement Learning, 2D/3D Computer Vision, Deep Learning, Tree Learners, Embodied AI
-
-*Frameworks:* Jax, Pytorch, Tensorflow, Pandas, scikit-learn, Node.js, React, MongoDB, Express.js
-
-*Tools:* Docker, Google Cloud, Jupyter Notebook/Lab, Git, Adobe Photoshop, Figma
-
-== Interests
-#chiline()
-*Languages:* English, Chinese
-
-*Sports:* Fencing (Saber), Fencing Coaching
-
-*Music:* Violin, Viola
