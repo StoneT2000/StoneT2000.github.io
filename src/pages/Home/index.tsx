@@ -61,8 +61,8 @@ const Home = () => {
             <span style={{fontSize: '0.8rem'}}>Last Updated: August 7, 2026</span>
           </div>
           <p>
-            I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. My research spans simulation infrastructure, robotics, reinforcement learning, and evaluation systems. I was previously a PhD student advised
-            by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a> at UC San Diego. 
+            I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. My research spans simulation infrastructure, robotics, reinforcement learning, and evaluation systems. I am completing my PhD at UC San Diego advised
+            by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a>. 
           </p>
           {/* <div className="anchor" id="news-a" />
           <h2 style={{marginBottom: 0}}>News</h2>
