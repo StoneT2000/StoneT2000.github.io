@@ -58,7 +58,7 @@ const Home = () => {
               <a href="mailto:stonezt2019@gmail.com ">Email</a>
             </p>
             <br/>
-            <span style={{fontSize: '0.8rem'}}>Last Updated: June 15, 2026</span>
+            <span style={{fontSize: '0.8rem'}}>Last Updated: August 7, 2026</span>
           </div>
           <p>
             I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. I was previously a PhD student advised
