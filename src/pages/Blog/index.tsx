@@ -6,7 +6,7 @@ import BlogPostPreviewCard, {
 import './index.css';
 import axios from 'axios';
 import MarkdownIt from 'markdown-it';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 const md = new MarkdownIt();
 const Blog = () => {
   const [posts, setPosts] = useState<

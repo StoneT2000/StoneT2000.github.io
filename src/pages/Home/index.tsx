@@ -4,7 +4,7 @@ import ProjectCard from '../../components/ProjectCard';
 import AwardModule from '../../components/AwardModule';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import './index.css';
 // import work from './work.json';
 import news from './news.json';

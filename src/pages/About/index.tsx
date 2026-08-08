@@ -2,7 +2,7 @@ import React from 'react';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import './index.css';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 const About = () => {
   const tabs = [
     { name: 'About', href: 'brief-a' },

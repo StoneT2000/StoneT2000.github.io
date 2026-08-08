@@ -3,7 +3,7 @@ import ProjectCard, { ProjectCardProps } from '../../components/ProjectCard';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Sidebar from '../../components/Sidebar';
 import './index.css';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { ProjectsData } from '../../data/projects';
 const Projects = () => {
   const [checked, setChecked] = useState({
