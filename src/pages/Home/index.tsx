@@ -27,7 +27,7 @@ const Home = () => {
     // { name: 'News', href: 'news-a' },
     { name: 'Publications', href: 'publications-a' },
     { name: 'Presentations/Talks', href: 'presentations-a' },
-    { name: 'Projects', href: 'projects-a' },
+    // { name: 'Projects', href: 'projects-a' },
     // { name: 'Work Experience', href: 'work-a' },
     { name: 'Awards', href: 'awards-a' },
   ];
@@ -61,7 +61,7 @@ const Home = () => {
             <span style={{fontSize: '0.8rem'}}>Last Updated: August 7, 2026</span>
           </div>
           <p>
-            I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. I was previously a PhD student advised
+            I am a member of technical staff at <a href="https://www.pi.website/">Physical Intelligence (π)</a> working on simulation and robotics. My research spans simulation infrastructure, robotics, reinforcement learning, and evaluation systems. I was previously a PhD student advised
             by <a href="https://cseweb.ucsd.edu/~haosu/">Hao Su</a> and <a href="https://hichristensen.com/">Henrik Christensen</a> at UC San Diego. 
           </p>
           {/* <div className="anchor" id="news-a" />
@@ -182,13 +182,13 @@ const Home = () => {
               );
             })}
           </div>
-          <div className="anchor" id="projects-a" />
+          {/* <div className="anchor" id="projects-a" />
           <h2>Pinned Projects</h2>
           <div className="projects">
             {projects.map((project) => (
               <ProjectCard {...project} key={project.title} />
             ))}
-          </div>
+          </div> */}
           {/* <div className="anchor" id="work-a" />
           <h2>Work Experience</h2>
           <div>
